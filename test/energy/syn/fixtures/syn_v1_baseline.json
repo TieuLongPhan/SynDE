@@ -1,0 +1,63 @@
+{
+  "fixture_version": 2,
+  "captured_at": "2026-07-10T10:08:00+02:00",
+  "purpose": "Freeze representative legacy SYN v1 behavior before v2 graph-energy implementation.",
+  "environment": {
+    "python": "3.12.12",
+    "numpy": "2.4.4",
+    "networkx": "3.6.1",
+    "rdkit": "2026.03.1",
+    "synkit": "1.4.1b1"
+  },
+  "energy_cases": {
+    "benzene": {
+      "smiles": "c1ccccc1",
+      "status": "success",
+      "n_pi": 6,
+      "energy_beta": -8.0,
+      "orbital_energies": [-2.0, -1.0, -1.0, 1.0, 1.0, 2.0]
+    },
+    "pyridine": {
+      "smiles": "n1ccccc1",
+      "status": "success",
+      "n_pi": 6,
+      "energy_beta": -8.0,
+      "orbital_energies": [-2.0, -1.0, -1.0, 1.0, 1.0, 2.0],
+      "known_limitation": "Legacy v1 treats pyridine as electronically identical to benzene."
+    },
+    "pyrrole": {
+      "smiles": "c1cc[nH]c1",
+      "status": "success",
+      "n_pi": 5,
+      "energy_beta": -5.23606797749979,
+      "orbital_energies": [-2.0, -0.618033988749895, -0.618033988749895, 1.618033988749895, 1.618033988749895],
+      "known_limitation": "Legacy v1 derives occupation from pi-node count rather than explicit pi-electron assignment."
+    },
+    "two_ethenes": {
+      "smiles": "C=C.C=C",
+      "status": "success",
+      "n_pi": 4,
+      "energy_beta": -4.0,
+      "orbital_energies": [-1.0, -1.0, 1.0, 1.0]
+    }
+  },
+  "pair_cases": {
+    "two_ethenes": {
+      "smiles": "C=C.C=C",
+      "pair_count": 4,
+      "score_histogram": {
+        "-0.724697266663": 4
+      }
+    },
+    "two_benzenes": {
+      "smiles": "c1ccccc1.c1ccccc1",
+      "pair_count": 36,
+      "score_histogram": {
+        "-0.219233709041": 16,
+        "-0.181733709041": 16,
+        "-0.0748961417436": 4
+      },
+      "known_limitation": "Legacy individual frontier eigenvectors split graph-symmetry-equivalent pairs into multiple score groups."
+    }
+  }
+}
