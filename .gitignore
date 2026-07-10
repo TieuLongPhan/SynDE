@@ -219,5 +219,5 @@ __marimo__/
 
 
 # Define
-sprint/*
+sprint/*.html
 *.ipynb
