@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "record_type": "frozen_external_validation",
+  "protocol": "synde-ord-v4-frozen-external-v1",
+  "executed_on": "2026-07-31",
+  "model_path": "benchmark/models/ord_v4_calibrated_development.json",
+  "model_sha256": "6b04dd12dd22643662f0ea894266bde07d8750b7506447da7545bc675ed0c166",
+  "fit_source": "data/ord_traindata.csv",
+  "fit_groups": 3210,
+  "fit_molecules": 14665,
+  "external_source": "data/ord_external.csv",
+  "external_source_sha256": "d38f8f6697ae52144e526e93d7edb62df769caeb88e71c68223d52d37757b619",
+  "ord_test_accessed": false,
+  "external_labels_used_for_fit_or_tuning": false,
+  "post_external_model_revision": false,
+  "external_formula_and_graph_disjoint": true,
+  "external_groups": 7856,
+  "external_molecules": 34087,
+  "group_scoreability": 1.0,
+  "mean_group_pearson": 0.9428243766553281,
+  "mean_group_pearson_bootstrap_95ci": [
+    0.9383080733629936,
+    0.9471022854943526
+  ],
+  "mean_group_spearman": 0.8905313775667645,
+  "mean_group_spearman_bootstrap_95ci": [
+    0.8852511474120753,
+    0.8957629332861641
+  ],
+  "mean_pairwise_concordance": 0.9235228154398216,
+  "top1_accuracy": 0.8478869653767821,
+  "far_group_max_tanimoto_le_0_50": {
+    "groups": 2535,
+    "molecules": 8893,
+    "mean_pearson": 0.9268684351465852,
+    "mean_spearman": 0.87157270080347,
+    "top1_accuracy": 0.8532544378698225
+  },
+  "all_prespecified_external_performance_criteria_met": true,
+  "result_path": "benchmark/ord_v4_external.json",
+  "evaluator_sha256": "b5335cd2635f13c4a673500db20849194c789c738c31601b9043f31f46da50f4",
+  "training_cache_sha256": "cbc96930fc12c57c1171bccbc0cfbe2288d24ad8fe78015231358be88dc0f183",
+  "data_generation_rdkit_version": "2025.9.6",
+  "data_generation_xtb_version": "6.7.1",
+  "evaluation_rdkit_runtime_version": "2026.03.4",
+  "claim_boundary": "Frozen external-source evaluation relative to v4 training; the external file belongs to the legacy molecular collection and is not a newly generated chemical population."
+}

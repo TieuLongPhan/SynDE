@@ -28,6 +28,8 @@ class ITSGraphBuilder:
         self,
         reactants: list[NormalizedMolecularGraph],
         products: list[NormalizedMolecularGraph],
+        *,
+        native_its: nx.Graph | None = None,
     ) -> ITSGraph:
         left = self._mapped_union(reactants, side="reactant")
         right = self._mapped_union(products, side="product")
@@ -81,7 +83,7 @@ class ITSGraphBuilder:
         center = tuple(
             sorted({atom_map for change in changes for atom_map in change["atom_maps"]})
         )
-        return ITSGraph(its, center, tuple(changes), left, right)
+        return ITSGraph(native_its or its, center, tuple(changes), left, right)
 
     @staticmethod
     def _mapped_union(items: list[NormalizedMolecularGraph], *, side: str) -> nx.Graph:

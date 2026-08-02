@@ -18,6 +18,7 @@ from .graph_schema import (
 )
 from .hsab import HSABDescriptor, hsab_descriptor, local_hsab_compatibility
 from .its import ITSGraph, ITSGraphBuilder
+from .orbital_pi import OrbitalNode, assign_orbital_pi
 from .pair_scoring import (
     GraphPairScorer,
     PairScoreGroup,
@@ -52,6 +53,8 @@ __all__ = [
     "local_hsab_compatibility",
     "ITSGraph",
     "ITSGraphBuilder",
+    "OrbitalNode",
+    "assign_orbital_pi",
     "GraphPairScorer",
     "PairScoreGroup",
     "PairScoreResult",

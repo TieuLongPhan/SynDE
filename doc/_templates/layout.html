@@ -1,0 +1,33 @@
+{% extends "!layout.html" %}
+
+{% block extrabody %}
+  {% include "header.html" %}
+{% endblock %}
+
+{% block footer %}
+<footer class="synde-full-width-footer">
+  <div class="synde-footer-container">
+    <div class="synde-footer-content">
+      <p class="synde-footer-title"><strong>SynDE: Interpretable 2D ranking of constitutional isomers by GFN2-xTB energy.</strong></p>
+      <p class="synde-footer-links">
+        <a href="{{ pathto('getting_started') }}">Getting started</a> &middot;
+        <a href="{{ pathto('tutorial') }}">Tutorials</a> &middot;
+        <a href="{{ pathto('api') }}">API</a> &middot;
+        <a href="{{ pathto('reference') }}">Citation</a> &middot;
+        <a href="https://github.com/TieuLongPhan/SynDE" target="_blank" rel="noopener">GitHub</a> &middot;
+        <a href="https://github.com/TieuLongPhan/SynDE/issues" target="_blank" rel="noopener">Support</a>
+      </p>
+      <p class="synde-footer-copy">SynDE is distributed under the MIT License.</p>
+      <p class="synde-footer-copy">Funded by the European Union's Horizon Europe Doctoral Network programme under Marie Skłodowska-Curie grant agreement No. 101072930 (TACsy).</p>
+      <p class="synde-footer-built">Created using <a href="https://www.sphinx-doc.org/" target="_blank" rel="noopener">Sphinx</a>.</p>
+    </div>
+    <button class="synde-back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});" aria-label="Back to top">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5">
+        <line x1="12" y1="19" x2="12" y2="5"></line>
+        <polyline points="5 12 12 5 19 12"></polyline>
+      </svg>
+      <span>Back to top</span>
+    </button>
+  </div>
+</footer>
+{% endblock %}

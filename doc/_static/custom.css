@@ -1,0 +1,562 @@
+/* SynDE Custom Sphinx Documentation Layout & Styling */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  --synde-dark-nav: #0b192c;
+  --synde-dark-card: #1e293b;
+  --synde-primary: #0284c7;
+  --synde-accent: #38bdf8;
+  --synde-teal: #0d9488;
+  --synde-teal-hover: #14b8a6;
+  --synde-text-main: #334155;
+  --synde-text-dark: #0f172a;
+  --synde-border-color: #e2e8f0;
+  --synde-code-bg: #0b192c;
+  --synde-radius: 6px;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: var(--synde-text-main);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+}
+
+/* ==========================================
+   TOP HEADER NAVIGATION BAR (Full Width Edge-to-Edge)
+   ========================================== */
+.synde-header-bar {
+  background-color: var(--synde-dark-nav) !important;
+  color: #ffffff !important;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 52px;
+  z-index: 99999;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+}
+
+.synde-header-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.synde-header-brand a {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  color: #ffffff !important;
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-decoration: none !important;
+}
+
+.synde-logo-icon {
+  width: 28px;
+  height: 24px;
+  flex: 0 0 auto;
+  overflow: visible;
+}
+
+.synde-logo-molecule,
+.synde-logo-bond {
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 1.45;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.synde-logo-bond {
+  opacity: 0.58;
+}
+
+.synde-logo-atom {
+  fill: #ffffff;
+}
+
+.synde-logo-energy {
+  fill: var(--synde-accent);
+  stroke: var(--synde-dark-nav);
+  stroke-width: 0.8;
+  stroke-linejoin: round;
+}
+
+.synde-header-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+}
+
+.synde-header-nav a {
+  color: #cbd5e1 !important;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none !important;
+  transition: color 0.15s ease;
+}
+
+.synde-header-nav a:hover {
+  color: #ffffff !important;
+}
+
+.synde-header-brand a:focus-visible,
+.synde-header-nav a:focus-visible,
+.synde-github-icon-link:focus-visible,
+.synde-back-to-top:focus-visible,
+.copybtn:focus-visible,
+.synde-copy-btn:focus-visible {
+  outline: 3px solid var(--synde-accent);
+  outline-offset: 3px;
+}
+
+.synde-header-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.synde-search-box form {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.synde-search-box .search-icon {
+  position: absolute;
+  left: 0.65rem;
+  color: #94a3b8;
+  pointer-events: none;
+}
+
+.synde-search-box input {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: var(--synde-radius);
+  color: #f8fafc;
+  padding: 0.35rem 4rem 0.35rem 2.2rem;
+  font-size: 0.85rem;
+  width: 190px;
+  transition: all 0.2s ease;
+}
+
+.synde-search-box input:focus {
+  outline: 2px solid var(--synde-accent);
+  outline-offset: 1px;
+  border-color: var(--synde-accent);
+  width: 230px;
+  background-color: #0f172a;
+}
+
+.synde-search-box .search-shortcut {
+  position: absolute;
+  right: 0.45rem;
+  font-size: 0.68rem;
+  font-weight: 600;
+  background: #334155;
+  color: #94a3b8;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  pointer-events: none;
+  letter-spacing: 0.05em;
+  border: 1px solid #475569;
+}
+
+.synde-github-icon-link {
+  color: #94a3b8 !important;
+  display: flex;
+  align-items: center;
+  transition: color 0.15s ease;
+}
+
+.synde-github-icon-link:hover {
+  color: #ffffff !important;
+}
+
+/* Adjust RTD Theme Body & Sidebar Grid */
+body.wy-body-for-nav {
+  padding-top: 52px !important;
+}
+
+.wy-grid-for-nav {
+  padding-top: 0 !important;
+  min-height: calc(100vh - 52px - 140px) !important;
+  position: relative !important;
+}
+
+.wy-grid-for-nav::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.wy-nav-side {
+  top: 52px !important;
+  height: calc(100vh - 52px) !important;
+  background-color: var(--synde-dark-nav) !important;
+}
+
+.wy-side-nav-search {
+  background: var(--synde-dark-nav) !important;
+}
+
+.wy-nav-content-wrap {
+  background: #ffffff !important;
+  min-height: calc(100vh - 52px) !important;
+}
+
+/* ==========================================
+   100% FULL-WIDTH FOOTER (Edge-to-Edge Bar at Bottom of Screen)
+   ========================================== */
+footer.synde-full-width-footer,
+.synde-full-width-footer {
+  background-color: var(--synde-dark-nav) !important;
+  color: #ffffff !important;
+  width: 100% !important;
+  margin-top: 0 !important;
+  padding: 2.25rem 0 !important;
+  border-radius: 0 !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+  box-shadow: none !important;
+  position: relative !important;
+  z-index: 10000 !important;
+  clear: both !important;
+  display: block !important;
+}
+
+.synde-footer-container {
+  width: 100% !important;
+  max-width: 1400px !important;
+  margin: 0 auto !important;
+  padding: 0 2rem !important;
+  display: flex !important;
+  align-items: flex-end !important;
+  justify-content: space-between !important;
+  gap: 2rem !important;
+  box-sizing: border-box !important;
+}
+
+.synde-footer-content {
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.synde-footer-title {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  margin-bottom: 0.65rem !important;
+  font-size: 1.05rem !important;
+  display: block !important;
+}
+
+.synde-footer-links {
+  margin-bottom: 0.65rem !important;
+  color: #94a3b8 !important;
+  display: block !important;
+}
+
+.synde-footer-links a {
+  color: #38bdf8 !important;
+  text-decoration: underline !important;
+  font-weight: 500;
+  transition: color 0.15s ease;
+}
+
+.synde-footer-links a:hover {
+  color: #7dd3fc !important;
+}
+
+.synde-footer-copy {
+  color: #cbd5e1 !important;
+  margin-bottom: 0.35rem !important;
+  font-size: 0.9rem !important;
+  display: block !important;
+}
+
+.synde-footer-built {
+  color: #cbd5e1 !important;
+  margin-bottom: 0 !important;
+  font-size: 0.9rem !important;
+  display: block !important;
+}
+
+.synde-footer-built a {
+  color: #38bdf8 !important;
+  text-decoration: underline !important;
+}
+
+/* Back to Top Button */
+.synde-back-to-top {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background-color: var(--synde-teal);
+  color: #ffffff;
+  border: none;
+  border-radius: 9999px;
+  padding: 0.6rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.synde-back-to-top:hover {
+  background-color: var(--synde-teal-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* ==========================================
+   CODE BLOCK COPY BUTTON & STYLING
+   ========================================== */
+code, pre {
+  font-family: 'JetBrains Mono', monospace !important;
+  font-size: 0.88em !important;
+}
+
+.rst-content code.literal {
+  background-color: #f1f5f9 !important;
+  color: #0369a1 !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 4px !important;
+  padding: 0.15em 0.35em !important;
+}
+
+.highlight {
+  position: relative;
+  background-color: var(--synde-code-bg) !important;
+  border-radius: var(--synde-radius) !important;
+  border: 1px solid #334155 !important;
+  margin-bottom: 1.25rem !important;
+}
+
+.rst-content .highlight pre {
+  padding: 1rem 1.25rem !important;
+  color: #f8fafc !important;
+  overflow-x: auto;
+}
+
+/* The default Sphinx Pygments palette targets a light background. Establish
+   a complete high-contrast palette for SynDE's dark code blocks. */
+.rst-content .highlight span {
+  color: #e2e8f0;
+}
+
+.rst-content .highlight .c,
+.rst-content .highlight .ch,
+.rst-content .highlight .cm,
+.rst-content .highlight .cp,
+.rst-content .highlight .cpf,
+.rst-content .highlight .c1,
+.rst-content .highlight .cs {
+  color: #94a3b8;
+}
+
+.rst-content .highlight .k,
+.rst-content .highlight .kc,
+.rst-content .highlight .kd,
+.rst-content .highlight .kn,
+.rst-content .highlight .kp,
+.rst-content .highlight .kr,
+.rst-content .highlight .kt,
+.rst-content .highlight .ow {
+  color: #7dd3fc;
+}
+
+.rst-content .highlight .s,
+.rst-content .highlight .sa,
+.rst-content .highlight .sb,
+.rst-content .highlight .sc,
+.rst-content .highlight .dl,
+.rst-content .highlight .sd,
+.rst-content .highlight .s1,
+.rst-content .highlight .s2,
+.rst-content .highlight .se,
+.rst-content .highlight .sh,
+.rst-content .highlight .si,
+.rst-content .highlight .sr,
+.rst-content .highlight .ss {
+  color: #fda4af;
+}
+
+.rst-content .highlight .nb,
+.rst-content .highlight .bp,
+.rst-content .highlight .nt {
+  color: #86efac;
+}
+
+.rst-content .highlight .nc,
+.rst-content .highlight .nd,
+.rst-content .highlight .ne,
+.rst-content .highlight .nf,
+.rst-content .highlight .fm,
+.rst-content .highlight .nn {
+  color: #c4b5fd;
+}
+
+.rst-content .highlight .go,
+.rst-content .highlight .o,
+.rst-content .highlight .m,
+.rst-content .highlight .mb,
+.rst-content .highlight .mf,
+.rst-content .highlight .mh,
+.rst-content .highlight .mi,
+.rst-content .highlight .mo,
+.rst-content .highlight .il {
+  color: #cbd5e1;
+}
+
+.rst-content .highlight .gp,
+.rst-content .highlight .gh,
+.rst-content .highlight .gu {
+  color: #67e8f9;
+}
+
+.copybtn, .synde-copy-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background-color: #1e293b;
+  color: #94a3b8;
+  border: 1px solid #334155;
+  border-radius: 4px;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  opacity: 0.85;
+  transition: all 0.15s ease;
+  z-index: 10;
+}
+
+.highlight:hover .copybtn,
+.highlight:hover .synde-copy-btn {
+  opacity: 1;
+}
+
+.copybtn:hover, .synde-copy-btn:hover {
+  background-color: #334155;
+  color: #ffffff;
+}
+
+.synde-copy-btn.copied, .copybtn.success {
+  background-color: #0369a1;
+  color: #ffffff;
+  border-color: #38bdf8;
+}
+
+/* Admonitions styling */
+.rst-content .admonition {
+  border-radius: var(--synde-radius) !important;
+  border: 1px solid #e2e8f0 !important;
+  border-left-width: 4px !important;
+  padding: 1rem 1.25rem !important;
+  margin-bottom: 1.25rem !important;
+}
+
+.rst-content .admonition.note {
+  background-color: #f0f9ff !important;
+  border-left-color: #0284c7 !important;
+}
+.rst-content .admonition.note .admonition-title {
+  color: #0369a1 !important;
+  font-weight: 700 !important;
+}
+
+/* Keep the desktop header useful as its available width contracts. */
+@media screen and (max-width: 1180px) {
+  .synde-header-container {
+    gap: 1rem;
+  }
+
+  .synde-header-nav {
+    gap: 1rem;
+  }
+
+  .synde-search-box input {
+    width: 150px;
+  }
+
+  .synde-search-box input:focus {
+    width: 175px;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .synde-header-nav a[href*="github.com"],
+  .synde-search-box {
+    display: none;
+  }
+}
+
+/* At the RTD theme's mobile breakpoint, its native bar owns navigation and
+   the sidebar toggle. Hiding the desktop header avoids duplicated, clipped UI. */
+@media screen and (max-width: 768px) {
+  .synde-header-bar {
+    display: none;
+  }
+
+  body.wy-body-for-nav {
+    padding-top: 0 !important;
+  }
+
+  .wy-grid-for-nav {
+    min-height: calc(100vh - 140px) !important;
+  }
+
+  .wy-nav-side {
+    top: 0 !important;
+    height: 100vh !important;
+  }
+
+  .wy-nav-content-wrap {
+    min-height: 100vh !important;
+  }
+
+  .synde-footer-container {
+    align-items: flex-start !important;
+    flex-direction: column !important;
+    padding: 0 1.25rem !important;
+  }
+
+  .synde-back-to-top {
+    align-self: flex-start;
+  }
+}
+
+.rst-content [id] {
+  scroll-margin-top: 68px;
+}
+
+@media screen and (max-width: 768px) {
+  .rst-content [id] {
+    scroll-margin-top: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
