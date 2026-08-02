@@ -12,11 +12,13 @@ class GraphBuilder:
         from synkit.Chem.Molecule.standardize import sanitize_and_canonicalize_smiles
         from synkit.IO.mol_to_graph import MolToGraph
 
-        mol = Chem.MolFromSmiles(smiles)
+        parser = Chem.SmilesParserParams()
+        parser.removeHs = False
+        mol = Chem.MolFromSmiles(smiles, parser)
         if mol is None:
             raise ValueError(f"Invalid SMILES: {smiles}")
         canonical = sanitize_and_canonicalize_smiles(smiles)
-        graph = MolToGraph(attr_profile="minimal", with_topology=True).transform(
+        graph = MolToGraph(attr_profile="full", with_topology=True).transform(
             Chem.Mol(mol)
         )
         return GraphBuilder.from_synkit_graph(
@@ -49,6 +51,49 @@ class GraphBuilder:
             canonical_smiles=canonical_smiles,
             source="synkit-mol-to-graph",
         )
+
+    @staticmethod
+    def reaction_states_from_smiles(
+        reaction_smiles: str, *, strict: bool = True
+    ) -> tuple[NormalizedMolecularGraph, NormalizedMolecularGraph, nx.Graph | None]:
+        """Convert reaction SMILES with Synkit's native reaction graph converter.
+
+        The first two values are SynDE-normalized reactant and product state
+        graphs.  The third is Synkit's paired-attribute ITS graph when complete
+        atom mapping is available; otherwise it is ``None``.
+        """
+        from synkit.IO import rsmi_to_graph
+        from synkit.Graph.ITS import ITSConstruction
+
+        reactant_raw, product_raw = rsmi_to_graph(
+            reaction_smiles,
+            drop_non_aam=False,
+            use_index_as_atom_map=False,
+        )
+        if reactant_raw is None or product_raw is None:
+            raise ValueError("Invalid reaction SMILES")
+        reactant = GraphBuilder.from_synkit_graph(reactant_raw, strict=strict)
+        product = GraphBuilder.from_synkit_graph(product_raw, strict=strict)
+        try:
+            mapped_reactant = GraphBuilder._relabel_by_atom_map(reactant_raw)
+            mapped_product = GraphBuilder._relabel_by_atom_map(product_raw)
+            its = ITSConstruction().construct(mapped_reactant, mapped_product)
+        except ValueError:
+            its = None
+        return reactant, product, its
+
+    @staticmethod
+    def _relabel_by_atom_map(graph: nx.Graph) -> nx.Graph:
+        mapping: dict[object, int] = {}
+        for node, attrs in graph.nodes(data=True):
+            atom_map = attrs.get("atom_map")
+            if atom_map in (None, 0):
+                raise ValueError("REACTION_MAPPING_MISSING")
+            atom_map = int(atom_map)
+            if atom_map in mapping.values():
+                raise ValueError("REACTION_NOT_BALANCED")
+            mapping[node] = atom_map
+        return nx.relabel_nodes(graph, mapping, copy=True)
 
     @staticmethod
     def from_graph(graph: nx.Graph, *, strict: bool = True) -> NormalizedMolecularGraph:

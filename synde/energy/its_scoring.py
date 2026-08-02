@@ -51,10 +51,12 @@ class ITSScorer:
         reactants: list[NormalizedMolecularGraph],
         products: list[NormalizedMolecularGraph],
         reaction_smiles: str,
+        *,
+        native_its=None,
     ) -> ITSScoreResult:
         state_delta = self._state_delta(reactants, products)
         try:
-            its = self.builder.build(reactants, products)
+            its = self.builder.build(reactants, products, native_its=native_its)
         except ValueError as error:
             return ITSScoreResult(
                 "unsupported",
@@ -137,8 +139,10 @@ class ITSScorer:
                 for _, _, data in its.product_graph.edges(atom_map, data=True)
             )
             valence += abs(product_valence - reactant_valence)
-            node = its.graph.nodes[atom_map]
-            aromaticity += float(node["reactant_aromatic"] != node["product_aromatic"])
+            aromaticity += float(
+                its.reactant_graph.nodes[atom_map]["aromatic"]
+                != its.product_graph.nodes[atom_map]["aromatic"]
+            )
         return {
             "formed_bond_penalty": self.config.formed_bond_weight * formed,
             "broken_bond_penalty": self.config.broken_bond_weight * broken,

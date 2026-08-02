@@ -1,17 +1,17 @@
 """Graph-only molecule score orchestration."""
 
 from __future__ import annotations
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from synde.graph.generalized_huckel import GeneralizedHuckel, HuckelParameters
 from synde.graph.graph_schema import NormalizedMolecularGraph
-from .local_energy import local_score_components
 from synde.graph.pi_system import assign_pi_systems
 from .results import MoleculeScoreResult
+from .two_d_energy import TwoDEnergyConfig, two_d_energy_components
 
 
 @dataclass(frozen=True)
 class MoleculeScoringConfig:
-    pi_weight: float = 1.0
+    two_d: TwoDEnergyConfig = field(default_factory=TwoDEnergyConfig)
 
 
 class MoleculeScorer:
@@ -24,13 +24,11 @@ class MoleculeScorer:
         self.huckel = GeneralizedHuckel(parameters)
 
     def score(self, normalized: NormalizedMolecularGraph) -> MoleculeScoreResult:
-        local = local_score_components(normalized.graph)
         assignment = assign_pi_systems(normalized)
         huckel = self.huckel.solve(assignment)
-        components = {
-            **local,
-            "pi_stabilization": self.config.pi_weight * huckel.pi_stabilization,
-        }
+        components = two_d_energy_components(
+            normalized.graph, assignment, huckel, self.config.two_d
+        )
         warnings = tuple(
             dict.fromkeys(
                 (
@@ -53,5 +51,5 @@ class MoleculeScorer:
                 "parameter_set": huckel.parameter_set,
             },
             warnings,
-            {"model_name": "graph-energy-v2", "mode": "graph"},
+            {"model_name": "synde-2d-v1", "mode": "graph", "calibrated": False},
         )

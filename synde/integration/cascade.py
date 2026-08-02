@@ -66,7 +66,7 @@ class GraphXTBCascade:
                 try:
                     if key not in self._xtb_cache:
                         if xtb_evaluator is None:
-                            from synde.external.xtb.xtb_reaction import XTBReaction
+                            from synde.geometry.xtb.xtb_reaction import XTBReaction
 
                             self._xtb_cache[key] = float(
                                 XTBReaction.delta_e_rsmi(reaction, level=level)

@@ -1,11 +1,70 @@
 Tutorials and examples
 ======================
 
-Graph construction
-------------------
+Attributing a SynDE ranking
+---------------------------
 
-``GraphBuilder`` converts SMILES into the normalized graph contract used by
-the graph-first model:
+SynDE is a linear equation, so each prediction can be decomposed exactly. The
+following example reports the terms that most strongly separate the first two
+ranked isomers:
+
+.. code-block:: python
+
+   from synde.energy import SynDEScorer
+   from synde.graph import GraphBuilder
+
+   scorer = SynDEScorer.load_default()
+   graphs = [
+       GraphBuilder.from_smiles("CCCCC"),
+       GraphBuilder.from_smiles("CC(C)CC"),
+       GraphBuilder.from_smiles("CC(C)(C)C"),
+   ]
+   ranked = sorted(
+       zip(graphs, scorer.score_group(graphs)), key=lambda row: row[1].score
+   )
+
+   first, second = ranked[:2]
+   differences = {
+       name: second[1].components[name] - first[1].components[name]
+       for name in first[1].components
+   }
+   for name, delta in sorted(
+       differences.items(), key=lambda item: abs(item[1]), reverse=True
+   )[:10]:
+       print(name, delta)
+
+The displayed values are contributions to a statistical prediction. They can
+identify graph motifs associated with a ranking, but should not be interpreted
+as an energy decomposition from an electronic-structure Hamiltonian.
+
+Serializing auditable output
+----------------------------
+
+Result objects are dataclasses with a JSON-compatible ``to_dict()`` method:
+
+.. code-block:: python
+
+   import json
+
+   record = {
+       "model_sha256": scorer.model_sha256,
+       "externally_validated": scorer.externally_validated,
+       "ranking": [
+           {
+               "canonical_smiles": graph.canonical_smiles,
+               "result": result.to_dict(),
+           }
+           for graph, result in ranked
+       ],
+   }
+   print(json.dumps(record, indent=2))
+
+Graph and reaction utilities
+----------------------------
+
+The package also exposes lower-level graph, orbital, geometry, and reaction
+utilities. These are useful for descriptor inspection and method development,
+but they do not inherit the final SynDE model's external-validation claim.
 
 .. code-block:: python
 
@@ -15,39 +74,6 @@ the graph-first model:
    pi = assign_pi_systems(graph)
    print(pi.electron_count)
 
-The graph layer provides π-system assignment, generalized Hückel descriptors,
-frontier-orbital descriptors, HSAB descriptors, and candidate pair ranking.
-
-State score versus ITS score
-----------------------------
-
-``score_reaction`` measures the product-minus-reactant graph-state change.
-It can be used with or without atom maps, although maps are needed for exact
-bond-change diagnostics.
-
-.. code-block:: python
-
-   from synde.energy import GraphEnergy
-
-   energy = GraphEnergy()
-   state = energy.score_reaction(
-       "[CH2:1]=[CH2:2]>>[CH3:1][CH3:2]"
-   )
-   print(state.reaction_delta_score)
-
-``score_its`` additionally builds an atom-mapped imaginary transition-state
-graph. Use it when the reaction centre is known and a feasibility-oriented
-ranking feature is required:
-
-.. code-block:: python
-
-   its = energy.score_its("[CH2:1]=[CH2:2]>>[CH3:1][CH3:2]")
-   print(its.components)
-
-Calibration and external comparison
------------------------------------
-
-The heuristic weights are starting values. Fit a named calibration model only
-against a provenance-tracked target and evaluate it on held-out data. Optional
-conformer and xTB utilities are comparison/refinement layers; they do not turn
-an uncalibrated graph score into a physical energy.
+``GraphEnergy.score_reaction`` and ``GraphEnergy.score_its`` provide graph-state
+and mapped reaction-centre scores. Their outputs are feasibility-oriented graph
+coordinates, not physical transition-state energies.

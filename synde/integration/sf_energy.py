@@ -1,6 +1,6 @@
-from typing import List, Tuple, Optional
+from typing import List, Tuple
 from synde.geometry.rdkit._conformer import ConformerGenerator
-from synde.external.xtb.xtb_reaction import XTBReaction
+from synde.geometry.xtb.xtb_reaction import XTBReaction
 from synkit.IO import setup_logging
 
 logger = setup_logging()
@@ -41,7 +41,7 @@ class SFEnergy:
         random_coords_threshold: int = 100,
         force_field_method: str = "MMFF94",
         max_iter: str = "auto",
-        sort: Optional[bool] = True,
+        sort: bool = True,
     ) -> Tuple[List[str], List[float]]:
         """
         Processes and sorts a list of reaction SMILES strings based on their calculated
@@ -70,19 +70,27 @@ class SFEnergy:
             xtb = XTBReaction(n_jobs=self.num_threads, verbose=self.verbose)
             energies = xtb.delta_e_parallel(reactions, level="tight")
             results = list(zip(reactions, energies))
-        elif self.energy_type in ("GRAPH", "SYN_V2", "SYN"):
-            logger.info("Calculate reaction score using GraphEnergy v2")
+        elif self.energy_type in ("GRAPH", "SYN_V2", "SYN", "ITS", "SYN_ITS"):
+            logger.info("Calculate reaction score using SynDE graph scoring")
             from synde.energy.graph_energy import GraphEnergy
 
             ge = GraphEnergy()
             results = []
             for rsmi in reactions:
                 try:
-                    res = ge.score_reaction(rsmi)
-                    score = res.reaction_delta_score
-                except Exception as e:
-                    logger.error(f"Error calculating graph energy for {rsmi}: {e}")
-                    score = 0.0
+                    if self.energy_type in ("ITS", "SYN_ITS"):
+                        res = ge.score_its(rsmi)
+                        score = res.its_score
+                    else:
+                        res = ge.score_reaction(rsmi)
+                        score = res.reaction_delta_score
+                    if score is None:
+                        raise ValueError(
+                            f"SynDE returned {res.status!r}: {res.warnings!r}"
+                        )
+                except Exception as error:
+                    logger.error("SynDE scoring failed for %s: %s", rsmi, error)
+                    score = float("inf")
                 results.append((rsmi, score))
         else:
             logger.info(f"Minimize energy using {force_field_method}")

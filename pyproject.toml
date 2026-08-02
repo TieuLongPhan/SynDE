@@ -4,11 +4,11 @@ build-backend = "hatchling.build"
 
 [project]
 name = "synde"
-version = "0.1.0"
+version = "0.2.0"
 authors = [
     {name="Tieu Long Phan", email="tieu@bioinf.uni-leipzig.de"}
 ]
-description = "Utility for reaction modeling using graph grammar"
+description = "Interpretable 2D ranking of constitutional isomers by GFN2-xTB energy"
 readme = "README.md"
 long-description = {file = "CHANGELOG.md"}
 long-description-content-type = "text/markdown"
@@ -21,19 +21,42 @@ classifiers = [
 dependencies = [
     "rdkit>=2025.3.1",
     "numpy>=2.2.0",
-    "synkit>=1.5.0",
+    "synkit>=1.5,<1.7",
 ]
 
 [project.optional-dependencies]
-all = ["numpy>=2.2.0", "pandas>=1.5.3"]
+all = [
+  "pandas>=1.5.3",
+  "thermo>=0.6,<0.7",
+  "tblite>=0.7,<0.8",
+  "joblib>=1.4,<2",
+  "scikit-learn>=1.7,<2",
+  "scipy>=1.15,<2",
+]
+empirical = ["thermo>=0.6,<0.7"]
+semiempirical = ["tblite>=0.7,<0.8"]
+benchmark = [
+  "joblib>=1.4,<2",
+  "scikit-learn>=1.7,<2",
+  "scipy>=1.15,<2",
+]
 docs = [
   "sphinx>=6.0",
   "sphinx-rtd-theme",
   "sphinxcontrib-bibtex",
+  "sphinx-copybutton",
+]
+dev = [
+  "flake8>=7,<8",
+  "pytest>=8,<9",
+  "sphinx>=6",
+  "sphinx-rtd-theme",
+  "sphinxcontrib-bibtex",
+  "sphinx-copybutton",
 ]
 
 [project.urls]
-homepage = "https://github.com/tuyetminhphan/SynDE"
-source = "https://github.com/tuyetminhphan/SynDE"
-issues = "https://github.com/tuyetminhphan/SynDE/issues"
+homepage = "https://github.com/TieuLongPhan/SynDE"
+source = "https://github.com/TieuLongPhan/SynDE"
+issues = "https://github.com/TieuLongPhan/SynDE/issues"
 documentation = "https://synde.readthedocs.io/en/latest/"

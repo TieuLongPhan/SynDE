@@ -91,6 +91,16 @@ def _as_float(value: Any, default: float = 1.0) -> float:
     return value if math.isfinite(value) else default
 
 
+def _optional_float(value: Any) -> float | None:
+    if value is None:
+        return None
+    try:
+        result = float(value)
+    except (TypeError, ValueError):
+        return None
+    return result if math.isfinite(result) else None
+
+
 def _canonical_component_key(graph: nx.Graph, nodes: Iterable[Any]) -> str:
     component = graph.subgraph(nodes).copy()
     for _, data in component.nodes(data=True):
@@ -272,8 +282,27 @@ class GraphNormalizer:
                 "ring_sizes": tuple(
                     sorted(_as_int(size) for size in attrs.get("ring_sizes", ()))
                 ),
+                "explicit_valence": _as_int(attrs.get("explicit_valence", 0)),
+                "implicit_valence": _as_int(attrs.get("implicit_valence", 0)),
+                "valence": _as_int(attrs.get("valence", 0)),
+                "valence_electrons": _as_int(attrs.get("valence_electrons", 0)),
+                "estimated_lone_pairs": _as_int(
+                    attrs.get("estimated_lone_pairs", attrs.get("lone_pairs", 0))
+                ),
+                "available_lone_pairs": _as_int(
+                    attrs.get(
+                        "available_lone_pairs",
+                        1 if attrs.get("available_lp", False) else 0,
+                    )
+                ),
+                "oxidation_state": _optional_float(attrs.get("oxidation_state")),
+                "bond_order_sum": _optional_float(attrs.get("bond_order_sum")),
+                "lp_bond_order_sum": _optional_float(attrs.get("lp_bond_order_sum")),
+                "conj_component_size": _as_int(attrs.get("conj_component_size", 0)),
             }
         )
+        attrs["lone_pairs"] = attrs["estimated_lone_pairs"]
+        attrs["available_lp"] = attrs["available_lone_pairs"] > 0
         return attrs
 
     def _normalize_edge(
@@ -310,6 +339,18 @@ class GraphNormalizer:
                 "in_ring": bool(attrs.get("in_ring", False)),
                 "stereo": str(attrs.get("stereo", "NONE")),
                 "bond_type": str(attrs.get("bond_type", "UNSPECIFIED")),
+                "kekule_order": _as_float(attrs.get("kekule_order", order), order),
+                "sigma_order": _as_float(
+                    attrs.get("sigma_order", min(order, 1.0)), min(order, 1.0)
+                ),
+                "pi_order": _as_float(
+                    attrs.get("pi_order", max(0.0, order - 1.0)),
+                    max(0.0, order - 1.0),
+                ),
+                "kekule_bond_type": str(
+                    attrs.get("kekule_bond_type", attrs.get("bond_type", "UNSPECIFIED"))
+                ),
+                "ez_isomer": str(attrs.get("ez_isomer", attrs.get("stereo", "N"))),
             }
         )
         return attrs

@@ -69,7 +69,8 @@ instance/
 .scrapy
 
 # Sphinx documentation
-docs/_build/
+docs/
+doc/_build/
 
 # PyBuilder
 .pybuilder/
@@ -221,3 +222,26 @@ __marimo__/
 # Define
 sprint/*.html
 *.ipynb
+
+# xTB/tblite scratch files
+/charges
+/wbo
+/xtbrestart
+/xtbtopo.mol
+
+# Local ORD inputs are not redistributed; only hashes and derived records are tracked.
+/data/energy.py
+/data/ord_external.csv
+/data/ord_traindata.csv
+
+# LaTeX build intermediates (retain manuscript PDFs and generated source)
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*-SAVE-ERROR

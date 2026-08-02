@@ -206,6 +206,11 @@ class GeneralizedHuckel:
             beta = self.parameters.beta_conjugated
         if left["element"] != "C" or right["element"] != "C":
             beta *= self.parameters.hetero_beta_scale
+        # Experimental topology-aware scorers may attenuate a specific
+        # coupling (for example, across a rotatable biaryl bond).  Ordinary
+        # graphs do not carry this attribute, so the stable model is exactly
+        # unchanged.
+        beta *= float(attrs.get("coupling_scale", 1.0))
         return float(beta)
 
     @staticmethod
