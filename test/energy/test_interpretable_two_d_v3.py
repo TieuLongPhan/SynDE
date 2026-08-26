@@ -78,9 +78,7 @@ def test_v3_features_are_invariant_to_atom_relabeling() -> None:
 
 
 def test_v3_benzene_density_terms_respect_degenerate_symmetry() -> None:
-    features = extract_quantum_graph_v3_features(
-        GraphBuilder.from_smiles("c1ccccc1")
-    )
+    features = extract_quantum_graph_v3_features(GraphBuilder.from_smiles("c1ccccc1"))
 
     assert features["v3_huckel_component_count"] == 1
     assert features["v3_huckel_component_size_max"] == 6
@@ -107,9 +105,7 @@ def test_v3_disconnected_and_empty_pi_cases_are_zero_safe() -> None:
 
 
 def test_v3_ring_and_graph_steric_terms_have_expected_directions() -> None:
-    benzene = extract_quantum_graph_v3_features(
-        GraphBuilder.from_smiles("c1ccccc1")
-    )
+    benzene = extract_quantum_graph_v3_features(GraphBuilder.from_smiles("c1ccccc1"))
     ortho_xylene = extract_quantum_graph_v3_features(
         GraphBuilder.from_smiles("Cc1ccccc1C")
     )
@@ -130,8 +126,7 @@ def test_v3_ring_and_graph_steric_terms_have_expected_directions() -> None:
 
 def test_v3_family_lookup_rejects_unregistered_terms() -> None:
     assert (
-        v3_feature_family("v3_huckel_density_electron_trace")
-        == HUCKEL_DENSITY_FAMILY
+        v3_feature_family("v3_huckel_density_electron_trace") == HUCKEL_DENSITY_FAMILY
     )
     with pytest.raises(ValueError, match="Unknown v3 feature"):
         v3_feature_family("v3_unregistered_target_informed_term")

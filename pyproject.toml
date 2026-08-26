@@ -4,14 +4,12 @@ build-backend = "hatchling.build"
 
 [project]
 name = "synde"
-version = "0.2.0"
+version = "0.5.0"
 authors = [
     {name="Tieu Long Phan", email="tieu@bioinf.uni-leipzig.de"}
 ]
-description = "Interpretable 2D ranking of constitutional isomers by GFN2-xTB energy"
+description = "Interpretable 2D GFN2-xTB energy prediction and isomer ranking"
 readme = "README.md"
-long-description = {file = "CHANGELOG.md"}
-long-description-content-type = "text/markdown"
 requires-python = ">=3.11"
 classifiers = [
     "Programming Language :: Python :: 3",
@@ -26,6 +24,7 @@ dependencies = [
 
 [project.optional-dependencies]
 all = [
+  "chemprop==2.3.0",
   "pandas>=1.5.3",
   "thermo>=0.6,<0.7",
   "tblite>=0.7,<0.8",
@@ -35,8 +34,10 @@ all = [
 ]
 empirical = ["thermo>=0.6,<0.7"]
 semiempirical = ["tblite>=0.7,<0.8"]
-benchmark = [
+experiment = [
+  "chemprop==2.3.0",
   "joblib>=1.4,<2",
+  "ord-schema>=0.8,<0.9",
   "scikit-learn>=1.7,<2",
   "scipy>=1.15,<2",
 ]
@@ -47,6 +48,7 @@ docs = [
   "sphinx-copybutton",
 ]
 dev = [
+  "black>=25,<27",
   "flake8>=7,<8",
   "pytest>=8,<9",
   "sphinx>=6",
@@ -55,8 +57,17 @@ dev = [
   "sphinx-copybutton",
 ]
 
+[project.scripts]
+synde = "synde.cli:main"
+
 [project.urls]
 homepage = "https://github.com/TieuLongPhan/SynDE"
 source = "https://github.com/TieuLongPhan/SynDE"
 issues = "https://github.com/TieuLongPhan/SynDE/issues"
 documentation = "https://synde.readthedocs.io/en/latest/"
+
+[tool.black]
+target-version = ["py311"]
+
+[tool.pytest.ini_options]
+testpaths = ["test"]

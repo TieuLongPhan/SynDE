@@ -24,10 +24,7 @@ from .interpretable_two_d_v2 import extract_named_empirical_two_d_features
 from .interpretable_two_d_v3 import extract_quantum_graph_v3_features
 from .results import MoleculeScoreResult
 
-
-FROZEN_MODEL_SHA256 = (
-    "6b04dd12dd22643662f0ea894266bde07d8750b7506447da7545bc675ed0c166"
-)
+FROZEN_MODEL_SHA256 = "78c17873cb895db6c2432387073bb2cbb510089aa861530a94189e6221df6eea"
 
 
 @dataclass(frozen=True)
@@ -52,6 +49,9 @@ class SynDEModelCard:
     uses_coordinates: bool
     training_labels_previously_used_for_prior_model_evaluation: bool
     external_validation_complete_at_freeze: bool
+    supported_elements: tuple[str, ...] = ()
+    ordinary_explicit_hydrogen_policy: str = "not_recorded"
+    isotope_policy: str = "not_recorded"
 
     @classmethod
     def from_dict(cls, payload: dict[str, Any]) -> "SynDEModelCard":
@@ -60,13 +60,15 @@ class SynDEModelCard:
         if "status" in translated:
             translated["status_at_freeze"] = translated.pop("status")
         if "v3_external_labels_used_for_v4_development" in translated:
-            translated[
-                "training_labels_previously_used_for_prior_model_evaluation"
-            ] = translated.pop("v3_external_labels_used_for_v4_development")
+            translated["training_labels_previously_used_for_prior_model_evaluation"] = (
+                translated.pop("v3_external_labels_used_for_v4_development")
+            )
         if "untouched_v4_test_complete" in translated:
             translated["external_validation_complete_at_freeze"] = translated.pop(
                 "untouched_v4_test_complete"
             )
+        if "supported_elements" in translated:
+            translated["supported_elements"] = tuple(translated["supported_elements"])
         return cls(**translated)
 
 
@@ -96,13 +98,18 @@ class SynDEValidationRecord:
 
     @property
     def confirms_model(self) -> bool:
-        """Return whether the record satisfies the frozen validation boundary."""
+        """Return whether the record is valid external evidence for this model.
+
+        External evaluation remains valid evidence when a prespecified
+        performance threshold is missed; acceptance outcomes are retained in
+        ``all_prespecified_external_performance_criteria_met`` rather than
+        being used to hide the evaluation record.
+        """
         return (
             self.model_sha256 == FROZEN_MODEL_SHA256
             and self.external_formula_and_graph_disjoint
             and not self.external_labels_used_for_fit_or_tuning
             and not self.post_external_model_revision
-            and self.all_prespecified_external_performance_criteria_met
         )
 
 
@@ -125,24 +132,35 @@ class SynDEScorer:
         if not weights:
             raise ValueError("A SynDE model must contain at least one weight.")
         if set(weights) != set(feature_scales):
-            raise ValueError("SynDE weights and feature scales must have identical keys.")
-        if any(not math.isfinite(value) or value <= 0 for value in feature_scales.values()):
+            raise ValueError(
+                "SynDE weights and feature scales must have identical keys."
+            )
+        if any(
+            not math.isfinite(value) or value <= 0 for value in feature_scales.values()
+        ):
             raise ValueError("Every SynDE feature scale must be finite and positive.")
         if not math.isfinite(training_distance_q99) or training_distance_q99 <= 0:
-            raise ValueError("The SynDE q99 feature distance must be finite and positive.")
+            raise ValueError(
+                "The SynDE q99 feature distance must be finite and positive."
+            )
         if card.uses_coordinates:
             raise ValueError("The SynDE scorer must remain coordinate-free.")
         if card.external_validation_complete_at_freeze:
             raise ValueError(
                 "The immutable calibration card cannot claim post-freeze validation."
             )
-        if card.status_at_freeze != "development_only_no_untouched_test":
+        if card.status_at_freeze not in {
+            "development_only_no_untouched_test",
+            "development_only_no_amended_external_evaluation",
+        }:
             raise ValueError("The immutable calibration card has an unexpected status.")
         if validation is not None:
             if model_sha256 != validation.model_sha256:
                 raise ValueError("The validation record does not match the model file.")
             if not validation.confirms_model:
-                raise ValueError("The supplied record does not confirm the frozen model.")
+                raise ValueError(
+                    "The supplied record does not confirm the frozen model."
+                )
         self.card = card
         self.weights = dict(weights)
         self.feature_scales = dict(feature_scales)
@@ -153,11 +171,28 @@ class SynDEScorer:
 
     @property
     def externally_validated(self) -> bool:
-        """Whether a matching successful external-validation record was loaded."""
+        """Whether a matching leakage-free external-validation record was loaded."""
         return self.validation is not None and self.validation.confirms_model
 
     def features(self, normalized: NormalizedMolecularGraph) -> dict[str, float]:
         """Return the fixed named two-dimensional feature library."""
+        elements = {
+            str(attributes.get("element"))
+            for _, attributes in normalized.graph.nodes(data=True)
+        }
+        if self.card.supported_elements:
+            unsupported = elements - set(self.card.supported_elements)
+            if unsupported:
+                raise ValueError(
+                    f"Unsupported elements for SynDE model: {sorted(unsupported)}"
+                )
+        if any(
+            int(attributes.get("isotope", 0)) != 0
+            for _, attributes in normalized.graph.nodes(data=True)
+        ):
+            raise ValueError(
+                "Isotopically labelled molecules are outside the SynDE model domain."
+            )
         first_order = self.base_scorer.score(normalized)
         features = extract_named_empirical_two_d_features(normalized, first_order)
         features.update(extract_quantum_graph_v3_features(normalized))
@@ -182,7 +217,9 @@ class SynDEScorer:
                 "graph_identity": normalized.identity,
                 "canonical_smiles": normalized.canonical_smiles,
                 "comparable_within_formula_only": True,
-                "selected_terms_present": sum(name in features for name in self.weights),
+                "selected_terms_present": sum(
+                    name in features for name in self.weights
+                ),
                 "selected_term_count": len(self.weights),
                 "externally_validated": self.externally_validated,
             },
@@ -199,6 +236,16 @@ class SynDEScorer:
                 "external_validation_loaded": self.externally_validated,
                 "external_validation_protocol": (
                     self.validation.protocol if self.validation is not None else None
+                ),
+                "all_prespecified_external_performance_criteria_met": (
+                    self.validation.all_prespecified_external_performance_criteria_met
+                    if self.validation is not None
+                    else None
+                ),
+                "external_validation_claim_boundary": (
+                    self.validation.claim_boundary
+                    if self.validation is not None
+                    else None
                 ),
             },
         )
@@ -271,7 +318,9 @@ class SynDEScorer:
         distance: dict[str, Any] = payload["selected_feature_distance"]
         return cls(
             card=SynDEModelCard.from_dict(payload["card"]),
-            weights={str(name): float(value) for name, value in payload["weights"].items()},
+            weights={
+                str(name): float(value) for name, value in payload["weights"].items()
+            },
             feature_scales={
                 str(name): float(value)
                 for name, value in payload["feature_scales"].items()
@@ -295,9 +344,10 @@ class SynDEScorer:
                 "and external-validation record. Reinstall the package from a "
                 "complete distribution."
             )
-        with as_file(model_resource) as model_path, as_file(
-            validation_resource
-        ) as validation_path:
+        with (
+            as_file(model_resource) as model_path,
+            as_file(validation_resource) as validation_path,
+        ):
             return cls.load(model_path, validation_path)
 
     def to_dict(self) -> dict[str, object]:

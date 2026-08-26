@@ -26,7 +26,6 @@ from synde.graph.graph_schema import NormalizedMolecularGraph
 from .results import MoleculeScoreResult
 from .valence_energy import ValenceEnergyConfig, valence_energy_terms
 
-
 JOBACK_REFERENCE_OFFSET_KJ_MOL = 68.29
 HUCKEL_RESONANCE_INTEGRAL_KJ_MOL = 75.0
 SCORE_PARAMETER_SET = "empirical-2d-joback-huckel-v1-development"
@@ -110,9 +109,11 @@ class EmpiricalTwoDEnergyScorer:
                     "joback_group_counts": counts,
                 },
                 warnings=(
-                    "THERMO_NOT_INSTALLED"
-                    if backend_missing
-                    else "JOBACK_FRAGMENTATION_FAILED",
+                    (
+                        "THERMO_NOT_INSTALLED"
+                        if backend_missing
+                        else "JOBACK_FRAGMENTATION_FAILED"
+                    ),
                 ),
                 provenance=self._provenance(),
             )

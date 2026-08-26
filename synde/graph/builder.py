@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 import networkx as nx
+from synde.errors import SynDEInputError
 from .graph_schema import NormalizedMolecularGraph, normalize_graph
 
 
@@ -11,13 +12,21 @@ class GraphBuilder:
         from rdkit import Chem
         from synkit.Chem.Molecule.standardize import sanitize_and_canonicalize_smiles
         from synkit.IO.mol_to_graph import MolToGraph
+        from synde.chem import normalize_ordinary_explicit_hydrogens
 
         parser = Chem.SmilesParserParams()
         parser.removeHs = False
         mol = Chem.MolFromSmiles(smiles, parser)
         if mol is None:
-            raise ValueError(f"Invalid SMILES: {smiles}")
-        canonical = sanitize_and_canonicalize_smiles(smiles)
+            raise SynDEInputError(
+                f"Invalid SMILES: {smiles!r} could not be parsed by RDKit.\n"
+                "  Hint: check valences, ring-closure digits, and bracketed "
+                "atoms. RDKit prints the specific parse failure above this "
+                "traceback."
+            )
+        mol = normalize_ordinary_explicit_hydrogens(mol)
+        normalized_smiles = Chem.MolToSmiles(mol, canonical=True, isomericSmiles=True)
+        canonical = sanitize_and_canonicalize_smiles(normalized_smiles)
         graph = MolToGraph(attr_profile="full", with_topology=True).transform(
             Chem.Mol(mol)
         )
@@ -71,7 +80,12 @@ class GraphBuilder:
             use_index_as_atom_map=False,
         )
         if reactant_raw is None or product_raw is None:
-            raise ValueError("Invalid reaction SMILES")
+            raise SynDEInputError(
+                f"Invalid reaction SMILES: {reaction_smiles!r} could not be "
+                "split into reactant and product graphs.\n"
+                "  Hint: use 'reactants>>products' with parsable SMILES on "
+                "both sides."
+            )
         reactant = GraphBuilder.from_synkit_graph(reactant_raw, strict=strict)
         product = GraphBuilder.from_synkit_graph(product_raw, strict=strict)
         try:

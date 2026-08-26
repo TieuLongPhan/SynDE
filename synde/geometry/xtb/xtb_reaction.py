@@ -11,9 +11,10 @@ class XTBReaction:
         """
         Initialize an XTBReaction object for calculating reaction energies.
 
-        Parameters:
-        n_jobs (int): Number of jobs to run in parallel. Defaults to 1.
-        verbose (int): Verbosity level. Defaults to 0.
+        :param n_jobs: Number of jobs to run in parallel.
+        :type n_jobs: int
+        :param verbose: Verbosity level.
+        :type verbose: int
         """
         self.n_jobs = n_jobs
         self.verbose = verbose
@@ -23,12 +24,12 @@ class XTBReaction:
         """
         Calculate the total energy of a list of SMILES strings.
 
-        Parameters:
-        - smiles_list (List[str]): List of SMILES strings.
-        - level (str): The optimization level; default is "loose".
-
-        Returns:
-        float: The total energy of the SMILES components.
+        :param smiles_list: List of SMILES strings.
+        :type smiles_list: List[str]
+        :param level: Optimization level.
+        :type level: str
+        :return: Total energy of the SMILES components.
+        :rtype: float
         """
         return sum(
             XTBMinimize(rsmi).fit(clean_xyz=True, level=level) for rsmi in smiles_list
@@ -45,16 +46,19 @@ class XTBReaction:
         """
         Calculate the energy difference (delta E) for a reaction given as SMILES.
 
-        Parameters:
-        - rsmi (str): Reaction SMILES string with reactants and products separated
-          by a symbol.
-        - symbol (str): Delimiter between reactants and products in the rSMI string.
-        - level (str): The optimization level; default is "loose".
-        - pred_type (str): Direction of prediction ('fw' for forward, 'bw' for backward).
-        - shared_energy (float): Pre-calculated energy for shared reactants or products.
-
-        Returns:
-        float: The calculated delta energy of the reaction.
+        :param rsmi: Reaction SMILES with reactants and products separated by
+            ``symbol``.
+        :type rsmi: str
+        :param symbol: Delimiter between reactants and products.
+        :type symbol: str
+        :param level: Optimization level.
+        :type level: str
+        :param pred_type: Direction of prediction (``fw`` or ``bw``).
+        :type pred_type: str
+        :param shared_energy: Pre-calculated energy for shared reactants or products.
+        :type shared_energy: float | None
+        :return: Calculated reaction energy difference.
+        :rtype: float
         """
         try:
             reactants, products = rsmi.split(symbol)
@@ -96,15 +100,17 @@ class XTBReaction:
         """
         Compute the delta E values for a list of reactions in parallel.
 
-        Parameters:
-        - list_rsmi (List[str]): A list of reaction SMILES strings.
-        - symbol (str): Delimiter between reactants and products in the rSMI string.
-        - level (str): The optimization level; default is "loose".
-        - pred_type (str): Specify 'fw' if reactions share reactants,
-        'bw' if reactions share products,  or None for standard processing.
-
-        Returns:
-        List[float]: A list of delta E values for the given reactions.
+        :param list_rsmi: Reaction SMILES strings.
+        :type list_rsmi: List[str]
+        :param symbol: Delimiter between reactants and products.
+        :type symbol: str
+        :param level: Optimization level.
+        :type level: str
+        :param pred_type: Use ``fw`` if reactions share reactants or ``bw`` if
+            they share products.
+        :type pred_type: str
+        :return: Reaction energy differences.
+        :rtype: List[float]
         """
         shared_energy = None
         if pred_type in ["fw", "bw"]:

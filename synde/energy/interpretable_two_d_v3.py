@@ -23,7 +23,6 @@ from synde.graph.generalized_huckel import GeneralizedHuckel
 from synde.graph.graph_schema import NormalizedMolecularGraph
 from synde.graph.orbital_pi import assign_orbital_pi
 
-
 QUANTUM_GRAPH_FEATURE_SCHEMA_V3 = "synde-quantum-graph-2d-v3-fixed-52-v1"
 
 HUCKEL_DENSITY_FAMILY = "v3_huckel_density_spectral"
@@ -52,7 +51,10 @@ def _definitions() -> tuple[V3FeatureDefinition, ...]:
     for name, description in (
         ("component_count", "Number of assigned connected pi-orbital components."),
         ("component_size_max", "Largest assigned pi-orbital component size."),
-        ("density_electron_trace", "Sum of traces of occupied Hückel density matrices."),
+        (
+            "density_electron_trace",
+            "Sum of traces of occupied Hückel density matrices.",
+        ),
         ("population_l2", "Sum of squared diagonal occupied populations."),
         (
             "population_variance",
@@ -121,7 +123,10 @@ def _definitions() -> tuple[V3FeatureDefinition, ...]:
     )
 
     for name, description in (
-        ("component_count", "Number of connected components in the atom-level pi graph."),
+        (
+            "component_count",
+            "Number of connected components in the atom-level pi graph.",
+        ),
         ("site_count", "Number of atoms in the atom-level pi graph."),
         ("component_size_max", "Largest atom-level pi-component size."),
         ("branch_center_count", "Pi-graph vertices with degree at least three."),
@@ -130,7 +135,10 @@ def _definitions() -> tuple[V3FeatureDefinition, ...]:
             "Nonaromatic pi-graph vertices with degree at least three.",
         ),
         ("path_count_length2", "Number of undirected simple pi paths with two edges."),
-        ("path_count_length3", "Number of undirected simple pi paths with three edges."),
+        (
+            "path_count_length3",
+            "Number of undirected simple pi paths with three edges.",
+        ),
         ("path_count_length4", "Number of undirected simple pi paths with four edges."),
     ):
         add(RESONANCE_TOPOLOGY_FAMILY, f"v3_resonance_{name}", description)
@@ -242,9 +250,7 @@ def _add_huckel_density_features(
         populations = np.diag(density)
         output["v3_huckel_density_electron_trace"] += _finite(np.trace(density))
         output["v3_huckel_population_l2"] += _finite(np.dot(populations, populations))
-        output["v3_huckel_population_variance"] += _finite(
-            np.var(populations, ddof=0)
-        )
+        output["v3_huckel_population_variance"] += _finite(np.var(populations, ddof=0))
         hamiltonian = np.asarray(system.hamiltonian, dtype=float)
         for power in (2, 3, 4):
             output[f"v3_huckel_spectral_moment_{power}"] += _finite(
@@ -286,9 +292,7 @@ def _add_huckel_density_features(
         output["v3_huckel_bond_order_abs_min"] = _finite(np.min(edge_array))
         output["v3_huckel_bond_order_abs_max"] = _finite(np.max(edge_array))
     if alternation:
-        output["v3_huckel_bond_order_alternation_mean"] = _finite(
-            np.mean(alternation)
-        )
+        output["v3_huckel_bond_order_alternation_mean"] = _finite(np.mean(alternation))
     if homo_ipr:
         output["v3_huckel_homo_projector_ipr_mean"] = _finite(np.mean(homo_ipr))
     if lumo_ipr:
@@ -354,12 +358,9 @@ def _add_charge_topology_features(
             if distance <= 4:
                 output[f"v3_charge_abs_difference_r{distance}"] += difference
                 output[f"v3_charge_product_r{distance}"] += product
-            if (
-                2 <= distance <= 4
-                and (
-                    (left in donors and right in acceptors)
-                    or (right in donors and left in acceptors)
-                )
+            if 2 <= distance <= 4 and (
+                (left in donors and right in acceptors)
+                or (right in donors and left in acceptors)
             ):
                 output[
                     f"v3_charge_donor_acceptor_abs_difference_r{distance}"
@@ -425,9 +426,7 @@ def _resonance_graph(graph: nx.Graph) -> nx.Graph:
     return resonance
 
 
-def _add_resonance_features(
-    output: dict[str, float], graph: nx.Graph
-) -> None:
+def _add_resonance_features(output: dict[str, float], graph: nx.Graph) -> None:
     resonance = _resonance_graph(graph)
     components = list(nx.connected_components(resonance))
     output["v3_resonance_component_count"] = float(len(components))
@@ -553,17 +552,16 @@ def _add_steric_features(output: dict[str, float], graph: nx.Graph) -> None:
     degrees = dict(heavy.degree())
     for center in heavy:
         neighbors = list(heavy.neighbors(center))
-        output["v3_steric_heavy_neighbor_pair_count"] += len(neighbors) * (
-            len(neighbors) - 1
-        ) / 2
+        output["v3_steric_heavy_neighbor_pair_count"] += (
+            len(neighbors) * (len(neighbors) - 1) / 2
+        )
         for first in range(len(neighbors)):
             for second in range(first + 1, len(neighbors)):
                 left = graph.nodes[neighbors[first]].get("element")
                 right = graph.nodes[neighbors[second]].get("element")
-                output["v3_steric_weighted_1_3_crowding"] += (
-                    _COVALENT_RADIUS.get(str(left), 0.75)
-                    * _COVALENT_RADIUS.get(str(right), 0.75)
-                )
+                output["v3_steric_weighted_1_3_crowding"] += _COVALENT_RADIUS.get(
+                    str(left), 0.75
+                ) * _COVALENT_RADIUS.get(str(right), 0.75)
     output["v3_steric_adjacent_branching_bond_count"] = float(
         sum(degrees[left] >= 3 and degrees[right] >= 3 for left, right in heavy.edges)
     )

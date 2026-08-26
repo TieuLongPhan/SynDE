@@ -1,6 +1,9 @@
 """Public graph-first v2 facade."""
 
 from __future__ import annotations
+
+from typing import TYPE_CHECKING
+
 from .molecule_scoring import MoleculeScorer
 from synde.graph.pair_scoring import GraphPairScorer
 from synde.graph.builder import GraphBuilder
@@ -15,7 +18,9 @@ from .empirical_two_d_energy import EmpiricalTwoDEnergyScorer
 from .first_order_two_d_energy import FirstOrderTwoDEnergyScorer
 from .valence_energy import ValenceEnergyScorer
 from .xtb_proxy_energy import GFN2XTBProxyScorer
-from synde.geometry.scoring import GeometryScorer, GeometryScoringConfig
+
+if TYPE_CHECKING:  # pragma: no cover - static analysis only
+    from synde.geometry.scoring import GeometryScoringConfig
 
 
 class GraphEnergy:
@@ -157,6 +162,10 @@ class GraphEnergy:
         config: GeometryScoringConfig | None = None,
         score_margin: float | None = None,
     ):
+        # Imported here so that loading the energy stack never pulls in the
+        # conformer and xTB machinery, which inference does not use.
+        from synde.geometry.scoring import GeometryScorer
+
         normalized = GraphBuilder.from_smiles(smiles)
         scorer = GeometryScorer(config, self.molecules)
         if not scorer.should_run(normalized, score_margin=score_margin):

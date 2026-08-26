@@ -14,15 +14,15 @@ from typing import Any, Iterable, Mapping
 
 import networkx as nx
 
+from synde.chem import SUPPORTED_ELEMENT_SET
+
 try:
     from rdkit import Chem  # type: ignore
 except Exception:  # pragma: no cover - optional at import time
     Chem = None  # type: ignore
 
 
-SUPPORTED_ELEMENTS = frozenset(
-    {"H", "B", "C", "N", "O", "F", "Si", "P", "S", "Cl", "Br", "I"}
-)
+SUPPORTED_ELEMENTS = SUPPORTED_ELEMENT_SET
 
 
 @dataclass(frozen=True)
@@ -222,7 +222,7 @@ class GraphNormalizer:
             warnings.append(
                 GraphWarning(
                     "UNSUPPORTED_ELEMENT",
-                    f"Element {element!r} is outside the initial v2 support boundary.",
+                    f"Element {element!r} is outside the SynDE support boundary.",
                     (node,),
                 )
             )

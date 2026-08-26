@@ -15,9 +15,9 @@ logger = setup_logging()
 @dataclass
 class EmbeddingConfig:
     """
-    Configuration for RDKit conformer embedding.
+    Configure RDKit conformer embedding.
 
-    :param default_method: Default embedding method ("ETKDGv3" recommended).
+    :param default_method: Default embedding method.
     :param max_num_conformers: Upper bound when num_conformers="auto".
     :param min_num_conformers: Lower bound when num_conformers="auto".
     :param decr_num_conformers: Per-atom decrement factor used in "auto" mode.
@@ -46,33 +46,16 @@ class EmbeddingConfig:
 
 
 class Embeddings:
-    """
-    Object-oriented wrapper for RDKit conformer embedding.
-
-    Provides:
-      - Auto selection of number of conformers based on molecule size.
-      - Selection among ETDG/ETKDG (v1–v3), srETKDGv3, and KDG parameter presets.
-      - Sensible defaults for threads, seeds, and random coordinate initialization.
-
-    Example
-    -------
-    >>> emb = Embeddings()
-    >>> mol = Chem.MolFromSmiles("CCO")
-    >>> mol = Chem.AddHs(mol)
-    >>> mol = emb.embed(mol, num_conformers=5)
-    >>> mol.GetNumConformers() >= 1
-    True
-    """
+    """Generate RDKit conformers with a selected distance-geometry method."""
 
     def __init__(self, config: Optional[EmbeddingConfig] = None) -> None:
         """
-        Initialize the embedding helper.
+        Create a conformer embedder.
 
-        :param config: Optional EmbeddingConfig to override defaults.
+        :param config: Embedding settings, or ``None`` for defaults.
         """
         self._config = config or EmbeddingConfig()
 
-    # ---------- dunder & properties ----------
     def __repr__(self) -> str:
         return f"<Embeddings method={self.default_method!r} threads={self.num_threads}>"
 
@@ -101,7 +84,6 @@ class Embeddings:
         """Return a brief description of the class usage."""
         return cls.__doc__ or "Embeddings helper for RDKit conformer generation."
 
-    # ---------- public API ----------
     def embed(
         self,
         molecule: Chem.Mol,
@@ -121,10 +103,9 @@ class Embeddings:
         :param num_threads: Override default thread count for this call.
         :param random_coords_threshold: Override threshold for random coordinate init.
         :param random_seed: Override RNG seed.
-        :returns: New molecule with embedded conformers (same atoms, with Hs).
+        :return: New molecule with embedded conformers (same atoms, with Hs).
         :raises ValueError: If parameters are invalid or the method name is unsupported.
         """
-        # validate & defaults
         if isinstance(num_conformers, str) and num_conformers != "auto":
             raise ValueError("`num_conformers` must be an integer or 'auto'.")
 
@@ -135,11 +116,9 @@ class Embeddings:
         seed = int(random_seed or self._config.random_seed)
         rct = int(random_coords_threshold or self._config.random_coords_threshold)
 
-        # copy and ensure hydrogens
         mol = Chem.Mol(molecule)
         mol = Chem.AddHs(mol)
 
-        # auto conformer count
         if num_conformers == "auto" or num_conformers is None:
             num_confs = self._get_num_conformers_from_molecule_size(
                 mol,
@@ -152,12 +131,10 @@ class Embeddings:
             if num_confs <= 0:
                 raise ValueError("`num_conformers` must be a positive integer.")
 
-        # set params
         params.numThreads = nt
         params.randomSeed = seed
         params.useRandomCoords = mol.GetNumAtoms() > rct
 
-        # perform embedding
         try:
             conf_ids = rdDistGeom.EmbedMultipleConfs(
                 mol, numConfs=num_confs, params=params
@@ -177,7 +154,6 @@ class Embeddings:
 
         return mol
 
-    # Backward-compatibility shim (keeps your original static-name usage alive)
     @staticmethod
     def mol_embed(
         molecule: Chem.Mol,
@@ -187,9 +163,7 @@ class Embeddings:
         random_coords_threshold: int = 100,
         random_seed: int = 42,
     ) -> Chem.Mol:
-        """
-        Legacy static API that forwards to the OOP ``embed`` method.
-        """
+        """Retain the original static embedding interface."""
         emb = Embeddings(
             EmbeddingConfig(
                 default_method=embedding_method,
@@ -200,7 +174,6 @@ class Embeddings:
         )
         return emb.embed(molecule, num_conformers=num_conformers)
 
-    # ---------- internal helpers ----------
     def _get_embedding_params(self, method_name: str):
         """
         Return an RDKit parameter object for the given method name.
@@ -229,7 +202,7 @@ class Embeddings:
         :param max_num: Maximum conformers.
         :param min_num: Minimum conformers.
         :param decr: Per-atom decrement factor.
-        :returns: Integer conformer count within [min_num, max_num].
+        :return: Integer conformer count within [min_num, max_num].
         """
         n = molecule.GetNumAtoms()
         suggested = max_num - int(n * decr)

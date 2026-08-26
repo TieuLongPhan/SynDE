@@ -24,7 +24,6 @@ from synde.graph.graph_schema import NormalizedMolecularGraph
 from .results import MoleculeScoreResult
 from .valence_energy import ValenceEnergyConfig, valence_energy_terms
 
-
 # Conventional gas-phase average bond enthalpies, kJ/mol.  Keys are sorted
 # element pairs followed by integer bond order.  The table is deliberately
 # compact; missing environments fall back to the corresponding single-bond
@@ -163,12 +162,10 @@ class FirstOrderTwoDEnergyScorer:
             "mixed_element_lone_pair_delocalization",
         )
         active_structural_pi = {
-            name: float(active_raw[name] * pi_conversion)
-            for name in structural_names
+            name: float(active_raw[name] * pi_conversion) for name in structural_names
         }
         active_donor_pi = {
-            name: float(active_raw[name] * pi_conversion)
-            for name in donor_names
+            name: float(active_raw[name] * pi_conversion) for name in donor_names
         }
         inactive_pi_names = {
             "imine_n_lone_pair_delocalization",
@@ -278,9 +275,7 @@ class FirstOrderTwoDEnergyScorer:
                 "huckel_parameter_sets": huckel_parameter_sets,
                 "term_scales": {
                     "localized_bond_enthalpy": "average kJ/mol bond enthalpies",
-                    "pi_and_resonance": (
-                        "dimensionless Hückel increment x 75 kJ/mol"
-                    ),
+                    "pi_and_resonance": ("dimensionless Hückel increment x 75 kJ/mol"),
                     "remaining_terms": "fixed empirical kJ/mol",
                 },
                 "raw_topology_terms": raw_topology,
@@ -350,9 +345,7 @@ class FirstOrderTwoDEnergyScorer:
         """Return traditional carbon-skeleton indices before term selection."""
         graph = normalized.graph
         carbon_nodes = [
-            node
-            for node, attrs in graph.nodes(data=True)
-            if attrs["element"] == "C"
+            node for node, attrs in graph.nodes(data=True) if attrs["element"] == "C"
         ]
         carbon_graph = graph.subgraph(carbon_nodes)
         spectral = 0.0
@@ -383,9 +376,7 @@ class FirstOrderTwoDEnergyScorer:
             "carbon_skeleton_mean_wiener": float(
                 self.config.carbon_wiener_scale_kj_mol * wiener_mean
             ),
-            "rigid_intramolecular_hbond": self._rigid_intramolecular_hbond(
-                normalized
-            ),
+            "rigid_intramolecular_hbond": self._rigid_intramolecular_hbond(normalized),
         }
 
     def _rigid_intramolecular_hbond(
@@ -442,10 +433,7 @@ class FirstOrderTwoDEnergyScorer:
                 continue
             used_atoms.update((donor, acceptor))
             selected += 1
-        return float(
-            -self.config.rigid_intramolecular_hbond_kj_mol
-            * selected
-        )
+        return float(-self.config.rigid_intramolecular_hbond_kj_mol * selected)
 
     def _localized_bond_energy(
         self,

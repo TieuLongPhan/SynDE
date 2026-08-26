@@ -19,7 +19,7 @@ except PackageNotFoundError:
         release = m.version("synde")
     except (ImportError, AttributeError):
         # Fallback default
-        release = "0.2.0"
+        release = "0.5.0"
 # Use only major.minor for short version
 version = ".".join(release.split(".")[:2])
 

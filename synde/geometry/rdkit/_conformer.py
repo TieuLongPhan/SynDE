@@ -15,10 +15,10 @@ logger = setup_logging()
 @dataclass
 class ConformerConfig:
     """
-    High-level configuration for conformer generation & minimization.
+    Configure conformer generation and minimization.
 
-    :param embedding: Optional EmbeddingConfig; if None, sensible defaults are used.
-    :param forcefield: Optional ForceFieldConfig; if None, sensible defaults are used.
+    :param embedding: Embedding settings, or ``None`` for defaults.
+    :param forcefield: Force-field settings, or ``None`` for defaults.
     """
 
     embedding: Optional[EmbeddingConfig] = None
@@ -26,38 +26,18 @@ class ConformerConfig:
 
 
 class ConformerGenerator:
-    """
-    High-level orchestrator for generating and optimizing conformers.
-
-    This class composes :class:`Embeddings` (for 3D embedding) and
-    :class:`ForceField` (for MMFF/UFF minimization + energy scoring) to provide:
-
-      * Conformer generation for a molecule
-      * Energy minimization
-      * Lowest-energy conformer extraction
-      * Reaction-SMILES (RSMI) product–reactant energy difference (ΔE)
-
-    Example
-    -------
-    >>> cg = ConformerGenerator()
-    >>> mol = Chem.MolFromSmiles("CCO")
-    >>> mol_min, e_min = cg.process_mol(mol, num_conformers=5,
-    force_field_method="MMFF94")
-    >>> isinstance(mol_min, Chem.Mol), isinstance(e_min, float)
-    (True, True)
-    """
+    """Embed, minimize, and score RDKit conformers."""
 
     def __init__(self, config: Optional[ConformerConfig] = None) -> None:
         """
-        Initialize the generator with optional configs.
+        Create a conformer generator.
 
-        :param config: ConformerConfig with sub-configs for embedding and force-fields.
+        :param config: Embedding and force-field settings.
         """
         self._config = config or ConformerConfig()
         self._emb = Embeddings(self._config.embedding or EmbeddingConfig())
         self._ff = ForceField(self._config.forcefield or ForceFieldConfig())
 
-    # --------- dunder & properties ---------
     def __repr__(self) -> str:
         return (
             f"<ConformerGenerator emb={self._emb.default_method!r} "
@@ -84,7 +64,6 @@ class ConformerGenerator:
         """Short usage summary."""
         return cls.__doc__ or "Conformer generator (embedding + minimization)."
 
-    # --------- public API (instance) ---------
     def process_mol(
         self,
         molecule: Chem.Mol,
@@ -99,8 +78,7 @@ class ConformerGenerator:
         **kwargs: Any,
     ) -> Tuple[Optional[Chem.Mol], float]:
         """
-        Generate and minimize conformers for ``molecule`` and return the
-        lowest-energy conformer and its energy.
+        Generate conformers and return the lowest-energy result.
 
         :param molecule: RDKit molecule.
         :param num_conformers: Integer or "auto".
@@ -112,10 +90,9 @@ class ConformerGenerator:
         :param max_iter: Integer or "auto" for minimization iterations.
         :param return_energies: Ignored here (kept for signature parity).
         :param kwargs: Forwarded to RDKit minimizers if supported.
-        :returns: (minimized_molecule, energy_kcal_per_mol); (None, 0.0) on error.
+        :return: (minimized_molecule, energy_kcal_per_mol); (None, 0.0) on error.
         """
         try:
-            # 1) Embed conformers (adds Hs internally)
             mol3d = self._emb.embed(
                 molecule,
                 num_conformers=num_conformers,
@@ -125,7 +102,6 @@ class ConformerGenerator:
                 random_seed=random_seed,
             )
 
-            # 2) Minimize all conformers
             ff_method = force_field_method or self._ff.default_method
             mol_min = self._ff.minimize(
                 mol3d,
@@ -136,7 +112,6 @@ class ConformerGenerator:
                 **kwargs,
             )
 
-            # 3) Extract lowest-energy conformer and compute its energy
             mol_low = self._ff.get_lowest_energy_conformer(mol_min, ff_method)
             e_low = self._ff.compute_energy(mol_low, 0, ff_method)
             return mol_low, float(e_low)
@@ -150,12 +125,11 @@ class ConformerGenerator:
         **kwargs: Any,
     ) -> Tuple[Optional[Chem.Mol], float]:
         """
-        SMILES convenience wrapper around :meth:`process_mol`.
+        Generate and minimize conformers from a SMILES string.
 
         :param smiles: SMILES string.
         :param kwargs: Forwarded to :meth:`process_mol`.
-        :returns: (minimized_molecule, energy_kcal_per_mol);
-        (None, 0.0) on error/invalid SMILES.
+        :return: Minimized molecule and energy, or ``(None, 0.0)`` on error.
         """
         try:
             mol = Chem.MolFromSmiles(smiles)
@@ -179,7 +153,7 @@ class ConformerGenerator:
         :param rsmi: Reaction SMILES (RSMI), e.g. "CCO.O>>C=C".
         :param symbol: separator between reactants and products (default '>>').
         :param kwargs: Forwarded to :meth:`process_smiles` for each component.
-        :returns: ΔE (float). Returns NaN on parsing errors.
+        :return: ΔE (float). Returns NaN on parsing errors.
         """
         try:
             parts = rsmi.split(symbol)
@@ -212,7 +186,7 @@ class ConformerGenerator:
             logger.error("Error in rsmi_delta_e: %s", exc)
             return float("nan")
 
-    # --------- legacy static shims for backward compatibility ---------
+    # Backward-compatible static interfaces
     @staticmethod
     def _mol_process(
         molecule: Chem.Mol,

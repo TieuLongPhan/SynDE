@@ -1,0 +1,34 @@
+{
+  "model": "ordinary least squares on elemental atom counts",
+  "features": [
+    "atom_count[H]",
+    "atom_count[B]",
+    "atom_count[C]",
+    "atom_count[N]",
+    "atom_count[O]",
+    "atom_count[F]",
+    "atom_count[Si]",
+    "atom_count[P]",
+    "atom_count[S]",
+    "atom_count[Cl]",
+    "atom_count[Br]",
+    "atom_count[I]"
+  ],
+  "intercept": 1.9233772251106984,
+  "weights": {
+    "H": -13.976101902544656,
+    "B": -36.381139726205895,
+    "C": -58.24558901236033,
+    "N": -79.67977448512816,
+    "O": -110.68346951853731,
+    "F": -129.03492347429932,
+    "Si": -46.97320463663727,
+    "P": -71.36649039844221,
+    "S": -88.45809369172937,
+    "Cl": -124.2960976665187,
+    "Br": -111.6953210258832,
+    "I": -104.35686546459976
+  },
+  "fit_target": "raw energy minus final structural-model score",
+  "training_only": true
+}

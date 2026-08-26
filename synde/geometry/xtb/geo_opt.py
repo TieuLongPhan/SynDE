@@ -18,9 +18,7 @@ from synkit.IO import setup_logging
 
 logger = setup_logging()
 
-# ---------------------------------------------------------------------------
 # Module-level xTB discovery (non-fatal; used by tests to decide skipping)
-# ---------------------------------------------------------------------------
 _XTB_PATH = shutil.which("xtb")
 HAS_XTB: bool = _XTB_PATH is not None
 if not HAS_XTB:
@@ -99,9 +97,7 @@ class GeoOpt:
         self._smiles = smiles
         self._cfg = config or GeoOptConfig()
 
-    # -----------------------------------------------------------------------
     # Dunder & properties
-    # -----------------------------------------------------------------------
     def __repr__(self) -> str:
         return (
             f"<GeoOpt smiles={self._smiles!r} xtb={self._cfg.xtb_executable!r} "
@@ -124,9 +120,7 @@ class GeoOpt:
         """Short usage summary."""
         return cls.__doc__ or "xTB geometry optimizer."
 
-    # -----------------------------------------------------------------------
     # Compatibility helpers
-    # -----------------------------------------------------------------------
     @staticmethod
     def smiles_to_3D(smiles: str) -> Optional[Chem.Mol]:
         """
@@ -134,7 +128,7 @@ class GeoOpt:
 
         :param smiles: SMILES string to embed.
         :type smiles: str
-        :returns: RDKit molecule with 3D coords or ``None`` on failure.
+        :return: RDKit molecule with 3D coords or ``None`` on failure.
         :rtype: Optional[Chem.Mol]
         """
         try:
@@ -165,7 +159,7 @@ class GeoOpt:
         :type molecule: Chem.Mol
         :param filename: Output XYZ path.
         :type filename: str
-        :returns: The filename that was written.
+        :return: The filename that was written.
         :rtype: str
         :raises RuntimeError: If the molecule has no conformer.
         """
@@ -182,14 +176,12 @@ class GeoOpt:
         logger.info("XYZ file '%s' has been saved.", filename)
         return filename
 
-    # -----------------------------------------------------------------------
     # Internal helpers (RDKit + xTB)
-    # -----------------------------------------------------------------------
     def _validate_smiles(self) -> Chem.Mol:
         """
         Parse and hydrogenate the instance SMILES.
 
-        :returns: RDKit molecule with explicit hydrogens.
+        :return: RDKit molecule with explicit hydrogens.
         :rtype: Chem.Mol
         :raises ValueError: If the SMILES is invalid.
         """
@@ -231,7 +223,7 @@ class GeoOpt:
         """
         Resolve the xTB executable path.
 
-        :returns: Absolute path to the xTB binary.
+        :return: Absolute path to the xTB binary.
         :rtype: str
         :raises FileNotFoundError: If xTB cannot be found or executed.
         """
@@ -254,7 +246,7 @@ class GeoOpt:
 
         :param level: Level name token.
         :type level: str
-        :returns: Accuracy parameter for ``--acc``.
+        :return: Accuracy parameter for ``--acc``.
         :rtype: float
         :raises ValueError: If the level name is unknown.
         """
@@ -272,7 +264,7 @@ class GeoOpt:
         :type stdout: str
         :param stderr: Captured xTB stderr text.
         :type stderr: str
-        :returns: Energy in Hartree if found, else ``None``.
+        :return: Energy in Hartree if found, else ``None``.
         :rtype: Optional[float]
         """
         text = (stdout or "") + "\n" + (stderr or "")
@@ -309,7 +301,7 @@ class GeoOpt:
         :type level: str
         :param xtb_omp_threads: Optional OMP thread cap for the xTB subprocess.
         :type xtb_omp_threads: Optional[int]
-        :returns: Mapping with ``cmd`` and ``env``.
+        :return: Mapping with ``cmd`` and ``env``.
         :rtype: Dict[str, Any]
         """
         xtb_bin = self._which_xtb()
@@ -435,9 +427,7 @@ class GeoOpt:
                 logger.exception("Failed during persistence of intermediate files.")
         return proc, opt_path, saved_opt_path
 
-    # -----------------------------------------------------------------------
-    # Public per-molecule API — OPTIMIZATION
-    # -----------------------------------------------------------------------
+    # Geometry optimization
     def optimize(
         self,
         save_dir: str = "./",
@@ -451,7 +441,7 @@ class GeoOpt:
         """
         Run xTB geometry optimization and collect results.
 
-        :returns: Result dict with keys: ``smiles, status, message, energy_Eh,
+        :return: Result dict with keys: ``smiles, status, message, energy_Eh,
                   energy_kJmol, energy_kcalmol, energy_eV, optimized_file, stdout,
                   stderr``.
         """
@@ -537,9 +527,7 @@ class GeoOpt:
         result["message"] = "Optimization completed."
         return result
 
-    # -----------------------------------------------------------------------
-    # Public per-molecule API — SINGLE POINT
-    # -----------------------------------------------------------------------
+    # Single-point energy
     def _build_sp_cmd(
         self,
         xyz: str,
@@ -614,7 +602,7 @@ class GeoOpt:
         If neither ``mol`` nor ``xyz_path`` is provided the instance SMILES is
         embedded and pre-relaxed first.
 
-        :returns: Result dict with keys: ``status, message, energy_Eh, energy_kJmol,
+        :return: Result dict with keys: ``status, message, energy_Eh, energy_kJmol,
                   energy_kcalmol, energy_eV, stdout, stderr, used_xyz``.
         """
         result: Dict[str, Any] = {
@@ -680,9 +668,7 @@ class GeoOpt:
             if tmp_ctx is not None:
                 tmp_ctx.cleanup()
 
-    # -----------------------------------------------------------------------
     # Backward-compatible wrapper returning only energy
-    # -----------------------------------------------------------------------
     def fit(
         self, save_dir: str = "./", clean_xyz: bool = False, level: str = "loose"
     ) -> float:
@@ -702,9 +688,7 @@ class GeoOpt:
             logger.error("An error occurred during fit(): %s", e)
             return 0.0
 
-    # -----------------------------------------------------------------------
     # Batch (parallel) API
-    # -----------------------------------------------------------------------
     @classmethod
     def _worker(cls, s: str, save_dir: str, params: Dict[str, Any]) -> Dict[str, Any]:
         inst = cls(

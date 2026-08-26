@@ -87,7 +87,9 @@ def test_synde_group_distance_and_formula_guard() -> None:
     results = _scorer(q99=1e-9).score_group(group)
 
     assert len(results) == 3
-    assert all("centered_selected_feature_distance" in row.descriptors for row in results)
+    assert all(
+        "centered_selected_feature_distance" in row.descriptors for row in results
+    )
     assert any(_scorer().DISTANCE_WARNING in row.warnings for row in results)
 
     with pytest.raises(ValueError, match="one formula"):
@@ -139,11 +141,19 @@ def test_default_frozen_model_loads_as_externally_validated() -> None:
 
     results = scorer.score_group(group)
 
-    assert scorer.card.training_groups == 3210
+    assert scorer.card.training_groups == 11993
     assert scorer.model_sha256 == FROZEN_MODEL_SHA256
     assert scorer.externally_validated is True
-    assert len(scorer.weights) == 340
+    assert scorer.validation is not None
+    assert scorer.validation.external_groups == 3005
+    assert scorer.validation.external_molecules == 19940
+    assert not scorer.validation.all_prespecified_external_performance_criteria_met
+    assert len(scorer.weights) == 633
     assert len(results) == 3
     assert all(scorer.CALIBRATION_ONLY_WARNING not in row.warnings for row in results)
     assert all(row.descriptors["externally_validated"] for row in results)
     assert all(row.status == "success" for row in results)
+    assert all(
+        row.provenance["all_prespecified_external_performance_criteria_met"] is False
+        for row in results
+    )

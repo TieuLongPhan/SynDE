@@ -13,6 +13,8 @@
   --synde-border-color: #e2e8f0;
   --synde-code-bg: #0b192c;
   --synde-radius: 6px;
+  /* Matches .wy-nav-side so the brand sits directly above the sidebar. */
+  --synde-side-width: 300px;
 }
 
 body {
@@ -45,13 +47,22 @@ body {
 
 .synde-header-container {
   width: 100%;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
+  max-width: none;
+  margin: 0;
+  padding: 0;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: 1.5rem;
+}
+
+/* The brand occupies a column the exact width of the sidebar, so the logo
+   reads as the top-left corner of the page rather than floating inward. */
+.synde-header-brand {
+  flex: 0 0 var(--synde-side-width);
+  display: flex;
+  align-items: center;
+  padding-left: 1.25rem;
+  min-width: 0;
 }
 
 .synde-header-brand a {
@@ -98,6 +109,8 @@ body {
 .synde-header-nav {
   display: flex;
   align-items: center;
+  flex: 1 1 auto;
+  min-width: 0;
   gap: 1.75rem;
 }
 
@@ -126,6 +139,8 @@ body {
 .synde-header-right {
   display: flex;
   align-items: center;
+  margin-left: auto;
+  padding-right: 1.5rem;
   gap: 1rem;
 }
 
@@ -213,9 +228,30 @@ body.wy-body-for-nav {
   background: var(--synde-dark-nav) !important;
 }
 
+/* On desktop the fixed header already carries the brand and the search
+   field. Repeating both at the top of the sidebar reads as duplicated UI,
+   so the sidebar starts directly with the navigation tree. Below the RTD
+   mobile breakpoint the header is hidden and this block is needed again. */
+@media screen and (min-width: 769px) {
+  .wy-side-nav-search {
+    display: none !important;
+  }
+
+  .wy-menu-vertical {
+    padding-top: 1.25rem;
+  }
+}
+
 .wy-nav-content-wrap {
   background: #ffffff !important;
   min-height: calc(100vh - 52px) !important;
+}
+
+/* The RTD default caps content at 800px, which leaves most of a wide screen
+   empty and forces the reference tables and terminal blocks to scroll. */
+.wy-nav-content {
+  max-width: 1040px !important;
+  margin: 0 !important;
 }
 
 /* ==========================================
@@ -483,6 +519,10 @@ code, pre {
 @media screen and (max-width: 1180px) {
   .synde-header-container {
     gap: 1rem;
+  }
+
+  .synde-header-brand {
+    flex: 0 0 auto;
   }
 
   .synde-header-nav {

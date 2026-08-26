@@ -1,47 +1,46 @@
 {
   "schema_version": 1,
   "record_type": "frozen_external_validation",
-  "protocol": "synde-ord-v4-frozen-external-v1",
-  "executed_on": "2026-07-31",
-  "model_path": "benchmark/models/ord_v4_calibrated_development.json",
-  "model_sha256": "6b04dd12dd22643662f0ea894266bde07d8750b7506447da7545bc675ed0c166",
-  "fit_source": "data/ord_traindata.csv",
-  "fit_groups": 3210,
-  "fit_molecules": 14665,
-  "external_source": "data/ord_external.csv",
-  "external_source_sha256": "d38f8f6697ae52144e526e93d7edb62df769caeb88e71c68223d52d37757b619",
-  "ord_test_accessed": false,
+  "protocol": "synde-total-energy-amended-domain-external-validation-v2",
+  "executed_on": "2026-08-13",
+  "model_path": "synde/models/synde_frozen_model.json",
+  "model_sha256": "78c17873cb895db6c2432387073bb2cbb510089aa861530a94189e6221df6eea",
+  "fit_source": "data/ord_training_xtb.csv",
+  "fit_groups": 11993,
+  "fit_molecules": 78513,
+  "external_source": "data/ord_test_xtb.csv",
+  "external_source_sha256": "ea884767d11b4f3058e52f868c36a08122f61119af06cdb8013f90d7094deead",
   "external_labels_used_for_fit_or_tuning": false,
   "post_external_model_revision": false,
   "external_formula_and_graph_disjoint": true,
-  "external_groups": 7856,
-  "external_molecules": 34087,
+  "external_groups": 3005,
+  "external_molecules": 19940,
   "group_scoreability": 1.0,
-  "mean_group_pearson": 0.9428243766553281,
+  "mean_group_pearson": 0.9417784110500872,
   "mean_group_pearson_bootstrap_95ci": [
-    0.9383080733629936,
-    0.9471022854943526
+    0.9343183043839901,
+    0.9486970602455137
   ],
-  "mean_group_spearman": 0.8905313775667645,
+  "mean_group_spearman": 0.8810148309815532,
   "mean_group_spearman_bootstrap_95ci": [
-    0.8852511474120753,
-    0.8957629332861641
+    0.8721388828863871,
+    0.8892663832285298
   ],
-  "mean_pairwise_concordance": 0.9235228154398216,
-  "top1_accuracy": 0.8478869653767821,
-  "far_group_max_tanimoto_le_0_50": {
-    "groups": 2535,
-    "molecules": 8893,
-    "mean_pearson": 0.9268684351465852,
-    "mean_spearman": 0.87157270080347,
-    "top1_accuracy": 0.8532544378698225
-  },
-  "all_prespecified_external_performance_criteria_met": true,
-  "result_path": "benchmark/ord_v4_external.json",
-  "evaluator_sha256": "b5335cd2635f13c4a673500db20849194c789c738c31601b9043f31f46da50f4",
-  "training_cache_sha256": "cbc96930fc12c57c1171bccbc0cfbe2288d24ad8fe78015231358be88dc0f183",
+  "mean_pairwise_concordance": 0.909273169056863,
+  "mean_pairwise_concordance_bootstrap_95ci": [
+    0.9048640757467713,
+    0.9139386208171565
+  ],
+  "top1_accuracy": 0.789351081530782,
+  "top1_accuracy_bootstrap_95ci": [
+    0.7756988352745424,
+    0.8033361064891846
+  ],
+  "all_prespecified_external_performance_criteria_met": false,
+  "result_path": "Experiment/results/global_comparators/synde.json",
+  "result_sha256": "c9b615cfaf4148fbc9981bbf010546f1a48aea0d575b5f895c71e40096c10ac6",
   "data_generation_rdkit_version": "2025.9.6",
   "data_generation_xtb_version": "6.7.1",
-  "evaluation_rdkit_runtime_version": "2026.03.4",
-  "claim_boundary": "Frozen external-source evaluation relative to v4 training; the external file belongs to the legacy molecular collection and is not a newly generated chemical population."
+  "evaluation_rdkit_runtime_version": "2025.09.6",
+  "claim_boundary": "Frozen formula- and connectivity-disjoint external evidence for the amended 633-term scorer. The top-1 point estimate remains below 0.80; all model fitting and selection used the development cohort only."
 }
