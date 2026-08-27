@@ -1,0 +1,5369 @@
+{
+  "protocol": "synde-amended-domain-target-reuse-v1",
+  "reference_energy_protocol": "synde-ord-gfn2-xtb-extreme-v1",
+  "legacy_commit": "d5aefa8b197ff7a26bc2dba05f7b1d011ed94ab2",
+  "recovery_database": null,
+  "training_recovery_audit": {
+    "recovered_labels": 77926,
+    "ambiguous_groups_left_pending": 15,
+    "ambiguous_manifest_molecules_left_pending": 125
+  },
+  "external_recovery_audit": {
+    "recovered_labels": 19794,
+    "ambiguous_groups_left_pending": 5,
+    "ambiguous_manifest_molecules_left_pending": 46
+  },
+  "seeded_into_amended_manifest": {
+    "training": 77926,
+    "external": 19791
+  },
+  "seeded_by_source": {
+    "group_records": 97717,
+    "recovery_database": 0
+  },
+  "cross_source_validation": {
+    "overlapping_targets": 13117,
+    "maximum_absolute_difference_eV": 0.293401451282989,
+    "fraction_within_1meV": 0.9959594419455668
+  },
+  "fresh_calculations_required": {
+    "training": 608,
+    "external": 154
+  },
+  "fresh_calculation_records": [
+    {
+      "split": "training",
+      "group_id": "C13H20NO5P|charge=0",
+      "formula": "C13H20NO5P",
+      "SMILES": "CC(C)OP(=O)(Cc1cccc([N+](=O)[O-])c1)OC(C)C",
+      "connectivity": "CC(C)OP(=O)(Cc1cccc([N+](=O)[O-])c1)OC(C)C"
+    },
+    {
+      "split": "training",
+      "group_id": "C13H20NO5P|charge=0",
+      "formula": "C13H20NO5P",
+      "SMILES": "CCOP(=O)(OCC)C(C)(C)c1ccc([N+](=O)[O-])cc1",
+      "connectivity": "CCOP(=O)(OCC)C(C)(C)c1ccc([N+](=O)[O-])cc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C13H20NO5P|charge=0",
+      "formula": "C13H20NO5P",
+      "SMILES": "COP(=O)(O)C(NC(=O)OCc1ccccc1)C(C)C",
+      "connectivity": "COP(=O)(O)C(NC(=O)OCc1ccccc1)C(C)C"
+    },
+    {
+      "split": "training",
+      "group_id": "C13H20NO5P|charge=0",
+      "formula": "C13H20NO5P",
+      "SMILES": "CC(C)OP(=O)(Cc1ccc([N+](=O)[O-])cc1)OC(C)C",
+      "connectivity": "CC(C)OP(=O)(Cc1ccc([N+](=O)[O-])cc1)OC(C)C"
+    },
+    {
+      "split": "training",
+      "group_id": "C26H23P|charge=0",
+      "formula": "C26H23P",
+      "SMILES": "CC1=Cc2cccc(P(c3ccccc3)c3cccc4c3CC(C)=C4)c2C1",
+      "connectivity": "CC1=Cc2cccc(P(c3ccccc3)c3cccc4c3CC(C)=C4)c2C1"
+    },
+    {
+      "split": "training",
+      "group_id": "C26H23P|charge=0",
+      "formula": "C26H23P",
+      "SMILES": "Cc1ccccc1-c1ccccc1CP(c1ccccc1)c1ccccc1",
+      "connectivity": "Cc1ccccc1-c1ccccc1CP(c1ccccc1)c1ccccc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C26H23P|charge=0",
+      "formula": "C26H23P",
+      "SMILES": "CC1=C(c2ccccc2)P2CC1(C)C(c1ccccc1)=C2c1ccccc1",
+      "connectivity": "CC1=C(c2ccccc2)P2CC1(C)C(c1ccccc1)=C2c1ccccc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C12H19FNO4P|charge=0",
+      "formula": "C12H19FNO4P",
+      "SMILES": "CCOP(=O)(Cc1ccc(N)c(OC)c1F)OCC",
+      "connectivity": "CCOP(=O)(Cc1ccc(N)c(OC)c1F)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C12H19FNO4P|charge=0",
+      "formula": "C12H19FNO4P",
+      "SMILES": "CCOP(=O)(Cc1cc(F)c(N)c(OC)c1)OCC",
+      "connectivity": "CCOP(=O)(Cc1cc(F)c(N)c(OC)c1)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C12H19FNO4P|charge=0",
+      "formula": "C12H19FNO4P",
+      "SMILES": "CCOP(=O)(Cc1cc(OC)c(N)cc1F)OCC",
+      "connectivity": "CCOP(=O)(Cc1cc(OC)c(N)cc1F)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C8H9O5P|charge=0",
+      "formula": "C8H9O5P",
+      "SMILES": "COC(=O)c1ccccc1P(=O)(O)O",
+      "connectivity": "COC(=O)c1ccccc1P(=O)(O)O"
+    },
+    {
+      "split": "training",
+      "group_id": "C8H9O5P|charge=0",
+      "formula": "C8H9O5P",
+      "SMILES": "O=Cc1ccc(O)c(CP(=O)(O)O)c1",
+      "connectivity": "O=Cc1ccc(O)c(CP(=O)(O)O)c1"
+    },
+    {
+      "split": "training",
+      "group_id": "C8H9O5P|charge=0",
+      "formula": "C8H9O5P",
+      "SMILES": "O=C(O)C(O)P(=O)(O)c1ccccc1",
+      "connectivity": "O=C(O)C(O)P(=O)(O)c1ccccc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C10H24NO2P|charge=0",
+      "formula": "C10H24NO2P",
+      "SMILES": "CCCCOP(=O)(CC)CC(C)CN",
+      "connectivity": "CCCCOP(=O)(CC)CC(C)CN"
+    },
+    {
+      "split": "training",
+      "group_id": "C10H24NO2P|charge=0",
+      "formula": "C10H24NO2P",
+      "SMILES": "CCOP(OCC)N(C(C)C)C(C)C",
+      "connectivity": "CCOP(OCC)N(C(C)C)C(C)C"
+    },
+    {
+      "split": "training",
+      "group_id": "C10H24NO2P|charge=0",
+      "formula": "C10H24NO2P",
+      "SMILES": "CC(C)OP(=O)(CCCN)C(C)(C)C",
+      "connectivity": "CC(C)OP(=O)(CCCN)C(C)(C)C"
+    },
+    {
+      "split": "training",
+      "group_id": "C8H19O4P|charge=0",
+      "formula": "C8H19O4P",
+      "SMILES": "CCOC(OCC)P(C)(=O)OCC",
+      "connectivity": "CCOC(OCC)P(C)(=O)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C8H19O4P|charge=0",
+      "formula": "C8H19O4P",
+      "SMILES": "CCP(=O)(CCO)OCCCCO",
+      "connectivity": "CCP(=O)(CCO)OCCCCO"
+    },
+    {
+      "split": "training",
+      "group_id": "C8H19O4P|charge=0",
+      "formula": "C8H19O4P",
+      "SMILES": "CCCCC(CC)COP(=O)(O)O",
+      "connectivity": "CCCCC(CC)COP(=O)(O)O"
+    },
+    {
+      "split": "training",
+      "group_id": "C8H19O4P|charge=0",
+      "formula": "C8H19O4P",
+      "SMILES": "CCOP(=O)(CCCCO)OCC",
+      "connectivity": "CCOP(=O)(CCCCO)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C8H19O4P|charge=0",
+      "formula": "C8H19O4P",
+      "SMILES": "CCO[PH](=O)C(C)(OCC)OCC",
+      "connectivity": "CCO[PH](=O)C(C)(OCC)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C8H19O4P|charge=0",
+      "formula": "C8H19O4P",
+      "SMILES": "CC(C)(C)OP(=O)(O)OC(C)(C)C",
+      "connectivity": "CC(C)(C)OP(=O)(O)OC(C)(C)C"
+    },
+    {
+      "split": "training",
+      "group_id": "C8H19O4P|charge=0",
+      "formula": "C8H19O4P",
+      "SMILES": "CCCC(O)P(=O)(OCC)OCC",
+      "connectivity": "CCCC(O)P(=O)(OCC)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C8H19O4P|charge=0",
+      "formula": "C8H19O4P",
+      "SMILES": "CCOCCP(=O)(OCC)OCC",
+      "connectivity": "CCOCCP(=O)(OCC)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C8H19O4P|charge=0",
+      "formula": "C8H19O4P",
+      "SMILES": "CCCCCCCCOP(=O)(O)O",
+      "connectivity": "CCCCCCCCOP(=O)(O)O"
+    },
+    {
+      "split": "training",
+      "group_id": "C9H18NO2P|charge=0",
+      "formula": "C9H18NO2P",
+      "SMILES": "CC(C)O[PH](=O)CC1=CC(N)CC1",
+      "connectivity": "CC(C)O[PH](=O)CC1=CC(N)CC1"
+    },
+    {
+      "split": "training",
+      "group_id": "C9H18NO2P|charge=0",
+      "formula": "C9H18NO2P",
+      "SMILES": "CCCCOP(=O)(CC)CCC#N",
+      "connectivity": "CCCCOP(=O)(CC)CCC#N"
+    },
+    {
+      "split": "training",
+      "group_id": "C9H18NO2P|charge=0",
+      "formula": "C9H18NO2P",
+      "SMILES": "CCCCP(=O)(CCC#N)OCC",
+      "connectivity": "CCCCP(=O)(CCC#N)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C9H18NO2P|charge=0",
+      "formula": "C9H18NO2P",
+      "SMILES": "CC(C)COP(C)(=O)C(C)CC#N",
+      "connectivity": "CC(C)COP(C)(=O)C(C)CC#N"
+    },
+    {
+      "split": "training",
+      "group_id": "C9H18NO2P|charge=0",
+      "formula": "C9H18NO2P",
+      "SMILES": "CCCCOC(=O)C(N)/C=C/CP",
+      "connectivity": "CCCCOC(=O)C(N)C=CCP"
+    },
+    {
+      "split": "training",
+      "group_id": "C8H8Cl2N2O|charge=0",
+      "formula": "C8H8Cl2N2O",
+      "SMILES": "N=C(Cc1cc(Cl)cc(Cl)c1)NO",
+      "connectivity": "N=C(Cc1cc(Cl)cc(Cl)c1)NO"
+    },
+    {
+      "split": "training",
+      "group_id": "C11H15O4P|charge=0",
+      "formula": "C11H15O4P",
+      "SMILES": "COP(=O)(CC(=O)c1ccc(C)cc1)OC",
+      "connectivity": "COP(=O)(CC(=O)c1ccc(C)cc1)OC"
+    },
+    {
+      "split": "training",
+      "group_id": "C11H15O4P|charge=0",
+      "formula": "C11H15O4P",
+      "SMILES": "CCOP(=O)(OCC)C(=O)c1ccccc1",
+      "connectivity": "CCOP(=O)(OCC)C(=O)c1ccccc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C11H15O4P|charge=0",
+      "formula": "C11H15O4P",
+      "SMILES": "CCOC(C)([PH2]=O)c1ccc(C(=O)O)cc1",
+      "connectivity": "CCOC(C)([PH2]=O)c1ccc(C(=O)O)cc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C11H15O4P|charge=0",
+      "formula": "C11H15O4P",
+      "SMILES": "COP(=O)(OC)C(=O)CCc1ccccc1",
+      "connectivity": "COP(=O)(OC)C(=O)CCc1ccccc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C11H15O4P|charge=0",
+      "formula": "C11H15O4P",
+      "SMILES": "CP1(=O)OCC(OCc2ccccc2)CO1",
+      "connectivity": "CP1(=O)OCC(OCc2ccccc2)CO1"
+    },
+    {
+      "split": "training",
+      "group_id": "C11H15O4P|charge=0",
+      "formula": "C11H15O4P",
+      "SMILES": "CCOP(=O)(OCC)c1ccc(C=O)cc1",
+      "connectivity": "CCOP(=O)(OCC)c1ccc(C=O)cc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C11H15O4P|charge=0",
+      "formula": "C11H15O4P",
+      "SMILES": "COP(=O)(OC)C(=O)c1cc(C)ccc1C",
+      "connectivity": "COP(=O)(OC)C(=O)c1cc(C)ccc1C"
+    },
+    {
+      "split": "training",
+      "group_id": "C11H15O4P|charge=0",
+      "formula": "C11H15O4P",
+      "SMILES": "COC(=O)CP(C)(=O)OCc1ccccc1",
+      "connectivity": "COC(=O)CP(C)(=O)OCc1ccccc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C11H15O4P|charge=0",
+      "formula": "C11H15O4P",
+      "SMILES": "COP(=O)(CC(=O)Cc1ccccc1)OC",
+      "connectivity": "COP(=O)(CC(=O)Cc1ccccc1)OC"
+    },
+    {
+      "split": "training",
+      "group_id": "C11H15O4P|charge=0",
+      "formula": "C11H15O4P",
+      "SMILES": "COP(=O)(CC(=O)c1ccccc1C)OC",
+      "connectivity": "COP(=O)(CC(=O)c1ccccc1C)OC"
+    },
+    {
+      "split": "training",
+      "group_id": "C10H24NO5P|charge=0",
+      "formula": "C10H24NO5P",
+      "SMILES": "CCOP(=O)(CCN(CCO)CCO)OCC",
+      "connectivity": "CCOP(=O)(CCN(CCO)CCO)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C10H24NO5P|charge=0",
+      "formula": "C10H24NO5P",
+      "SMILES": "CCOC(OCC)P(=O)(CC(O)CN)OCC",
+      "connectivity": "CCOC(OCC)P(=O)(CC(O)CN)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C10H24NO5P|charge=0",
+      "formula": "C10H24NO5P",
+      "SMILES": "CCOP(=O)(CCOCCOCCN)OCC",
+      "connectivity": "CCOP(=O)(CCOCCOCCN)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C19H23O5P|charge=0",
+      "formula": "C19H23O5P",
+      "SMILES": "CCOP(=O)(OCC)c1ccc(C(C(=O)OC)c2ccccc2)cc1",
+      "connectivity": "CCOP(=O)(OCC)c1ccc(C(C(=O)OC)c2ccccc2)cc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C19H23O5P|charge=0",
+      "formula": "C19H23O5P",
+      "SMILES": "CCOP(=O)(O)CCC(OC)(C(=O)c1ccccc1)c1ccccc1",
+      "connectivity": "CCOP(=O)(O)CCC(OC)(C(=O)c1ccccc1)c1ccccc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C19H23O5P|charge=0",
+      "formula": "C19H23O5P",
+      "SMILES": "CCOP(=O)(Cc1ccc(C(=O)c2ccc(OC)cc2)cc1)OCC",
+      "connectivity": "CCOP(=O)(Cc1ccc(C(=O)c2ccc(OC)cc2)cc1)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C23H23O2P|charge=0",
+      "formula": "C23H23O2P",
+      "SMILES": "CCOC(=O)C(C)=P(c1ccccc1)(c1ccccc1)c1ccccc1",
+      "connectivity": "CCOC(=O)C(C)=P(c1ccccc1)(c1ccccc1)c1ccccc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C23H23O2P|charge=0",
+      "formula": "C23H23O2P",
+      "SMILES": "C[PH2]=CC(=O)OCC(c1ccccc1)(c1ccccc1)c1ccccc1",
+      "connectivity": "C[PH2]=CC(=O)OCC(c1ccccc1)(c1ccccc1)c1ccccc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C23H23O2P|charge=0",
+      "formula": "C23H23O2P",
+      "SMILES": "CCOC(=O)CC=P(c1ccccc1)(c1ccccc1)c1ccccc1",
+      "connectivity": "CCOC(=O)CC=P(c1ccccc1)(c1ccccc1)c1ccccc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C23H23O2P|charge=0",
+      "formula": "C23H23O2P",
+      "SMILES": "O=C(O)CCCC=P(c1ccccc1)(c1ccccc1)c1ccccc1",
+      "connectivity": "O=C(O)CCCC=P(c1ccccc1)(c1ccccc1)c1ccccc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C23H23O2P|charge=0",
+      "formula": "C23H23O2P",
+      "SMILES": "CC(C)(C)c1ccc(C(=O)P(=O)(c2ccccc2)c2ccccc2)cc1",
+      "connectivity": "CC(C)(C)c1ccc(C(=O)P(=O)(c2ccccc2)c2ccccc2)cc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C11H23O4P|charge=0",
+      "formula": "C11H23O4P",
+      "SMILES": "CCCC(C)(C)CC(=O)CP(=O)(OC)OC",
+      "connectivity": "CCCC(C)(C)CC(=O)CP(=O)(OC)OC"
+    },
+    {
+      "split": "training",
+      "group_id": "C11H23O4P|charge=0",
+      "formula": "C11H23O4P",
+      "SMILES": "CCC(C)(C)CCC(=O)CP(=O)(OC)OC",
+      "connectivity": "CCC(C)(C)CCC(=O)CP(=O)(OC)OC"
+    },
+    {
+      "split": "training",
+      "group_id": "C11H23O4P|charge=0",
+      "formula": "C11H23O4P",
+      "SMILES": "CCOC(=O)C(CC(C)C)C[PH](=O)OCC",
+      "connectivity": "CCOC(=O)C(CC(C)C)C[PH](=O)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C11H23O4P|charge=0",
+      "formula": "C11H23O4P",
+      "SMILES": "CCCCC(C)(C)C(=O)CP(=O)(OC)OC",
+      "connectivity": "CCCCC(C)(C)C(=O)CP(=O)(OC)OC"
+    },
+    {
+      "split": "training",
+      "group_id": "C16H17NO4|charge=0",
+      "formula": "C16H17NO4",
+      "SMILES": "COc1cc(C)c(C(=O)c2ccccc2OC)c(OC)n1",
+      "connectivity": "COc1cc(C)c(C(=O)c2ccccc2OC)c(OC)n1"
+    },
+    {
+      "split": "training",
+      "group_id": "C16H17NO4|charge=0",
+      "formula": "C16H17NO4",
+      "SMILES": "O=C(O)C12CC3CC1CC(c1ccc([N+](=O)[O-])cc1)(C3)C2",
+      "connectivity": "O=C(O)C12CC3CC1CC(c1ccc([N+](=O)[O-])cc1)(C3)C2"
+    },
+    {
+      "split": "training",
+      "group_id": "C16H17NO4|charge=0",
+      "formula": "C16H17NO4",
+      "SMILES": "Oc1ccc(OCC2NCCc3cc(O)c(O)cc32)cc1",
+      "connectivity": "Oc1ccc(OCC2NCCc3cc(O)c(O)cc32)cc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C16H17NO4|charge=0",
+      "formula": "C16H17NO4",
+      "SMILES": "O=C(O)C1CCN(C(=O)Cc2coc3ccccc23)CC1",
+      "connectivity": "O=C(O)C1CCN(C(=O)Cc2coc3ccccc23)CC1"
+    },
+    {
+      "split": "training",
+      "group_id": "C16H17NO4|charge=0",
+      "formula": "C16H17NO4",
+      "SMILES": "Cc1cc(CO)nc2cc3c(cc12)OC(C)(C)[C@]1(O)O[C@@H]31",
+      "connectivity": "Cc1cc(CO)nc2cc3c(cc12)OC(C)(C)C1(O)OC31"
+    },
+    {
+      "split": "training",
+      "group_id": "C16H17NO4|charge=0",
+      "formula": "C16H17NO4",
+      "SMILES": "C=CC(C)(C)CC(=O)C(=O)Nc1ccc2c(c1)C(=O)OC2",
+      "connectivity": "C=CC(C)(C)CC(=O)C(=O)Nc1ccc2c(c1)C(=O)OC2"
+    },
+    {
+      "split": "training",
+      "group_id": "C16H17NO4|charge=0",
+      "formula": "C16H17NO4",
+      "SMILES": "COCC(C#N)=Cc1cc(OC)c(OC)c2c1C=CCO2",
+      "connectivity": "COCC(C#N)=Cc1cc(OC)c(OC)c2c1C=CCO2"
+    },
+    {
+      "split": "training",
+      "group_id": "C16H17NO4|charge=0",
+      "formula": "C16H17NO4",
+      "SMILES": "CCCC(=O)c1cc2c(=O)cc(C(=O)O)[nH]c2c(C)c1C",
+      "connectivity": "CCCC(=O)c1cc2c(=O)cc(C(=O)O)[nH]c2c(C)c1C"
+    },
+    {
+      "split": "training",
+      "group_id": "C16H17NO4|charge=0",
+      "formula": "C16H17NO4",
+      "SMILES": "CC(C)Oc1ccc(OCc2ccccc2)cc1[N+](=O)[O-]",
+      "connectivity": "CC(C)Oc1ccc(OCc2ccccc2)cc1[N+](=O)[O-]"
+    },
+    {
+      "split": "training",
+      "group_id": "C16H17NO4|charge=0",
+      "formula": "C16H17NO4",
+      "SMILES": "CCOC(=O)C1C(=O)N(CC)c2cc3cc(C)oc3cc21",
+      "connectivity": "CCOC(=O)C1C(=O)N(CC)c2cc3cc(C)oc3cc21"
+    },
+    {
+      "split": "training",
+      "group_id": "C4H10NO4P|charge=0",
+      "formula": "C4H10NO4P",
+      "SMILES": "NCCP(=O)(O)CC(=O)O",
+      "connectivity": "NCCP(=O)(O)CC(=O)O"
+    },
+    {
+      "split": "training",
+      "group_id": "C4H10NO4P|charge=0",
+      "formula": "C4H10NO4P",
+      "SMILES": "NCCOP1(=O)OCCO1",
+      "connectivity": "NCCOP1(=O)OCCO1"
+    },
+    {
+      "split": "training",
+      "group_id": "C4H10NO4P|charge=0",
+      "formula": "C4H10NO4P",
+      "SMILES": "C=CC(CN)OP(=O)(O)O",
+      "connectivity": "C=CC(CN)OP(=O)(O)O"
+    },
+    {
+      "split": "training",
+      "group_id": "C9H15N3O11P2|charge=0",
+      "formula": "C9H15N3O11P2",
+      "SMILES": "Nc1ccn([C@@H]2O[C@H](CO)[C@@H](OP(=O)(O)OP(=O)(O)O)[C@H]2O)c(=O)n1",
+      "connectivity": "Nc1ccn(C2OC(CO)C(OP(=O)(O)OP(=O)(O)O)C2O)c(=O)n1"
+    },
+    {
+      "split": "training",
+      "group_id": "C9H15N3O11P2|charge=0",
+      "formula": "C9H15N3O11P2",
+      "SMILES": "Nc1nc(=O)n([C@H]2C[C@H](OP(=O)(O)O)[C@@H](COP(=O)(O)O)O2)cc1O",
+      "connectivity": "Nc1nc(=O)n(C2CC(OP(=O)(O)O)C(COP(=O)(O)O)O2)cc1O"
+    },
+    {
+      "split": "training",
+      "group_id": "C9H15N3O11P2|charge=0",
+      "formula": "C9H15N3O11P2",
+      "SMILES": "Nc1ccn([C@@H]2O[C@H](COP(=O)(O)OP(=O)(O)O)[C@@H](O)[C@H]2O)c(=O)n1",
+      "connectivity": "Nc1ccn(C2OC(COP(=O)(O)OP(=O)(O)O)C(O)C2O)c(=O)n1"
+    },
+    {
+      "split": "training",
+      "group_id": "C12H20NO3P|charge=0",
+      "formula": "C12H20NO3P",
+      "SMILES": "CCOP(=O)(Cc1cc(C)cc(C)n1)OCC",
+      "connectivity": "CCOP(=O)(Cc1cc(C)cc(C)n1)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C12H20NO3P|charge=0",
+      "formula": "C12H20NO3P",
+      "SMILES": "CCOP(=O)(NCCc1ccccc1)OCC",
+      "connectivity": "CCOP(=O)(NCCc1ccccc1)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C12H20NO3P|charge=0",
+      "formula": "C12H20NO3P",
+      "SMILES": "CCOP(=O)(CCCc1ccncc1)OCC",
+      "connectivity": "CCOP(=O)(CCCc1ccncc1)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C12H20NO3P|charge=0",
+      "formula": "C12H20NO3P",
+      "SMILES": "CC(C)OP(=O)(OC(C)C)c1ccc(N)cc1",
+      "connectivity": "CC(C)OP(=O)(OC(C)C)c1ccc(N)cc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C12H20NO3P|charge=0",
+      "formula": "C12H20NO3P",
+      "SMILES": "CCOP(=O)(CNCc1ccccc1)OCC",
+      "connectivity": "CCOP(=O)(CNCc1ccccc1)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C12H20NO3P|charge=0",
+      "formula": "C12H20NO3P",
+      "SMILES": "CC(C)OP(=O)(OC(C)C)c1cccc(N)c1",
+      "connectivity": "CC(C)OP(=O)(OC(C)C)c1cccc(N)c1"
+    },
+    {
+      "split": "training",
+      "group_id": "C12H20NO3P|charge=0",
+      "formula": "C12H20NO3P",
+      "SMILES": "CCOP(=O)(OCC)C(C)c1ccc(N)cc1",
+      "connectivity": "CCOP(=O)(OCC)C(C)c1ccc(N)cc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C12H20NO3P|charge=0",
+      "formula": "C12H20NO3P",
+      "SMILES": "CCOP(=O)(Cc1ccc(N)c(C)c1)OCC",
+      "connectivity": "CCOP(=O)(Cc1ccc(N)c(C)c1)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C7H4O2|charge=0",
+      "formula": "C7H4O2",
+      "SMILES": "C#Cc1ccc(=O)oc1",
+      "connectivity": "C#Cc1ccc(=O)oc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C7H4O2|charge=0",
+      "formula": "C7H4O2",
+      "SMILES": "O=C(O)c1c#cccc1",
+      "connectivity": "O=C(O)c1c#cccc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C7H4O2|charge=0",
+      "formula": "C7H4O2",
+      "SMILES": "C#Cc1coc(C=O)c1",
+      "connectivity": "C#Cc1coc(C=O)c1"
+    },
+    {
+      "split": "training",
+      "group_id": "C7H4O2|charge=0",
+      "formula": "C7H4O2",
+      "SMILES": "O=C1C=C2C=CC=C2O1",
+      "connectivity": "O=C1C=C2C=CC=C2O1"
+    },
+    {
+      "split": "training",
+      "group_id": "C7H15O4P|charge=0",
+      "formula": "C7H15O4P",
+      "SMILES": "C=COCP(=O)(OCC)OCC",
+      "connectivity": "C=COCP(=O)(OCC)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C7H15O4P|charge=0",
+      "formula": "C7H15O4P",
+      "SMILES": "CCOP(=O)(CCC=O)OCC",
+      "connectivity": "CCOP(=O)(CCC=O)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C7H15O4P|charge=0",
+      "formula": "C7H15O4P",
+      "SMILES": "CCOP(=O)(CC(C)=O)OCC",
+      "connectivity": "CCOP(=O)(CC(C)=O)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C7H15O4P|charge=0",
+      "formula": "C7H15O4P",
+      "SMILES": "CCCCP(=O)(O)CCC(=O)O",
+      "connectivity": "CCCCP(=O)(O)CCC(=O)O"
+    },
+    {
+      "split": "training",
+      "group_id": "C7H15O4P|charge=0",
+      "formula": "C7H15O4P",
+      "SMILES": "CCOC(=O)CCP(C)(=O)OC",
+      "connectivity": "CCOC(=O)CCP(C)(=O)OC"
+    },
+    {
+      "split": "training",
+      "group_id": "C7H15O4P|charge=0",
+      "formula": "C7H15O4P",
+      "SMILES": "CCOP(=O)(CC1CO1)OCC",
+      "connectivity": "CCOP(=O)(CC1CO1)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C7H15O4P|charge=0",
+      "formula": "C7H15O4P",
+      "SMILES": "COP(=O)(CC(=O)C(C)C)OC",
+      "connectivity": "COP(=O)(CC(=O)C(C)C)OC"
+    },
+    {
+      "split": "training",
+      "group_id": "C7H15O4P|charge=0",
+      "formula": "C7H15O4P",
+      "SMILES": "CCOP(=O)(OCC)C(C)C=O",
+      "connectivity": "CCOP(=O)(OCC)C(C)C=O"
+    },
+    {
+      "split": "training",
+      "group_id": "C7H15O4P|charge=0",
+      "formula": "C7H15O4P",
+      "SMILES": "CCP(=O)(O)CC(C)C(=O)OC",
+      "connectivity": "CCP(=O)(O)CC(C)C(=O)OC"
+    },
+    {
+      "split": "training",
+      "group_id": "C16H24NO7P|charge=0",
+      "formula": "C16H24NO7P",
+      "SMILES": "COP(=O)(OC)C(NC(=O)OC(C)(C)C)C(=O)OCc1ccccc1",
+      "connectivity": "COP(=O)(OC)C(NC(=O)OC(C)(C)C)C(=O)OCc1ccccc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C16H24NO7P|charge=0",
+      "formula": "C16H24NO7P",
+      "SMILES": "COC(=O)c1ccc(C(NC(=O)OC(C)(C)C)P(=O)(OC)OC)cc1",
+      "connectivity": "COC(=O)c1ccc(C(NC(=O)OC(C)(C)C)P(=O)(OC)OC)cc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C16H24NO7P|charge=0",
+      "formula": "C16H24NO7P",
+      "SMILES": "CCOP(=O)(OCC)c1cc(CC(NC(C)=O)C(=O)OC)ccc1O",
+      "connectivity": "CCOP(=O)(OCC)c1cc(CC(NC(C)=O)C(=O)OC)ccc1O"
+    },
+    {
+      "split": "training",
+      "group_id": "C16H24NO7P|charge=0",
+      "formula": "C16H24NO7P",
+      "SMILES": "CCOP(OCC)C(NC(=O)c1c(OC)cccc1OC)C(=O)OC",
+      "connectivity": "CCOP(OCC)C(NC(=O)c1c(OC)cccc1OC)C(=O)OC"
+    },
+    {
+      "split": "training",
+      "group_id": "C6H14ClO3P|charge=0",
+      "formula": "C6H14ClO3P",
+      "SMILES": "CCOP(=O)(CCCl)OCC",
+      "connectivity": "CCOP(=O)(CCCl)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C6H14ClO3P|charge=0",
+      "formula": "C6H14ClO3P",
+      "SMILES": "CC(C)OP(=O)(Cl)OC(C)C",
+      "connectivity": "CC(C)OP(=O)(Cl)OC(C)C"
+    },
+    {
+      "split": "training",
+      "group_id": "C6H14ClO3P|charge=0",
+      "formula": "C6H14ClO3P",
+      "SMILES": "CCCCO[PH](=O)C(O)CCl",
+      "connectivity": "CCCCO[PH](=O)C(O)CCl"
+    },
+    {
+      "split": "training",
+      "group_id": "C11H16BrO3P|charge=0",
+      "formula": "C11H16BrO3P",
+      "SMILES": "CCOP(=O)(OCC)C(Br)c1ccccc1",
+      "connectivity": "CCOP(=O)(OCC)C(Br)c1ccccc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C11H16BrO3P|charge=0",
+      "formula": "C11H16BrO3P",
+      "SMILES": "CCOP(OCC)OCc1ccc(Br)cc1",
+      "connectivity": "CCOP(OCC)OCc1ccc(Br)cc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C11H16BrO3P|charge=0",
+      "formula": "C11H16BrO3P",
+      "SMILES": "CCOP(=O)(Cc1ccccc1Br)OCC",
+      "connectivity": "CCOP(=O)(Cc1ccccc1Br)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C11H16BrO3P|charge=0",
+      "formula": "C11H16BrO3P",
+      "SMILES": "CCOP(OCC)C(O)c1cccc(Br)c1",
+      "connectivity": "CCOP(OCC)C(O)c1cccc(Br)c1"
+    },
+    {
+      "split": "training",
+      "group_id": "C11H16BrO3P|charge=0",
+      "formula": "C11H16BrO3P",
+      "SMILES": "CCOP(=O)(OCC)c1ccc(CBr)cc1",
+      "connectivity": "CCOP(=O)(OCC)c1ccc(CBr)cc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C11H16BrO3P|charge=0",
+      "formula": "C11H16BrO3P",
+      "SMILES": "CCOP(=O)(Cc1cccc(Br)c1)OCC",
+      "connectivity": "CCOP(=O)(Cc1cccc(Br)c1)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C11H16BrO3P|charge=0",
+      "formula": "C11H16BrO3P",
+      "SMILES": "CCOP(=O)(Cc1ccc(Br)cc1)OCC",
+      "connectivity": "CCOP(=O)(Cc1ccc(Br)cc1)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C11H17O5P|charge=0",
+      "formula": "C11H17O5P",
+      "SMILES": "CCOP(=O)(OCC)Oc1ccc(CO)cc1",
+      "connectivity": "CCOP(=O)(OCC)Oc1ccc(CO)cc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C11H17O5P|charge=0",
+      "formula": "C11H17O5P",
+      "SMILES": "COc1cc(CP(=O)(OC)OC)cc(C)c1O",
+      "connectivity": "COc1cc(CP(=O)(OC)OC)cc(C)c1O"
+    },
+    {
+      "split": "training",
+      "group_id": "C11H17O5P|charge=0",
+      "formula": "C11H17O5P",
+      "SMILES": "COc1ccc(OC)c(CP(=O)(OC)OC)c1",
+      "connectivity": "COc1ccc(OC)c(CP(=O)(OC)OC)c1"
+    },
+    {
+      "split": "training",
+      "group_id": "C7H15O2P|charge=0",
+      "formula": "C7H15O2P",
+      "SMILES": "O=[PH](O)CC1CCCCC1",
+      "connectivity": "O=[PH](O)CC1CCCCC1"
+    },
+    {
+      "split": "training",
+      "group_id": "C7H15O2P|charge=0",
+      "formula": "C7H15O2P",
+      "SMILES": "OP(O)CC1CCCCC1",
+      "connectivity": "OP(O)CC1CCCCC1"
+    },
+    {
+      "split": "training",
+      "group_id": "C7H15O2P|charge=0",
+      "formula": "C7H15O2P",
+      "SMILES": "CCOP(C)(=O)CC1CC1",
+      "connectivity": "CCOP(C)(=O)CC1CC1"
+    },
+    {
+      "split": "training",
+      "group_id": "C15H15F5N2O3S|charge=0",
+      "formula": "C15H15F5N2O3S",
+      "SMILES": "CCSC(=O)c1c(C(F)(F)F)nc(C(F)F)c(C(=O)OC)c1NC1CC1",
+      "connectivity": "CCSC(=O)c1c(C(F)(F)F)nc(C(F)F)c(C(=O)OC)c1NC1CC1"
+    },
+    {
+      "split": "training",
+      "group_id": "C15H15F5N2O3S|charge=0",
+      "formula": "C15H15F5N2O3S",
+      "SMILES": "COc1cc(OC)c(/N=N/c2ccc(S(F)(F)(F)(F)F)cc2)c(OC)c1",
+      "connectivity": "COc1cc(OC)c(N=Nc2ccc(S(F)(F)(F)(F)F)cc2)c(OC)c1"
+    },
+    {
+      "split": "training",
+      "group_id": "C15H15F5N2O3S|charge=0",
+      "formula": "C15H15F5N2O3S",
+      "SMILES": "COc1cc(OC)c(OC)cc1/N=N/c1ccc(S(F)(F)(F)(F)F)cc1",
+      "connectivity": "COc1cc(OC)c(OC)cc1N=Nc1ccc(S(F)(F)(F)(F)F)cc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C21H17O5P|charge=0",
+      "formula": "C21H17O5P",
+      "SMILES": "COc1cccc(OC)c1C(=O)P1(=O)Oc2ccccc2-c2ccccc21",
+      "connectivity": "COc1cccc(OC)c1C(=O)P1(=O)Oc2ccccc2-c2ccccc21"
+    },
+    {
+      "split": "training",
+      "group_id": "C21H17O5P|charge=0",
+      "formula": "C21H17O5P",
+      "SMILES": "COc1cc(OC)cc(C(=O)P2(=O)Oc3ccccc3-c3ccccc32)c1",
+      "connectivity": "COc1cc(OC)cc(C(=O)P2(=O)Oc3ccccc3-c3ccccc32)c1"
+    },
+    {
+      "split": "training",
+      "group_id": "C21H17O5P|charge=0",
+      "formula": "C21H17O5P",
+      "SMILES": "COc1ccc(C(=O)P2(=O)Oc3ccccc3-c3ccccc32)c(OC)c1",
+      "connectivity": "COc1ccc(C(=O)P2(=O)Oc3ccccc3-c3ccccc32)c(OC)c1"
+    },
+    {
+      "split": "training",
+      "group_id": "C12H18NO2P|charge=0",
+      "formula": "C12H18NO2P",
+      "SMILES": "COc1ccc(P2(=O)CCN(C)CC2)cc1",
+      "connectivity": "COc1ccc(P2(=O)CCN(C)CC2)cc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C12H18NO2P|charge=0",
+      "formula": "C12H18NO2P",
+      "SMILES": "CCN(CC)P1OCc2ccccc2CO1",
+      "connectivity": "CCN(CC)P1OCc2ccccc2CO1"
+    },
+    {
+      "split": "training",
+      "group_id": "C12H18NO2P|charge=0",
+      "formula": "C12H18NO2P",
+      "SMILES": "COC[PH](=O)CCC=NCc1ccccc1",
+      "connectivity": "COC[PH](=O)CCC=NCc1ccccc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C12H17O3P|charge=0",
+      "formula": "C12H17O3P",
+      "SMILES": "CCP(=O)(CC)c1ccc(OC)c(C=O)c1",
+      "connectivity": "CCP(=O)(CC)c1ccc(OC)c(C=O)c1"
+    },
+    {
+      "split": "training",
+      "group_id": "C12H17O3P|charge=0",
+      "formula": "C12H17O3P",
+      "SMILES": "CC1(C)COP(OCc2ccccc2)OC1",
+      "connectivity": "CC1(C)COP(OCc2ccccc2)OC1"
+    },
+    {
+      "split": "training",
+      "group_id": "C12H17O3P|charge=0",
+      "formula": "C12H17O3P",
+      "SMILES": "CC1(C)COP(=O)(Cc2ccccc2)OC1",
+      "connectivity": "CC1(C)COP(=O)(Cc2ccccc2)OC1"
+    },
+    {
+      "split": "training",
+      "group_id": "C6H11O5P|charge=0",
+      "formula": "C6H11O5P",
+      "SMILES": "C=C(C(=O)OC)P(=O)(OC)OC",
+      "connectivity": "C=C(C(=O)OC)P(=O)(OC)OC"
+    },
+    {
+      "split": "training",
+      "group_id": "C6H11O5P|charge=0",
+      "formula": "C6H11O5P",
+      "SMILES": "C=CC(=O)OCCCP(=O)(O)O",
+      "connectivity": "C=CC(=O)OCCCP(=O)(O)O"
+    },
+    {
+      "split": "training",
+      "group_id": "C6H11O5P|charge=0",
+      "formula": "C6H11O5P",
+      "SMILES": "COC(=O)CCC(=O)[PH](=O)CO",
+      "connectivity": "COC(=O)CCC(=O)[PH](=O)CO"
+    },
+    {
+      "split": "training",
+      "group_id": "C10H19O4P|charge=0",
+      "formula": "C10H19O4P",
+      "SMILES": "CCOP(=O)(OCC)C1CCCC(=O)C1",
+      "connectivity": "CCOP(=O)(OCC)C1CCCC(=O)C1"
+    },
+    {
+      "split": "training",
+      "group_id": "C10H19O4P|charge=0",
+      "formula": "C10H19O4P",
+      "SMILES": "CCOP(=O)(OCC)C(C)C(=O)C1CC1",
+      "connectivity": "CCOP(=O)(OCC)C(C)C(=O)C1CC1"
+    },
+    {
+      "split": "training",
+      "group_id": "C10H19O4P|charge=0",
+      "formula": "C10H19O4P",
+      "SMILES": "CCCCOP(=O)(CC)CC1CC(=O)O1",
+      "connectivity": "CCCCOP(=O)(CC)CC1CC(=O)O1"
+    },
+    {
+      "split": "training",
+      "group_id": "C10H19O4P|charge=0",
+      "formula": "C10H19O4P",
+      "SMILES": "COP(=O)(CC(=O)C1CCCCC1)OC",
+      "connectivity": "COP(=O)(CC(=O)C1CCCCC1)OC"
+    },
+    {
+      "split": "training",
+      "group_id": "C10H19O4P|charge=0",
+      "formula": "C10H19O4P",
+      "SMILES": "CCC(CC)(C(=O)OC(C)(C)C)P(=O)=O",
+      "connectivity": "CCC(CC)(C(=O)OC(C)(C)C)P(=O)=O"
+    },
+    {
+      "split": "training",
+      "group_id": "C10H19O4P|charge=0",
+      "formula": "C10H19O4P",
+      "SMILES": "COP(=O)(CC(=O)C(C)(C)C1CC1)OC",
+      "connectivity": "COP(=O)(CC(=O)C(C)(C)C1CC1)OC"
+    },
+    {
+      "split": "training",
+      "group_id": "C10H19O4P|charge=0",
+      "formula": "C10H19O4P",
+      "SMILES": "COP(=O)(CC(=O)CC1CCCC1)OC",
+      "connectivity": "COP(=O)(CC(=O)CC1CCCC1)OC"
+    },
+    {
+      "split": "training",
+      "group_id": "C10H19O4P|charge=0",
+      "formula": "C10H19O4P",
+      "SMILES": "C=C(CCCC)C(=O)CP(=O)(OC)OC",
+      "connectivity": "C=C(CCCC)C(=O)CP(=O)(OC)OC"
+    },
+    {
+      "split": "training",
+      "group_id": "C13H23O5P|charge=0",
+      "formula": "C13H23O5P",
+      "SMILES": "CCOC(=O)C=C(C)C=CCP(=O)(OCC)OCC",
+      "connectivity": "CCOC(=O)C=C(C)C=CCP(=O)(OCC)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C13H23O5P|charge=0",
+      "formula": "C13H23O5P",
+      "SMILES": "CCCCCC(=O)C1(C(=O)CP(=O)(OC)OC)CC1",
+      "connectivity": "CCCCCC(=O)C1(C(=O)CP(=O)(OC)OC)CC1"
+    },
+    {
+      "split": "training",
+      "group_id": "C13H23O5P|charge=0",
+      "formula": "C13H23O5P",
+      "SMILES": "CCOP(=O)(C#CCCOC1CCCCO1)OCC",
+      "connectivity": "CCOP(=O)(C#CCCOC1CCCCO1)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C13H20NO4P|charge=0",
+      "formula": "C13H20NO4P",
+      "SMILES": "C=Cc1ccc(OCP(=O)(OCC)OCC)c(N)c1",
+      "connectivity": "C=Cc1ccc(OCP(=O)(OCC)OCC)c(N)c1"
+    },
+    {
+      "split": "training",
+      "group_id": "C13H20NO4P|charge=0",
+      "formula": "C13H20NO4P",
+      "SMILES": "CCOP(C)(=O)CCNC(=O)OCc1ccccc1",
+      "connectivity": "CCOP(C)(=O)CCNC(=O)OCc1ccccc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C13H20NO4P|charge=0",
+      "formula": "C13H20NO4P",
+      "SMILES": "CCOC(=O)NCc1ccccc1P(C)(=O)OCC",
+      "connectivity": "CCOC(=O)NCc1ccccc1P(C)(=O)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C13H20NO4P|charge=0",
+      "formula": "C13H20NO4P",
+      "SMILES": "CC(C)(C)OC(=O)N[C@@H](Cc1ccccc1)[PH](=O)O",
+      "connectivity": "CC(C)(C)OC(=O)NC(Cc1ccccc1)[PH](=O)O"
+    },
+    {
+      "split": "training",
+      "group_id": "C13H20NO4P|charge=0",
+      "formula": "C13H20NO4P",
+      "SMILES": "CC(C)C(NC(=O)CCc1ccccc1)P(=O)(O)O",
+      "connectivity": "CC(C)C(NC(=O)CCc1ccccc1)P(=O)(O)O"
+    },
+    {
+      "split": "training",
+      "group_id": "C13H20NO4P|charge=0",
+      "formula": "C13H20NO4P",
+      "SMILES": "CCCCC(NC(=O)OCc1ccccc1)[PH](=O)O",
+      "connectivity": "CCCCC(NC(=O)OCc1ccccc1)[PH](=O)O"
+    },
+    {
+      "split": "training",
+      "group_id": "C13H20NO4P|charge=0",
+      "formula": "C13H20NO4P",
+      "SMILES": "CCOP(=O)(CN=Cc1ccc(OC)cc1)OCC",
+      "connectivity": "CCOP(=O)(CN=Cc1ccc(OC)cc1)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C8H18ClO3P|charge=0",
+      "formula": "C8H18ClO3P",
+      "SMILES": "CCCCOP(=O)(Cl)OCCCC",
+      "connectivity": "CCCCOP(=O)(Cl)OCCCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C8H18ClO3P|charge=0",
+      "formula": "C8H18ClO3P",
+      "SMILES": "CCOP(=O)(CCCCCl)OCC",
+      "connectivity": "CCOP(=O)(CCCCCl)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C8H18ClO3P|charge=0",
+      "formula": "C8H18ClO3P",
+      "SMILES": "CCCC(Cl)P(=O)(OCC)OCC",
+      "connectivity": "CCCC(Cl)P(=O)(OCC)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C8H18ClO3P|charge=0",
+      "formula": "C8H18ClO3P",
+      "SMILES": "CC(C)COP(=O)(Cl)OCC(C)C",
+      "connectivity": "CC(C)COP(=O)(Cl)OCC(C)C"
+    },
+    {
+      "split": "training",
+      "group_id": "C8H18ClO3P|charge=0",
+      "formula": "C8H18ClO3P",
+      "SMILES": "CCOP(=O)(CC(C)CCl)OCC",
+      "connectivity": "CCOP(=O)(CC(C)CCl)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C20H14N2O6|charge=0",
+      "formula": "C20H14N2O6",
+      "SMILES": "COc1cc2c3c(cccc3c1[N+](=O)[O-])C(=O)N(OCc1ccccc1)C2=O",
+      "connectivity": "COc1cc2c3c(cccc3c1[N+](=O)[O-])C(=O)N(OCc1ccccc1)C2=O"
+    },
+    {
+      "split": "training",
+      "group_id": "C20H14N2O6|charge=0",
+      "formula": "C20H14N2O6",
+      "SMILES": "O=C(O)c1cc(OCc2ccccn2)c(C(=O)c2ccccc2)c([N+](=O)[O-])c1",
+      "connectivity": "O=C(O)c1cc(OCc2ccccn2)c(C(=O)c2ccccc2)c([N+](=O)[O-])c1"
+    },
+    {
+      "split": "training",
+      "group_id": "C20H14N2O6|charge=0",
+      "formula": "C20H14N2O6",
+      "SMILES": "C#CCN=C(O)c1ccc(C(O)=NCC#C)c2c(C(=O)O)ccc(C(=O)O)c12",
+      "connectivity": "C#CCN=C(O)c1ccc(C(O)=NCC#C)c2c(C(=O)O)ccc(C(=O)O)c12"
+    },
+    {
+      "split": "training",
+      "group_id": "C20H14N2O6|charge=0",
+      "formula": "C20H14N2O6",
+      "SMILES": "O=C(Nc1cc(Oc2cccc([N+](=O)[O-])c2)ccc1C(=O)O)c1ccccc1",
+      "connectivity": "O=C(Nc1cc(Oc2cccc([N+](=O)[O-])c2)ccc1C(=O)O)c1ccccc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C20H14N2O6|charge=0",
+      "formula": "C20H14N2O6",
+      "SMILES": "O=C(Nc1cc(Oc2ccccc2)ccc1C(=O)O)c1ccc([N+](=O)[O-])cc1",
+      "connectivity": "O=C(Nc1cc(Oc2ccccc2)ccc1C(=O)O)c1ccc([N+](=O)[O-])cc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C20H14N2O6|charge=0",
+      "formula": "C20H14N2O6",
+      "SMILES": "COC(=O)c1cc(=O)c2ccc3c(ccc4c(=O)cc(C(=O)OC)[nH]c43)c2[nH]1",
+      "connectivity": "COC(=O)c1cc(=O)c2ccc3c(ccc4c(=O)cc(C(=O)OC)[nH]c43)c2[nH]1"
+    },
+    {
+      "split": "training",
+      "group_id": "C20H14N2O6|charge=0",
+      "formula": "C20H14N2O6",
+      "SMILES": "COC(=O)c1cc2c(cc1C(=O)OC)COc1cc(C#N)c(C#N)cc1OC2",
+      "connectivity": "COC(=O)c1cc2c(cc1C(=O)OC)COc1cc(C#N)c(C#N)cc1OC2"
+    },
+    {
+      "split": "training",
+      "group_id": "C17H19O6P|charge=0",
+      "formula": "C17H19O6P",
+      "SMILES": "CCOc1ccc(Cc2cc(C(=O)CP(=O)(O)O)ccc2O)cc1",
+      "connectivity": "CCOc1ccc(Cc2cc(C(=O)CP(=O)(O)O)ccc2O)cc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C17H19O6P|charge=0",
+      "formula": "C17H19O6P",
+      "SMILES": "CC(OP(=O)(OCc1ccccc1)OCc1ccccc1)C(=O)O",
+      "connectivity": "CC(OP(=O)(OCc1ccccc1)OCc1ccccc1)C(=O)O"
+    },
+    {
+      "split": "training",
+      "group_id": "C17H19O6P|charge=0",
+      "formula": "C17H19O6P",
+      "SMILES": "COP(=O)(OC)C(O)c1ccc(C(=O)OCc2ccccc2)cc1",
+      "connectivity": "COP(=O)(OC)C(O)c1ccc(C(=O)OCc2ccccc2)cc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C13H22N5O6P|charge=0",
+      "formula": "C13H22N5O6P",
+      "SMILES": "CCOP(=O)(COCC(O)COn1cnc2c(N)ncnc21)OCC",
+      "connectivity": "CCOP(=O)(COCC(O)COn1cnc2c(N)ncnc21)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C13H22N5O6P|charge=0",
+      "formula": "C13H22N5O6P",
+      "SMILES": "CCOP(=O)(COCC(CO)On1cnc2c(N)ncnc21)OCC",
+      "connectivity": "CCOP(=O)(COCC(CO)On1cnc2c(N)ncnc21)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C13H22N5O6P|charge=0",
+      "formula": "C13H22N5O6P",
+      "SMILES": "CCOP(=O)(COCCCOn1cnc2c(=O)[nH]c(N)nc21)OCC",
+      "connectivity": "CCOP(=O)(COCCCOn1cnc2c(=O)[nH]c(N)nc21)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C13H22N5O6P|charge=0",
+      "formula": "C13H22N5O6P",
+      "SMILES": "CCOP(=O)(CC(O)COn1cnc2c(OC)nc(N)nc21)OCC",
+      "connectivity": "CCOP(=O)(CC(O)COn1cnc2c(OC)nc(N)nc21)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C18H21NO3|charge=0",
+      "formula": "C18H21NO3",
+      "SMILES": "COc1ncccc1-c1cc(C=O)c(OC)c(C(C)(C)C)c1",
+      "connectivity": "COc1ncccc1-c1cc(C=O)c(OC)c(C(C)(C)C)c1"
+    },
+    {
+      "split": "training",
+      "group_id": "C18H21NO3|charge=0",
+      "formula": "C18H21NO3",
+      "SMILES": "O=C(O)C(=O)Nc1ccc(C23CC4CC(CC(C4)C2)C3)cc1",
+      "connectivity": "O=C(O)C(=O)Nc1ccc(C23CC4CC(CC(C4)C2)C3)cc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C18H21NO3|charge=0",
+      "formula": "C18H21NO3",
+      "SMILES": "CC(=O)c1c(C(C)=O)c(C)n(-c2cc(C)c(O)cc2C)c1C",
+      "connectivity": "CC(=O)c1c(C(C)=O)c(C)n(-c2cc(C)c(O)cc2C)c1C"
+    },
+    {
+      "split": "training",
+      "group_id": "C18H21NO3|charge=0",
+      "formula": "C18H21NO3",
+      "SMILES": "CC(C)C[C@@H]1C(=O)N(OCc2ccccc2)[C@H]2C=C[C@H]1C2=O",
+      "connectivity": "CC(C)CC1C(=O)N(OCc2ccccc2)C2C=CC1C2=O"
+    },
+    {
+      "split": "training",
+      "group_id": "C18H21NO3|charge=0",
+      "formula": "C18H21NO3",
+      "SMILES": "CC1(O)CC(C)(C)c2ccc(Oc3ccc(N)cc3)cc2O1",
+      "connectivity": "CC1(O)CC(C)(C)c2ccc(Oc3ccc(N)cc3)cc2O1"
+    },
+    {
+      "split": "training",
+      "group_id": "C18H21NO3|charge=0",
+      "formula": "C18H21NO3",
+      "SMILES": "O=C(C=CCCCCC(O)c1ccc2ccccc2c1)NO",
+      "connectivity": "O=C(C=CCCCCC(O)c1ccc2ccccc2c1)NO"
+    },
+    {
+      "split": "training",
+      "group_id": "C18H21NO3|charge=0",
+      "formula": "C18H21NO3",
+      "SMILES": "COC(=O)c1cc(C2CC=CCC2)cc(N2CCCC2=O)c1",
+      "connectivity": "COC(=O)c1cc(C2CC=CCC2)cc(N2CCCC2=O)c1"
+    },
+    {
+      "split": "training",
+      "group_id": "C18H21NO3|charge=0",
+      "formula": "C18H21NO3",
+      "SMILES": "COc1ccc(CCN2COc3c(cccc3OC)C2)cc1",
+      "connectivity": "COc1ccc(CCN2COc3c(cccc3OC)C2)cc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C18H21NO3|charge=0",
+      "formula": "C18H21NO3",
+      "SMILES": "CC(C)(C)OC(=O)n1ccc2cc(C#CCCCO)ccc21",
+      "connectivity": "CC(C)(C)OC(=O)n1ccc2cc(C#CCCCO)ccc21"
+    },
+    {
+      "split": "training",
+      "group_id": "C18H21NO3|charge=0",
+      "formula": "C18H21NO3",
+      "SMILES": "O=CCC1(CCN2C(=O)c3ccccc3C2=O)CCCCC1",
+      "connectivity": "O=CCC1(CCN2C(=O)c3ccccc3C2=O)CCCCC1"
+    },
+    {
+      "split": "training",
+      "group_id": "C19H22NO7P|charge=0",
+      "formula": "C19H22NO7P",
+      "SMILES": "O=C(NC(CCP(=O)(O)O)C(=O)OCc1ccccc1)OCc1ccccc1",
+      "connectivity": "O=C(NC(CCP(=O)(O)O)C(=O)OCc1ccccc1)OCc1ccccc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C19H22NO7P|charge=0",
+      "formula": "C19H22NO7P",
+      "SMILES": "CCOC(=O)CN(CP(=O)(Oc1ccccc1)Oc1ccccc1)C(=O)OC",
+      "connectivity": "CCOC(=O)CN(CP(=O)(Oc1ccccc1)Oc1ccccc1)C(=O)OC"
+    },
+    {
+      "split": "training",
+      "group_id": "C19H22NO7P|charge=0",
+      "formula": "C19H22NO7P",
+      "SMILES": "O=C(O)CCNC(=O)[C@H](Cc1ccccc1)OP(=O)(O)OCc1ccccc1",
+      "connectivity": "O=C(O)CCNC(=O)C(Cc1ccccc1)OP(=O)(O)OCc1ccccc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C21H27F3N4O|charge=0",
+      "formula": "C21H27F3N4O",
+      "SMILES": "Cc1c(-c2ccc(C(F)(F)F)cc2)nn(CC(C)C)c(=O)c1N1CCN(C)CC1",
+      "connectivity": "Cc1c(-c2ccc(C(F)(F)F)cc2)nn(CC(C)C)c(=O)c1N1CCN(C)CC1"
+    },
+    {
+      "split": "training",
+      "group_id": "C21H27F3N4O|charge=0",
+      "formula": "C21H27F3N4O",
+      "SMILES": "CC(C)Cn1nc(-c2ccc(C(F)(F)F)cc2)cc(CN2CCN(C)CC2)c1=O",
+      "connectivity": "CC(C)Cn1nc(-c2ccc(C(F)(F)F)cc2)cc(CN2CCN(C)CC2)c1=O"
+    },
+    {
+      "split": "training",
+      "group_id": "C21H27F3N4O|charge=0",
+      "formula": "C21H27F3N4O",
+      "SMILES": "NC1CC2CCCC2(C(=O)N2[C@H]3CC[C@H]2CN(c2cc(C(F)(F)F)ccn2)C3)C1",
+      "connectivity": "NC1CC2CCCC2(C(=O)N2C3CCC2CN(c2cc(C(F)(F)F)ccn2)C3)C1"
+    },
+    {
+      "split": "training",
+      "group_id": "C5H12NO4P|charge=0",
+      "formula": "C5H12NO4P",
+      "SMILES": "O=P(O)(O)CN1CCOCC1",
+      "connectivity": "O=P(O)(O)CN1CCOCC1"
+    },
+    {
+      "split": "training",
+      "group_id": "C5H12NO4P|charge=0",
+      "formula": "C5H12NO4P",
+      "SMILES": "CCOP(=O)(OCC)C(N)=O",
+      "connectivity": "CCOP(=O)(OCC)C(N)=O"
+    },
+    {
+      "split": "training",
+      "group_id": "C5H12NO4P|charge=0",
+      "formula": "C5H12NO4P",
+      "SMILES": "CCCNC(=O)CP(=O)(O)O",
+      "connectivity": "CCCNC(=O)CP(=O)(O)O"
+    },
+    {
+      "split": "training",
+      "group_id": "C13H21N2O4P|charge=0",
+      "formula": "C13H21N2O4P",
+      "SMILES": "CCOC(=O)[C@H](C)N(CCN)[PH](=O)Oc1ccccc1",
+      "connectivity": "CCOC(=O)C(C)N(CCN)[PH](=O)Oc1ccccc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C13H21N2O4P|charge=0",
+      "formula": "C13H21N2O4P",
+      "SMILES": "CCOC(=O)c1cccc(OP(=O)(N(C)C)N(C)C)c1",
+      "connectivity": "CCOC(=O)c1cccc(OP(=O)(N(C)C)N(C)C)c1"
+    },
+    {
+      "split": "training",
+      "group_id": "C13H21N2O4P|charge=0",
+      "formula": "C13H21N2O4P",
+      "SMILES": "CCOP(=O)(NN=C(COC)c1ccccc1)OCC",
+      "connectivity": "CCOP(=O)(NN=C(COC)c1ccccc1)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C13H21N2O4P|charge=0",
+      "formula": "C13H21N2O4P",
+      "SMILES": "CCOP(C)(=O)c1ccc(NC(=O)OC(C)(C)C)nc1",
+      "connectivity": "CCOP(C)(=O)c1ccc(NC(=O)OC(C)(C)C)nc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C10H23O3P|charge=0",
+      "formula": "C10H23O3P",
+      "SMILES": "CCCCOP(=O)(CC)CC(C)CO",
+      "connectivity": "CCCCOP(=O)(CC)CC(C)CO"
+    },
+    {
+      "split": "training",
+      "group_id": "C10H23O3P|charge=0",
+      "formula": "C10H23O3P",
+      "SMILES": "CCCCCCCCCCP(=O)(O)O",
+      "connectivity": "CCCCCCCCCCP(=O)(O)O"
+    },
+    {
+      "split": "training",
+      "group_id": "C10H23O3P|charge=0",
+      "formula": "C10H23O3P",
+      "SMILES": "CCC(C)P(=O)(CCCO)CCCO",
+      "connectivity": "CCC(C)P(=O)(CCCO)CCCO"
+    },
+    {
+      "split": "training",
+      "group_id": "C10H23O3P|charge=0",
+      "formula": "C10H23O3P",
+      "SMILES": "CCCCOP(=O)(CC)CCOCC",
+      "connectivity": "CCCCOP(=O)(CC)CCOCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C10H23O2P|charge=0",
+      "formula": "C10H23O2P",
+      "SMILES": "CCC(C)P(CCCO)CCCO",
+      "connectivity": "CCC(C)P(CCCO)CCCO"
+    },
+    {
+      "split": "training",
+      "group_id": "C10H23O2P|charge=0",
+      "formula": "C10H23O2P",
+      "SMILES": "CCCCCCCCCCP(O)O",
+      "connectivity": "CCCCCCCCCCP(O)O"
+    },
+    {
+      "split": "training",
+      "group_id": "C10H23O2P|charge=0",
+      "formula": "C10H23O2P",
+      "SMILES": "CCCCCC[PH](=O)OCCCC",
+      "connectivity": "CCCCCC[PH](=O)OCCCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C16H14ClF3NO5P|charge=0",
+      "formula": "C16H14ClF3NO5P",
+      "SMILES": "CCCP(=O)(O)c1cc(Oc2ccc(C(F)(F)F)cc2Cl)ccc1[N+](=O)[O-]",
+      "connectivity": "CCCP(=O)(O)c1cc(Oc2ccc(C(F)(F)F)cc2Cl)ccc1[N+](=O)[O-]"
+    },
+    {
+      "split": "training",
+      "group_id": "C16H14ClF3NO5P|charge=0",
+      "formula": "C16H14ClF3NO5P",
+      "SMILES": "CCOP(C)(=O)c1cc(Oc2ccc(C(F)(F)F)cc2Cl)ccc1[N+](=O)[O-]",
+      "connectivity": "CCOP(C)(=O)c1cc(Oc2ccc(C(F)(F)F)cc2Cl)ccc1[N+](=O)[O-]"
+    },
+    {
+      "split": "training",
+      "group_id": "C16H14ClF3NO5P|charge=0",
+      "formula": "C16H14ClF3NO5P",
+      "SMILES": "CCP(=O)(OC)c1cc(Oc2ccc(C(F)(F)F)cc2Cl)ccc1[N+](=O)[O-]",
+      "connectivity": "CCP(=O)(OC)c1cc(Oc2ccc(C(F)(F)F)cc2Cl)ccc1[N+](=O)[O-]"
+    },
+    {
+      "split": "training",
+      "group_id": "C14H20NO7P|charge=0",
+      "formula": "C14H20NO7P",
+      "SMILES": "COP(=O)(CCC(N)C(=O)O)Oc1cccc(CCC(=O)O)c1",
+      "connectivity": "COP(=O)(CCC(N)C(=O)O)Oc1cccc(CCC(=O)O)c1"
+    },
+    {
+      "split": "training",
+      "group_id": "C14H20NO7P|charge=0",
+      "formula": "C14H20NO7P",
+      "SMILES": "COP(=O)(OC)C(OC1CCCCO1)c1cccc([N+](=O)[O-])c1",
+      "connectivity": "COP(=O)(OC)C(OC1CCCCO1)c1cccc([N+](=O)[O-])c1"
+    },
+    {
+      "split": "training",
+      "group_id": "C14H20NO7P|charge=0",
+      "formula": "C14H20NO7P",
+      "SMILES": "COP(=O)(OC)C(C)C(NC(=O)OCc1ccccc1)C(=O)O",
+      "connectivity": "COP(=O)(OC)C(C)C(NC(=O)OCc1ccccc1)C(=O)O"
+    },
+    {
+      "split": "training",
+      "group_id": "C14H20NO7P|charge=0",
+      "formula": "C14H20NO7P",
+      "SMILES": "COC(=O)C(CP(=O)(OC)OC)NC(=O)OCc1ccccc1",
+      "connectivity": "COC(=O)C(CP(=O)(OC)OC)NC(=O)OCc1ccccc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C17H24N2|charge=0",
+      "formula": "C17H24N2",
+      "SMILES": "Cc1cc(CCC(C)C)nc(-n2c(C)ccc2C)c1",
+      "connectivity": "Cc1cc(CCC(C)C)nc(-n2c(C)ccc2C)c1"
+    },
+    {
+      "split": "training",
+      "group_id": "C17H24N2|charge=0",
+      "formula": "C17H24N2",
+      "SMILES": "CC1C2CC3=C(CCC4=C3C=CCNCC41C)N2C",
+      "connectivity": "CC1C2CC3=C(CCC4=C3C=CCNCC41C)N2C"
+    },
+    {
+      "split": "training",
+      "group_id": "C17H24N2|charge=0",
+      "formula": "C17H24N2",
+      "SMILES": "Nc1ccccc1NCC12CC3CC(CC(C3)C1)C2",
+      "connectivity": "Nc1ccccc1NCC12CC3CC(CC(C3)C1)C2"
+    },
+    {
+      "split": "training",
+      "group_id": "C17H24N2|charge=0",
+      "formula": "C17H24N2",
+      "SMILES": "Cc1cc(N=CN(C)C)c(C)cc1C#CC(C)(C)C",
+      "connectivity": "Cc1cc(N=CN(C)C)c(C)cc1C#CC(C)(C)C"
+    },
+    {
+      "split": "training",
+      "group_id": "C17H24N2|charge=0",
+      "formula": "C17H24N2",
+      "SMILES": "c1cc2c3c(c1)C1CCCCCC1CN3CCNC2",
+      "connectivity": "c1cc2c3c(c1)C1CCCCCC1CN3CCNC2"
+    },
+    {
+      "split": "training",
+      "group_id": "C17H24N2|charge=0",
+      "formula": "C17H24N2",
+      "SMILES": "CC1(C)C2CCC3(C2)C1c1ncncc1CC3(C)C",
+      "connectivity": "CC1(C)C2CCC3(C2)C1c1ncncc1CC3(C)C"
+    },
+    {
+      "split": "training",
+      "group_id": "C17H24N2|charge=0",
+      "formula": "C17H24N2",
+      "SMILES": "CCCN(CCC)C1Cc2cc3cc[nH]c3cc2C1",
+      "connectivity": "CCCN(CCC)C1Cc2cc3cc[nH]c3cc2C1"
+    },
+    {
+      "split": "training",
+      "group_id": "C17H24N2|charge=0",
+      "formula": "C17H24N2",
+      "SMILES": "CCCCn1c(CC)ccc1Cc1cccc(N)c1",
+      "connectivity": "CCCCn1c(CC)ccc1Cc1cccc(N)c1"
+    },
+    {
+      "split": "training",
+      "group_id": "C17H24N2|charge=0",
+      "formula": "C17H24N2",
+      "SMILES": "CCN(CC)C(=CC1=NCCCC1)c1ccccc1",
+      "connectivity": "CCN(CC)C(=CC1=NCCCC1)c1ccccc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C17H24N2|charge=0",
+      "formula": "C17H24N2",
+      "SMILES": "N#CCCCCC1CCN(Cc2ccccc2)CC1",
+      "connectivity": "N#CCCCCC1CCN(Cc2ccccc2)CC1"
+    },
+    {
+      "split": "training",
+      "group_id": "C11H23N2O7PS|charge=0",
+      "formula": "C11H23N2O7PS",
+      "SMILES": "CC(C)(COP(=O)(O)O)[C@@H](O)C(=O)NCCC(=O)NCCS",
+      "connectivity": "CC(C)(COP(=O)(O)O)C(O)C(=O)NCCC(=O)NCCS"
+    },
+    {
+      "split": "training",
+      "group_id": "C11H23N2O7PS|charge=0",
+      "formula": "C11H23N2O7PS",
+      "SMILES": "CCOP(=O)(OCC)OCN1C(=O)C(C(C)C)N(C)S1(=O)=O",
+      "connectivity": "CCOP(=O)(OCC)OCN1C(=O)C(C(C)C)N(C)S1(=O)=O"
+    },
+    {
+      "split": "training",
+      "group_id": "C11H23N2O7PS|charge=0",
+      "formula": "C11H23N2O7PS",
+      "SMILES": "CCCC1C(=O)N(COP(=O)(OCC)OCC)S(=O)(=O)N1C",
+      "connectivity": "CCCC1C(=O)N(COP(=O)(OCC)OCC)S(=O)(=O)N1C"
+    },
+    {
+      "split": "training",
+      "group_id": "C9H19O6P|charge=0",
+      "formula": "C9H19O6P",
+      "SMILES": "CCOP(=O)(COCCOC(C)=O)OCC",
+      "connectivity": "CCOP(=O)(COCCOC(C)=O)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C9H19O6P|charge=0",
+      "formula": "C9H19O6P",
+      "SMILES": "CCOC(C(=O)OC)P(=O)(OCC)OCC",
+      "connectivity": "CCOC(C(=O)OC)P(=O)(OCC)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C9H19O6P|charge=0",
+      "formula": "C9H19O6P",
+      "SMILES": "CCOC(=O)C(OC)P(=O)(OCC)OCC",
+      "connectivity": "CCOC(=O)C(OC)P(=O)(OCC)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C7H15O5P|charge=0",
+      "formula": "C7H15O5P",
+      "SMILES": "COP1(OC)(OC)OC(C)=C(C)O1",
+      "connectivity": "COP1(OC)(OC)OC(C)=C(C)O1"
+    },
+    {
+      "split": "training",
+      "group_id": "C7H15O5P|charge=0",
+      "formula": "C7H15O5P",
+      "SMILES": "COP(=O)(CC(C)OC(C)=O)OC",
+      "connectivity": "COP(=O)(CC(C)OC(C)=O)OC"
+    },
+    {
+      "split": "training",
+      "group_id": "C7H15O5P|charge=0",
+      "formula": "C7H15O5P",
+      "SMILES": "CCOP(=O)(OCC)C(C)C(=O)O",
+      "connectivity": "CCOP(=O)(OCC)C(C)C(=O)O"
+    },
+    {
+      "split": "training",
+      "group_id": "C7H15O5P|charge=0",
+      "formula": "C7H15O5P",
+      "SMILES": "CCP(=O)(O)CCC(=O)OCCO",
+      "connectivity": "CCP(=O)(O)CCC(=O)OCCO"
+    },
+    {
+      "split": "training",
+      "group_id": "C7H15O5P|charge=0",
+      "formula": "C7H15O5P",
+      "SMILES": "CCOC(=O)P(=O)(OCC)OCC",
+      "connectivity": "CCOC(=O)P(=O)(OCC)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C7H15O5P|charge=0",
+      "formula": "C7H15O5P",
+      "SMILES": "CCOP(=O)(CC(=O)OC)OCC",
+      "connectivity": "CCOP(=O)(CC(=O)OC)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C7H15O5P|charge=0",
+      "formula": "C7H15O5P",
+      "SMILES": "CCOP(=O)(CCC(=O)O)OCC",
+      "connectivity": "CCOP(=O)(CCC(=O)O)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C7H15O5P|charge=0",
+      "formula": "C7H15O5P",
+      "SMILES": "CCCCOC(=O)P(=O)(OC)OC",
+      "connectivity": "CCCCOC(=O)P(=O)(OC)OC"
+    },
+    {
+      "split": "training",
+      "group_id": "C7H9P|charge=0",
+      "formula": "C7H9P",
+      "SMILES": "Cc1ccccc1P",
+      "connectivity": "Cc1ccccc1P"
+    },
+    {
+      "split": "training",
+      "group_id": "C7H9P|charge=0",
+      "formula": "C7H9P",
+      "SMILES": "Cc1ccc(P)cc1",
+      "connectivity": "Cc1ccc(P)cc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C7H9P|charge=0",
+      "formula": "C7H9P",
+      "SMILES": "CPc1ccccc1",
+      "connectivity": "CPc1ccccc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C22H30O3|charge=0",
+      "formula": "C22H30O3",
+      "SMILES": "COC(=O)[C@H]1[C@H](C)C[C@H]2[C@@H]3CCC4=CC(=O)CC[C@]4(C)C3=CC[C@@]21C",
+      "connectivity": "COC(=O)C1C(C)CC2C3CCC4=CC(=O)CCC4(C)C3=CCC21C"
+    },
+    {
+      "split": "training",
+      "group_id": "C22H30O3|charge=0",
+      "formula": "C22H30O3",
+      "SMILES": "CC(C)(O)CCCCCc1cccc(CCc2cc(O)cc(O)c2)c1",
+      "connectivity": "CC(C)(O)CCCCCc1cccc(CCc2cc(O)cc(O)c2)c1"
+    },
+    {
+      "split": "training",
+      "group_id": "C22H30O3|charge=0",
+      "formula": "C22H30O3",
+      "SMILES": "CC(C)=CCCC(C)=CCCC(C)=CCOc1ccc(C(=O)O)cc1",
+      "connectivity": "CC(C)=CCCC(C)=CCCC(C)=CCOc1ccc(C(=O)O)cc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C22H30O3|charge=0",
+      "formula": "C22H30O3",
+      "SMILES": "CCc1cc(C)cc(CC)c1C1C(=O)CC(C2CCOCC2)CC1=O",
+      "connectivity": "CCc1cc(C)cc(CC)c1C1C(=O)CC(C2CCOCC2)CC1=O"
+    },
+    {
+      "split": "training",
+      "group_id": "C22H30O3|charge=0",
+      "formula": "C22H30O3",
+      "SMILES": "COC1(c2cc(C(C)(C)C)c(O)c(C(C)(C)C)c2)C=CC=C(C=O)C1",
+      "connectivity": "COC1(c2cc(C(C)(C)C)c(O)c(C(C)(C)C)c2)C=CC=C(C=O)C1"
+    },
+    {
+      "split": "training",
+      "group_id": "C22H30O3|charge=0",
+      "formula": "C22H30O3",
+      "SMILES": "C=CCCCC1(CCCC=C)CC(=O)c2ccc(O)c(CCC)c2O1",
+      "connectivity": "C=CCCCC1(CCCC=C)CC(=O)c2ccc(O)c(CCC)c2O1"
+    },
+    {
+      "split": "training",
+      "group_id": "C22H30O3|charge=0",
+      "formula": "C22H30O3",
+      "SMILES": "CC(C=O)[C@H]1CC[C@H]2[C@@H]3[C@@H]4O[C@]45OC4=C5[C@](C)(CCC4)[C@H]3CC[C@]12C",
+      "connectivity": "CC(C=O)C1CCC2C3C(CCC12C)C1(C)CCCC2=C1C1(O2)OC31"
+    },
+    {
+      "split": "training",
+      "group_id": "C22H30O3|charge=0",
+      "formula": "C22H30O3",
+      "SMILES": "CC(=O)OCC=C(C)C(=O)C#CC(C)=CCC1=C(C)CCCC1(C)C",
+      "connectivity": "CC(=O)OCC=C(C)C(=O)C#CC(C)=CCC1=C(C)CCCC1(C)C"
+    },
+    {
+      "split": "training",
+      "group_id": "C22H30O3|charge=0",
+      "formula": "C22H30O3",
+      "SMILES": "CC(=O)C1=C(C)C[C@H]2[C@@H]3CC[C@H]4C[C@@H]5O[C@@H]5C[C@]4(C)[C@H]3C(=O)C[C@]12C",
+      "connectivity": "CC(=O)C1=C(C)CC2C3CCC4CC5OC5CC4(C)C3C(=O)CC12C"
+    },
+    {
+      "split": "training",
+      "group_id": "C22H30O3|charge=0",
+      "formula": "C22H30O3",
+      "SMILES": "COc1ccc(C)c2c1[C@H]1CC[C@@]3(C)[C@@H](CCC34OCCO4)[C@@H]1CC2",
+      "connectivity": "COc1ccc(C)c2c1C1CCC3(C)C(CCC34OCCO4)C1CC2"
+    },
+    {
+      "split": "training",
+      "group_id": "C10H15O4P|charge=0",
+      "formula": "C10H15O4P",
+      "SMILES": "CCOP(=O)(OCC)c1ccccc1O",
+      "connectivity": "CCOP(=O)(OCC)c1ccccc1O"
+    },
+    {
+      "split": "training",
+      "group_id": "C10H15O4P|charge=0",
+      "formula": "C10H15O4P",
+      "SMILES": "COP(=O)(CCc1ccc(O)cc1)OC",
+      "connectivity": "COP(=O)(CCc1ccc(O)cc1)OC"
+    },
+    {
+      "split": "training",
+      "group_id": "C10H15O4P|charge=0",
+      "formula": "C10H15O4P",
+      "SMILES": "CCOP(=O)(OCC)c1ccc(O)cc1",
+      "connectivity": "CCOP(=O)(OCC)c1ccc(O)cc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C9H18ClO4P|charge=0",
+      "formula": "C9H18ClO4P",
+      "SMILES": "CC(C)OP(=O)(OC(C)C)C(C)(Cl)C=O",
+      "connectivity": "CC(C)OP(=O)(OC(C)C)C(C)(Cl)C=O"
+    },
+    {
+      "split": "training",
+      "group_id": "C9H18ClO4P|charge=0",
+      "formula": "C9H18ClO4P",
+      "SMILES": "CCCCCC(=O)C(Cl)P(=O)(OC)OC",
+      "connectivity": "CCCCCC(=O)C(Cl)P(=O)(OC)OC"
+    },
+    {
+      "split": "training",
+      "group_id": "C9H18ClO4P|charge=0",
+      "formula": "C9H18ClO4P",
+      "SMILES": "C=C(CCl)COCP(=O)(OCC)OCC",
+      "connectivity": "C=C(CCl)COCP(=O)(OCC)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C12H19O2P|charge=0",
+      "formula": "C12H19O2P",
+      "SMILES": "CCO[PH](=O)CCCCc1ccccc1",
+      "connectivity": "CCO[PH](=O)CCCCc1ccccc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C12H19O2P|charge=0",
+      "formula": "C12H19O2P",
+      "SMILES": "CCOP(CCc1ccccc1)OCC",
+      "connectivity": "CCOP(CCc1ccccc1)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C12H19O2P|charge=0",
+      "formula": "C12H19O2P",
+      "SMILES": "CC(C)OP(OC(C)C)c1ccccc1",
+      "connectivity": "CC(C)OP(OC(C)C)c1ccccc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C9H20NO4P|charge=0",
+      "formula": "C9H20NO4P",
+      "SMILES": "CCOP(=O)(CCCNC(C)=O)OCC",
+      "connectivity": "CCOP(=O)(CCCNC(C)=O)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C9H20NO4P|charge=0",
+      "formula": "C9H20NO4P",
+      "SMILES": "CC(C)CC(CP(=O)(O)C(C)N)C(=O)O",
+      "connectivity": "CC(C)CC(CP(=O)(O)C(C)N)C(=O)O"
+    },
+    {
+      "split": "training",
+      "group_id": "C9H20NO4P|charge=0",
+      "formula": "C9H20NO4P",
+      "SMILES": "CCOP(=O)(CN1CCOCC1)OCC",
+      "connectivity": "CCOP(=O)(CN1CCOCC1)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C12H25O4P|charge=0",
+      "formula": "C12H25O4P",
+      "SMILES": "CCCCC(CC(C)C(C)=O)P(=O)(OC)OC",
+      "connectivity": "CCCCC(CC(C)C(C)=O)P(=O)(OC)OC"
+    },
+    {
+      "split": "training",
+      "group_id": "C12H25O4P|charge=0",
+      "formula": "C12H25O4P",
+      "SMILES": "CCOP(=O)(OCC)C(C)C(=O)CC(C)(C)C",
+      "connectivity": "CCOP(=O)(OCC)C(C)C(=O)CC(C)(C)C"
+    },
+    {
+      "split": "training",
+      "group_id": "C12H25O4P|charge=0",
+      "formula": "C12H25O4P",
+      "SMILES": "CCCCCCCCC(=O)CP(=O)(OC)OC",
+      "connectivity": "CCCCCCCCC(=O)CP(=O)(OC)OC"
+    },
+    {
+      "split": "training",
+      "group_id": "C21H29P|charge=0",
+      "formula": "C21H29P",
+      "SMILES": "C1=C(P(C2CCCCC2)C2CCCCC2)Cc2ccccc21",
+      "connectivity": "C1=C(P(C2CCCCC2)C2CCCCC2)Cc2ccccc21"
+    },
+    {
+      "split": "training",
+      "group_id": "C21H29P|charge=0",
+      "formula": "C21H29P",
+      "SMILES": "CC(C)c1cc(C(C)C)c(-c2ccccc2P)c(C(C)C)c1",
+      "connectivity": "CC(C)c1cc(C(C)C)c(-c2ccccc2P)c(C(C)C)c1"
+    },
+    {
+      "split": "training",
+      "group_id": "C21H29P|charge=0",
+      "formula": "C21H29P",
+      "SMILES": "Cc1ccccc1-c1ccccc1P(C(C)(C)C)C(C)(C)C",
+      "connectivity": "Cc1ccccc1-c1ccccc1P(C(C)(C)C)C(C)(C)C"
+    },
+    {
+      "split": "training",
+      "group_id": "C9H14N5O6P|charge=0",
+      "formula": "C9H14N5O6P",
+      "SMILES": "Nc1ncnc2c1ncn2OCC(O)COCP(=O)(O)O",
+      "connectivity": "Nc1ncnc2c1ncn2OCC(O)COCP(=O)(O)O"
+    },
+    {
+      "split": "training",
+      "group_id": "C9H14N5O6P|charge=0",
+      "formula": "C9H14N5O6P",
+      "SMILES": "Nc1nc2c(ncn2C[C@H](CO)OCP(=O)(O)O)c(=O)[nH]1",
+      "connectivity": "Nc1nc2c(ncn2CC(CO)OCP(=O)(O)O)c(=O)[nH]1"
+    },
+    {
+      "split": "training",
+      "group_id": "C9H14N5O6P|charge=0",
+      "formula": "C9H14N5O6P",
+      "SMILES": "Nc1nc2c(ncn2OC(CO)CCP(=O)(O)O)c(=O)[nH]1",
+      "connectivity": "Nc1nc2c(ncn2OC(CO)CCP(=O)(O)O)c(=O)[nH]1"
+    },
+    {
+      "split": "training",
+      "group_id": "C9H14N5O6P|charge=0",
+      "formula": "C9H14N5O6P",
+      "SMILES": "Nc1ncnc2c1ncn2OC(CO)COCP(=O)(O)O",
+      "connectivity": "Nc1ncnc2c1ncn2OC(CO)COCP(=O)(O)O"
+    },
+    {
+      "split": "training",
+      "group_id": "C9H14N5O6P|charge=0",
+      "formula": "C9H14N5O6P",
+      "SMILES": "Nc1nc2c(ncn2OCCCOCP(=O)(O)O)c(=O)[nH]1",
+      "connectivity": "Nc1nc2c(ncn2OCCCOCP(=O)(O)O)c(=O)[nH]1"
+    },
+    {
+      "split": "training",
+      "group_id": "C13H26N2O6P2|charge=0",
+      "formula": "C13H26N2O6P2",
+      "SMILES": "CCOP(=O)(OCC)C(Cn1cccn1)P(=O)(OCC)OCC",
+      "connectivity": "CCOP(=O)(OCC)C(Cn1cccn1)P(=O)(OCC)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C13H26N2O6P2|charge=0",
+      "formula": "C13H26N2O6P2",
+      "SMILES": "CCOP(=O)(OCC)C(Cc1ncc[nH]1)P(=O)(OCC)OCC",
+      "connectivity": "CCOP(=O)(OCC)C(Cc1ncc[nH]1)P(=O)(OCC)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C13H26N2O6P2|charge=0",
+      "formula": "C13H26N2O6P2",
+      "SMILES": "CCOP(=O)(OCC)C(Cn1ccnc1)P(=O)(OCC)OCC",
+      "connectivity": "CCOP(=O)(OCC)C(Cn1ccnc1)P(=O)(OCC)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C7H7Cl2OP|charge=0",
+      "formula": "C7H7Cl2OP",
+      "SMILES": "Cc1cccc(P(=O)(Cl)Cl)c1",
+      "connectivity": "Cc1cccc(P(=O)(Cl)Cl)c1"
+    },
+    {
+      "split": "training",
+      "group_id": "C7H7Cl2OP|charge=0",
+      "formula": "C7H7Cl2OP",
+      "SMILES": "Cc1ccc(P(=O)(Cl)Cl)cc1",
+      "connectivity": "Cc1ccc(P(=O)(Cl)Cl)cc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C7H7Cl2OP|charge=0",
+      "formula": "C7H7Cl2OP",
+      "SMILES": "Cc1ccccc1P(=O)(Cl)Cl",
+      "connectivity": "Cc1ccccc1P(=O)(Cl)Cl"
+    },
+    {
+      "split": "training",
+      "group_id": "C22H28NO3P|charge=0",
+      "formula": "C22H28NO3P",
+      "SMILES": "COc1ccc(C2OC3(CCN(CP(C)(C)=O)CC3)c3ccccc32)cc1",
+      "connectivity": "COc1ccc(C2OC3(CCN(CP(C)(C)=O)CC3)c3ccccc32)cc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C22H28NO3P|charge=0",
+      "formula": "C22H28NO3P",
+      "SMILES": "COc1ccc2c(c1)C(c1ccccc1)OC21CCN(CP(C)(C)=O)CC1",
+      "connectivity": "COc1ccc2c(c1)C(c1ccccc1)OC21CCN(CP(C)(C)=O)CC1"
+    },
+    {
+      "split": "training",
+      "group_id": "C22H28NO3P|charge=0",
+      "formula": "C22H28NO3P",
+      "SMILES": "COc1ccc2c(c1)C1(CCN(CP(C)(C)=O)CC1)OC2c1ccccc1",
+      "connectivity": "COc1ccc2c(c1)C1(CCN(CP(C)(C)=O)CC1)OC2c1ccccc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C10H19O5P|charge=0",
+      "formula": "C10H19O5P",
+      "SMILES": "CCC(C)P(=O)(CCC(=O)O)CCC(=O)O",
+      "connectivity": "CCC(C)P(=O)(CCC(=O)O)CCC(=O)O"
+    },
+    {
+      "split": "training",
+      "group_id": "C10H19O5P|charge=0",
+      "formula": "C10H19O5P",
+      "SMILES": "C=CC(=O)OCCCP(=O)(OCC)OCC",
+      "connectivity": "C=CC(=O)OCCCP(=O)(OCC)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C10H19O5P|charge=0",
+      "formula": "C10H19O5P",
+      "SMILES": "CCOP(=O)(OCC)/C(C)=C(/C)C(=O)OC",
+      "connectivity": "CCOP(=O)(OCC)C(C)=C(C)C(=O)OC"
+    },
+    {
+      "split": "training",
+      "group_id": "C10H19O5P|charge=0",
+      "formula": "C10H19O5P",
+      "SMILES": "CC(C)CP(=O)(CCC(=O)O)CCC(=O)O",
+      "connectivity": "CC(C)CP(=O)(CCC(=O)O)CCC(=O)O"
+    },
+    {
+      "split": "training",
+      "group_id": "C6H4S|charge=0",
+      "formula": "C6H4S",
+      "SMILES": "c1cc2ccc1s2",
+      "connectivity": "c1cc2ccc1s2"
+    },
+    {
+      "split": "training",
+      "group_id": "C6H4S|charge=0",
+      "formula": "C6H4S",
+      "SMILES": "C#Cc1cccs1",
+      "connectivity": "C#Cc1cccs1"
+    },
+    {
+      "split": "training",
+      "group_id": "C6H4S|charge=0",
+      "formula": "C6H4S",
+      "SMILES": "C#Cc1ccsc1",
+      "connectivity": "C#Cc1ccsc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C6H4S|charge=0",
+      "formula": "C6H4S",
+      "SMILES": "c1cc2cc(c1)S2",
+      "connectivity": "c1cc2cc(c1)S2"
+    },
+    {
+      "split": "training",
+      "group_id": "C15H22NO7P|charge=0",
+      "formula": "C15H22NO7P",
+      "SMILES": "CCOC(=O)C(Cc1ccc([N+](=O)[O-])cc1)P(=O)(OCC)OCC",
+      "connectivity": "CCOC(=O)C(Cc1ccc([N+](=O)[O-])cc1)P(=O)(OCC)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C15H22NO7P|charge=0",
+      "formula": "C15H22NO7P",
+      "SMILES": "COP(=O)(OC)C(NC(=O)OC(C)(C)C)c1ccc(C(=O)O)cc1",
+      "connectivity": "COP(=O)(OC)C(NC(=O)OC(C)(C)C)c1ccc(C(=O)O)cc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C15H22NO7P|charge=0",
+      "formula": "C15H22NO7P",
+      "SMILES": "CCOP(=O)(OCC)C(NC(=O)OCc1ccccc1)C(=O)OC",
+      "connectivity": "CCOP(=O)(OCC)C(NC(=O)OCc1ccccc1)C(=O)OC"
+    },
+    {
+      "split": "training",
+      "group_id": "C7H18NO2P|charge=0",
+      "formula": "C7H18NO2P",
+      "SMILES": "CCN(CC)CP(=O)(O)CC",
+      "connectivity": "CCN(CC)CP(=O)(O)CC"
+    },
+    {
+      "split": "training",
+      "group_id": "C7H18NO2P|charge=0",
+      "formula": "C7H18NO2P",
+      "SMILES": "CCCCCCC(N)P(O)O",
+      "connectivity": "CCCCCCC(N)P(O)O"
+    },
+    {
+      "split": "training",
+      "group_id": "C7H18NO2P|charge=0",
+      "formula": "C7H18NO2P",
+      "SMILES": "CCCCP(=O)(O)CCCN",
+      "connectivity": "CCCCP(=O)(O)CCCN"
+    },
+    {
+      "split": "training",
+      "group_id": "C7H18NO2P|charge=0",
+      "formula": "C7H18NO2P",
+      "SMILES": "CC(C)CP(=O)(O)CCCN",
+      "connectivity": "CC(C)CP(=O)(O)CCCN"
+    },
+    {
+      "split": "training",
+      "group_id": "C19H18O2P2|charge=0",
+      "formula": "C19H18O2P2",
+      "SMILES": "O=[PH](O)Cc1ccccc1P(c1ccccc1)c1ccccc1",
+      "connectivity": "O=[PH](O)Cc1ccccc1P(c1ccccc1)c1ccccc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C19H18O2P2|charge=0",
+      "formula": "C19H18O2P2",
+      "SMILES": "O=[PH](O)Cc1ccc(P(c2ccccc2)c2ccccc2)cc1",
+      "connectivity": "O=[PH](O)Cc1ccc(P(c2ccccc2)c2ccccc2)cc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C19H18O2P2|charge=0",
+      "formula": "C19H18O2P2",
+      "SMILES": "O=[PH](O)Cc1cccc(P(c2ccccc2)c2ccccc2)c1",
+      "connectivity": "O=[PH](O)Cc1cccc(P(c2ccccc2)c2ccccc2)c1"
+    },
+    {
+      "split": "training",
+      "group_id": "C10H13O5P|charge=0",
+      "formula": "C10H13O5P",
+      "SMILES": "COC(=O)P(=O)(OC)OCc1ccccc1",
+      "connectivity": "COC(=O)P(=O)(OC)OCc1ccccc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C10H13O5P|charge=0",
+      "formula": "C10H13O5P",
+      "SMILES": "COP(=O)(OC)C(=O)Oc1ccc(C)cc1",
+      "connectivity": "COP(=O)(OC)C(=O)Oc1ccc(C)cc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C10H13O5P|charge=0",
+      "formula": "C10H13O5P",
+      "SMILES": "COP(=O)(OC)C(=O)OCc1ccccc1",
+      "connectivity": "COP(=O)(OC)C(=O)OCc1ccccc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C24H21O3P|charge=0",
+      "formula": "C24H21O3P",
+      "SMILES": "CCc1cc2ccccc2c2c1O[PH](=O)Oc1c-2cc2ccccc2c1CC",
+      "connectivity": "CCc1cc2ccccc2c2c1O[PH](=O)Oc1c-2cc2ccccc2c1CC"
+    },
+    {
+      "split": "training",
+      "group_id": "C24H21O3P|charge=0",
+      "formula": "C24H21O3P",
+      "SMILES": "COc1ccc(P(=O)(c2ccc(OC)cc2)c2cccc3ccccc23)cc1",
+      "connectivity": "COc1ccc(P(=O)(c2ccc(OC)cc2)c2cccc3ccccc23)cc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C24H21O3P|charge=0",
+      "formula": "C24H21O3P",
+      "SMILES": "Cc1ccccc1C(=O)P(C(=O)c1ccccc1C)C(=O)c1ccccc1C",
+      "connectivity": "Cc1ccccc1C(=O)P(C(=O)c1ccccc1C)C(=O)c1ccccc1C"
+    },
+    {
+      "split": "training",
+      "group_id": "C15H23O4P|charge=0",
+      "formula": "C15H23O4P",
+      "SMILES": "CCOP(=O)(CCC(=O)CCc1ccccc1)OCC",
+      "connectivity": "CCOP(=O)(CCC(=O)CCc1ccccc1)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C15H23O4P|charge=0",
+      "formula": "C15H23O4P",
+      "SMILES": "CCOP(=O)(OCC)c1cccc(CCCC(C)=O)c1",
+      "connectivity": "CCOP(=O)(OCC)c1cccc(CCCC(C)=O)c1"
+    },
+    {
+      "split": "training",
+      "group_id": "C15H23O4P|charge=0",
+      "formula": "C15H23O4P",
+      "SMILES": "CC1(COc2ccc(CP(=O)(O)O)cc2)CCCCC1",
+      "connectivity": "CC1(COc2ccc(CP(=O)(O)O)cc2)CCCCC1"
+    },
+    {
+      "split": "training",
+      "group_id": "C15H23O4P|charge=0",
+      "formula": "C15H23O4P",
+      "SMILES": "CCOP(=O)(CCCCc1ccccc1)CCC(=O)O",
+      "connectivity": "CCOP(=O)(CCCCc1ccccc1)CCC(=O)O"
+    },
+    {
+      "split": "training",
+      "group_id": "C15H23O4P|charge=0",
+      "formula": "C15H23O4P",
+      "SMILES": "CCOP(=O)(CCCCc1ccccc1)CC(=O)OC",
+      "connectivity": "CCOP(=O)(CCCCc1ccccc1)CC(=O)OC"
+    },
+    {
+      "split": "training",
+      "group_id": "C22H35N2O5P|charge=0",
+      "formula": "C22H35N2O5P",
+      "SMILES": "CC(C)(C)[C@H]1CC[C@H](Oc2ccc3c(c2)CCN3C(=O)CNCCP(=O)(O)O)CC1",
+      "connectivity": "CC(C)(C)C1CCC(Oc2ccc3c(c2)CCN3C(=O)CNCCP(=O)(O)O)CC1"
+    },
+    {
+      "split": "training",
+      "group_id": "C22H35N2O5P|charge=0",
+      "formula": "C22H35N2O5P",
+      "SMILES": "CCOP(=O)(CC(=O)N1CCC[C@H]1C(=O)OC(C)(C)C)C(N)CCc1ccccc1",
+      "connectivity": "CCOP(=O)(CC(=O)N1CCCC1C(=O)OC(C)(C)C)C(N)CCc1ccccc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C22H35N2O5P|charge=0",
+      "formula": "C22H35N2O5P",
+      "SMILES": "CCOC(=O)CN1CCCC[C@H](NP(=O)(CCCCc2ccccc2)OCC)C1=O",
+      "connectivity": "CCOC(=O)CN1CCCCC(NP(=O)(CCCCc2ccccc2)OCC)C1=O"
+    },
+    {
+      "split": "training",
+      "group_id": "C8H17O6P|charge=0",
+      "formula": "C8H17O6P",
+      "SMILES": "CCCCOC(=O)C(O)P(=O)(OC)OC",
+      "connectivity": "CCCCOC(=O)C(O)P(=O)(OC)OC"
+    },
+    {
+      "split": "training",
+      "group_id": "C8H17O6P|charge=0",
+      "formula": "C8H17O6P",
+      "SMILES": "CCP(=O)(O)CCC(=O)OCC(O)CO",
+      "connectivity": "CCP(=O)(O)CCC(=O)OCC(O)CO"
+    },
+    {
+      "split": "training",
+      "group_id": "C8H17O6P|charge=0",
+      "formula": "C8H17O6P",
+      "SMILES": "CCOP(=O)(OCC)C(OC)C(=O)OC",
+      "connectivity": "CCOP(=O)(OCC)C(OC)C(=O)OC"
+    },
+    {
+      "split": "training",
+      "group_id": "C8H17O6P|charge=0",
+      "formula": "C8H17O6P",
+      "SMILES": "CCOP(OCC)OCOCC(=O)OC",
+      "connectivity": "CCOP(OCC)OCOCC(=O)OC"
+    },
+    {
+      "split": "training",
+      "group_id": "C8H17O6P|charge=0",
+      "formula": "C8H17O6P",
+      "SMILES": "CCOP(=O)(COCC(=O)OC)OCC",
+      "connectivity": "CCOP(=O)(COCC(=O)OC)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C14H15O2P|charge=0",
+      "formula": "C14H15O2P",
+      "SMILES": "COc1ccc(Pc2ccc(OC)cc2)cc1",
+      "connectivity": "COc1ccc(Pc2ccc(OC)cc2)cc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C14H15O2P|charge=0",
+      "formula": "C14H15O2P",
+      "SMILES": "Cc1cccc(P(=O)(O)c2cccc(C)c2)c1",
+      "connectivity": "Cc1cccc(P(=O)(O)c2cccc(C)c2)c1"
+    },
+    {
+      "split": "training",
+      "group_id": "C14H15O2P|charge=0",
+      "formula": "C14H15O2P",
+      "SMILES": "CCOP(Oc1ccccc1)c1ccccc1",
+      "connectivity": "CCOP(Oc1ccccc1)c1ccccc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C14H15O2P|charge=0",
+      "formula": "C14H15O2P",
+      "SMILES": "COCP(=O)(c1ccccc1)c1ccccc1",
+      "connectivity": "COCP(=O)(c1ccccc1)c1ccccc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C10H11ClO3|charge=0",
+      "formula": "C10H11ClO3",
+      "SMILES": "COCOc1cccc(Cl)c1C(C)=O",
+      "connectivity": "COCOc1cccc(Cl)c1C(C)=O"
+    },
+    {
+      "split": "training",
+      "group_id": "C10H11ClO3|charge=0",
+      "formula": "C10H11ClO3",
+      "SMILES": "CC(O)c1cc(Cl)cc2c1OCCO2",
+      "connectivity": "CC(O)c1cc(Cl)cc2c1OCCO2"
+    },
+    {
+      "split": "training",
+      "group_id": "C10H11ClO3|charge=0",
+      "formula": "C10H11ClO3",
+      "SMILES": "O=C(CCl)C1C(=O)C2CCC(C2)C1=O",
+      "connectivity": "O=C(CCl)C1C(=O)C2CCC(C2)C1=O"
+    },
+    {
+      "split": "training",
+      "group_id": "C10H11ClO3|charge=0",
+      "formula": "C10H11ClO3",
+      "SMILES": "ClCCCOc1cc2ccc1OCO2",
+      "connectivity": "ClCCCOc1cc2ccc1OCO2"
+    },
+    {
+      "split": "training",
+      "group_id": "C10H11ClO3|charge=0",
+      "formula": "C10H11ClO3",
+      "SMILES": "COC12C=CC(CC1)C(=O)C(Cl)C2=O",
+      "connectivity": "COC12C=CC(CC1)C(=O)C(Cl)C2=O"
+    },
+    {
+      "split": "training",
+      "group_id": "C10H11ClO3|charge=0",
+      "formula": "C10H11ClO3",
+      "SMILES": "CCCc1cc(Cl)c(O)c(C=O)c1O",
+      "connectivity": "CCCc1cc(Cl)c(O)c(C=O)c1O"
+    },
+    {
+      "split": "training",
+      "group_id": "C10H11ClO3|charge=0",
+      "formula": "C10H11ClO3",
+      "SMILES": "OC1COC(c2ccc(Cl)cc2)OC1",
+      "connectivity": "OC1COC(c2ccc(Cl)cc2)OC1"
+    },
+    {
+      "split": "training",
+      "group_id": "C10H11ClO3|charge=0",
+      "formula": "C10H11ClO3",
+      "SMILES": "O=C(OCC(O)CCl)c1ccccc1",
+      "connectivity": "O=C(OCC(O)CCl)c1ccccc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C10H11ClO3|charge=0",
+      "formula": "C10H11ClO3",
+      "SMILES": "COC1=C(Cl)C(=O)C2(C)C=CC1(C)O2",
+      "connectivity": "COC1=C(Cl)C(=O)C2(C)C=CC1(C)O2"
+    },
+    {
+      "split": "training",
+      "group_id": "C10H11ClO3|charge=0",
+      "formula": "C10H11ClO3",
+      "SMILES": "Cc1cc(Cl)ccc1OC(C)C(=O)O",
+      "connectivity": "Cc1cc(Cl)ccc1OC(C)C(=O)O"
+    },
+    {
+      "split": "training",
+      "group_id": "C9H12FO3P|charge=0",
+      "formula": "C9H12FO3P",
+      "SMILES": "COP(=O)(Cc1ccc(F)cc1)OC",
+      "connectivity": "COP(=O)(Cc1ccc(F)cc1)OC"
+    },
+    {
+      "split": "training",
+      "group_id": "C9H12FO3P|charge=0",
+      "formula": "C9H12FO3P",
+      "SMILES": "COP(=O)(Cc1ccccc1F)OC",
+      "connectivity": "COP(=O)(Cc1ccccc1F)OC"
+    },
+    {
+      "split": "training",
+      "group_id": "C9H12FO3P|charge=0",
+      "formula": "C9H12FO3P",
+      "SMILES": "COP(=O)(Cc1cccc(F)c1)OC",
+      "connectivity": "COP(=O)(Cc1cccc(F)c1)OC"
+    },
+    {
+      "split": "training",
+      "group_id": "C16H25N2O6P|charge=0",
+      "formula": "C16H25N2O6P",
+      "SMILES": "CCOC(=O)C(Cc1ccc(NC(=O)OC(C)(C)C)nc1)C[PH](=O)O",
+      "connectivity": "CCOC(=O)C(Cc1ccc(NC(=O)OC(C)(C)C)nc1)C[PH](=O)O"
+    },
+    {
+      "split": "training",
+      "group_id": "C16H25N2O6P|charge=0",
+      "formula": "C16H25N2O6P",
+      "SMILES": "CCC[C@H](NC(=O)OCc1ccccc1)C(=O)C(N)P(=O)(OC)OC",
+      "connectivity": "CCCC(NC(=O)OCc1ccccc1)C(=O)C(N)P(=O)(OC)OC"
+    },
+    {
+      "split": "training",
+      "group_id": "C16H25N2O6P|charge=0",
+      "formula": "C16H25N2O6P",
+      "SMILES": "CC(C)C[C@H](NC(=O)OCc1ccccc1)C(=O)N[C@@H](C)P(=O)(O)O",
+      "connectivity": "CC(C)CC(NC(=O)OCc1ccccc1)C(=O)NC(C)P(=O)(O)O"
+    },
+    {
+      "split": "training",
+      "group_id": "C6H12NO3P|charge=0",
+      "formula": "C6H12NO3P",
+      "SMILES": "CCOP(=O)(CC#N)OCC",
+      "connectivity": "CCOP(=O)(CC#N)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C6H12NO3P|charge=0",
+      "formula": "C6H12NO3P",
+      "SMILES": "[C-]#[N+]CP(=O)(OCC)OCC",
+      "connectivity": "[C-]#[N+]CP(=O)(OCC)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C6H12NO3P|charge=0",
+      "formula": "C6H12NO3P",
+      "SMILES": "CCC(C#N)(CC)P(=O)(O)O",
+      "connectivity": "CCC(C#N)(CC)P(=O)(O)O"
+    },
+    {
+      "split": "training",
+      "group_id": "C12H15O7P|charge=0",
+      "formula": "C12H15O7P",
+      "SMILES": "CCOC(=O)c1ccc(OC(=O)P(=O)(OC)OC)cc1",
+      "connectivity": "CCOC(=O)c1ccc(OC(=O)P(=O)(OC)OC)cc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C12H15O7P|charge=0",
+      "formula": "C12H15O7P",
+      "SMILES": "C=CCOP(=O)(OCC=C)OCc1cocc1C(=O)O",
+      "connectivity": "C=CCOP(=O)(OCC=C)OCc1cocc1C(=O)O"
+    },
+    {
+      "split": "training",
+      "group_id": "C12H15O7P|charge=0",
+      "formula": "C12H15O7P",
+      "SMILES": "C=CCOP(=O)(OCC=C)OCc1coc(C(=O)O)c1",
+      "connectivity": "C=CCOP(=O)(OCC=C)OCc1coc(C(=O)O)c1"
+    },
+    {
+      "split": "training",
+      "group_id": "C18H22O2|charge=0",
+      "formula": "C18H22O2",
+      "SMILES": "C[C@]12CCC3=C4CCC(=O)C=C4CC[C@H]3[C@@H]1CCC2=O",
+      "connectivity": "CC12CCC3=C4CCC(=O)C=C4CCC3C1CCC2=O"
+    },
+    {
+      "split": "training",
+      "group_id": "C18H22O2|charge=0",
+      "formula": "C18H22O2",
+      "SMILES": "OCc1cccc(CCCCCOc2ccccc2)c1",
+      "connectivity": "OCc1cccc(CCCCCOc2ccccc2)c1"
+    },
+    {
+      "split": "training",
+      "group_id": "C18H22O2|charge=0",
+      "formula": "C18H22O2",
+      "SMILES": "O=C(O)C1CC2CC1C1C3=C4C5CCC(C5)C4C(C3)C21",
+      "connectivity": "O=C(O)C1CC2CC1C1C3=C4C5CCC(C5)C4C(C3)C21"
+    },
+    {
+      "split": "training",
+      "group_id": "C18H22O2|charge=0",
+      "formula": "C18H22O2",
+      "SMILES": "Cc1cc(C)c(C(O)c2ccc(C(C)C)cc2)c(O)c1",
+      "connectivity": "Cc1cc(C)c(C(O)c2ccc(C(C)C)cc2)c(O)c1"
+    },
+    {
+      "split": "training",
+      "group_id": "C18H22O2|charge=0",
+      "formula": "C18H22O2",
+      "SMILES": "CC(C)(C)c1cc(-c2ccco2)cc2c1OCC2(C)C",
+      "connectivity": "CC(C)(C)c1cc(-c2ccco2)cc2c1OCC2(C)C"
+    },
+    {
+      "split": "training",
+      "group_id": "C18H22O2|charge=0",
+      "formula": "C18H22O2",
+      "SMILES": "CC=CCC1Cc2ccc(OC3CCCC3)cc2C1=O",
+      "connectivity": "CC=CCC1Cc2ccc(OC3CCCC3)cc2C1=O"
+    },
+    {
+      "split": "training",
+      "group_id": "C18H22O2|charge=0",
+      "formula": "C18H22O2",
+      "SMILES": "O=C(CC12CC3CC(CC(C3)C1)C2)c1ccc(O)cc1",
+      "connectivity": "O=C(CC12CC3CC(CC(C3)C1)C2)c1ccc(O)cc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C18H22O2|charge=0",
+      "formula": "C18H22O2",
+      "SMILES": "CCC(C)(c1ccccc1OC)c1ccccc1OC",
+      "connectivity": "CCC(C)(c1ccccc1OC)c1ccccc1OC"
+    },
+    {
+      "split": "training",
+      "group_id": "C18H22O2|charge=0",
+      "formula": "C18H22O2",
+      "SMILES": "C#CCCC(=O)C(O)(c1ccccc1)C1CCCCC1",
+      "connectivity": "C#CCCC(=O)C(O)(c1ccccc1)C1CCCCC1"
+    },
+    {
+      "split": "training",
+      "group_id": "C18H22O2|charge=0",
+      "formula": "C18H22O2",
+      "SMILES": "C[C@]12CC[C@H]3C(=CCc4cc(O)ccc43)[C@@H]1CC[C@H]2O",
+      "connectivity": "CC12CCC3C(=CCc4cc(O)ccc43)C1CCC2O"
+    },
+    {
+      "split": "training",
+      "group_id": "C14H18NO5P|charge=0",
+      "formula": "C14H18NO5P",
+      "SMILES": "O=C(O)[C@@H]1CCCN1C(=O)CP(=O)(O)Cc1ccccc1",
+      "connectivity": "O=C(O)C1CCCN1C(=O)CP(=O)(O)Cc1ccccc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C14H18NO5P|charge=0",
+      "formula": "C14H18NO5P",
+      "SMILES": "O=C1c2ccccc2C(=O)N1CCCCCCP(=O)(O)O",
+      "connectivity": "O=C1c2ccccc2C(=O)N1CCCCCCP(=O)(O)O"
+    },
+    {
+      "split": "training",
+      "group_id": "C14H18NO5P|charge=0",
+      "formula": "C14H18NO5P",
+      "SMILES": "O=C(O)[C@@H]1CCCN1C(=O)CCP(=O)(O)c1ccccc1",
+      "connectivity": "O=C(O)C1CCCN1C(=O)CCP(=O)(O)c1ccccc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C14H18NO5P|charge=0",
+      "formula": "C14H18NO5P",
+      "SMILES": "COC(=O)C(Cc1c[nH]c2ccccc12)P(=O)(OC)OC",
+      "connectivity": "COC(=O)C(Cc1c[nH]c2ccccc12)P(=O)(OC)OC"
+    },
+    {
+      "split": "training",
+      "group_id": "C14H18NO5P|charge=0",
+      "formula": "C14H18NO5P",
+      "SMILES": "CCOP(=O)(CCN1C(=O)c2ccccc2C1=O)OCC",
+      "connectivity": "CCOP(=O)(CCN1C(=O)c2ccccc2C1=O)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C10H14NO5P|charge=0",
+      "formula": "C10H14NO5P",
+      "SMILES": "O=C(NCCP(=O)(O)O)OCc1ccccc1",
+      "connectivity": "O=C(NCCP(=O)(O)O)OCc1ccccc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C10H14NO5P|charge=0",
+      "formula": "C10H14NO5P",
+      "SMILES": "CCOP(=O)(OCC)c1ccccc1[N+](=O)[O-]",
+      "connectivity": "CCOP(=O)(OCC)c1ccccc1[N+](=O)[O-]"
+    },
+    {
+      "split": "training",
+      "group_id": "C10H14NO5P|charge=0",
+      "formula": "C10H14NO5P",
+      "SMILES": "COP(=O)(CC(=O)COc1cccnc1)OC",
+      "connectivity": "COP(=O)(CC(=O)COc1cccnc1)OC"
+    },
+    {
+      "split": "training",
+      "group_id": "C10H14NO5P|charge=0",
+      "formula": "C10H14NO5P",
+      "SMILES": "CCOP(=O)(OCC)c1ccc([N+](=O)[O-])cc1",
+      "connectivity": "CCOP(=O)(OCC)c1ccc([N+](=O)[O-])cc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C10H14NO5P|charge=0",
+      "formula": "C10H14NO5P",
+      "SMILES": "O=C(O)CN(Cc1ccccc1)CP(=O)(O)O",
+      "connectivity": "O=C(O)CN(Cc1ccccc1)CP(=O)(O)O"
+    },
+    {
+      "split": "training",
+      "group_id": "C10H14NO5P|charge=0",
+      "formula": "C10H14NO5P",
+      "SMILES": "CCOP(=O)(OCC)c1cccc([N+](=O)[O-])c1",
+      "connectivity": "CCOP(=O)(OCC)c1cccc([N+](=O)[O-])c1"
+    },
+    {
+      "split": "training",
+      "group_id": "C10H14NO5P|charge=0",
+      "formula": "C10H14NO5P",
+      "SMILES": "COC(=O)c1ccc(NP(=O)(OC)OC)cc1",
+      "connectivity": "COC(=O)c1ccc(NP(=O)(OC)OC)cc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C10H14NO5P|charge=0",
+      "formula": "C10H14NO5P",
+      "SMILES": "O=C(O)CNCc1ccccc1CP(=O)(O)O",
+      "connectivity": "O=C(O)CNCc1ccccc1CP(=O)(O)O"
+    },
+    {
+      "split": "training",
+      "group_id": "C10H24O6P2|charge=0",
+      "formula": "C10H24O6P2",
+      "SMILES": "CCOP(=O)(OCC)C(C(C)C)P(=O)(OC)OC",
+      "connectivity": "CCOP(=O)(OCC)C(C(C)C)P(=O)(OC)OC"
+    },
+    {
+      "split": "training",
+      "group_id": "C10H24O6P2|charge=0",
+      "formula": "C10H24O6P2",
+      "SMILES": "CCOP(=O)(OCC)C(C)P(=O)(OCC)OCC",
+      "connectivity": "CCOP(=O)(OCC)C(C)P(=O)(OCC)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C10H24O6P2|charge=0",
+      "formula": "C10H24O6P2",
+      "SMILES": "CCOP(=O)(CCP(=O)(OCC)OCC)OCC",
+      "connectivity": "CCOP(=O)(CCP(=O)(OCC)OCC)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C5H10N2O7P2|charge=0",
+      "formula": "C5H10N2O7P2",
+      "SMILES": "Cc1conc1NC(P(=O)(O)O)P(=O)(O)O",
+      "connectivity": "Cc1conc1NC(P(=O)(O)O)P(=O)(O)O"
+    },
+    {
+      "split": "training",
+      "group_id": "C5H10N2O7P2|charge=0",
+      "formula": "C5H10N2O7P2",
+      "SMILES": "O=P(O)(O)C(O)(Cc1c[nH]cn1)P(=O)(O)O",
+      "connectivity": "O=P(O)(O)C(O)(Cc1c[nH]cn1)P(=O)(O)O"
+    },
+    {
+      "split": "training",
+      "group_id": "C5H10N2O7P2|charge=0",
+      "formula": "C5H10N2O7P2",
+      "SMILES": "Cc1cc(NC(P(=O)(O)O)P(=O)(O)O)no1",
+      "connectivity": "Cc1cc(NC(P(=O)(O)O)P(=O)(O)O)no1"
+    },
+    {
+      "split": "training",
+      "group_id": "C5H10N2O7P2|charge=0",
+      "formula": "C5H10N2O7P2",
+      "SMILES": "O=P(O)(O)C(O)C(c1ncc[nH]1)P(=O)(O)O",
+      "connectivity": "O=P(O)(O)C(O)C(c1ncc[nH]1)P(=O)(O)O"
+    },
+    {
+      "split": "training",
+      "group_id": "C5H10N2O7P2|charge=0",
+      "formula": "C5H10N2O7P2",
+      "SMILES": "O=P(O)(O)C(O)(Cn1ccnc1)P(=O)(O)O",
+      "connectivity": "O=P(O)(O)C(O)(Cn1ccnc1)P(=O)(O)O"
+    },
+    {
+      "split": "training",
+      "group_id": "C8H18ClP|charge=0",
+      "formula": "C8H18ClP",
+      "SMILES": "CCCCP(Cl)C(C)(C)C",
+      "connectivity": "CCCCP(Cl)C(C)(C)C"
+    },
+    {
+      "split": "training",
+      "group_id": "C8H18ClP|charge=0",
+      "formula": "C8H18ClP",
+      "SMILES": "CCCCP(Cl)CCCC",
+      "connectivity": "CCCCP(Cl)CCCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C8H18ClP|charge=0",
+      "formula": "C8H18ClP",
+      "SMILES": "CCC(C)P(Cl)C(C)CC",
+      "connectivity": "CCC(C)P(Cl)C(C)CC"
+    },
+    {
+      "split": "training",
+      "group_id": "C8H18ClP|charge=0",
+      "formula": "C8H18ClP",
+      "SMILES": "CC(C)(C)P(Cl)C(C)(C)C",
+      "connectivity": "CC(C)(C)P(Cl)C(C)(C)C"
+    },
+    {
+      "split": "training",
+      "group_id": "C8H18ClP|charge=0",
+      "formula": "C8H18ClP",
+      "SMILES": "CCC(C)P(Cl)C(C)(C)C",
+      "connectivity": "CCC(C)P(Cl)C(C)(C)C"
+    },
+    {
+      "split": "training",
+      "group_id": "C14H15OP|charge=0",
+      "formula": "C14H15OP",
+      "SMILES": "Cc1ccc([PH](=O)c2ccc(C)cc2)cc1",
+      "connectivity": "Cc1ccc([PH](=O)c2ccc(C)cc2)cc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C14H15OP|charge=0",
+      "formula": "C14H15OP",
+      "SMILES": "CCOP(c1ccccc1)c1ccccc1",
+      "connectivity": "CCOP(c1ccccc1)c1ccccc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C14H15OP|charge=0",
+      "formula": "C14H15OP",
+      "SMILES": "Cc1ccccc1[PH](=O)c1ccccc1C",
+      "connectivity": "Cc1ccccc1[PH](=O)c1ccccc1C"
+    },
+    {
+      "split": "training",
+      "group_id": "C14H15OP|charge=0",
+      "formula": "C14H15OP",
+      "SMILES": "Cc1cccc([PH](=O)c2cccc(C)c2)c1",
+      "connectivity": "Cc1cccc([PH](=O)c2cccc(C)c2)c1"
+    },
+    {
+      "split": "training",
+      "group_id": "C22H22NP|charge=0",
+      "formula": "C22H22NP",
+      "SMILES": "CC1CCc2cccc(P(c3ccccc3)c3ccccc3)c2N1",
+      "connectivity": "CC1CCc2cccc(P(c3ccccc3)c3ccccc3)c2N1"
+    },
+    {
+      "split": "training",
+      "group_id": "C22H22NP|charge=0",
+      "formula": "C22H22NP",
+      "SMILES": "CCP(CC)c1ccccc1-n1c2ccccc2c2ccccc21",
+      "connectivity": "CCP(CC)c1ccccc1-n1c2ccccc2c2ccccc21"
+    },
+    {
+      "split": "training",
+      "group_id": "C22H22NP|charge=0",
+      "formula": "C22H22NP",
+      "SMILES": "C(=NCCCP(c1ccccc1)c1ccccc1)c1ccccc1",
+      "connectivity": "C(=NCCCP(c1ccccc1)c1ccccc1)c1ccccc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C15H21N2O4P|charge=0",
+      "formula": "C15H21N2O4P",
+      "SMILES": "CCOP(=O)(CCc1cn(-c2ccccc2)nc1O)OCC",
+      "connectivity": "CCOP(=O)(CCc1cn(-c2ccccc2)nc1O)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C15H21N2O4P|charge=0",
+      "formula": "C15H21N2O4P",
+      "SMILES": "CCOP(=O)(CCc1cc(O)nn1-c1ccccc1)OCC",
+      "connectivity": "CCOP(=O)(CCc1cc(O)nn1-c1ccccc1)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C15H21N2O4P|charge=0",
+      "formula": "C15H21N2O4P",
+      "SMILES": "CCOP(=O)(Cn1cc(C)c(=O)c2c(N)cccc21)OCC",
+      "connectivity": "CCOP(=O)(Cn1cc(C)c(=O)c2c(N)cccc21)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C12H28NO4P|charge=0",
+      "formula": "C12H28NO4P",
+      "SMILES": "CC(C)(N)COP(=O)(OC(C)(C)C)OC(C)(C)C",
+      "connectivity": "CC(C)(N)COP(=O)(OC(C)(C)C)OC(C)(C)C"
+    },
+    {
+      "split": "training",
+      "group_id": "C12H28NO4P|charge=0",
+      "formula": "C12H28NO4P",
+      "SMILES": "CCOC(OCC)P(=O)(OCC)C(CC)CCN",
+      "connectivity": "CCOC(OCC)P(=O)(OCC)C(CC)CCN"
+    },
+    {
+      "split": "training",
+      "group_id": "C12H28NO4P|charge=0",
+      "formula": "C12H28NO4P",
+      "SMILES": "CCCOC(OCCC)P(=O)(CCCN)OCC",
+      "connectivity": "CCCOC(OCCC)P(=O)(CCCN)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C12H28NO4P|charge=0",
+      "formula": "C12H28NO4P",
+      "SMILES": "CCNCCOP(=O)(OC(C)(C)C)OC(C)(C)C",
+      "connectivity": "CCNCCOP(=O)(OC(C)(C)C)OC(C)(C)C"
+    },
+    {
+      "split": "training",
+      "group_id": "C9H19O3P|charge=0",
+      "formula": "C9H19O3P",
+      "SMILES": "C=CCCCP(=O)(OCC)OCC",
+      "connectivity": "C=CCCCP(=O)(OCC)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C9H19O3P|charge=0",
+      "formula": "C9H19O3P",
+      "SMILES": "CCCCOP(=O)(CC)CCC=O",
+      "connectivity": "CCCCOP(=O)(CC)CCC=O"
+    },
+    {
+      "split": "training",
+      "group_id": "C9H19O3P|charge=0",
+      "formula": "C9H19O3P",
+      "SMILES": "CC(C)O[PH](=O)C[C@H]1CC[C@@H](O)C1",
+      "connectivity": "CC(C)O[PH](=O)CC1CCC(O)C1"
+    },
+    {
+      "split": "training",
+      "group_id": "C11H5ClF3N3O2|charge=0",
+      "formula": "C11H5ClF3N3O2",
+      "SMILES": "O=[N+]([O-])c1cc(-c2ncccc2C(F)(F)F)cnc1Cl",
+      "connectivity": "O=[N+]([O-])c1cc(-c2ncccc2C(F)(F)F)cnc1Cl"
+    },
+    {
+      "split": "training",
+      "group_id": "C11H5ClF3N3O2|charge=0",
+      "formula": "C11H5ClF3N3O2",
+      "SMILES": "O=[N+]([O-])c1ccc(-c2ccc(Cl)nn2)cc1C(F)(F)F",
+      "connectivity": "O=[N+]([O-])c1ccc(-c2ccc(Cl)nn2)cc1C(F)(F)F"
+    },
+    {
+      "split": "training",
+      "group_id": "C11H5ClF3N3O2|charge=0",
+      "formula": "C11H5ClF3N3O2",
+      "SMILES": "Fc1cnc(Cl)nc1Nc1cc2c(F)c(F)c1OCO2",
+      "connectivity": "Fc1cnc(Cl)nc1Nc1cc2c(F)c(F)c1OCO2"
+    },
+    {
+      "split": "training",
+      "group_id": "C11H5ClF3N3O2|charge=0",
+      "formula": "C11H5ClF3N3O2",
+      "SMILES": "N#Cc1ccc2c(nc(C(F)(F)F)n2CC(=O)O)c1Cl",
+      "connectivity": "N#Cc1ccc2c(nc(C(F)(F)F)n2CC(=O)O)c1Cl"
+    },
+    {
+      "split": "training",
+      "group_id": "C5H14NO4P|charge=0",
+      "formula": "C5H14NO4P",
+      "SMILES": "CCN(CCO)CP(=O)(O)O",
+      "connectivity": "CCN(CCO)CP(=O)(O)O"
+    },
+    {
+      "split": "training",
+      "group_id": "C5H14NO4P|charge=0",
+      "formula": "C5H14NO4P",
+      "SMILES": "CCOP(=O)(CON)OCC",
+      "connectivity": "CCOP(=O)(CON)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C5H14NO4P|charge=0",
+      "formula": "C5H14NO4P",
+      "SMILES": "O=P(O)(O)CCCCCNO",
+      "connectivity": "O=P(O)(O)CCCCCNO"
+    },
+    {
+      "split": "training",
+      "group_id": "C11H17O4P|charge=0",
+      "formula": "C11H17O4P",
+      "SMILES": "COP(=O)(CCCOc1ccccc1)OC",
+      "connectivity": "COP(=O)(CCCOc1ccccc1)OC"
+    },
+    {
+      "split": "training",
+      "group_id": "C11H17O4P|charge=0",
+      "formula": "C11H17O4P",
+      "SMILES": "CCOP(=O)(OCC)c1ccc(CO)cc1",
+      "connectivity": "CCOP(=O)(OCC)c1ccc(CO)cc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C11H17O4P|charge=0",
+      "formula": "C11H17O4P",
+      "SMILES": "CCOP(=O)(OCC)c1ccccc1OC",
+      "connectivity": "CCOP(=O)(OCC)c1ccccc1OC"
+    },
+    {
+      "split": "training",
+      "group_id": "C11H17O4P|charge=0",
+      "formula": "C11H17O4P",
+      "SMILES": "CCOP(=O)(Cc1ccccc1O)OCC",
+      "connectivity": "CCOP(=O)(Cc1ccccc1O)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C11H17O4P|charge=0",
+      "formula": "C11H17O4P",
+      "SMILES": "COCc1ccccc1CP(=O)(OC)OC",
+      "connectivity": "COCc1ccccc1CP(=O)(OC)OC"
+    },
+    {
+      "split": "training",
+      "group_id": "C11H17O4P|charge=0",
+      "formula": "C11H17O4P",
+      "SMILES": "CCOP(=O)(Cc1ccc(O)cc1)OCC",
+      "connectivity": "CCOP(=O)(Cc1ccc(O)cc1)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C11H17O4P|charge=0",
+      "formula": "C11H17O4P",
+      "SMILES": "CC(C)(CCP(=O)(O)O)c1ccc(O)cc1",
+      "connectivity": "CC(C)(CCP(=O)(O)O)c1ccc(O)cc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C11H17O4P|charge=0",
+      "formula": "C11H17O4P",
+      "SMILES": "CCOP(=O)(OCC)OCc1ccccc1",
+      "connectivity": "CCOP(=O)(OCC)OCc1ccccc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C11H17O4P|charge=0",
+      "formula": "C11H17O4P",
+      "SMILES": "CCOP(=O)(OCC)c1cccc(OC)c1",
+      "connectivity": "CCOP(=O)(OCC)c1cccc(OC)c1"
+    },
+    {
+      "split": "training",
+      "group_id": "C11H17O4P|charge=0",
+      "formula": "C11H17O4P",
+      "SMILES": "CCOP(=O)(OCC)c1cc(O)ccc1C",
+      "connectivity": "CCOP(=O)(OCC)c1cc(O)ccc1C"
+    },
+    {
+      "split": "training",
+      "group_id": "C6H14NO7P|charge=0",
+      "formula": "C6H14NO7P",
+      "SMILES": "NCCOP(=O)(O)OCC(O)COC=O",
+      "connectivity": "NCCOP(=O)(O)OCC(O)COC=O"
+    },
+    {
+      "split": "training",
+      "group_id": "C6H14NO7P|charge=0",
+      "formula": "C6H14NO7P",
+      "SMILES": "O=C(O)CNCP(=O)(O)OCC(O)CO",
+      "connectivity": "O=C(O)CNCP(=O)(O)OCC(O)CO"
+    },
+    {
+      "split": "training",
+      "group_id": "C6H14NO7P|charge=0",
+      "formula": "C6H14NO7P",
+      "SMILES": "CCOC(=O)N(O)CC(O)CP(=O)(O)O",
+      "connectivity": "CCOC(=O)N(O)CC(O)CP(=O)(O)O"
+    },
+    {
+      "split": "training",
+      "group_id": "C8H6F2O3|charge=0",
+      "formula": "C8H6F2O3",
+      "SMILES": "Cc1ccc(O)c2c1OC(F)(F)O2",
+      "connectivity": "Cc1ccc(O)c2c1OC(F)(F)O2"
+    },
+    {
+      "split": "training",
+      "group_id": "C8H6F2O3|charge=0",
+      "formula": "C8H6F2O3",
+      "SMILES": "O=C(O)c1cccc(OC(F)F)c1",
+      "connectivity": "O=C(O)c1cccc(OC(F)F)c1"
+    },
+    {
+      "split": "training",
+      "group_id": "C8H6F2O3|charge=0",
+      "formula": "C8H6F2O3",
+      "SMILES": "OC1OCOc2ccc1c(F)c2F",
+      "connectivity": "OC1OCOc2ccc1c(F)c2F"
+    },
+    {
+      "split": "training",
+      "group_id": "C8H6F2O3|charge=0",
+      "formula": "C8H6F2O3",
+      "SMILES": "CC(=O)c1cc(F)c(O)c(F)c1O",
+      "connectivity": "CC(=O)c1cc(F)c(O)c(F)c1O"
+    },
+    {
+      "split": "training",
+      "group_id": "C8H6F2O3|charge=0",
+      "formula": "C8H6F2O3",
+      "SMILES": "O=C(O)Cc1ccc(O)c(F)c1F",
+      "connectivity": "O=C(O)Cc1ccc(O)c(F)c1F"
+    },
+    {
+      "split": "training",
+      "group_id": "C8H6F2O3|charge=0",
+      "formula": "C8H6F2O3",
+      "SMILES": "COC(=O)Oc1ccc(F)cc1F",
+      "connectivity": "COC(=O)Oc1ccc(F)cc1F"
+    },
+    {
+      "split": "training",
+      "group_id": "C8H6F2O3|charge=0",
+      "formula": "C8H6F2O3",
+      "SMILES": "O=C(O)COc1ccc(F)c(F)c1",
+      "connectivity": "O=C(O)COc1ccc(F)c(F)c1"
+    },
+    {
+      "split": "training",
+      "group_id": "C8H6F2O3|charge=0",
+      "formula": "C8H6F2O3",
+      "SMILES": "OCc1ccc2c(c1)OC(F)(F)O2",
+      "connectivity": "OCc1ccc2c(c1)OC(F)(F)O2"
+    },
+    {
+      "split": "training",
+      "group_id": "C8H6F2O3|charge=0",
+      "formula": "C8H6F2O3",
+      "SMILES": "COc1c(F)ccc(C(=O)O)c1F",
+      "connectivity": "COc1c(F)ccc(C(=O)O)c1F"
+    },
+    {
+      "split": "training",
+      "group_id": "C8H6F2O3|charge=0",
+      "formula": "C8H6F2O3",
+      "SMILES": "O=Cc1ccc(OC(F)F)c(O)c1",
+      "connectivity": "O=Cc1ccc(OC(F)F)c(O)c1"
+    },
+    {
+      "split": "training",
+      "group_id": "C10H20NO3P|charge=0",
+      "formula": "C10H20NO3P",
+      "SMILES": "NCC(=O)CP(=O)(O)CC1CCCCC1",
+      "connectivity": "NCC(=O)CP(=O)(O)CC1CCCCC1"
+    },
+    {
+      "split": "training",
+      "group_id": "C10H20NO3P|charge=0",
+      "formula": "C10H20NO3P",
+      "SMILES": "CCOP(=O)(OCC)C1(C)CCC(C)=N1",
+      "connectivity": "CCOP(=O)(OCC)C1(C)CCC(C)=N1"
+    },
+    {
+      "split": "training",
+      "group_id": "C10H20NO3P|charge=0",
+      "formula": "C10H20NO3P",
+      "SMILES": "CCP(=O)(CC(C)C#N)OCCCCO",
+      "connectivity": "CCP(=O)(CC(C)C#N)OCCCCO"
+    },
+    {
+      "split": "training",
+      "group_id": "C5H13O3P|charge=0",
+      "formula": "C5H13O3P",
+      "SMILES": "CCCCOP(C)(=O)O",
+      "connectivity": "CCCCOP(C)(=O)O"
+    },
+    {
+      "split": "training",
+      "group_id": "C5H13O3P|charge=0",
+      "formula": "C5H13O3P",
+      "SMILES": "CCOP(C)(=O)OCC",
+      "connectivity": "CCOP(C)(=O)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C5H13O3P|charge=0",
+      "formula": "C5H13O3P",
+      "SMILES": "CC(C)OP(C)(=O)CO",
+      "connectivity": "CC(C)OP(C)(=O)CO"
+    },
+    {
+      "split": "training",
+      "group_id": "C5H13O3P|charge=0",
+      "formula": "C5H13O3P",
+      "SMILES": "CCCP(=O)(O)OCC",
+      "connectivity": "CCCP(=O)(O)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C5H13O3P|charge=0",
+      "formula": "C5H13O3P",
+      "SMILES": "CCCP(=O)(OC)OC",
+      "connectivity": "CCCP(=O)(OC)OC"
+    },
+    {
+      "split": "training",
+      "group_id": "C5H13O3P|charge=0",
+      "formula": "C5H13O3P",
+      "SMILES": "CCO[PH](=O)C(C)(C)O",
+      "connectivity": "CCO[PH](=O)C(C)(C)O"
+    },
+    {
+      "split": "training",
+      "group_id": "C5H13O3P|charge=0",
+      "formula": "C5H13O3P",
+      "SMILES": "CCP(=O)(O)CCCO",
+      "connectivity": "CCP(=O)(O)CCCO"
+    },
+    {
+      "split": "training",
+      "group_id": "C11H15F2O3P|charge=0",
+      "formula": "C11H15F2O3P",
+      "SMILES": "CCOP(=O)(Cc1cc(F)ccc1F)OCC",
+      "connectivity": "CCOP(=O)(Cc1cc(F)ccc1F)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C11H15F2O3P|charge=0",
+      "formula": "C11H15F2O3P",
+      "SMILES": "CCOP(=O)(Cc1cc(F)cc(F)c1)OCC",
+      "connectivity": "CCOP(=O)(Cc1cc(F)cc(F)c1)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C11H15F2O3P|charge=0",
+      "formula": "C11H15F2O3P",
+      "SMILES": "CCOP(=O)(Cc1c(F)cccc1F)OCC",
+      "connectivity": "CCOP(=O)(Cc1c(F)cccc1F)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C11H25O4P|charge=0",
+      "formula": "C11H25O4P",
+      "SMILES": "CCOP(=O)(OCC)C(C)(C)CCCCO",
+      "connectivity": "CCOP(=O)(OCC)C(C)(C)CCCCO"
+    },
+    {
+      "split": "training",
+      "group_id": "C11H25O4P|charge=0",
+      "formula": "C11H25O4P",
+      "SMILES": "CCCCOP(=O)(OCCCC)C(O)CC",
+      "connectivity": "CCCCOP(=O)(OCCCC)C(O)CC"
+    },
+    {
+      "split": "training",
+      "group_id": "C11H25O4P|charge=0",
+      "formula": "C11H25O4P",
+      "SMILES": "CCCCOP(=O)(OCCCC)C(C)(C)O",
+      "connectivity": "CCCCOP(=O)(OCCCC)C(C)(C)O"
+    },
+    {
+      "split": "training",
+      "group_id": "C8H20NO5P|charge=0",
+      "formula": "C8H20NO5P",
+      "SMILES": "CCOP(=O)(OCC)N(CCO)CCO",
+      "connectivity": "CCOP(=O)(OCC)N(CCO)CCO"
+    },
+    {
+      "split": "training",
+      "group_id": "C8H20NO5P|charge=0",
+      "formula": "C8H20NO5P",
+      "SMILES": "CCOC(OCC)P(=O)(O)CC(O)CN",
+      "connectivity": "CCOC(OCC)P(=O)(O)CC(O)CN"
+    },
+    {
+      "split": "training",
+      "group_id": "C8H20NO5P|charge=0",
+      "formula": "C8H20NO5P",
+      "SMILES": "CCOP(=O)(COCCCON)OCC",
+      "connectivity": "CCOP(=O)(COCCCON)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C8H9O4P|charge=0",
+      "formula": "C8H9O4P",
+      "SMILES": "CP(=O)(O)c1ccc(C(=O)O)cc1",
+      "connectivity": "CP(=O)(O)c1ccc(C(=O)O)cc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C8H9O4P|charge=0",
+      "formula": "C8H9O4P",
+      "SMILES": "COP1(=O)Oc2ccc(C)cc2O1",
+      "connectivity": "COP1(=O)Oc2ccc(C)cc2O1"
+    },
+    {
+      "split": "training",
+      "group_id": "C8H9O4P|charge=0",
+      "formula": "C8H9O4P",
+      "SMILES": "CCOP1(=O)Oc2ccccc2O1",
+      "connectivity": "CCOP1(=O)Oc2ccccc2O1"
+    },
+    {
+      "split": "training",
+      "group_id": "C19H19O3P|charge=0",
+      "formula": "C19H19O3P",
+      "SMILES": "CCOP1(=O)C=C(c2ccccc2)C=C(Cc2ccccc2)O1",
+      "connectivity": "CCOP1(=O)C=C(c2ccccc2)C=C(Cc2ccccc2)O1"
+    },
+    {
+      "split": "training",
+      "group_id": "C19H19O3P|charge=0",
+      "formula": "C19H19O3P",
+      "SMILES": "CCOP1(=O)C=C(c2ccccc2)C=C(c2ccc(C)cc2)O1",
+      "connectivity": "CCOP1(=O)C=C(c2ccccc2)C=C(c2ccc(C)cc2)O1"
+    },
+    {
+      "split": "training",
+      "group_id": "C19H19O3P|charge=0",
+      "formula": "C19H19O3P",
+      "SMILES": "C=C(Cc1ccccc1)OP(=O)(C#Cc1ccccc1)OCC",
+      "connectivity": "C=C(Cc1ccccc1)OP(=O)(C#Cc1ccccc1)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C12H27O4P|charge=0",
+      "formula": "C12H27O4P",
+      "SMILES": "CCCCOP(=O)(OCCCC)OCCCC",
+      "connectivity": "CCCCOP(=O)(OCCCC)OCCCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C12H27O4P|charge=0",
+      "formula": "C12H27O4P",
+      "SMILES": "CCCCCCCCCCCCOP(=O)(O)O",
+      "connectivity": "CCCCCCCCCCCCOP(=O)(O)O"
+    },
+    {
+      "split": "training",
+      "group_id": "C12H27O4P|charge=0",
+      "formula": "C12H27O4P",
+      "SMILES": "CCCCOP(=O)(OCC(C)C)OCC(C)C",
+      "connectivity": "CCCCOP(=O)(OCC(C)C)OCC(C)C"
+    },
+    {
+      "split": "training",
+      "group_id": "C12H27O4P|charge=0",
+      "formula": "C12H27O4P",
+      "SMILES": "CCCCCCC(CCCC)COP(=O)(O)O",
+      "connectivity": "CCCCCCC(CCCC)COP(=O)(O)O"
+    },
+    {
+      "split": "training",
+      "group_id": "C12H27O4P|charge=0",
+      "formula": "C12H27O4P",
+      "SMILES": "CCCCP(=O)(OCC)C(C)(OCC)OCC",
+      "connectivity": "CCCCP(=O)(OCC)C(C)(OCC)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C12H27O4P|charge=0",
+      "formula": "C12H27O4P",
+      "SMILES": "CCCCOP(=O)(OCCCC)OCC(C)C",
+      "connectivity": "CCCCOP(=O)(OCCCC)OCC(C)C"
+    },
+    {
+      "split": "training",
+      "group_id": "C16H18NO5P|charge=0",
+      "formula": "C16H18NO5P",
+      "SMILES": "O=C(NC(Cc1ccccc1)P(=O)(O)O)OCc1ccccc1",
+      "connectivity": "O=C(NC(Cc1ccccc1)P(=O)(O)O)OCc1ccccc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C16H18NO5P|charge=0",
+      "formula": "C16H18NO5P",
+      "SMILES": "NC(CCP(=O)(Oc1ccccc1)Oc1ccccc1)C(=O)O",
+      "connectivity": "NC(CCP(=O)(Oc1ccccc1)Oc1ccccc1)C(=O)O"
+    },
+    {
+      "split": "training",
+      "group_id": "C16H18NO5P|charge=0",
+      "formula": "C16H18NO5P",
+      "SMILES": "O=C(O)[C@H](Cc1ccc(-c2ccccc2)cc1)NCP(=O)(O)O",
+      "connectivity": "O=C(O)C(Cc1ccc(-c2ccccc2)cc1)NCP(=O)(O)O"
+    },
+    {
+      "split": "training",
+      "group_id": "C16H18NO5P|charge=0",
+      "formula": "C16H18NO5P",
+      "SMILES": "NC(Cc1cc(CP(=O)(O)O)cc(-c2ccccc2)c1)C(=O)O",
+      "connectivity": "NC(Cc1cc(CP(=O)(O)O)cc(-c2ccccc2)c1)C(=O)O"
+    },
+    {
+      "split": "training",
+      "group_id": "C8H16NO5P|charge=0",
+      "formula": "C8H16NO5P",
+      "SMILES": "CCC/C(=C\\C(N)C(=O)O)CP(=O)(O)O",
+      "connectivity": "CCCC(=CC(N)C(=O)O)CP(=O)(O)O"
+    },
+    {
+      "split": "training",
+      "group_id": "C8H16NO5P|charge=0",
+      "formula": "C8H16NO5P",
+      "SMILES": "CC(C)/C(=C\\C(N)C(=O)O)CP(=O)(O)O",
+      "connectivity": "CC(C)C(=CC(N)C(=O)O)CP(=O)(O)O"
+    },
+    {
+      "split": "training",
+      "group_id": "C8H16NO5P|charge=0",
+      "formula": "C8H16NO5P",
+      "SMILES": "CCOC(=O)/C(N)=C\\C(C)CP(=O)(O)O",
+      "connectivity": "CCOC(=O)C(N)=CC(C)CP(=O)(O)O"
+    },
+    {
+      "split": "training",
+      "group_id": "C19H24N2|charge=0",
+      "formula": "C19H24N2",
+      "SMILES": "CCc1cccc(CC)c1-c1cc(C)c2c(n1)CCNC2",
+      "connectivity": "CCc1cccc(CC)c1-c1cc(C)c2c(n1)CCNC2"
+    },
+    {
+      "split": "training",
+      "group_id": "C19H24N2|charge=0",
+      "formula": "C19H24N2",
+      "SMILES": "Nc1ccc(C(c2ccc(N)cc2)C2CCCCC2)cc1",
+      "connectivity": "Nc1ccc(C(c2ccc(N)cc2)C2CCCCC2)cc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C19H24N2|charge=0",
+      "formula": "C19H24N2",
+      "SMILES": "CC=C(c1ccc(N(C)C)cc1)c1ccc(N(C)C)cc1",
+      "connectivity": "CC=C(c1ccc(N(C)C)cc1)c1ccc(N(C)C)cc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C19H24N2|charge=0",
+      "formula": "C19H24N2",
+      "SMILES": "C=CCN1C2=C3CC1C(C)C1(C)C=NCC=CC3=C1CC2",
+      "connectivity": "C=CCN1C2=C3CC1C(C)C1(C)C=NCC=CC3=C1CC2"
+    },
+    {
+      "split": "training",
+      "group_id": "C19H24N2|charge=0",
+      "formula": "C19H24N2",
+      "SMILES": "Cc1cc(C)c(N=CNc2c(C)cc(C)cc2C)c(C)c1",
+      "connectivity": "Cc1cc(C)c(N=CNc2c(C)cc(C)cc2C)c(C)c1"
+    },
+    {
+      "split": "training",
+      "group_id": "C19H24N2|charge=0",
+      "formula": "C19H24N2",
+      "SMILES": "CC1(NCc2ccccc2)CCN(Cc2ccccc2)C1",
+      "connectivity": "CC1(NCc2ccccc2)CCN(Cc2ccccc2)C1"
+    },
+    {
+      "split": "training",
+      "group_id": "C19H24N2|charge=0",
+      "formula": "C19H24N2",
+      "SMILES": "C=Cc1ccc(-c2ncc(CCCCCCC)cn2)cc1",
+      "connectivity": "C=Cc1ccc(-c2ncc(CCCCCCC)cn2)cc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C19H24N2|charge=0",
+      "formula": "C19H24N2",
+      "SMILES": "Cc1ccc2c(c1)c1c(n2C2=CCCCC2)CCN(C)C1",
+      "connectivity": "Cc1ccc2c(c1)c1c(n2C2=CCCCC2)CCN(C)C1"
+    },
+    {
+      "split": "training",
+      "group_id": "C19H24N2|charge=0",
+      "formula": "C19H24N2",
+      "SMILES": "CC1C(c2ccccc2)NC(c2ccccc2)C(C)C1N",
+      "connectivity": "CC1C(c2ccccc2)NC(c2ccccc2)C(C)C1N"
+    },
+    {
+      "split": "training",
+      "group_id": "C19H24N2|charge=0",
+      "formula": "C19H24N2",
+      "SMILES": "CC(C)c1cccc(C(C)C)c1NC(=N)c1ccccc1",
+      "connectivity": "CC(C)c1cccc(C(C)C)c1NC(=N)c1ccccc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C14H16NO3P|charge=0",
+      "formula": "C14H16NO3P",
+      "SMILES": "NP(=O)(OCc1ccccc1)OCc1ccccc1",
+      "connectivity": "NP(=O)(OCc1ccccc1)OCc1ccccc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C14H16NO3P|charge=0",
+      "formula": "C14H16NO3P",
+      "SMILES": "O=P(O)(O)C(NCc1ccccc1)c1ccccc1",
+      "connectivity": "O=P(O)(O)C(NCc1ccccc1)c1ccccc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C14H16NO3P|charge=0",
+      "formula": "C14H16NO3P",
+      "SMILES": "COc1ccc(C(N)c2ccc([PH](=O)O)cc2)cc1",
+      "connectivity": "COc1ccc(C(N)c2ccc([PH](=O)O)cc2)cc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C17H29N4O6P|charge=0",
+      "formula": "C17H29N4O6P",
+      "SMILES": "CCOP(=O)(CCCCn1c(=O)c2c(ncn2CCOC)n(C)c1=O)OCC",
+      "connectivity": "CCOP(=O)(CCCCn1c(=O)c2c(ncn2CCOC)n(C)c1=O)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C17H29N4O6P|charge=0",
+      "formula": "C17H29N4O6P",
+      "SMILES": "CCOCn1cnc2c1c(=O)n(CCCCP(=O)(OCC)OCC)c(=O)n2C",
+      "connectivity": "CCOCn1cnc2c1c(=O)n(CCCCP(=O)(OCC)OCC)c(=O)n2C"
+    },
+    {
+      "split": "training",
+      "group_id": "C17H29N4O6P|charge=0",
+      "formula": "C17H29N4O6P",
+      "SMILES": "CCOP(=O)(CCCCn1cnc2c1c(=O)n(C(C)OC)c(=O)n2C)OCC",
+      "connectivity": "CCOP(=O)(CCCCn1cnc2c1c(=O)n(C(C)OC)c(=O)n2C)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C17H29N4O6P|charge=0",
+      "formula": "C17H29N4O6P",
+      "SMILES": "CCOCn1c(=O)c2c(ncn2CCCCP(=O)(OCC)OCC)n(C)c1=O",
+      "connectivity": "CCOCn1c(=O)c2c(ncn2CCCCP(=O)(OCC)OCC)n(C)c1=O"
+    },
+    {
+      "split": "training",
+      "group_id": "C13H8O|charge=0",
+      "formula": "C13H8O",
+      "SMILES": "O=C1C=CC2=c3ccccc3=CC2=C1",
+      "connectivity": "O=C1C=CC2=c3ccccc3=CC2=C1"
+    },
+    {
+      "split": "training",
+      "group_id": "C13H8O|charge=0",
+      "formula": "C13H8O",
+      "SMILES": "O=c1c2cc3ccccc3cc1C=C2",
+      "connectivity": "O=c1c2cc3ccccc3cc1C=C2"
+    },
+    {
+      "split": "training",
+      "group_id": "C13H8O|charge=0",
+      "formula": "C13H8O",
+      "SMILES": "O=C1c2ccccc2-c2ccccc21",
+      "connectivity": "O=C1c2ccccc2-c2ccccc21"
+    },
+    {
+      "split": "training",
+      "group_id": "C13H8O|charge=0",
+      "formula": "C13H8O",
+      "SMILES": "O=CC#Cc1cccc2ccccc12",
+      "connectivity": "O=CC#Cc1cccc2ccccc12"
+    },
+    {
+      "split": "training",
+      "group_id": "C13H8O|charge=0",
+      "formula": "C13H8O",
+      "SMILES": "O=CC#Cc1ccc2ccccc2c1",
+      "connectivity": "O=CC#Cc1ccc2ccccc2c1"
+    },
+    {
+      "split": "training",
+      "group_id": "C13H8O|charge=0",
+      "formula": "C13H8O",
+      "SMILES": "O=C1C=CC=C2C1=Cc1ccccc12",
+      "connectivity": "O=C1C=CC=C2C1=Cc1ccccc12"
+    },
+    {
+      "split": "training",
+      "group_id": "C12H19O5P|charge=0",
+      "formula": "C12H19O5P",
+      "SMILES": "CCOP(=O)(OCC)C(O)c1ccc(OC)cc1",
+      "connectivity": "CCOP(=O)(OCC)C(O)c1ccc(OC)cc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C12H19O5P|charge=0",
+      "formula": "C12H19O5P",
+      "SMILES": "CCOP(=O)(OCC)c1cc(OC)cc(OC)c1",
+      "connectivity": "CCOP(=O)(OCC)c1cc(OC)cc(OC)c1"
+    },
+    {
+      "split": "training",
+      "group_id": "C12H19O5P|charge=0",
+      "formula": "C12H19O5P",
+      "SMILES": "CCOP(=O)(OCC)C(OC)c1cccc(O)c1",
+      "connectivity": "CCOP(=O)(OCC)C(OC)c1cccc(O)c1"
+    },
+    {
+      "split": "training",
+      "group_id": "C20H19P|charge=0",
+      "formula": "C20H19P",
+      "SMILES": "Cc1cc(C)cc(P(c2ccccc2)c2ccccc2)c1",
+      "connectivity": "Cc1cc(C)cc(P(c2ccccc2)c2ccccc2)c1"
+    },
+    {
+      "split": "training",
+      "group_id": "C20H19P|charge=0",
+      "formula": "C20H19P",
+      "SMILES": "CC=P(c1ccccc1)(c1ccccc1)c1ccccc1",
+      "connectivity": "CC=P(c1ccccc1)(c1ccccc1)c1ccccc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C20H19P|charge=0",
+      "formula": "C20H19P",
+      "SMILES": "C=C[PH](c1ccccc1)(c1ccccc1)c1ccccc1",
+      "connectivity": "C=C[PH](c1ccccc1)(c1ccccc1)c1ccccc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C15H22NO6P|charge=0",
+      "formula": "C15H22NO6P",
+      "SMILES": "CCOC(=O)C(N)C=C(COCc1ccccc1)CP(=O)(O)O",
+      "connectivity": "CCOC(=O)C(N)C=C(COCc1ccccc1)CP(=O)(O)O"
+    },
+    {
+      "split": "training",
+      "group_id": "C15H22NO6P|charge=0",
+      "formula": "C15H22NO6P",
+      "SMILES": "CCOC(=O)c1ccc(NC(=O)CP(=O)(OCC)OCC)cc1",
+      "connectivity": "CCOC(=O)c1ccc(NC(=O)CP(=O)(OCC)OCC)cc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C15H22NO6P|charge=0",
+      "formula": "C15H22NO6P",
+      "SMILES": "COC(=O)CCP(=O)(OC)C(C)NC(=O)OCc1ccccc1",
+      "connectivity": "COC(=O)CCP(=O)(OC)C(C)NC(=O)OCc1ccccc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C11H21O5P|charge=0",
+      "formula": "C11H21O5P",
+      "SMILES": "CCOC(=O)C([PH2]=O)=C(C)C(OCC)OCC",
+      "connectivity": "CCOC(=O)C([PH2]=O)=C(C)C(OCC)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C11H21O5P|charge=0",
+      "formula": "C11H21O5P",
+      "SMILES": "CCOC(=O)CC=CCP(=O)(OCC)OCC",
+      "connectivity": "CCOC(=O)CC=CCP(=O)(OCC)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C11H21O5P|charge=0",
+      "formula": "C11H21O5P",
+      "SMILES": "C=C(C)C(=O)OCCCP(=O)(OCC)OCC",
+      "connectivity": "C=C(C)C(=O)OCCCP(=O)(OCC)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C11H16FO3P|charge=0",
+      "formula": "C11H16FO3P",
+      "SMILES": "CCOP(=O)(Cc1cccc(F)c1)OCC",
+      "connectivity": "CCOP(=O)(Cc1cccc(F)c1)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C11H16FO3P|charge=0",
+      "formula": "C11H16FO3P",
+      "SMILES": "CCOP(=O)(Cc1ccc(F)cc1)OCC",
+      "connectivity": "CCOP(=O)(Cc1ccc(F)cc1)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C11H16FO3P|charge=0",
+      "formula": "C11H16FO3P",
+      "SMILES": "CCOP(=O)(Cc1ccccc1F)OCC",
+      "connectivity": "CCOP(=O)(Cc1ccccc1F)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C4H11N2O4P|charge=0",
+      "formula": "C4H11N2O4P",
+      "SMILES": "C[C@H](N)C(=O)NOP(C)(=O)O",
+      "connectivity": "CC(N)C(=O)NOP(C)(=O)O"
+    },
+    {
+      "split": "training",
+      "group_id": "C4H11N2O4P|charge=0",
+      "formula": "C4H11N2O4P",
+      "SMILES": "CNC(=O)N(C)CP(=O)(O)O",
+      "connectivity": "CNC(=O)N(C)CP(=O)(O)O"
+    },
+    {
+      "split": "training",
+      "group_id": "C4H11N2O4P|charge=0",
+      "formula": "C4H11N2O4P",
+      "SMILES": "C[C@H](NC(=O)CN)P(=O)(O)O",
+      "connectivity": "CC(NC(=O)CN)P(=O)(O)O"
+    },
+    {
+      "split": "training",
+      "group_id": "C4H11N2O4P|charge=0",
+      "formula": "C4H11N2O4P",
+      "SMILES": "CCC(NC(N)=O)P(=O)(O)O",
+      "connectivity": "CCC(NC(N)=O)P(=O)(O)O"
+    },
+    {
+      "split": "training",
+      "group_id": "C17H22NO4P|charge=0",
+      "formula": "C17H22NO4P",
+      "SMILES": "CCOP(=O)(Cc1cccc(Oc2ncccc2C)c1)OCC",
+      "connectivity": "CCOP(=O)(Cc1cccc(Oc2ncccc2C)c1)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C17H22NO4P|charge=0",
+      "formula": "C17H22NO4P",
+      "SMILES": "CCOP(=O)(Cc1cccc(Oc2cc(C)ccn2)c1)OCC",
+      "connectivity": "CCOP(=O)(Cc1cccc(Oc2cc(C)ccn2)c1)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C17H22NO4P|charge=0",
+      "formula": "C17H22NO4P",
+      "SMILES": "CCOP(=O)(Cc1cccc(Oc2ccc(C)cn2)c1)OCC",
+      "connectivity": "CCOP(=O)(Cc1cccc(Oc2ccc(C)cn2)c1)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C17H22NO4P|charge=0",
+      "formula": "C17H22NO4P",
+      "SMILES": "CCOP(=O)(Cc1cccc(Oc2cccc(C)n2)c1)OCC",
+      "connectivity": "CCOP(=O)(Cc1cccc(Oc2cccc(C)n2)c1)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C14H23OP|charge=0",
+      "formula": "C14H23OP",
+      "SMILES": "CCCCCCCC[PH](=O)c1ccccc1",
+      "connectivity": "CCCCCCCC[PH](=O)c1ccccc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C14H23OP|charge=0",
+      "formula": "C14H23OP",
+      "SMILES": "CCCCCCP(OCC)c1ccccc1",
+      "connectivity": "CCCCCCP(OCC)c1ccccc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C14H23OP|charge=0",
+      "formula": "C14H23OP",
+      "SMILES": "CC(C)(C)P(=O)(c1ccccc1)C(C)(C)C",
+      "connectivity": "CC(C)(C)P(=O)(c1ccccc1)C(C)(C)C"
+    },
+    {
+      "split": "training",
+      "group_id": "C16H25N4O4P|charge=0",
+      "formula": "C16H25N4O4P",
+      "SMILES": "CCCN[PH](=O)[C@@]1(NC(=O)OCc2ccccc2)CCCN(N)C1=O",
+      "connectivity": "CCCN[PH](=O)C1(NC(=O)OCc2ccccc2)CCCN(N)C1=O"
+    },
+    {
+      "split": "training",
+      "group_id": "C16H25N4O4P|charge=0",
+      "formula": "C16H25N4O4P",
+      "SMILES": "CCCN(C(=O)OCc1ccccc1)C1CCCN(P(N)(N)=O)C1=O",
+      "connectivity": "CCCN(C(=O)OCc1ccccc1)C1CCCN(P(N)(N)=O)C1=O"
+    },
+    {
+      "split": "training",
+      "group_id": "C16H25N4O4P|charge=0",
+      "formula": "C16H25N4O4P",
+      "SMILES": "CC(C)N(C(=O)OCc1ccccc1)C1CCCN(P(N)(N)=O)C1=O",
+      "connectivity": "CC(C)N(C(=O)OCc1ccccc1)C1CCCN(P(N)(N)=O)C1=O"
+    },
+    {
+      "split": "training",
+      "group_id": "C10H14BrO3P|charge=0",
+      "formula": "C10H14BrO3P",
+      "SMILES": "CCOP(=O)(OCC)c1ccc(Br)cc1",
+      "connectivity": "CCOP(=O)(OCC)c1ccc(Br)cc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C10H14BrO3P|charge=0",
+      "formula": "C10H14BrO3P",
+      "SMILES": "COP(=O)(OC)C(C)c1ccc(Br)cc1",
+      "connectivity": "COP(=O)(OC)C(C)c1ccc(Br)cc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C10H14BrO3P|charge=0",
+      "formula": "C10H14BrO3P",
+      "SMILES": "CCOP(=O)(OCC)c1ccccc1Br",
+      "connectivity": "CCOP(=O)(OCC)c1ccccc1Br"
+    },
+    {
+      "split": "training",
+      "group_id": "C4H10NO3P|charge=0",
+      "formula": "C4H10NO3P",
+      "SMILES": "CP(=O)(O)CC(=O)CN",
+      "connectivity": "CP(=O)(O)CC(=O)CN"
+    },
+    {
+      "split": "training",
+      "group_id": "C4H10NO3P|charge=0",
+      "formula": "C4H10NO3P",
+      "SMILES": "O=P(O)(O)C1CCCN1",
+      "connectivity": "O=P(O)(O)C1CCCN1"
+    },
+    {
+      "split": "training",
+      "group_id": "C4H10NO3P|charge=0",
+      "formula": "C4H10NO3P",
+      "SMILES": "CP(C)(=O)C(O)C(N)=O",
+      "connectivity": "CP(C)(=O)C(O)C(N)=O"
+    },
+    {
+      "split": "training",
+      "group_id": "C7H15O3P|charge=0",
+      "formula": "C7H15O3P",
+      "SMILES": "CC=CP(=O)(CC)OCCO",
+      "connectivity": "CC=CP(=O)(CC)OCCO"
+    },
+    {
+      "split": "training",
+      "group_id": "C7H15O3P|charge=0",
+      "formula": "C7H15O3P",
+      "SMILES": "CCOP(=O)(OCC)C1CC1",
+      "connectivity": "CCOP(=O)(OCC)C1CC1"
+    },
+    {
+      "split": "training",
+      "group_id": "C7H15O3P|charge=0",
+      "formula": "C7H15O3P",
+      "SMILES": "CCP(=O)(CC)CC(=O)OC",
+      "connectivity": "CCP(=O)(CC)CC(=O)OC"
+    },
+    {
+      "split": "training",
+      "group_id": "C7H15O3P|charge=0",
+      "formula": "C7H15O3P",
+      "SMILES": "COP(=O)(CC=C(C)C)OC",
+      "connectivity": "COP(=O)(CC=C(C)C)OC"
+    },
+    {
+      "split": "training",
+      "group_id": "C7H15O3P|charge=0",
+      "formula": "C7H15O3P",
+      "SMILES": "C=CCP(=O)(OCC)OCC",
+      "connectivity": "C=CCP(=O)(OCC)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C19H21ClN4O3S|charge=0",
+      "formula": "C19H21ClN4O3S",
+      "SMILES": "CC[C@](C(=N)NO)(c1ccc(Cl)cc1)n1ccc2c(NS(C)(=O)=O)cccc21",
+      "connectivity": "CCC(C(=N)NO)(c1ccc(Cl)cc1)n1ccc2c(NS(C)(=O)=O)cccc21"
+    },
+    {
+      "split": "training",
+      "group_id": "C17H19N3|charge=0",
+      "formula": "C17H19N3",
+      "SMILES": "CNCCC(c1ccccc1)c1c[nH]c2cccnc12",
+      "connectivity": "CNCCC(c1ccccc1)c1c[nH]c2cccnc12"
+    },
+    {
+      "split": "training",
+      "group_id": "C17H19N3|charge=0",
+      "formula": "C17H19N3",
+      "SMILES": "CC1C2CC3=C(CCC4=C3C=CCN=CC41C)N2C#N",
+      "connectivity": "CC1C2CC3=C(CCC4=C3C=CCN=CC41C)N2C#N"
+    },
+    {
+      "split": "training",
+      "group_id": "C17H19N3|charge=0",
+      "formula": "C17H19N3",
+      "SMILES": "Cc1ccn2c(C)c(CCc3ccc(N)cc3)nc2c1",
+      "connectivity": "Cc1ccn2c(C)c(CCc3ccc(N)cc3)nc2c1"
+    },
+    {
+      "split": "training",
+      "group_id": "C17H19N3|charge=0",
+      "formula": "C17H19N3",
+      "SMILES": "CN1C[C@H](CC#N)C=C2c3cccc4c3[C@@H](CN4)C[C@H]21",
+      "connectivity": "CN1CC(CC#N)C=C2c3cccc4c3C(CN4)CC21"
+    },
+    {
+      "split": "training",
+      "group_id": "C17H19N3|charge=0",
+      "formula": "C17H19N3",
+      "SMILES": "c1ccc(-c2cncc(N3CCN4CCC3C4)c2)cc1",
+      "connectivity": "c1ccc(-c2cncc(N3CCN4CCC3C4)c2)cc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C17H19N3|charge=0",
+      "formula": "C17H19N3",
+      "SMILES": "CCCCCCc1cnc(-c2ccc(C#N)cc2)nc1",
+      "connectivity": "CCCCCCc1cnc(-c2ccc(C#N)cc2)nc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C17H19N3|charge=0",
+      "formula": "C17H19N3",
+      "SMILES": "Cc1cc(C#Cc2cn(C(C)C)c(C3CC3)n2)ccn1",
+      "connectivity": "Cc1cc(C#Cc2cn(C(C)C)c(C3CC3)n2)ccn1"
+    },
+    {
+      "split": "training",
+      "group_id": "C17H19N3|charge=0",
+      "formula": "C17H19N3",
+      "SMILES": "Cc1nc2cccc(NCc3c(C)cccc3C)c2[nH]1",
+      "connectivity": "Cc1nc2cccc(NCc3c(C)cccc3C)c2[nH]1"
+    },
+    {
+      "split": "training",
+      "group_id": "C17H19N3|charge=0",
+      "formula": "C17H19N3",
+      "SMILES": "CN(C)c1ccc2cc3ccc(N(C)C)cc3nc2c1",
+      "connectivity": "CN(C)c1ccc2cc3ccc(N(C)C)cc3nc2c1"
+    },
+    {
+      "split": "training",
+      "group_id": "C17H19N3|charge=0",
+      "formula": "C17H19N3",
+      "SMILES": "c1ccc2c(c1)CCn1ccnc1C2=C1CCNCC1",
+      "connectivity": "c1ccc2c(c1)CCn1ccnc1C2=C1CCNCC1"
+    },
+    {
+      "split": "training",
+      "group_id": "C7H15N2O4P|charge=0",
+      "formula": "C7H15N2O4P",
+      "SMILES": "NC(=O)[C@H]1C[C@@H](CP(=O)(O)O)CCN1",
+      "connectivity": "NC(=O)C1CC(CP(=O)(O)O)CCN1"
+    },
+    {
+      "split": "training",
+      "group_id": "C7H15N2O4P|charge=0",
+      "formula": "C7H15N2O4P",
+      "SMILES": "CCOP(=O)(OCC)C(=O)N=C(C)N",
+      "connectivity": "CCOP(=O)(OCC)C(=O)N=C(C)N"
+    },
+    {
+      "split": "training",
+      "group_id": "C7H15N2O4P|charge=0",
+      "formula": "C7H15N2O4P",
+      "SMILES": "C[C@H](NC(=O)[C@@H]1CCCN1)P(=O)(O)O",
+      "connectivity": "CC(NC(=O)C1CCCN1)P(=O)(O)O"
+    },
+    {
+      "split": "training",
+      "group_id": "C16H19OP|charge=0",
+      "formula": "C16H19OP",
+      "SMILES": "O=[PH](CCc1ccccc1)CCc1ccccc1",
+      "connectivity": "O=[PH](CCc1ccccc1)CCc1ccccc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C16H19OP|charge=0",
+      "formula": "C16H19OP",
+      "SMILES": "Cc1cc(C)cc([PH](=O)c2cc(C)cc(C)c2)c1",
+      "connectivity": "Cc1cc(C)cc([PH](=O)c2cc(C)cc(C)c2)c1"
+    },
+    {
+      "split": "training",
+      "group_id": "C16H19OP|charge=0",
+      "formula": "C16H19OP",
+      "SMILES": "COc1c(C)cc(C)cc1P(C)c1ccccc1",
+      "connectivity": "COc1c(C)cc(C)cc1P(C)c1ccccc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C16H19OP|charge=0",
+      "formula": "C16H19OP",
+      "SMILES": "CCOP(c1ccccc1C)c1ccccc1C",
+      "connectivity": "CCOP(c1ccccc1C)c1ccccc1C"
+    },
+    {
+      "split": "training",
+      "group_id": "C16H19OP|charge=0",
+      "formula": "C16H19OP",
+      "SMILES": "CCc1ccccc1[PH](=O)c1ccccc1CC",
+      "connectivity": "CCc1ccccc1[PH](=O)c1ccccc1CC"
+    },
+    {
+      "split": "training",
+      "group_id": "C16H19OP|charge=0",
+      "formula": "C16H19OP",
+      "SMILES": "OP(CCc1ccccc1)CCc1ccccc1",
+      "connectivity": "OP(CCc1ccccc1)CCc1ccccc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C16H19OP|charge=0",
+      "formula": "C16H19OP",
+      "SMILES": "CC(C)(C)P(=O)(c1ccccc1)c1ccccc1",
+      "connectivity": "CC(C)(C)P(=O)(c1ccccc1)c1ccccc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C5H11O5P|charge=0",
+      "formula": "C5H11O5P",
+      "SMILES": "COC1CCC(P(=O)(O)O)O1",
+      "connectivity": "COC1CCC(P(=O)(O)O)O1"
+    },
+    {
+      "split": "training",
+      "group_id": "C5H11O5P|charge=0",
+      "formula": "C5H11O5P",
+      "SMILES": "CCOC(=O)P(=O)(OC)OC",
+      "connectivity": "CCOC(=O)P(=O)(OC)OC"
+    },
+    {
+      "split": "training",
+      "group_id": "C5H11O5P|charge=0",
+      "formula": "C5H11O5P",
+      "SMILES": "COC(=O)CP(=O)(OC)OC",
+      "connectivity": "COC(=O)CP(=O)(OC)OC"
+    },
+    {
+      "split": "training",
+      "group_id": "C16H17N|charge=0",
+      "formula": "C16H17N",
+      "SMILES": "Cc1ccc(-c2ccc3c(c2)CNCC3)cc1",
+      "connectivity": "Cc1ccc(-c2ccc3c(c2)CNCC3)cc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C16H17N|charge=0",
+      "formula": "C16H17N",
+      "SMILES": "C1=CC2=CC3=CC2(C=C1)C=C3N1CCCCC1",
+      "connectivity": "C1=CC2=CC3=CC2(C=C1)C=C3N1CCCCC1"
+    },
+    {
+      "split": "training",
+      "group_id": "C16H17N|charge=0",
+      "formula": "C16H17N",
+      "SMILES": "C=Cc1ccc([C@@H](N)Cc2ccccc2)cc1",
+      "connectivity": "C=Cc1ccc(C(N)Cc2ccccc2)cc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C16H17N|charge=0",
+      "formula": "C16H17N",
+      "SMILES": "CC1=C(C)C(C)C(c2ccccc2C#N)=C1C",
+      "connectivity": "CC1=C(C)C(C)C(c2ccccc2C#N)=C1C"
+    },
+    {
+      "split": "training",
+      "group_id": "C16H17N|charge=0",
+      "formula": "C16H17N",
+      "SMILES": "c1ccc(C2CCCN2c2ccccc2)cc1",
+      "connectivity": "c1ccc(C2CCCN2c2ccccc2)cc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C16H17N|charge=0",
+      "formula": "C16H17N",
+      "SMILES": "C#CCCN(C)Cc1cccc2ccccc12",
+      "connectivity": "C#CCCN(C)Cc1cccc2ccccc12"
+    },
+    {
+      "split": "training",
+      "group_id": "C16H17N|charge=0",
+      "formula": "C16H17N",
+      "SMILES": "C=C(c1ccccc1)c1ccc(N(C)C)cc1",
+      "connectivity": "C=C(c1ccccc1)c1ccc(N(C)C)cc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C16H17N|charge=0",
+      "formula": "C16H17N",
+      "SMILES": "Cc1ccc(C23CNCC2C3)c2ccccc12",
+      "connectivity": "Cc1ccc(C23CNCC2C3)c2ccccc12"
+    },
+    {
+      "split": "training",
+      "group_id": "C16H17N|charge=0",
+      "formula": "C16H17N",
+      "SMILES": "NCC1c2ccccc2CCc2ccccc21",
+      "connectivity": "NCC1c2ccccc2CCc2ccccc21"
+    },
+    {
+      "split": "training",
+      "group_id": "C16H17N|charge=0",
+      "formula": "C16H17N",
+      "SMILES": "CCC(C)C(C#N)c1ccc2ccccc2c1",
+      "connectivity": "CCC(C)C(C#N)c1ccc2ccccc2c1"
+    },
+    {
+      "split": "training",
+      "group_id": "C12H23O4P|charge=0",
+      "formula": "C12H23O4P",
+      "SMILES": "COC(=O)CCP(CCC(=O)OC)CC(C)C",
+      "connectivity": "COC(=O)CCP(CCC(=O)OC)CC(C)C"
+    },
+    {
+      "split": "training",
+      "group_id": "C12H23O4P|charge=0",
+      "formula": "C12H23O4P",
+      "SMILES": "COP(=O)(CC(=O)C(C)(C)CC=C(C)C)OC",
+      "connectivity": "COP(=O)(CC(=O)C(C)(C)CC=C(C)C)OC"
+    },
+    {
+      "split": "training",
+      "group_id": "C12H23O4P|charge=0",
+      "formula": "C12H23O4P",
+      "SMILES": "COP(=O)(CC(=O)C(C)C1CCCCC1)OC",
+      "connectivity": "COP(=O)(CC(=O)C(C)C1CCCCC1)OC"
+    },
+    {
+      "split": "training",
+      "group_id": "C12H23O4P|charge=0",
+      "formula": "C12H23O4P",
+      "SMILES": "CCC(C)P(CCC(=O)OC)CCC(=O)OC",
+      "connectivity": "CCC(C)P(CCC(=O)OC)CCC(=O)OC"
+    },
+    {
+      "split": "training",
+      "group_id": "C12H23O4P|charge=0",
+      "formula": "C12H23O4P",
+      "SMILES": "CCOP(=O)(CC(=O)C1CCCCC1)OCC",
+      "connectivity": "CCOP(=O)(CC(=O)C1CCCCC1)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C12H23O4P|charge=0",
+      "formula": "C12H23O4P",
+      "SMILES": "CCOP(=O)(OCC)C1(C)CC(=O)CC(C)C1",
+      "connectivity": "CCOP(=O)(OCC)C1(C)CC(=O)CC(C)C1"
+    },
+    {
+      "split": "training",
+      "group_id": "C12H23O4P|charge=0",
+      "formula": "C12H23O4P",
+      "SMILES": "COC(=O)CCP(CCC(=O)OC)C(C)(C)C",
+      "connectivity": "COC(=O)CCP(CCC(=O)OC)C(C)(C)C"
+    },
+    {
+      "split": "training",
+      "group_id": "C12H23O4P|charge=0",
+      "formula": "C12H23O4P",
+      "SMILES": "COP(=O)(CC(=O)CCC1CCCCC1)OC",
+      "connectivity": "COP(=O)(CC(=O)CCC1CCCCC1)OC"
+    },
+    {
+      "split": "training",
+      "group_id": "C12H23O4P|charge=0",
+      "formula": "C12H23O4P",
+      "SMILES": "CCCCC1(C(=O)CP(=O)(OC)OC)CCC1",
+      "connectivity": "CCCCC1(C(=O)CP(=O)(OC)OC)CCC1"
+    },
+    {
+      "split": "training",
+      "group_id": "C12H23O4P|charge=0",
+      "formula": "C12H23O4P",
+      "SMILES": "CCCC1CCC(C(=O)CP(=O)(OC)OC)C1",
+      "connectivity": "CCCC1CCC(C(=O)CP(=O)(OC)OC)C1"
+    },
+    {
+      "split": "training",
+      "group_id": "C4H12NO2P|charge=0",
+      "formula": "C4H12NO2P",
+      "SMILES": "CC(C)C(N)P(O)O",
+      "connectivity": "CC(C)C(N)P(O)O"
+    },
+    {
+      "split": "training",
+      "group_id": "C4H12NO2P|charge=0",
+      "formula": "C4H12NO2P",
+      "SMILES": "CP(=O)(O)CCCN",
+      "connectivity": "CP(=O)(O)CCCN"
+    },
+    {
+      "split": "training",
+      "group_id": "C4H12NO2P|charge=0",
+      "formula": "C4H12NO2P",
+      "SMILES": "CC(CN)CP(O)O",
+      "connectivity": "CC(CN)CP(O)O"
+    },
+    {
+      "split": "training",
+      "group_id": "C4H12NO2P|charge=0",
+      "formula": "C4H12NO2P",
+      "SMILES": "CC(C)C(N)[PH](=O)O",
+      "connectivity": "CC(C)C(N)[PH](=O)O"
+    },
+    {
+      "split": "training",
+      "group_id": "C13H19O6P|charge=0",
+      "formula": "C13H19O6P",
+      "SMILES": "CCOP(=O)(OCC)C(O)c1ccc(C(=O)OC)cc1",
+      "connectivity": "CCOP(=O)(OCC)C(O)c1ccc(C(=O)OC)cc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C13H19O6P|charge=0",
+      "formula": "C13H19O6P",
+      "SMILES": "CCOP(=O)(CCOc1ccc(C(=O)O)cc1)OCC",
+      "connectivity": "CCOP(=O)(CCOc1ccc(C(=O)O)cc1)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C13H19O6P|charge=0",
+      "formula": "C13H19O6P",
+      "SMILES": "CCOP(=O)(COC(=O)c1ccccc1OC)OCC",
+      "connectivity": "CCOP(=O)(COC(=O)c1ccccc1OC)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C13H22NO3P|charge=0",
+      "formula": "C13H22NO3P",
+      "SMILES": "CCOP(=O)(OCC)C(C)(C)c1ccc(N)cc1",
+      "connectivity": "CCOP(=O)(OCC)C(C)(C)c1ccc(N)cc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C13H22NO3P|charge=0",
+      "formula": "C13H22NO3P",
+      "SMILES": "CCOP(=O)(Cc1cccc(CCN)c1)OCC",
+      "connectivity": "CCOP(=O)(Cc1cccc(CCN)c1)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C13H22NO3P|charge=0",
+      "formula": "C13H22NO3P",
+      "SMILES": "CCOP(=O)(OCC)C(C#N)=CC1CCCCC1",
+      "connectivity": "CCOP(=O)(OCC)C(C#N)=CC1CCCCC1"
+    },
+    {
+      "split": "training",
+      "group_id": "C13H22NO3P|charge=0",
+      "formula": "C13H22NO3P",
+      "SMILES": "CCOP(=O)(NC(C)Cc1ccccc1)OCC",
+      "connectivity": "CCOP(=O)(NC(C)Cc1ccccc1)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C13H22NO3P|charge=0",
+      "formula": "C13H22NO3P",
+      "SMILES": "CC(C)OP(=O)(OC(C)C)C(N)c1ccccc1",
+      "connectivity": "CC(C)OP(=O)(OC(C)C)C(N)c1ccccc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C13H22NO3P|charge=0",
+      "formula": "C13H22NO3P",
+      "SMILES": "CCO[PH](=O)CCCCc1ccc(N)c(OC)c1",
+      "connectivity": "CCO[PH](=O)CCCCc1ccc(N)c(OC)c1"
+    },
+    {
+      "split": "training",
+      "group_id": "C6H11O3P|charge=0",
+      "formula": "C6H11O3P",
+      "SMILES": "C=C(C)C=C(C)P(=O)(O)O",
+      "connectivity": "C=C(C)C=C(C)P(=O)(O)O"
+    },
+    {
+      "split": "training",
+      "group_id": "C6H11O3P|charge=0",
+      "formula": "C6H11O3P",
+      "SMILES": "O=P(O)(O)C1=CCCCC1",
+      "connectivity": "O=P(O)(O)C1=CCCCC1"
+    },
+    {
+      "split": "training",
+      "group_id": "C6H11O3P|charge=0",
+      "formula": "C6H11O3P",
+      "SMILES": "C#CP(=O)(OCC)OCC",
+      "connectivity": "C#CP(=O)(OCC)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C6H11O3P|charge=0",
+      "formula": "C6H11O3P",
+      "SMILES": "COP1(=O)CCC(=O)CC1",
+      "connectivity": "COP1(=O)CCC(=O)CC1"
+    },
+    {
+      "split": "training",
+      "group_id": "C16H22O6P2|charge=0",
+      "formula": "C16H22O6P2",
+      "SMILES": "COP(=O)(Cc1cc2ccccc2cc1CP(=O)(OC)OC)OC",
+      "connectivity": "COP(=O)(Cc1cc2ccccc2cc1CP(=O)(OC)OC)OC"
+    },
+    {
+      "split": "training",
+      "group_id": "C16H22O6P2|charge=0",
+      "formula": "C16H22O6P2",
+      "SMILES": "COP(=O)(Cc1ccc(CP(=O)(OC)OC)c2ccccc12)OC",
+      "connectivity": "COP(=O)(Cc1ccc(CP(=O)(OC)OC)c2ccccc12)OC"
+    },
+    {
+      "split": "training",
+      "group_id": "C16H22O6P2|charge=0",
+      "formula": "C16H22O6P2",
+      "SMILES": "COP(=O)(Cc1ccc2ccc(CP(=O)(OC)OC)cc2c1)OC",
+      "connectivity": "COP(=O)(Cc1ccc2ccc(CP(=O)(OC)OC)cc2c1)OC"
+    },
+    {
+      "split": "training",
+      "group_id": "C6H15N2O4P|charge=0",
+      "formula": "C6H15N2O4P",
+      "SMILES": "CCOP(=O)(NNC(C)=O)OCC",
+      "connectivity": "CCOP(=O)(NNC(C)=O)OCC"
+    },
+    {
+      "split": "training",
+      "group_id": "C6H15N2O4P|charge=0",
+      "formula": "C6H15N2O4P",
+      "SMILES": "CCC[C@H](N)C(=O)NOP(C)(=O)O",
+      "connectivity": "CCCC(N)C(=O)NOP(C)(=O)O"
+    },
+    {
+      "split": "training",
+      "group_id": "C6H15N2O4P|charge=0",
+      "formula": "C6H15N2O4P",
+      "SMILES": "CC(C)[C@H](N)C(=O)NOP(C)(=O)O",
+      "connectivity": "CC(C)C(N)C(=O)NOP(C)(=O)O"
+    },
+    {
+      "split": "training",
+      "group_id": "C24H25O2P|charge=0",
+      "formula": "C24H25O2P",
+      "SMILES": "CC(C)(C)OC(=O)C=P(c1ccccc1)(c1ccccc1)c1ccccc1",
+      "connectivity": "CC(C)(C)OC(=O)C=P(c1ccccc1)(c1ccccc1)c1ccccc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C24H25O2P|charge=0",
+      "formula": "C24H25O2P",
+      "SMILES": "CCCOCC(=O)C=P(c1ccccc1)(c1ccccc1)c1ccccc1",
+      "connectivity": "CCCOCC(=O)C=P(c1ccccc1)(c1ccccc1)c1ccccc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C24H25O2P|charge=0",
+      "formula": "C24H25O2P",
+      "SMILES": "CCOC(=O)C(CC)=P(c1ccccc1)(c1ccccc1)c1ccccc1",
+      "connectivity": "CCOC(=O)C(CC)=P(c1ccccc1)(c1ccccc1)c1ccccc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C24H25O2P|charge=0",
+      "formula": "C24H25O2P",
+      "SMILES": "CC(C)(C)OC(=O)C(c1ccccc1)=[PH](c1ccccc1)c1ccccc1",
+      "connectivity": "CC(C)(C)OC(=O)C(c1ccccc1)=[PH](c1ccccc1)c1ccccc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C24H25O2P|charge=0",
+      "formula": "C24H25O2P",
+      "SMILES": "CCC(C)OC(=O)C=P(c1ccccc1)(c1ccccc1)c1ccccc1",
+      "connectivity": "CCC(C)OC(=O)C=P(c1ccccc1)(c1ccccc1)c1ccccc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C24H25O2P|charge=0",
+      "formula": "C24H25O2P",
+      "SMILES": "CCOCCC(=O)C=P(c1ccccc1)(c1ccccc1)c1ccccc1",
+      "connectivity": "CCOCCC(=O)C=P(c1ccccc1)(c1ccccc1)c1ccccc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C24H25O2P|charge=0",
+      "formula": "C24H25O2P",
+      "SMILES": "CC(C)OCC(=O)C=P(c1ccccc1)(c1ccccc1)c1ccccc1",
+      "connectivity": "CC(C)OCC(=O)C=P(c1ccccc1)(c1ccccc1)c1ccccc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C24H25O2P|charge=0",
+      "formula": "C24H25O2P",
+      "SMILES": "C(CC1COCCO1)=P(c1ccccc1)(c1ccccc1)c1ccccc1",
+      "connectivity": "C(CC1COCCO1)=P(c1ccccc1)(c1ccccc1)c1ccccc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C24H25O2P|charge=0",
+      "formula": "C24H25O2P",
+      "SMILES": "Cc1cc(C)c(C(=O)P(=O)(c2ccccc2C)c2ccccc2C)c(C)c1",
+      "connectivity": "Cc1cc(C)c(C(=O)P(=O)(c2ccccc2C)c2ccccc2C)c(C)c1"
+    },
+    {
+      "split": "training",
+      "group_id": "C24H25O2P|charge=0",
+      "formula": "C24H25O2P",
+      "SMILES": "O=C(C=P(c1ccccc1)(c1ccccc1)c1ccccc1)CCCCO",
+      "connectivity": "O=C(C=P(c1ccccc1)(c1ccccc1)c1ccccc1)CCCCO"
+    },
+    {
+      "split": "training",
+      "group_id": "C11H16N5O7P|charge=0",
+      "formula": "C11H16N5O7P",
+      "SMILES": "CO[C@@H]1[C@H](O)[C@@H](COP(=O)(O)O)O[C@H]1n1cnc2c(N)ncnc21",
+      "connectivity": "COC1C(O)C(COP(=O)(O)O)OC1n1cnc2c(N)ncnc21"
+    },
+    {
+      "split": "training",
+      "group_id": "C11H16N5O7P|charge=0",
+      "formula": "C11H16N5O7P",
+      "SMILES": "C[C@]1(OCP(=O)(O)O)O[C@@H](n2cnc3c(N)ncnc32)[C@H](O)[C@@H]1O",
+      "connectivity": "CC1(OCP(=O)(O)O)OC(n2cnc3c(N)ncnc32)C(O)C1O"
+    },
+    {
+      "split": "training",
+      "group_id": "C11H16N5O7P|charge=0",
+      "formula": "C11H16N5O7P",
+      "SMILES": "Cn1cnc2c(ncn2[C@@H]2O[C@H](COP(=O)(O)O)[C@@H](O)[C@H]2O)c1=N",
+      "connectivity": "Cn1cnc2c(ncn2C2OC(COP(=O)(O)O)C(O)C2O)c1=N"
+    },
+    {
+      "split": "training",
+      "group_id": "C18H17Cl2NO2|charge=0",
+      "formula": "C18H17Cl2NO2",
+      "SMILES": "CCCC(O)c1ccc(C#N)cc1OCc1ccc(Cl)cc1Cl",
+      "connectivity": "CCCC(O)c1ccc(C#N)cc1OCc1ccc(Cl)cc1Cl"
+    },
+    {
+      "split": "training",
+      "group_id": "C18H17Cl2NO2|charge=0",
+      "formula": "C18H17Cl2NO2",
+      "SMILES": "O=C1CC(CO)C(c2c(Cl)cccc2Cl)N1Cc1ccccc1",
+      "connectivity": "O=C1CC(CO)C(c2c(Cl)cccc2Cl)N1Cc1ccccc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C18H17Cl2NO2|charge=0",
+      "formula": "C18H17Cl2NO2",
+      "SMILES": "COC1=NC(C)(c2cccc(-c3cc(Cl)cc(Cl)c3)c2)COC1",
+      "connectivity": "COC1=NC(C)(c2cccc(-c3cc(Cl)cc(Cl)c3)c2)COC1"
+    },
+    {
+      "split": "training",
+      "group_id": "C18H17Cl2NO2|charge=0",
+      "formula": "C18H17Cl2NO2",
+      "SMILES": "CC(CNCc1ccc(Cl)o1)Oc1ccc2ccccc2c1Cl",
+      "connectivity": "CC(CNCc1ccc(Cl)o1)Oc1ccc2ccccc2c1Cl"
+    },
+    {
+      "split": "training",
+      "group_id": "C18H17Cl2NO2|charge=0",
+      "formula": "C18H17Cl2NO2",
+      "SMILES": "CN1C(=O)C2C3C=CC(CCC3)C2(c2ccc(Cl)c(Cl)c2)C1=O",
+      "connectivity": "CN1C(=O)C2C3C=CC(CCC3)C2(c2ccc(Cl)c(Cl)c2)C1=O"
+    },
+    {
+      "split": "training",
+      "group_id": "C18H17Cl2NO2|charge=0",
+      "formula": "C18H17Cl2NO2",
+      "SMILES": "CC(C)c1c[nH]c2ccc(Oc3c(Cl)cc(CO)cc3Cl)cc12",
+      "connectivity": "CC(C)c1c[nH]c2ccc(Oc3c(Cl)cc(CO)cc3Cl)cc12"
+    },
+    {
+      "split": "training",
+      "group_id": "C18H17Cl2NO2|charge=0",
+      "formula": "C18H17Cl2NO2",
+      "SMILES": "CN(C(=O)CC(CC=O)c1ccc(Cl)c(Cl)c1)c1ccccc1",
+      "connectivity": "CN(C(=O)CC(CC=O)c1ccc(Cl)c(Cl)c1)c1ccccc1"
+    },
+    {
+      "split": "training",
+      "group_id": "C18H17Cl2NO2|charge=0",
+      "formula": "C18H17Cl2NO2",
+      "SMILES": "CCCC12CCC(=O)C=C1c1c(cc(OCC#N)c(Cl)c1Cl)C2",
+      "connectivity": "CCCC12CCC(=O)C=C1c1c(cc(OCC#N)c(Cl)c1Cl)C2"
+    },
+    {
+      "split": "training",
+      "group_id": "C18H17Cl2NO2|charge=0",
+      "formula": "C18H17Cl2NO2",
+      "SMILES": "CCOC(=O)C1CC(c2ccc(Cl)cc2)c2cc(Cl)ccc2N1",
+      "connectivity": "CCOC(=O)C1CC(c2ccc(Cl)cc2)c2cc(Cl)ccc2N1"
+    },
+    {
+      "split": "training",
+      "group_id": "C18H17Cl2NO2|charge=0",
+      "formula": "C18H17Cl2NO2",
+      "SMILES": "COCCCc1cc(Cl)cc2nc(Cc3ccccc3Cl)oc12",
+      "connectivity": "COCCCc1cc(Cl)cc2nc(Cc3ccccc3Cl)oc12"
+    },
+    {
+      "split": "external",
+      "group_id": "C14H18NO4P|charge=0",
+      "formula": "C14H18NO4P",
+      "SMILES": "CCOP(=O)(Cc1cc(-c2ccccc2)on1)OCC",
+      "connectivity": "CCOP(=O)(Cc1cc(-c2ccccc2)on1)OCC"
+    },
+    {
+      "split": "external",
+      "group_id": "C14H18NO4P|charge=0",
+      "formula": "C14H18NO4P",
+      "SMILES": "O=C1c2ccccc2C(=O)N1CCCCCC[PH](=O)O",
+      "connectivity": "O=C1c2ccccc2C(=O)N1CCCCCC[PH](=O)O"
+    },
+    {
+      "split": "external",
+      "group_id": "C14H18NO4P|charge=0",
+      "formula": "C14H18NO4P",
+      "SMILES": "CCOP(=O)(OCC)c1ccc(-c2cccc(N)c2)o1",
+      "connectivity": "CCOP(=O)(OCC)c1ccc(-c2cccc(N)c2)o1"
+    },
+    {
+      "split": "external",
+      "group_id": "C14H18NO4P|charge=0",
+      "formula": "C14H18NO4P",
+      "SMILES": "CCOP(=O)(Cc1cc(-c2ccccc2)no1)OCC",
+      "connectivity": "CCOP(=O)(Cc1cc(-c2ccccc2)no1)OCC"
+    },
+    {
+      "split": "external",
+      "group_id": "C14H18NO4P|charge=0",
+      "formula": "C14H18NO4P",
+      "SMILES": "CCOP(=O)(Cc1cc[n+]([O-])c2ccccc12)OCC",
+      "connectivity": "CCOP(=O)(Cc1cc[n+]([O-])c2ccccc12)OCC"
+    },
+    {
+      "split": "external",
+      "group_id": "C14H18NO4P|charge=0",
+      "formula": "C14H18NO4P",
+      "SMILES": "CCOP(=O)(Cc1cnc(-c2ccccc2)o1)OCC",
+      "connectivity": "CCOP(=O)(Cc1cnc(-c2ccccc2)o1)OCC"
+    },
+    {
+      "split": "external",
+      "group_id": "C16H19ClN2|charge=0",
+      "formula": "C16H19ClN2",
+      "SMILES": "CN1CCc2c(Cl)ccc(Cn3cccc3)c2CC1",
+      "connectivity": "CN1CCc2c(Cl)ccc(Cn3cccc3)c2CC1"
+    },
+    {
+      "split": "external",
+      "group_id": "C16H19ClN2|charge=0",
+      "formula": "C16H19ClN2",
+      "SMILES": "CC(Cl)c1cc(C(C)(C)C#N)cc(C(C)(C)C#N)c1",
+      "connectivity": "CC(Cl)c1cc(C(C)(C)C#N)cc(C(C)(C)C#N)c1"
+    },
+    {
+      "split": "external",
+      "group_id": "C16H19ClN2|charge=0",
+      "formula": "C16H19ClN2",
+      "SMILES": "CC1C2CC3=C(CCC4=C3C=C(Cl)CN=CC41C)N2",
+      "connectivity": "CC1C2CC3=C(CCC4=C3C=C(Cl)CN=CC41C)N2"
+    },
+    {
+      "split": "external",
+      "group_id": "C16H19ClN2|charge=0",
+      "formula": "C16H19ClN2",
+      "SMILES": "Cc1cc(C)c(Cc2nc(C)nc(Cl)c2C)c(C)c1",
+      "connectivity": "Cc1cc(C)c(Cc2nc(C)nc(Cl)c2C)c(C)c1"
+    },
+    {
+      "split": "external",
+      "group_id": "C16H19ClN2|charge=0",
+      "formula": "C16H19ClN2",
+      "SMILES": "Clc1cnc2ccccc2c1CCC1CCCNC1",
+      "connectivity": "Clc1cnc2ccccc2c1CCC1CCCNC1"
+    },
+    {
+      "split": "external",
+      "group_id": "C16H19ClN2|charge=0",
+      "formula": "C16H19ClN2",
+      "SMILES": "CC(C)c1ccccc1N(N)Cc1ccc(Cl)cc1",
+      "connectivity": "CC(C)c1ccccc1N(N)Cc1ccc(Cl)cc1"
+    },
+    {
+      "split": "external",
+      "group_id": "C16H19ClN2|charge=0",
+      "formula": "C16H19ClN2",
+      "SMILES": "CC(C)(C)N1CCCC1=C(C#N)c1ccc(Cl)cc1",
+      "connectivity": "CC(C)(C)N1CCCC1=C(C#N)c1ccc(Cl)cc1"
+    },
+    {
+      "split": "external",
+      "group_id": "C16H19ClN2|charge=0",
+      "formula": "C16H19ClN2",
+      "SMILES": "ClCCN1CCN(c2cccc3ccccc23)CC1",
+      "connectivity": "ClCCN1CCN(c2cccc3ccccc23)CC1"
+    },
+    {
+      "split": "external",
+      "group_id": "C16H19ClN2|charge=0",
+      "formula": "C16H19ClN2",
+      "SMILES": "CCCN1CC=C(c2c[nH]c3ccc(Cl)cc23)CC1",
+      "connectivity": "CCCN1CC=C(c2c[nH]c3ccc(Cl)cc23)CC1"
+    },
+    {
+      "split": "external",
+      "group_id": "C16H19ClN2|charge=0",
+      "formula": "C16H19ClN2",
+      "SMILES": "N#Cc1ccc(N2CCCC3CCCCC32)cc1Cl",
+      "connectivity": "N#Cc1ccc(N2CCCC3CCCCC32)cc1Cl"
+    },
+    {
+      "split": "external",
+      "group_id": "C15H16NO3P|charge=0",
+      "formula": "C15H16NO3P",
+      "SMILES": "CC1CN1P(=O)(Oc1ccccc1)Oc1ccccc1",
+      "connectivity": "CC1CN1P(=O)(Oc1ccccc1)Oc1ccccc1"
+    },
+    {
+      "split": "external",
+      "group_id": "C15H16NO3P|charge=0",
+      "formula": "C15H16NO3P",
+      "SMILES": "O=P(O)(O)CCCn1c2ccccc2c2ccccc21",
+      "connectivity": "O=P(O)(O)CCCn1c2ccccc2c2ccccc21"
+    },
+    {
+      "split": "external",
+      "group_id": "C15H16NO3P|charge=0",
+      "formula": "C15H16NO3P",
+      "SMILES": "COP(C)(=O)C1CC(c2cccc3ccccc23)=NO1",
+      "connectivity": "COP(C)(=O)C1CC(c2cccc3ccccc23)=NO1"
+    },
+    {
+      "split": "external",
+      "group_id": "C13H19O5P|charge=0",
+      "formula": "C13H19O5P",
+      "SMILES": "CCOP(=O)(OCC)c1ccc(COC(C)=O)cc1",
+      "connectivity": "CCOP(=O)(OCC)c1ccc(COC(C)=O)cc1"
+    },
+    {
+      "split": "external",
+      "group_id": "C13H19O5P|charge=0",
+      "formula": "C13H19O5P",
+      "SMILES": "COP(=O)(CC(=O)C(C)(C)Oc1ccccc1)OC",
+      "connectivity": "COP(=O)(CC(=O)C(C)(C)Oc1ccccc1)OC"
+    },
+    {
+      "split": "external",
+      "group_id": "C13H19O5P|charge=0",
+      "formula": "C13H19O5P",
+      "SMILES": "CCOP(=O)(Cc1cc(C=O)ccc1OC)OCC",
+      "connectivity": "CCOP(=O)(Cc1cc(C=O)ccc1OC)OCC"
+    },
+    {
+      "split": "external",
+      "group_id": "C13H19O5P|charge=0",
+      "formula": "C13H19O5P",
+      "SMILES": "CCOP(OCC)OCc1ccc(C(=O)OC)cc1",
+      "connectivity": "CCOP(OCC)OCc1ccc(C(=O)OC)cc1"
+    },
+    {
+      "split": "external",
+      "group_id": "C13H19O5P|charge=0",
+      "formula": "C13H19O5P",
+      "SMILES": "CCOP(=O)(CC(=O)c1cccc(OC)c1)OCC",
+      "connectivity": "CCOP(=O)(CC(=O)c1cccc(OC)c1)OCC"
+    },
+    {
+      "split": "external",
+      "group_id": "C13H19O5P|charge=0",
+      "formula": "C13H19O5P",
+      "SMILES": "COCc1cccc(CC(=O)CP(=O)(OC)OC)c1",
+      "connectivity": "COCc1cccc(CC(=O)CP(=O)(OC)OC)c1"
+    },
+    {
+      "split": "external",
+      "group_id": "C13H19O5P|charge=0",
+      "formula": "C13H19O5P",
+      "SMILES": "CCOP(=O)(Cc1ccccc1C(=O)OC)OCC",
+      "connectivity": "CCOP(=O)(Cc1ccccc1C(=O)OC)OCC"
+    },
+    {
+      "split": "external",
+      "group_id": "C13H19O5P|charge=0",
+      "formula": "C13H19O5P",
+      "SMILES": "CCOP(=O)(CC(=O)OCc1ccccc1)OCC",
+      "connectivity": "CCOP(=O)(CC(=O)OCc1ccccc1)OCC"
+    },
+    {
+      "split": "external",
+      "group_id": "C13H19O5P|charge=0",
+      "formula": "C13H19O5P",
+      "SMILES": "CCOP(=O)(OCC)c1ccc(C(C)C(=O)O)cc1",
+      "connectivity": "CCOP(=O)(OCC)c1ccc(C(C)C(=O)O)cc1"
+    },
+    {
+      "split": "external",
+      "group_id": "C13H19O5P|charge=0",
+      "formula": "C13H19O5P",
+      "SMILES": "CCOP(=O)(Cc1cccc(C(=O)OC)c1)OCC",
+      "connectivity": "CCOP(=O)(Cc1cccc(C(=O)OC)c1)OCC"
+    },
+    {
+      "split": "external",
+      "group_id": "C8H19O3P|charge=0",
+      "formula": "C8H19O3P",
+      "SMILES": "CCCCO[PH](=O)OCCCC",
+      "connectivity": "CCCCO[PH](=O)OCCCC"
+    },
+    {
+      "split": "external",
+      "group_id": "C8H19O3P|charge=0",
+      "formula": "C8H19O3P",
+      "SMILES": "CCOC(C)(OCC)P(C)(C)=O",
+      "connectivity": "CCOC(C)(OCC)P(C)(C)=O"
+    },
+    {
+      "split": "external",
+      "group_id": "C8H19O3P|charge=0",
+      "formula": "C8H19O3P",
+      "SMILES": "CC(C)(C)O[PH](=O)OC(C)(C)C",
+      "connectivity": "CC(C)(C)O[PH](=O)OC(C)(C)C"
+    },
+    {
+      "split": "external",
+      "group_id": "C8H19O3P|charge=0",
+      "formula": "C8H19O3P",
+      "SMILES": "CCCCOP(O)OCCCC",
+      "connectivity": "CCCCOP(O)OCCCC"
+    },
+    {
+      "split": "external",
+      "group_id": "C8H19O3P|charge=0",
+      "formula": "C8H19O3P",
+      "SMILES": "CCCCOCCP(=O)(O)CC",
+      "connectivity": "CCCCOCCP(=O)(O)CC"
+    },
+    {
+      "split": "external",
+      "group_id": "C8H19O3P|charge=0",
+      "formula": "C8H19O3P",
+      "SMILES": "CCCCOP(=O)(O)CCCC",
+      "connectivity": "CCCCOP(=O)(O)CCCC"
+    },
+    {
+      "split": "external",
+      "group_id": "C8H19O3P|charge=0",
+      "formula": "C8H19O3P",
+      "SMILES": "CCOP(=O)(CC(C)C)OCC",
+      "connectivity": "CCOP(=O)(CC(C)C)OCC"
+    },
+    {
+      "split": "external",
+      "group_id": "C8H19O3P|charge=0",
+      "formula": "C8H19O3P",
+      "SMILES": "CCCCCCC(C)(O)P(O)O",
+      "connectivity": "CCCCCCC(C)(O)P(O)O"
+    },
+    {
+      "split": "external",
+      "group_id": "C8H19O3P|charge=0",
+      "formula": "C8H19O3P",
+      "SMILES": "CCCCOP(=O)(CC)CCO",
+      "connectivity": "CCCCOP(=O)(CC)CCO"
+    },
+    {
+      "split": "external",
+      "group_id": "C3H7O5P|charge=0",
+      "formula": "C3H7O5P",
+      "SMILES": "CC(C(=O)O)P(=O)(O)O",
+      "connectivity": "CC(C(=O)O)P(=O)(O)O"
+    },
+    {
+      "split": "external",
+      "group_id": "C3H7O5P|charge=0",
+      "formula": "C3H7O5P",
+      "SMILES": "CCOC(=O)P(=O)(O)O",
+      "connectivity": "CCOC(=O)P(=O)(O)O"
+    },
+    {
+      "split": "external",
+      "group_id": "C3H7O5P|charge=0",
+      "formula": "C3H7O5P",
+      "SMILES": "COC(=O)CP(=O)(O)O",
+      "connectivity": "COC(=O)CP(=O)(O)O"
+    },
+    {
+      "split": "external",
+      "group_id": "C3H7O5P|charge=0",
+      "formula": "C3H7O5P",
+      "SMILES": "O=C(O)CCP(=O)(O)O",
+      "connectivity": "O=C(O)CCP(=O)(O)O"
+    },
+    {
+      "split": "external",
+      "group_id": "C14H19N2O5P|charge=0",
+      "formula": "C14H19N2O5P",
+      "SMILES": "CCOC(=O)c1cn2c(P(=O)(OCC)OCC)cccc2n1",
+      "connectivity": "CCOC(=O)c1cn2c(P(=O)(OCC)OCC)cccc2n1"
+    },
+    {
+      "split": "external",
+      "group_id": "C14H19N2O5P|charge=0",
+      "formula": "C14H19N2O5P",
+      "SMILES": "COc1ccc2c(C(OP(=O)(OC)OC)=C(C)C)n[nH]c2c1",
+      "connectivity": "COc1ccc2c(C(OP(=O)(OC)OC)=C(C)C)n[nH]c2c1"
+    },
+    {
+      "split": "external",
+      "group_id": "C14H19N2O5P|charge=0",
+      "formula": "C14H19N2O5P",
+      "SMILES": "NCCCP(=O)(O)CC(O)CN1C(=O)c2ccccc2C1=O",
+      "connectivity": "NCCCP(=O)(O)CC(O)CN1C(=O)c2ccccc2C1=O"
+    },
+    {
+      "split": "external",
+      "group_id": "C9H14N5O5P|charge=0",
+      "formula": "C9H14N5O5P",
+      "SMILES": "Nc1nc2c(ncn2OCCCCP(=O)(O)O)c(=O)[nH]1",
+      "connectivity": "Nc1nc2c(ncn2OCCCCP(=O)(O)O)c(=O)[nH]1"
+    },
+    {
+      "split": "external",
+      "group_id": "C9H14N5O5P|charge=0",
+      "formula": "C9H14N5O5P",
+      "SMILES": "Nc1ncnc2c1ncn2OCCCOCP(=O)(O)O",
+      "connectivity": "Nc1ncnc2c1ncn2OCCCOCP(=O)(O)O"
+    },
+    {
+      "split": "external",
+      "group_id": "C9H14N5O5P|charge=0",
+      "formula": "C9H14N5O5P",
+      "SMILES": "Nc1ncnc2c1ncn2OCC(O)CCP(=O)(O)O",
+      "connectivity": "Nc1ncnc2c1ncn2OCC(O)CCP(=O)(O)O"
+    },
+    {
+      "split": "external",
+      "group_id": "C9H14N5O5P|charge=0",
+      "formula": "C9H14N5O5P",
+      "SMILES": "Nc1nc2c(ncn2COCCCP(=O)(O)O)c(=O)[nH]1",
+      "connectivity": "Nc1nc2c(ncn2COCCCP(=O)(O)O)c(=O)[nH]1"
+    },
+    {
+      "split": "external",
+      "group_id": "C13H11F3N4O|charge=0",
+      "formula": "C13H11F3N4O",
+      "SMILES": "Cc1cc2c(C(F)(F)F)c(C#N)ccc2n1CC(=N)NO",
+      "connectivity": "Cc1cc2c(C(F)(F)F)c(C#N)ccc2n1CC(=N)NO"
+    },
+    {
+      "split": "external",
+      "group_id": "C18H16O4|charge=0",
+      "formula": "C18H16O4",
+      "SMILES": "O=C1C[C@H]2[C@@H](C1)c1cc(O)ccc1O[C@H]2c1ccc(O)cc1",
+      "connectivity": "O=C1CC2c3cc(O)ccc3OC(c3ccc(O)cc3)C2C1"
+    },
+    {
+      "split": "external",
+      "group_id": "C18H16O4|charge=0",
+      "formula": "C18H16O4",
+      "SMILES": "COC(=O)c1ccc(C=C(C(=O)O)c2ccc(C)cc2)cc1",
+      "connectivity": "COC(=O)c1ccc(C=C(C(=O)O)c2ccc(C)cc2)cc1"
+    },
+    {
+      "split": "external",
+      "group_id": "C18H16O4|charge=0",
+      "formula": "C18H16O4",
+      "SMILES": "CCOc1ccc2c(=O)cc(-c3ccccc3OC)oc2c1",
+      "connectivity": "CCOc1ccc2c(=O)cc(-c3ccccc3OC)oc2c1"
+    },
+    {
+      "split": "external",
+      "group_id": "C18H16O4|charge=0",
+      "formula": "C18H16O4",
+      "SMILES": "O=C(O)CCCc1ccc2c(c1)Cc1cccc(C(=O)O)c1-2",
+      "connectivity": "O=C(O)CCCc1ccc2c(c1)Cc1cccc(C(=O)O)c1-2"
+    },
+    {
+      "split": "external",
+      "group_id": "C18H16O4|charge=0",
+      "formula": "C18H16O4",
+      "SMILES": "CC(=O)Oc1ccc2c(c1)C(C)c1cc(OC(C)=O)ccc1-2",
+      "connectivity": "CC(=O)Oc1ccc2c(c1)C(C)c1cc(OC(C)=O)ccc1-2"
+    },
+    {
+      "split": "external",
+      "group_id": "C18H16O4|charge=0",
+      "formula": "C18H16O4",
+      "SMILES": "O=C1OCCCCOC(=O)c2ccc(cc2)-c2ccc1cc2",
+      "connectivity": "O=C1OCCCCOC(=O)c2ccc(cc2)-c2ccc1cc2"
+    },
+    {
+      "split": "external",
+      "group_id": "C18H16O4|charge=0",
+      "formula": "C18H16O4",
+      "SMILES": "CC(C)c1ccc(C2(O)C(=O)c3ccccc3C2=O)c(O)c1",
+      "connectivity": "CC(C)c1ccc(C2(O)C(=O)c3ccccc3C2=O)c(O)c1"
+    },
+    {
+      "split": "external",
+      "group_id": "C18H16O4|charge=0",
+      "formula": "C18H16O4",
+      "SMILES": "C=CC(=O)OCC(O)(C(=O)c1ccccc1)c1ccccc1",
+      "connectivity": "C=CC(=O)OCC(O)(C(=O)c1ccccc1)c1ccccc1"
+    },
+    {
+      "split": "external",
+      "group_id": "C18H16O4|charge=0",
+      "formula": "C18H16O4",
+      "SMILES": "O=C1C=C(O)CC(COc2ccccc2)(c2ccccc2)O1",
+      "connectivity": "O=C1C=C(O)CC(COc2ccccc2)(c2ccccc2)O1"
+    },
+    {
+      "split": "external",
+      "group_id": "C18H16O4|charge=0",
+      "formula": "C18H16O4",
+      "SMILES": "COC(=O)C1Oc2ccccc2C2(CC2)c2ccccc2O1",
+      "connectivity": "COC(=O)C1Oc2ccccc2C2(CC2)c2ccccc2O1"
+    },
+    {
+      "split": "external",
+      "group_id": "C19H23O3P|charge=0",
+      "formula": "C19H23O3P",
+      "SMILES": "COc1cccc(OC)c1-c1cccc2c1P(C(C)(C)C)CO2",
+      "connectivity": "COc1cccc(OC)c1-c1cccc2c1P(C(C)(C)C)CO2"
+    },
+    {
+      "split": "external",
+      "group_id": "C19H23O3P|charge=0",
+      "formula": "C19H23O3P",
+      "SMILES": "C=Cc1cc(P(=O)(OCC)c2ccccc2)ccc1OC(C)C",
+      "connectivity": "C=Cc1cc(P(=O)(OCC)c2ccccc2)ccc1OC(C)C"
+    },
+    {
+      "split": "external",
+      "group_id": "C19H23O3P|charge=0",
+      "formula": "C19H23O3P",
+      "SMILES": "CCOP(=O)(CC=C(c1ccccc1)c1ccccc1)OCC",
+      "connectivity": "CCOP(=O)(CC=C(c1ccccc1)c1ccccc1)OCC"
+    },
+    {
+      "split": "external",
+      "group_id": "C9H18NO5P|charge=0",
+      "formula": "C9H18NO5P",
+      "SMILES": "CCCCOC(=O)C(N)/C=C/CP(=O)(O)O",
+      "connectivity": "CCCCOC(=O)C(N)C=CCP(=O)(O)O"
+    },
+    {
+      "split": "external",
+      "group_id": "C9H18NO5P|charge=0",
+      "formula": "C9H18NO5P",
+      "SMILES": "CC(C)COC(=O)C(N)/C=C/CP(=O)(O)O",
+      "connectivity": "CC(C)COC(=O)C(N)C=CCP(=O)(O)O"
+    },
+    {
+      "split": "external",
+      "group_id": "C9H18NO5P|charge=0",
+      "formula": "C9H18NO5P",
+      "SMILES": "CCOC[PH](=O)CCC(=NO)C(=O)OCC",
+      "connectivity": "CCOC[PH](=O)CCC(=NO)C(=O)OCC"
+    },
+    {
+      "split": "external",
+      "group_id": "C9H18NO5P|charge=0",
+      "formula": "C9H18NO5P",
+      "SMILES": "CCC(C)OC(=O)C(N)/C=C/CP(=O)(O)O",
+      "connectivity": "CCC(C)OC(=O)C(N)C=CCP(=O)(O)O"
+    },
+    {
+      "split": "external",
+      "group_id": "C9H18NO5P|charge=0",
+      "formula": "C9H18NO5P",
+      "SMILES": "CCOP(=O)(CC=C(C)C[N+](=O)[O-])OCC",
+      "connectivity": "CCOP(=O)(CC=C(C)C[N+](=O)[O-])OCC"
+    },
+    {
+      "split": "external",
+      "group_id": "C17H19N|charge=0",
+      "formula": "C17H19N",
+      "SMILES": "c1ccc(C2CCCC(c3ccccc3)N2)cc1",
+      "connectivity": "c1ccc(C2CCCC(c3ccccc3)N2)cc1"
+    },
+    {
+      "split": "external",
+      "group_id": "C17H19N|charge=0",
+      "formula": "C17H19N",
+      "SMILES": "C1=CC2=CC3=CC2(C=C1)C=C3CN1CCCCC1",
+      "connectivity": "C1=CC2=CC3=CC2(C=C1)C=C3CN1CCCCC1"
+    },
+    {
+      "split": "external",
+      "group_id": "C17H19N|charge=0",
+      "formula": "C17H19N",
+      "SMILES": "CCC1(C)c2ccccc2N(C)c2ccccc21",
+      "connectivity": "CCC1(C)c2ccccc2N(C)c2ccccc21"
+    },
+    {
+      "split": "external",
+      "group_id": "C17H19N|charge=0",
+      "formula": "C17H19N",
+      "SMILES": "CC(=N[C@@H](C)c1ccc(C)cc1)c1ccccc1",
+      "connectivity": "CC(=NC(C)c1ccc(C)cc1)c1ccccc1"
+    },
+    {
+      "split": "external",
+      "group_id": "C17H19N|charge=0",
+      "formula": "C17H19N",
+      "SMILES": "C=CCC(CN)(c1ccccc1)c1ccccc1",
+      "connectivity": "C=CCC(CN)(c1ccccc1)c1ccccc1"
+    },
+    {
+      "split": "external",
+      "group_id": "C17H19N|charge=0",
+      "formula": "C17H19N",
+      "SMILES": "c1ccc2cc(C34CCN(CC3)CC4)ccc2c1",
+      "connectivity": "c1ccc2cc(C34CCN(CC3)CC4)ccc2c1"
+    },
+    {
+      "split": "external",
+      "group_id": "C17H19N|charge=0",
+      "formula": "C17H19N",
+      "SMILES": "c1cc2c3c(ccc(C4CCNCC4)c3c1)CC2",
+      "connectivity": "c1cc2c3c(ccc(C4CCNCC4)c3c1)CC2"
+    },
+    {
+      "split": "external",
+      "group_id": "C17H19N|charge=0",
+      "formula": "C17H19N",
+      "SMILES": "Cc1ccc(C23CC2CN(C)C3)c2ccccc12",
+      "connectivity": "Cc1ccc(C23CC2CN(C)C3)c2ccccc12"
+    },
+    {
+      "split": "external",
+      "group_id": "C17H19N|charge=0",
+      "formula": "C17H19N",
+      "SMILES": "CC1(NCc2ccccc2)Cc2ccccc2C1",
+      "connectivity": "CC1(NCc2ccccc2)Cc2ccccc2C1"
+    },
+    {
+      "split": "external",
+      "group_id": "C17H19N|charge=0",
+      "formula": "C17H19N",
+      "SMILES": "c1ccc(C2(c3ccccc3)CCNCC2)cc1",
+      "connectivity": "c1ccc(C2(c3ccccc3)CCNCC2)cc1"
+    },
+    {
+      "split": "external",
+      "group_id": "C10H16NO4P|charge=0",
+      "formula": "C10H16NO4P",
+      "SMILES": "CCOP(=O)(Cc1cc[n+]([O-])cc1)OCC",
+      "connectivity": "CCOP(=O)(Cc1cc[n+]([O-])cc1)OCC"
+    },
+    {
+      "split": "external",
+      "group_id": "C10H16NO4P|charge=0",
+      "formula": "C10H16NO4P",
+      "SMILES": "COP(=O)(CN(O)Cc1ccccc1)OC",
+      "connectivity": "COP(=O)(CN(O)Cc1ccccc1)OC"
+    },
+    {
+      "split": "external",
+      "group_id": "C10H16NO4P|charge=0",
+      "formula": "C10H16NO4P",
+      "SMILES": "COc1ccc(CC(N)P(O)O)cc1OC",
+      "connectivity": "COc1ccc(CC(N)P(O)O)cc1OC"
+    },
+    {
+      "split": "external",
+      "group_id": "C16H22NO7P|charge=0",
+      "formula": "C16H22NO7P",
+      "SMILES": "CC(=O)OCCC(=CC(N)C(=O)OCc1ccccc1)CP(=O)(O)O",
+      "connectivity": "CC(=O)OCCC(=CC(N)C(=O)OCc1ccccc1)CP(=O)(O)O"
+    },
+    {
+      "split": "external",
+      "group_id": "C16H22NO7P|charge=0",
+      "formula": "C16H22NO7P",
+      "SMILES": "COC(=O)[C@H]1C[C@@H](CP(=O)(O)O)CCN1C(=O)OCc1ccccc1",
+      "connectivity": "COC(=O)C1CC(CP(=O)(O)O)CCN1C(=O)OCc1ccccc1"
+    },
+    {
+      "split": "external",
+      "group_id": "C16H22NO7P|charge=0",
+      "formula": "C16H22NO7P",
+      "SMILES": "COc1c(C)c2c(c(O)c1CC=C(C)CNCP(=O)(O)O)C(=O)OC2",
+      "connectivity": "COc1c(C)c2c(c(O)c1CC=C(C)CNCP(=O)(O)O)C(=O)OC2"
+    },
+    {
+      "split": "external",
+      "group_id": "C12H19N2O4P|charge=0",
+      "formula": "C12H19N2O4P",
+      "SMILES": "CCOC(=O)CC(N)P(=O)(OCC)c1ccccn1",
+      "connectivity": "CCOC(=O)CC(N)P(=O)(OCC)c1ccccn1"
+    },
+    {
+      "split": "external",
+      "group_id": "C12H19N2O4P|charge=0",
+      "formula": "C12H19N2O4P",
+      "SMILES": "CCOP(=O)(CCNC(=O)c1cccnc1)OCC",
+      "connectivity": "CCOP(=O)(CCNC(=O)c1cccnc1)OCC"
+    },
+    {
+      "split": "external",
+      "group_id": "C12H19N2O4P|charge=0",
+      "formula": "C12H19N2O4P",
+      "SMILES": "CCOP(=O)(CCNC(=O)c1ccncc1)OCC",
+      "connectivity": "CCOP(=O)(CCNC(=O)c1ccncc1)OCC"
+    },
+    {
+      "split": "external",
+      "group_id": "C8H8Cl2NO2P|charge=0",
+      "formula": "C8H8Cl2NO2P",
+      "SMILES": "O=C(Cc1ccccc1)NP(=O)(Cl)Cl",
+      "connectivity": "O=C(Cc1ccccc1)NP(=O)(Cl)Cl"
+    },
+    {
+      "split": "external",
+      "group_id": "C8H8Cl2NO2P|charge=0",
+      "formula": "C8H8Cl2NO2P",
+      "SMILES": "Cc1ccccc1C(=O)NP(=O)(Cl)Cl",
+      "connectivity": "Cc1ccccc1C(=O)NP(=O)(Cl)Cl"
+    },
+    {
+      "split": "external",
+      "group_id": "C8H8Cl2NO2P|charge=0",
+      "formula": "C8H8Cl2NO2P",
+      "SMILES": "Cc1ccc(C(=O)NP(=O)(Cl)Cl)cc1",
+      "connectivity": "Cc1ccc(C(=O)NP(=O)(Cl)Cl)cc1"
+    },
+    {
+      "split": "external",
+      "group_id": "C11H11F4O4P|charge=0",
+      "formula": "C11H11F4O4P",
+      "SMILES": "COP(=O)(CC(=O)c1cccc(F)c1C(F)(F)F)OC",
+      "connectivity": "COP(=O)(CC(=O)c1cccc(F)c1C(F)(F)F)OC"
+    },
+    {
+      "split": "external",
+      "group_id": "C11H11F4O4P|charge=0",
+      "formula": "C11H11F4O4P",
+      "SMILES": "COP(=O)(CC(=O)c1ccc(F)cc1C(F)(F)F)OC",
+      "connectivity": "COP(=O)(CC(=O)c1ccc(F)cc1C(F)(F)F)OC"
+    },
+    {
+      "split": "external",
+      "group_id": "C11H11F4O4P|charge=0",
+      "formula": "C11H11F4O4P",
+      "SMILES": "COP(=O)(CC(=O)c1cc(F)ccc1C(F)(F)F)OC",
+      "connectivity": "COP(=O)(CC(=O)c1cc(F)ccc1C(F)(F)F)OC"
+    },
+    {
+      "split": "external",
+      "group_id": "C8H20NO4P|charge=0",
+      "formula": "C8H20NO4P",
+      "SMILES": "CCOC(OCC)P(=O)(O)CCCN",
+      "connectivity": "CCOC(OCC)P(=O)(O)CCCN"
+    },
+    {
+      "split": "external",
+      "group_id": "C8H20NO4P|charge=0",
+      "formula": "C8H20NO4P",
+      "SMILES": "CCOP(=O)(CCNCCO)OCC",
+      "connectivity": "CCOP(=O)(CCNCCO)OCC"
+    },
+    {
+      "split": "external",
+      "group_id": "C8H20NO4P|charge=0",
+      "formula": "C8H20NO4P",
+      "SMILES": "CCOP(=O)(CCOCCN)OCC",
+      "connectivity": "CCOP(=O)(CCOCCN)OCC"
+    },
+    {
+      "split": "external",
+      "group_id": "C8H20NO4P|charge=0",
+      "formula": "C8H20NO4P",
+      "SMILES": "CCOP(=O)(CCCCON)OCC",
+      "connectivity": "CCOP(=O)(CCCCON)OCC"
+    },
+    {
+      "split": "external",
+      "group_id": "C13H22N5O4P|charge=0",
+      "formula": "C13H22N5O4P",
+      "SMILES": "CCOP(=O)(CO[C@H](C)Cn1cnc2c(N)ncnc21)OCC",
+      "connectivity": "CCOP(=O)(COC(C)Cn1cnc2c(N)ncnc21)OCC"
+    },
+    {
+      "split": "external",
+      "group_id": "C13H22N5O4P|charge=0",
+      "formula": "C13H22N5O4P",
+      "SMILES": "CCOP(=O)(CCCCOn1cnc2c(N)ncnc21)OCC",
+      "connectivity": "CCOP(=O)(CCCCOn1cnc2c(N)ncnc21)OCC"
+    },
+    {
+      "split": "external",
+      "group_id": "C13H22N5O4P|charge=0",
+      "formula": "C13H22N5O4P",
+      "SMILES": "CCC(CC)(O[C@H](C)Cn1cnc2c(N)ncnc21)P(=O)(O)O",
+      "connectivity": "CCC(CC)(OC(C)Cn1cnc2c(N)ncnc21)P(=O)(O)O"
+    },
+    {
+      "split": "external",
+      "group_id": "C5H10N2O3|charge=0",
+      "formula": "C5H10N2O3",
+      "SMILES": "NC(=O)[C@@H](N)CCC(=O)O",
+      "connectivity": "NC(=O)C(N)CCC(=O)O"
+    },
+    {
+      "split": "external",
+      "group_id": "C5H10N2O3|charge=0",
+      "formula": "C5H10N2O3",
+      "SMILES": "CCOC=NNC(=O)OC",
+      "connectivity": "CCOC=NNC(=O)OC"
+    },
+    {
+      "split": "external",
+      "group_id": "C8H16NO2P|charge=0",
+      "formula": "C8H16NO2P",
+      "SMILES": "CCP(=O)(CCC#N)OC(C)C",
+      "connectivity": "CCP(=O)(CCC#N)OC(C)C"
+    },
+    {
+      "split": "external",
+      "group_id": "C8H16NO2P|charge=0",
+      "formula": "C8H16NO2P",
+      "SMILES": "CCCP(=O)(CCC#N)OCC",
+      "connectivity": "CCCP(=O)(CCC#N)OCC"
+    },
+    {
+      "split": "external",
+      "group_id": "C8H16NO2P|charge=0",
+      "formula": "C8H16NO2P",
+      "SMILES": "CC(C)COP(C)(=O)CCC#N",
+      "connectivity": "CC(C)COP(C)(=O)CCC#N"
+    },
+    {
+      "split": "external",
+      "group_id": "C6H13O3P|charge=0",
+      "formula": "C6H13O3P",
+      "SMILES": "CCOP(O)C1CCCO1",
+      "connectivity": "CCOP(O)C1CCCO1"
+    },
+    {
+      "split": "external",
+      "group_id": "C6H13O3P|charge=0",
+      "formula": "C6H13O3P",
+      "SMILES": "CC(CP(C)(C)=O)C(=O)O",
+      "connectivity": "CC(CP(C)(C)=O)C(=O)O"
+    },
+    {
+      "split": "external",
+      "group_id": "C6H13O3P|charge=0",
+      "formula": "C6H13O3P",
+      "SMILES": "O=P(O)(O)C1CCCCC1",
+      "connectivity": "O=P(O)(O)C1CCCCC1"
+    },
+    {
+      "split": "external",
+      "group_id": "C6H13O3P|charge=0",
+      "formula": "C6H13O3P",
+      "SMILES": "C=CP(=O)(OCC)OCC",
+      "connectivity": "C=CP(=O)(OCC)OCC"
+    },
+    {
+      "split": "external",
+      "group_id": "C4H10NO5P|charge=0",
+      "formula": "C4H10NO5P",
+      "SMILES": "O=CN(O)CCCP(=O)(O)O",
+      "connectivity": "O=CN(O)CCCP(=O)(O)O"
+    },
+    {
+      "split": "external",
+      "group_id": "C4H10NO5P|charge=0",
+      "formula": "C4H10NO5P",
+      "SMILES": "CN(CC(=O)O)CP(=O)(O)O",
+      "connectivity": "CN(CC(=O)O)CP(=O)(O)O"
+    },
+    {
+      "split": "external",
+      "group_id": "C4H10NO5P|charge=0",
+      "formula": "C4H10NO5P",
+      "SMILES": "NC(CCP(=O)(O)O)C(=O)O",
+      "connectivity": "NC(CCP(=O)(O)O)C(=O)O"
+    },
+    {
+      "split": "external",
+      "group_id": "C4H10NO5P|charge=0",
+      "formula": "C4H10NO5P",
+      "SMILES": "C[C@H](NCP(=O)(O)O)C(=O)O",
+      "connectivity": "CC(NCP(=O)(O)O)C(=O)O"
+    },
+    {
+      "split": "external",
+      "group_id": "C18H14BrP|charge=0",
+      "formula": "C18H14BrP",
+      "SMILES": "Brc1ccc(P(c2ccccc2)c2ccccc2)cc1",
+      "connectivity": "Brc1ccc(P(c2ccccc2)c2ccccc2)cc1"
+    },
+    {
+      "split": "external",
+      "group_id": "C18H14BrP|charge=0",
+      "formula": "C18H14BrP",
+      "SMILES": "Brc1ccccc1P(c1ccccc1)c1ccccc1",
+      "connectivity": "Brc1ccccc1P(c1ccccc1)c1ccccc1"
+    },
+    {
+      "split": "external",
+      "group_id": "C18H14BrP|charge=0",
+      "formula": "C18H14BrP",
+      "SMILES": "Brc1cccc(P(c2ccccc2)c2ccccc2)c1",
+      "connectivity": "Brc1cccc(P(c2ccccc2)c2ccccc2)c1"
+    },
+    {
+      "split": "external",
+      "group_id": "C10H21O2P|charge=0",
+      "formula": "C10H21O2P",
+      "SMILES": "CCOP(C)(=O)CC1CCCCC1",
+      "connectivity": "CCOP(C)(=O)CC1CCCCC1"
+    },
+    {
+      "split": "external",
+      "group_id": "C10H21O2P|charge=0",
+      "formula": "C10H21O2P",
+      "SMILES": "CCP(CC)CC(=O)OC(C)(C)C",
+      "connectivity": "CCP(CC)CC(=O)OC(C)(C)C"
+    },
+    {
+      "split": "external",
+      "group_id": "C10H21O2P|charge=0",
+      "formula": "C10H21O2P",
+      "SMILES": "CCCCO[PH](=O)C1CCCCC1",
+      "connectivity": "CCCCO[PH](=O)C1CCCCC1"
+    },
+    {
+      "split": "external",
+      "group_id": "C6H8N2|charge=0",
+      "formula": "C6H8N2",
+      "SMILES": "Cc1cncc(N)c1",
+      "connectivity": "Cc1cncc(N)c1"
+    },
+    {
+      "split": "external",
+      "group_id": "C6H8N2|charge=0",
+      "formula": "C6H8N2",
+      "SMILES": "NNc1ccccc1",
+      "connectivity": "NNc1ccccc1"
+    },
+    {
+      "split": "external",
+      "group_id": "C6H8N2|charge=0",
+      "formula": "C6H8N2",
+      "SMILES": "CCc1ccncn1",
+      "connectivity": "CCc1ccncn1"
+    },
+    {
+      "split": "external",
+      "group_id": "C20H32O|charge=0",
+      "formula": "C20H32O",
+      "SMILES": "CC(CCCC1CCCCC1)c1ccc(CCCO)cc1",
+      "connectivity": "CC(CCCC1CCCCC1)c1ccc(CCCO)cc1"
+    },
+    {
+      "split": "external",
+      "group_id": "C20H32O|charge=0",
+      "formula": "C20H32O",
+      "SMILES": "CC(C)=CCC/C(C)=C/CC/C(C)=C/CC/C(C)=C/C=O",
+      "connectivity": "CC(C)=CCCC(C)=CCCC(C)=CCCC(C)=CC=O"
+    },
+    {
+      "split": "external",
+      "group_id": "C20H32O|charge=0",
+      "formula": "C20H32O",
+      "SMILES": "C[C@H]1CC[C@@]2(C)[C@@H](CC[C@@H]3[C@@H]2CC[C@]2(C)C(=O)CC[C@@H]32)C1",
+      "connectivity": "CC1CCC2(C)C(CCC3C4CCC(=O)C4(C)CCC32)C1"
+    },
+    {
+      "split": "external",
+      "group_id": "C20H32O|charge=0",
+      "formula": "C20H32O",
+      "SMILES": "C=Cc1cc(C(C)(C)CCC)c(O)c(C(C)(C)CCC)c1",
+      "connectivity": "C=Cc1cc(C(C)(C)CCC)c(O)c(C(C)(C)CCC)c1"
+    },
+    {
+      "split": "external",
+      "group_id": "C20H32O|charge=0",
+      "formula": "C20H32O",
+      "SMILES": "CC[C@H]1CC[C@H](C2CCC(C3C=CC(=O)CC3)CC2)CC1",
+      "connectivity": "CCC1CCC(C2CCC(C3C=CC(=O)CC3)CC2)CC1"
+    },
+    {
+      "split": "external",
+      "group_id": "C20H32O|charge=0",
+      "formula": "C20H32O",
+      "SMILES": "CCCCCCCCCC(C)C=Cc1ccc(OC)cc1",
+      "connectivity": "CCCCCCCCCC(C)C=Cc1ccc(OC)cc1"
+    },
+    {
+      "split": "external",
+      "group_id": "C20H32O|charge=0",
+      "formula": "C20H32O",
+      "SMILES": "CC/C=C\\C/C=C\\C/C=C\\C/C=C\\C/C=C\\CCCCO",
+      "connectivity": "CCC=CCC=CCC=CCC=CCC=CCCCCO"
+    },
+    {
+      "split": "external",
+      "group_id": "C20H32O|charge=0",
+      "formula": "C20H32O",
+      "SMILES": "CC1CC2=CCCCC2C2CCC3(C)C(CO)CCC3C12",
+      "connectivity": "CC1CC2=CCCCC2C2CCC3(C)C(CO)CCC3C12"
+    },
+    {
+      "split": "external",
+      "group_id": "C20H32O|charge=0",
+      "formula": "C20H32O",
+      "SMILES": "O=C1CCCCCCCCCCCC[C@@H]2[C@H]1[C@H]1C=C[C@H]2C1",
+      "connectivity": "O=C1CCCCCCCCCCCCC2C3C=CC(C3)C12"
+    },
+    {
+      "split": "external",
+      "group_id": "C20H32O|charge=0",
+      "formula": "C20H32O",
+      "SMILES": "CC(C)C1=CC[C@H]2C(=C1)CC[C@H]1[C@](C)(CO)CCC[C@]21C",
+      "connectivity": "CC(C)C1=CCC2C(=C1)CCC1C(C)(CO)CCCC21C"
+    },
+    {
+      "split": "external",
+      "group_id": "C18H39O3P|charge=0",
+      "formula": "C18H39O3P",
+      "SMILES": "CCCCCCCCCCCCCCCCP(=O)(OC)OC",
+      "connectivity": "CCCCCCCCCCCCCCCCP(=O)(OC)OC"
+    },
+    {
+      "split": "external",
+      "group_id": "C18H39O3P|charge=0",
+      "formula": "C18H39O3P",
+      "SMILES": "CCCCCCCCCCCCCCP(=O)(OCC)OCC",
+      "connectivity": "CCCCCCCCCCCCCCP(=O)(OCC)OCC"
+    },
+    {
+      "split": "external",
+      "group_id": "C18H39O3P|charge=0",
+      "formula": "C18H39O3P",
+      "SMILES": "CCCCCCCCCCCCCCCCCCP(=O)(O)O",
+      "connectivity": "CCCCCCCCCCCCCCCCCCP(=O)(O)O"
+    },
+    {
+      "split": "external",
+      "group_id": "C15H17O4P|charge=0",
+      "formula": "C15H17O4P",
+      "SMILES": "CC1(C)COP(=O)(O)OC1c1cccc2ccccc12",
+      "connectivity": "CC1(C)COP(=O)(O)OC1c1cccc2ccccc12"
+    },
+    {
+      "split": "external",
+      "group_id": "C15H17O4P|charge=0",
+      "formula": "C15H17O4P",
+      "SMILES": "O=P(CO)(OCc1ccccc1)OCc1ccccc1",
+      "connectivity": "O=P(CO)(OCc1ccccc1)OCc1ccccc1"
+    },
+    {
+      "split": "external",
+      "group_id": "C15H17O4P|charge=0",
+      "formula": "C15H17O4P",
+      "SMILES": "COP(=O)(OC)c1cc(-c2ccc(C)cc2)ccc1O",
+      "connectivity": "COP(=O)(OC)c1cc(-c2ccc(C)cc2)ccc1O"
+    },
+    {
+      "split": "external",
+      "group_id": "C15H17O4P|charge=0",
+      "formula": "C15H17O4P",
+      "SMILES": "CC1(C)COP(=O)(O)OC1c1ccc2ccccc2c1",
+      "connectivity": "CC1(C)COP(=O)(O)OC1c1ccc2ccccc2c1"
+    },
+    {
+      "split": "external",
+      "group_id": "C15H17O4P|charge=0",
+      "formula": "C15H17O4P",
+      "SMILES": "CC(C)(O)P(=O)(Oc1ccccc1)Oc1ccccc1",
+      "connectivity": "CC(C)(O)P(=O)(Oc1ccccc1)Oc1ccccc1"
+    },
+    {
+      "split": "external",
+      "group_id": "C25H27O2P|charge=0",
+      "formula": "C25H27O2P",
+      "SMILES": "CC(C(=O)OC(C)(C)C)=P(c1ccccc1)(c1ccccc1)c1ccccc1",
+      "connectivity": "CC(C(=O)OC(C)(C)C)=P(c1ccccc1)(c1ccccc1)c1ccccc1"
+    },
+    {
+      "split": "external",
+      "group_id": "C25H27O2P|charge=0",
+      "formula": "C25H27O2P",
+      "SMILES": "CC(C)OCCC(=O)C=P(c1ccccc1)(c1ccccc1)c1ccccc1",
+      "connectivity": "CC(C)OCCC(=O)C=P(c1ccccc1)(c1ccccc1)c1ccccc1"
+    },
+    {
+      "split": "external",
+      "group_id": "C25H27O2P|charge=0",
+      "formula": "C25H27O2P",
+      "SMILES": "O=P(OCc1ccc(C2CCCCC2)cc1)(c1ccccc1)c1ccccc1",
+      "connectivity": "O=P(OCc1ccc(C2CCCCC2)cc1)(c1ccccc1)c1ccccc1"
+    },
+    {
+      "split": "external",
+      "group_id": "C25H27O2P|charge=0",
+      "formula": "C25H27O2P",
+      "SMILES": "CCCC(C(=O)OCC)=P(c1ccccc1)(c1ccccc1)c1ccccc1",
+      "connectivity": "CCCC(C(=O)OCC)=P(c1ccccc1)(c1ccccc1)c1ccccc1"
+    },
+    {
+      "split": "external",
+      "group_id": "C8H19NO6P2|charge=0",
+      "formula": "C8H19NO6P2",
+      "SMILES": "CC1(C)CCCN(C(P(=O)(O)O)P(=O)(O)O)C1",
+      "connectivity": "CC1(C)CCCN(C(P(=O)(O)O)P(=O)(O)O)C1"
+    },
+    {
+      "split": "external",
+      "group_id": "C8H19NO6P2|charge=0",
+      "formula": "C8H19NO6P2",
+      "SMILES": "O=P(O)(O)C(NC1CCCCCC1)P(=O)(O)O",
+      "connectivity": "O=P(O)(O)C(NC1CCCCCC1)P(=O)(O)O"
+    },
+    {
+      "split": "external",
+      "group_id": "C8H19NO6P2|charge=0",
+      "formula": "C8H19NO6P2",
+      "SMILES": "CC1(C)CCN(C(P(=O)(O)O)P(=O)(O)O)CC1",
+      "connectivity": "CC1(C)CCN(C(P(=O)(O)O)P(=O)(O)O)CC1"
+    },
+    {
+      "split": "external",
+      "group_id": "C21H23N5O3|charge=0",
+      "formula": "C21H23N5O3",
+      "SMILES": "N=C(N)NCCC[C@H](N)C(=O)Nc1ccc2cc(-c3ccccc3)c(=O)oc2c1",
+      "connectivity": "N=C(N)NCCCC(N)C(=O)Nc1ccc2cc(-c3ccccc3)c(=O)oc2c1"
+    },
+    {
+      "split": "external",
+      "group_id": "C17H23ClN2|charge=0",
+      "formula": "C17H23ClN2",
+      "SMILES": "CN1CCc2ccc(Cl)c3c2N(CC1)C1CCCCC31",
+      "connectivity": "CN1CCc2ccc(Cl)c3c2N(CC1)C1CCCCC31"
+    },
+    {
+      "split": "external",
+      "group_id": "C17H23ClN2|charge=0",
+      "formula": "C17H23ClN2",
+      "SMILES": "CCc1c(-c2c(C)cc(C)cc2C)nn(CC)c1CCl",
+      "connectivity": "CCc1c(-c2c(C)cc(C)cc2C)nn(CC)c1CCl"
+    },
+    {
+      "split": "external",
+      "group_id": "C17H23ClN2|charge=0",
+      "formula": "C17H23ClN2",
+      "SMILES": "CC1C2CC3=C(CCC4=C3C=C(Cl)CNCC41C)N2C",
+      "connectivity": "CC1C2CC3=C(CCC4=C3C=C(Cl)CNCC41C)N2C"
+    },
+    {
+      "split": "external",
+      "group_id": "C17H23ClN2|charge=0",
+      "formula": "C17H23ClN2",
+      "SMILES": "CC(C)(C)Cc1nc2cc(CCl)ccc2n1CC1CC1",
+      "connectivity": "CC(C)(C)Cc1nc2cc(CCl)ccc2n1CC1CC1"
+    },
+    {
+      "split": "external",
+      "group_id": "C17H23ClN2|charge=0",
+      "formula": "C17H23ClN2",
+      "SMILES": "Clc1cc2c3c(c1)C1CCCCCC1CN3CCNC2",
+      "connectivity": "Clc1cc2c3c(c1)C1CCCCCC1CN3CCNC2"
+    },
+    {
+      "split": "external",
+      "group_id": "C17H23ClN2|charge=0",
+      "formula": "C17H23ClN2",
+      "SMILES": "Clc1ccc2c3c1CCNCCN3C1CCCCCC21",
+      "connectivity": "Clc1ccc2c3c1CCNCCN3C1CCCCCC21"
+    }
+  ]
+}

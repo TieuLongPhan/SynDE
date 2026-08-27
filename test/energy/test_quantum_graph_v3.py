@@ -47,9 +47,7 @@ def test_quantum_graph_v3_score_is_deterministic_and_attributable() -> None:
 
 
 def test_quantum_graph_v3_model_round_trip(tmp_path) -> None:
-    scorer = QuantumGraphV3Scorer(
-        card=_card(), weights={"v3_charge_product_r2": -0.5}
-    )
+    scorer = QuantumGraphV3Scorer(card=_card(), weights={"v3_charge_product_r2": -0.5})
     path = tmp_path / "model.json"
     path.write_text(json.dumps(scorer.to_dict()), encoding="utf-8")
 
@@ -60,9 +58,7 @@ def test_quantum_graph_v3_model_round_trip(tmp_path) -> None:
 
 
 def test_quantum_graph_v3_group_scoring_rejects_mixed_formulae() -> None:
-    scorer = QuantumGraphV3Scorer(
-        card=_card(), weights={"v3_charge_product_r2": -0.5}
-    )
+    scorer = QuantumGraphV3Scorer(card=_card(), weights={"v3_charge_product_r2": -0.5})
     candidates = [
         GraphBuilder.from_smiles("CCC"),
         GraphBuilder.from_smiles("CCCC"),

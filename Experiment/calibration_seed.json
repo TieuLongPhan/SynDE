@@ -1,0 +1,504 @@
+{
+  "schema_version": 1,
+  "feature_definition_sha256": "a1749aea7a455d57677e0165224747f9aa674800411bd585f6a5b6f90d892a24",
+  "feature_count": 52,
+  "feature_families": {
+    "quantum_graph_charge_topology": 14,
+    "quantum_graph_cycle_ring_junction": 8,
+    "quantum_graph_graph_steric": 6,
+    "quantum_graph_huckel_density_spectral": 16,
+    "quantum_graph_resonance_topology": 8
+  },
+  "feature_definitions": [
+    {
+      "name": "quantum_graph_huckel_component_count",
+      "family": "quantum_graph_huckel_density_spectral",
+      "description": "Number of assigned connected pi-orbital components.",
+      "units": "dimensionless_graph_descriptor"
+    },
+    {
+      "name": "quantum_graph_huckel_component_size_max",
+      "family": "quantum_graph_huckel_density_spectral",
+      "description": "Largest assigned pi-orbital component size.",
+      "units": "dimensionless_graph_descriptor"
+    },
+    {
+      "name": "quantum_graph_huckel_density_electron_trace",
+      "family": "quantum_graph_huckel_density_spectral",
+      "description": "Sum of traces of occupied Hückel density matrices.",
+      "units": "dimensionless_graph_descriptor"
+    },
+    {
+      "name": "quantum_graph_huckel_population_l2",
+      "family": "quantum_graph_huckel_density_spectral",
+      "description": "Sum of squared diagonal occupied populations.",
+      "units": "dimensionless_graph_descriptor"
+    },
+    {
+      "name": "quantum_graph_huckel_population_variance",
+      "family": "quantum_graph_huckel_density_spectral",
+      "description": "Sum of within-component variances of diagonal occupied populations.",
+      "units": "dimensionless_graph_descriptor"
+    },
+    {
+      "name": "quantum_graph_huckel_bond_order_abs_sum",
+      "family": "quantum_graph_huckel_density_spectral",
+      "description": "Sum of absolute occupied-density edge elements.",
+      "units": "dimensionless_graph_descriptor"
+    },
+    {
+      "name": "quantum_graph_huckel_bond_order_squared_sum",
+      "family": "quantum_graph_huckel_density_spectral",
+      "description": "Sum of squared occupied-density edge elements.",
+      "units": "dimensionless_graph_descriptor"
+    },
+    {
+      "name": "quantum_graph_huckel_bond_order_abs_min",
+      "family": "quantum_graph_huckel_density_spectral",
+      "description": "Minimum absolute occupied-density edge element.",
+      "units": "dimensionless_graph_descriptor"
+    },
+    {
+      "name": "quantum_graph_huckel_bond_order_abs_max",
+      "family": "quantum_graph_huckel_density_spectral",
+      "description": "Maximum absolute occupied-density edge element.",
+      "units": "dimensionless_graph_descriptor"
+    },
+    {
+      "name": "quantum_graph_huckel_bond_order_alternation_mean",
+      "family": "quantum_graph_huckel_density_spectral",
+      "description": "Mean absolute bond-order difference for incident pi edges.",
+      "units": "dimensionless_graph_descriptor"
+    },
+    {
+      "name": "quantum_graph_huckel_spectral_moment_2",
+      "family": "quantum_graph_huckel_density_spectral",
+      "description": "Sum of normalized second Hückel spectral moments.",
+      "units": "dimensionless_graph_descriptor"
+    },
+    {
+      "name": "quantum_graph_huckel_spectral_moment_3",
+      "family": "quantum_graph_huckel_density_spectral",
+      "description": "Sum of normalized third Hückel spectral moments.",
+      "units": "dimensionless_graph_descriptor"
+    },
+    {
+      "name": "quantum_graph_huckel_spectral_moment_4",
+      "family": "quantum_graph_huckel_density_spectral",
+      "description": "Sum of normalized fourth Hückel spectral moments.",
+      "units": "dimensionless_graph_descriptor"
+    },
+    {
+      "name": "quantum_graph_huckel_occupied_energy_variance",
+      "family": "quantum_graph_huckel_density_spectral",
+      "description": "Sum of occupation-weighted within-component orbital-energy variances.",
+      "units": "dimensionless_graph_descriptor"
+    },
+    {
+      "name": "quantum_graph_huckel_homo_projector_ipr_mean",
+      "family": "quantum_graph_huckel_density_spectral",
+      "description": "Mean inverse-participation ratio of complete HOMO projectors.",
+      "units": "dimensionless_graph_descriptor"
+    },
+    {
+      "name": "quantum_graph_huckel_lumo_projector_ipr_mean",
+      "family": "quantum_graph_huckel_density_spectral",
+      "description": "Mean inverse-participation ratio of complete LUMO projectors.",
+      "units": "dimensionless_graph_descriptor"
+    },
+    {
+      "name": "quantum_graph_charge_abs_difference_r1",
+      "family": "quantum_graph_charge_topology",
+      "description": "Sum of absolute Gasteiger-charge contrasts at graph distance 1.",
+      "units": "dimensionless_graph_descriptor"
+    },
+    {
+      "name": "quantum_graph_charge_product_r1",
+      "family": "quantum_graph_charge_topology",
+      "description": "Sum of Gasteiger-charge products at graph distance 1.",
+      "units": "dimensionless_graph_descriptor"
+    },
+    {
+      "name": "quantum_graph_charge_abs_difference_r2",
+      "family": "quantum_graph_charge_topology",
+      "description": "Sum of absolute Gasteiger-charge contrasts at graph distance 2.",
+      "units": "dimensionless_graph_descriptor"
+    },
+    {
+      "name": "quantum_graph_charge_product_r2",
+      "family": "quantum_graph_charge_topology",
+      "description": "Sum of Gasteiger-charge products at graph distance 2.",
+      "units": "dimensionless_graph_descriptor"
+    },
+    {
+      "name": "quantum_graph_charge_abs_difference_r3",
+      "family": "quantum_graph_charge_topology",
+      "description": "Sum of absolute Gasteiger-charge contrasts at graph distance 3.",
+      "units": "dimensionless_graph_descriptor"
+    },
+    {
+      "name": "quantum_graph_charge_product_r3",
+      "family": "quantum_graph_charge_topology",
+      "description": "Sum of Gasteiger-charge products at graph distance 3.",
+      "units": "dimensionless_graph_descriptor"
+    },
+    {
+      "name": "quantum_graph_charge_abs_difference_r4",
+      "family": "quantum_graph_charge_topology",
+      "description": "Sum of absolute Gasteiger-charge contrasts at graph distance 4.",
+      "units": "dimensionless_graph_descriptor"
+    },
+    {
+      "name": "quantum_graph_charge_product_r4",
+      "family": "quantum_graph_charge_topology",
+      "description": "Sum of Gasteiger-charge products at graph distance 4.",
+      "units": "dimensionless_graph_descriptor"
+    },
+    {
+      "name": "quantum_graph_charge_donor_acceptor_abs_difference_r2",
+      "family": "quantum_graph_charge_topology",
+      "description": "Sum of absolute charge contrasts for fixed-rule donor--acceptor pairs at graph distance 2.",
+      "units": "dimensionless_graph_descriptor"
+    },
+    {
+      "name": "quantum_graph_charge_donor_acceptor_abs_difference_r3",
+      "family": "quantum_graph_charge_topology",
+      "description": "Sum of absolute charge contrasts for fixed-rule donor--acceptor pairs at graph distance 3.",
+      "units": "dimensionless_graph_descriptor"
+    },
+    {
+      "name": "quantum_graph_charge_donor_acceptor_abs_difference_r4",
+      "family": "quantum_graph_charge_topology",
+      "description": "Sum of absolute charge contrasts for fixed-rule donor--acceptor pairs at graph distance 4.",
+      "units": "dimensionless_graph_descriptor"
+    },
+    {
+      "name": "quantum_graph_charge_distance_decay_abs_difference",
+      "family": "quantum_graph_charge_topology",
+      "description": "All-pair absolute charge contrast weighted by 2^(-graph distance).",
+      "units": "dimensionless_graph_descriptor"
+    },
+    {
+      "name": "quantum_graph_charge_distance_decay_product",
+      "family": "quantum_graph_charge_topology",
+      "description": "All-pair signed charge product weighted by 2^(-graph distance).",
+      "units": "dimensionless_graph_descriptor"
+    },
+    {
+      "name": "quantum_graph_charge_bond_sign_changes",
+      "family": "quantum_graph_charge_topology",
+      "description": "Number of heavy-atom bonds whose nonzero endpoint charges have opposite signs.",
+      "units": "dimensionless_graph_descriptor"
+    },
+    {
+      "name": "quantum_graph_resonance_component_count",
+      "family": "quantum_graph_resonance_topology",
+      "description": "Number of connected components in the atom-level pi graph.",
+      "units": "dimensionless_graph_descriptor"
+    },
+    {
+      "name": "quantum_graph_resonance_site_count",
+      "family": "quantum_graph_resonance_topology",
+      "description": "Number of atoms in the atom-level pi graph.",
+      "units": "dimensionless_graph_descriptor"
+    },
+    {
+      "name": "quantum_graph_resonance_component_size_max",
+      "family": "quantum_graph_resonance_topology",
+      "description": "Largest atom-level pi-component size.",
+      "units": "dimensionless_graph_descriptor"
+    },
+    {
+      "name": "quantum_graph_resonance_branch_center_count",
+      "family": "quantum_graph_resonance_topology",
+      "description": "Pi-graph vertices with degree at least three.",
+      "units": "dimensionless_graph_descriptor"
+    },
+    {
+      "name": "quantum_graph_resonance_cross_conjugated_center_count",
+      "family": "quantum_graph_resonance_topology",
+      "description": "Nonaromatic pi-graph vertices with degree at least three.",
+      "units": "dimensionless_graph_descriptor"
+    },
+    {
+      "name": "quantum_graph_resonance_path_count_length2",
+      "family": "quantum_graph_resonance_topology",
+      "description": "Number of undirected simple pi paths with two edges.",
+      "units": "dimensionless_graph_descriptor"
+    },
+    {
+      "name": "quantum_graph_resonance_path_count_length3",
+      "family": "quantum_graph_resonance_topology",
+      "description": "Number of undirected simple pi paths with three edges.",
+      "units": "dimensionless_graph_descriptor"
+    },
+    {
+      "name": "quantum_graph_resonance_path_count_length4",
+      "family": "quantum_graph_resonance_topology",
+      "description": "Number of undirected simple pi paths with four edges.",
+      "units": "dimensionless_graph_descriptor"
+    },
+    {
+      "name": "quantum_graph_cycle_cycle_rank",
+      "family": "quantum_graph_cycle_ring_junction",
+      "description": "Basis-independent heavy-atom cyclomatic number.",
+      "units": "dimensionless_graph_descriptor"
+    },
+    {
+      "name": "quantum_graph_cycle_ring_size_quadratic_deviation",
+      "family": "quantum_graph_cycle_ring_junction",
+      "description": "Sum over symmetrized rings of (ring size - 6)^2.",
+      "units": "dimensionless_graph_descriptor"
+    },
+    {
+      "name": "quantum_graph_cycle_ring_size_variance",
+      "family": "quantum_graph_cycle_ring_junction",
+      "description": "Population variance of symmetrized ring sizes.",
+      "units": "dimensionless_graph_descriptor"
+    },
+    {
+      "name": "quantum_graph_cycle_junction_atom_count",
+      "family": "quantum_graph_cycle_ring_junction",
+      "description": "Atoms shared by at least two symmetrized rings.",
+      "units": "dimensionless_graph_descriptor"
+    },
+    {
+      "name": "quantum_graph_cycle_fused_shared_edge_count",
+      "family": "quantum_graph_cycle_ring_junction",
+      "description": "Edges shared by at least two symmetrized rings.",
+      "units": "dimensionless_graph_descriptor"
+    },
+    {
+      "name": "quantum_graph_cycle_bridgehead_atom_count",
+      "family": "quantum_graph_cycle_ring_junction",
+      "description": "Invariant RDKit bridgehead-atom count.",
+      "units": "dimensionless_graph_descriptor"
+    },
+    {
+      "name": "quantum_graph_cycle_exocyclic_multiple_bond_count",
+      "family": "quantum_graph_cycle_ring_junction",
+      "description": "Multiple bonds with exactly one endpoint in a symmetrized ring.",
+      "units": "dimensionless_graph_descriptor"
+    },
+    {
+      "name": "quantum_graph_cycle_adjacent_small_ring_pair_count",
+      "family": "quantum_graph_cycle_ring_junction",
+      "description": "Pairs of rings of size at most four that touch or are directly linked.",
+      "units": "dimensionless_graph_descriptor"
+    },
+    {
+      "name": "quantum_graph_steric_weighted_1_3_crowding",
+      "family": "quantum_graph_graph_steric",
+      "description": "Covalent-radius-product sum over heavy 1,3 endpoint pairs.",
+      "units": "dimensionless_graph_descriptor"
+    },
+    {
+      "name": "quantum_graph_steric_heavy_neighbor_pair_count",
+      "family": "quantum_graph_graph_steric",
+      "description": "Sum of heavy-neighbor pair counts around heavy atoms.",
+      "units": "dimensionless_graph_descriptor"
+    },
+    {
+      "name": "quantum_graph_steric_adjacent_branching_bond_count",
+      "family": "quantum_graph_graph_steric",
+      "description": "Heavy bonds joining two atoms of heavy degree at least three.",
+      "units": "dimensionless_graph_descriptor"
+    },
+    {
+      "name": "quantum_graph_steric_aromatic_ortho_substituent_pairs",
+      "family": "quantum_graph_graph_steric",
+      "description": "Aromatic ring edges whose endpoints both have external heavy substituents.",
+      "units": "dimensionless_graph_descriptor"
+    },
+    {
+      "name": "quantum_graph_steric_aromatic_meta_substituent_pairs",
+      "family": "quantum_graph_graph_steric",
+      "description": "Substituted aromatic atom pairs separated by two aromatic edges.",
+      "units": "dimensionless_graph_descriptor"
+    },
+    {
+      "name": "quantum_graph_steric_double_bond_substitution_product",
+      "family": "quantum_graph_graph_steric",
+      "description": "Sum of endpoint external-heavy-degree products over nonaromatic double bonds.",
+      "units": "dimensionless_graph_descriptor"
+    }
+  ],
+  "model": {
+    "weights": {
+      "atom_state[C;hyb=SP2;arom=0;q=+0;H=1;deg=2;ring=0]": 0.10284918227279592,
+      "atom_state[C;hyb=SP2;arom=0;q=+0;H=1;deg=2;ring=1]": 0.1519091354352477,
+      "atom_state[C;hyb=SP2;arom=0;q=+0;H=2;deg=1;ring=0]": 0.22234768994612142,
+      "atom_state[C;hyb=SP2;arom=1;q=+0;H=0;deg=3;ring=1]": -0.060939638065660044,
+      "atom_state[C;hyb=SP;arom=0;q=+0;H=0;deg=2;ring=0]": 0.20292717236923885,
+      "atom_state[N;hyb=SP2;arom=0;q=+0;H=1;deg=1;ring=0]": 0.4666312636436484,
+      "atom_state[N;hyb=SP2;arom=1;q=+0;H=0;deg=3;ring=1]": -0.21986125017503852,
+      "atom_state[N;hyb=SP3;arom=0;q=+0;H=0;deg=3;ring=1]": 0.11790078821108697,
+      "atom_state[N;hyb=SP3;arom=0;q=+0;H=1;deg=2;ring=0]": 0.1926683463407132,
+      "atom_state[N;hyb=SP3;arom=0;q=+0;H=1;deg=2;ring=1]": 0.25083035350762267,
+      "atom_state[N;hyb=SP3;arom=0;q=+0;H=2;deg=1;ring=0]": 0.23272488431383476,
+      "atom_state[O;hyb=SP2;arom=0;q=+0;H=1;deg=1;ring=0]": -0.06523840478447591,
+      "atom_state[O;hyb=SP3;arom=0;q=+0;H=1;deg=1;ring=0]": -0.07126116172396305,
+      "bond_environment[C;hyb=SP2;arom=0;q=+0;H=0;deg=3;ring=0|single|C;hyb=SP2;arom=0;q=+0;H=1;deg=2;ring=0|conj=1;ring=0]": 0.1251845210417831,
+      "bond_environment[C;hyb=SP2;arom=0;q=+0;H=0;deg=3;ring=0|single|C;hyb=SP2;arom=1;q=+0;H=0;deg=3;ring=1|conj=1;ring=0]": 0.0866263736862901,
+      "bond_environment[C;hyb=SP2;arom=0;q=+0;H=0;deg=3;ring=0|single|C;hyb=SP3;arom=0;q=+0;H=0;deg=4;ring=0|conj=0;ring=0]": 0.07395194732647617,
+      "bond_environment[C;hyb=SP2;arom=0;q=+0;H=0;deg=3;ring=0|single|O;hyb=SP2;arom=0;q=+0;H=0;deg=2;ring=0|conj=1;ring=0]": -0.11509482292280783,
+      "bond_environment[C;hyb=SP2;arom=0;q=+0;H=0;deg=3;ring=0|single|O;hyb=SP2;arom=0;q=+0;H=1;deg=1;ring=0|conj=1;ring=0]": -0.16602392247019113,
+      "bond_environment[C;hyb=SP2;arom=0;q=+0;H=0;deg=3;ring=0|single|S;hyb=SP3;arom=0;q=+0;H=0;deg=2;ring=0|conj=0;ring=0]": -0.29074981646541026,
+      "bond_environment[C;hyb=SP2;arom=0;q=+0;H=0;deg=3;ring=1|double|C;hyb=SP2;arom=0;q=+0;H=1;deg=2;ring=1|conj=1;ring=1]": 0.11094374582388908,
+      "bond_environment[C;hyb=SP2;arom=0;q=+0;H=0;deg=3;ring=1|double|N;hyb=SP2;arom=0;q=+0;H=0;deg=2;ring=0|conj=1;ring=0]": 0.1740862619475647,
+      "bond_environment[C;hyb=SP2;arom=0;q=+0;H=0;deg=3;ring=1|single|S;hyb=SP3;arom=0;q=+0;H=0;deg=2;ring=1|conj=0;ring=1]": -0.2777664843410166,
+      "bond_environment[C;hyb=SP2;arom=0;q=+0;H=1;deg=2;ring=0|single|C;hyb=SP2;arom=1;q=+0;H=0;deg=3;ring=1|conj=1;ring=0]": 0.11314609986793867,
+      "bond_environment[C;hyb=SP2;arom=1;q=+0;H=0;deg=3;ring=1|aromatic|N;hyb=SP2;arom=1;q=+0;H=1;deg=2;ring=1|conj=1;ring=1]": -0.0893422164932598,
+      "bond_environment[C;hyb=SP2;arom=1;q=+0;H=0;deg=3;ring=1|single|C;hyb=SP3;arom=0;q=+0;H=2;deg=2;ring=0|conj=0;ring=0]": -0.03348390454520442,
+      "bond_environment[C;hyb=SP2;arom=1;q=+0;H=0;deg=3;ring=1|single|C;hyb=SP3;arom=0;q=+0;H=3;deg=1;ring=0|conj=0;ring=0]": -0.05962805323587903,
+      "bond_environment[C;hyb=SP2;arom=1;q=+0;H=0;deg=3;ring=1|single|N;hyb=SP2;arom=0;q=+0;H=1;deg=2;ring=1|conj=1;ring=1]": -0.15650335584261404,
+      "bond_environment[C;hyb=SP2;arom=1;q=+0;H=0;deg=3;ring=1|single|N;hyb=SP2;arom=0;q=+1;H=0;deg=3;ring=0|conj=1;ring=0]": 0.8233441117037982,
+      "bond_environment[C;hyb=SP2;arom=1;q=+0;H=0;deg=3;ring=1|single|O;hyb=SP2;arom=0;q=+0;H=0;deg=2;ring=0|conj=1;ring=0]": 0.08454163649018198,
+      "bond_environment[C;hyb=SP2;arom=1;q=+0;H=0;deg=3;ring=1|single|O;hyb=SP2;arom=0;q=+0;H=0;deg=2;ring=1|conj=1;ring=1]": 0.10918482619704178,
+      "bond_environment[C;hyb=SP2;arom=1;q=+0;H=0;deg=3;ring=1|single|S;hyb=SP3;arom=0;q=+0;H=0;deg=4;ring=0|conj=0;ring=0]": 0.11059786563552622,
+      "bond_environment[C;hyb=SP3;arom=0;q=+0;H=0;deg=4;ring=1|single|C;hyb=SP3;arom=0;q=+0;H=0;deg=4;ring=1|conj=0;ring=1]": 0.26013370773394434,
+      "bond_environment[C;hyb=SP3;arom=0;q=+0;H=0;deg=4;ring=1|single|C;hyb=SP;arom=0;q=+0;H=0;deg=2;ring=0|conj=0;ring=0]": 0.3779108687672669,
+      "bond_environment[C;hyb=SP3;arom=0;q=+0;H=2;deg=2;ring=0|single|N;hyb=SP3;arom=0;q=+0;H=0;deg=3;ring=1|conj=0;ring=0]": 0.052752876432989336,
+      "bond_environment[C;hyb=SP;arom=0;q=+0;H=0;deg=2;ring=0|double|N;hyb=SP2;arom=0;q=+0;H=0;deg=2;ring=0|conj=1;ring=0]": -0.5881320533898964,
+      "bond_environment[C;hyb=SP;arom=0;q=+0;H=0;deg=2;ring=0|double|O;hyb=SP2;arom=0;q=+0;H=0;deg=1;ring=0|conj=1;ring=0]": -0.8153946251455805,
+      "bond_environment[C;hyb=SP;arom=0;q=+0;H=0;deg=2;ring=0|triple|N;hyb=SP;arom=0;q=+0;H=0;deg=1;ring=0|conj=1;ring=0]": 0.20028826192010935,
+      "bond_environment[Cl;hyb=SP3;arom=0;q=+0;H=0;deg=1;ring=0|single|S;hyb=SP3;arom=0;q=+0;H=0;deg=4;ring=0|conj=0;ring=0]": -0.6224338537975931,
+      "bond_environment[N;hyb=SP2;arom=0;q=+0;H=0;deg=2;ring=0|double|O;hyb=SP2;arom=0;q=+0;H=0;deg=1;ring=0|conj=1;ring=0]": 1.0218856237750742,
+      "bond_environment[N;hyb=SP2;arom=0;q=+0;H=0;deg=2;ring=0|single|O;hyb=SP2;arom=0;q=+0;H=0;deg=2;ring=0|conj=1;ring=0]": 0.45834929483297576,
+      "bond_environment[N;hyb=SP2;arom=0;q=+0;H=0;deg=2;ring=0|single|O;hyb=SP2;arom=0;q=+0;H=1;deg=1;ring=0|conj=1;ring=0]": 0.623851170580284,
+      "bond_environment[N;hyb=SP2;arom=0;q=+0;H=0;deg=3;ring=1|single|O;hyb=SP3;arom=0;q=+0;H=0;deg=2;ring=0|conj=0;ring=0]": 0.3399069358497307,
+      "bond_environment[N;hyb=SP2;arom=0;q=+0;H=1;deg=2;ring=0|single|S;hyb=SP3;arom=0;q=+0;H=0;deg=4;ring=0|conj=0;ring=0]": 0.20789417442046532,
+      "bond_environment[N;hyb=SP2;arom=1;q=+0;H=0;deg=2;ring=1|aromatic|N;hyb=SP2;arom=1;q=+0;H=0;deg=3;ring=1|conj=1;ring=1]": -0.14289108425136968,
+      "bond_environment[N;hyb=SP2;arom=1;q=+0;H=0;deg=2;ring=1|aromatic|O;hyb=SP2;arom=1;q=+0;H=0;deg=2;ring=1|conj=1;ring=1]": 0.31587584622753173,
+      "estate_by_element[Br]": -0.5452320816844778,
+      "estate_by_element[C]": 0.05481931636326469,
+      "estate_by_element[O]": -0.013777981749694116,
+      "first_order_v1[acyclic_pi_delocalization]": -0.004127361001845007,
+      "first_order_v1[carbonyl_n_lone_pair_delocalization]": 0.004418251299348895,
+      "first_order_v1[forced_small_ring_strain]": 0.006215490863644145,
+      "first_order_v1[localized_bond_enthalpy]": 0.0023988926683655987,
+      "first_order_v1[mixed_element_lone_pair_delocalization]": 0.0022113069612291923,
+      "first_order_v1[mixed_n_lone_pair_delocalization]": 0.0031499234159210027,
+      "fukui_homo_density[C;hyb=SP2;arom=0;q=+0]": 0.09561309597266297,
+      "fukui_homo_density[C;hyb=SP;arom=0;q=+0]": 0.2970473713895875,
+      "fukui_homo_density[N;hyb=SP2;arom=1;q=+0]": -0.2530892184784426,
+      "fukui_lumo_density[N;hyb=SP2;arom=1;q=+0]": 0.17583021074554656,
+      "gasteiger_bond_charge_difference": -0.16607659057016036,
+      "huckel_homo_energy_sum": -0.10006311474587684,
+      "huckel_min_frontier_gap": -0.1453730737141648,
+      "rdkit_bertz_ct": -0.0007643996493886282,
+      "rdkit_chi2n": -0.08850329317610509,
+      "rdkit_kappa1": 0.15847443783809229,
+      "ring[size=3;arom_atoms=0;unsat_edges=0;elements=C,C,C]": 0.30457670485508015,
+      "ring[size=5;arom_atoms=0;unsat_edges=0;elements=C,C,C,C,O]": -0.09905224739557053,
+      "ring[size=5;arom_atoms=0;unsat_edges=0;elements=C,C,C,N,N]": -0.21020623634152616,
+      "ring[size=5;arom_atoms=5;unsat_edges=5;elements=C,C,N,N,N]": -0.19193707278547315,
+      "ring[size=6;arom_atoms=6;unsat_edges=6;elements=C,C,C,C,C,C]": -0.09902434502279914,
+      "ring[size=6;arom_atoms=6;unsat_edges=6;elements=C,C,C,C,C,O]": 0.23459090724320078,
+      "ring[size=7;arom_atoms=4;unsat_edges=2;elements=C,C,C,C,C,N,N]": 0.44149896995864485,
+      "ring_junction_fused_pairs": -0.047674665376384776,
+      "quantum_graph_charge_abs_difference_r1": -0.16607659057015914,
+      "quantum_graph_charge_abs_difference_r2": -0.0477058310053627,
+      "quantum_graph_charge_abs_difference_r4": 0.013632008848201529,
+      "quantum_graph_charge_donor_acceptor_abs_difference_r4": -0.2287630722716964,
+      "quantum_graph_charge_product_r1": 1.7322996324749529,
+      "quantum_graph_charge_product_r2": -0.544430868372881,
+      "quantum_graph_charge_product_r3": -0.013117837815968677,
+      "quantum_graph_huckel_bond_order_abs_max": 0.43171112192482436,
+      "quantum_graph_huckel_bond_order_squared_sum": 0.09647347909870323,
+      "quantum_graph_huckel_occupied_energy_variance": -0.02637548845862759,
+      "quantum_graph_huckel_population_variance": -0.3718742863586694,
+      "quantum_graph_resonance_branch_center_count": 0.06717542197384264,
+      "quantum_graph_resonance_component_count": 0.05393528653417398,
+      "quantum_graph_resonance_path_count_length4": -0.010219564583922773
+    },
+    "selected_terms": [
+      "atom_state[C;hyb=SP2;arom=0;q=+0;H=1;deg=2;ring=0]",
+      "atom_state[C;hyb=SP2;arom=0;q=+0;H=1;deg=2;ring=1]",
+      "atom_state[C;hyb=SP2;arom=0;q=+0;H=2;deg=1;ring=0]",
+      "atom_state[C;hyb=SP2;arom=1;q=+0;H=0;deg=3;ring=1]",
+      "atom_state[C;hyb=SP;arom=0;q=+0;H=0;deg=2;ring=0]",
+      "atom_state[N;hyb=SP2;arom=0;q=+0;H=1;deg=1;ring=0]",
+      "atom_state[N;hyb=SP2;arom=1;q=+0;H=0;deg=3;ring=1]",
+      "atom_state[N;hyb=SP3;arom=0;q=+0;H=0;deg=3;ring=1]",
+      "atom_state[N;hyb=SP3;arom=0;q=+0;H=1;deg=2;ring=0]",
+      "atom_state[N;hyb=SP3;arom=0;q=+0;H=1;deg=2;ring=1]",
+      "atom_state[N;hyb=SP3;arom=0;q=+0;H=2;deg=1;ring=0]",
+      "atom_state[O;hyb=SP2;arom=0;q=+0;H=1;deg=1;ring=0]",
+      "atom_state[O;hyb=SP3;arom=0;q=+0;H=1;deg=1;ring=0]",
+      "bond_environment[C;hyb=SP2;arom=0;q=+0;H=0;deg=3;ring=0|single|C;hyb=SP2;arom=0;q=+0;H=1;deg=2;ring=0|conj=1;ring=0]",
+      "bond_environment[C;hyb=SP2;arom=0;q=+0;H=0;deg=3;ring=0|single|C;hyb=SP2;arom=1;q=+0;H=0;deg=3;ring=1|conj=1;ring=0]",
+      "bond_environment[C;hyb=SP2;arom=0;q=+0;H=0;deg=3;ring=0|single|C;hyb=SP3;arom=0;q=+0;H=0;deg=4;ring=0|conj=0;ring=0]",
+      "bond_environment[C;hyb=SP2;arom=0;q=+0;H=0;deg=3;ring=0|single|O;hyb=SP2;arom=0;q=+0;H=0;deg=2;ring=0|conj=1;ring=0]",
+      "bond_environment[C;hyb=SP2;arom=0;q=+0;H=0;deg=3;ring=0|single|O;hyb=SP2;arom=0;q=+0;H=1;deg=1;ring=0|conj=1;ring=0]",
+      "bond_environment[C;hyb=SP2;arom=0;q=+0;H=0;deg=3;ring=0|single|S;hyb=SP3;arom=0;q=+0;H=0;deg=2;ring=0|conj=0;ring=0]",
+      "bond_environment[C;hyb=SP2;arom=0;q=+0;H=0;deg=3;ring=1|double|C;hyb=SP2;arom=0;q=+0;H=1;deg=2;ring=1|conj=1;ring=1]",
+      "bond_environment[C;hyb=SP2;arom=0;q=+0;H=0;deg=3;ring=1|double|N;hyb=SP2;arom=0;q=+0;H=0;deg=2;ring=0|conj=1;ring=0]",
+      "bond_environment[C;hyb=SP2;arom=0;q=+0;H=0;deg=3;ring=1|single|S;hyb=SP3;arom=0;q=+0;H=0;deg=2;ring=1|conj=0;ring=1]",
+      "bond_environment[C;hyb=SP2;arom=0;q=+0;H=1;deg=2;ring=0|single|C;hyb=SP2;arom=1;q=+0;H=0;deg=3;ring=1|conj=1;ring=0]",
+      "bond_environment[C;hyb=SP2;arom=1;q=+0;H=0;deg=3;ring=1|aromatic|N;hyb=SP2;arom=1;q=+0;H=1;deg=2;ring=1|conj=1;ring=1]",
+      "bond_environment[C;hyb=SP2;arom=1;q=+0;H=0;deg=3;ring=1|single|C;hyb=SP3;arom=0;q=+0;H=2;deg=2;ring=0|conj=0;ring=0]",
+      "bond_environment[C;hyb=SP2;arom=1;q=+0;H=0;deg=3;ring=1|single|C;hyb=SP3;arom=0;q=+0;H=3;deg=1;ring=0|conj=0;ring=0]",
+      "bond_environment[C;hyb=SP2;arom=1;q=+0;H=0;deg=3;ring=1|single|N;hyb=SP2;arom=0;q=+0;H=1;deg=2;ring=1|conj=1;ring=1]",
+      "bond_environment[C;hyb=SP2;arom=1;q=+0;H=0;deg=3;ring=1|single|N;hyb=SP2;arom=0;q=+1;H=0;deg=3;ring=0|conj=1;ring=0]",
+      "bond_environment[C;hyb=SP2;arom=1;q=+0;H=0;deg=3;ring=1|single|O;hyb=SP2;arom=0;q=+0;H=0;deg=2;ring=0|conj=1;ring=0]",
+      "bond_environment[C;hyb=SP2;arom=1;q=+0;H=0;deg=3;ring=1|single|O;hyb=SP2;arom=0;q=+0;H=0;deg=2;ring=1|conj=1;ring=1]",
+      "bond_environment[C;hyb=SP2;arom=1;q=+0;H=0;deg=3;ring=1|single|S;hyb=SP3;arom=0;q=+0;H=0;deg=4;ring=0|conj=0;ring=0]",
+      "bond_environment[C;hyb=SP3;arom=0;q=+0;H=0;deg=4;ring=1|single|C;hyb=SP3;arom=0;q=+0;H=0;deg=4;ring=1|conj=0;ring=1]",
+      "bond_environment[C;hyb=SP3;arom=0;q=+0;H=0;deg=4;ring=1|single|C;hyb=SP;arom=0;q=+0;H=0;deg=2;ring=0|conj=0;ring=0]",
+      "bond_environment[C;hyb=SP3;arom=0;q=+0;H=2;deg=2;ring=0|single|N;hyb=SP3;arom=0;q=+0;H=0;deg=3;ring=1|conj=0;ring=0]",
+      "bond_environment[C;hyb=SP;arom=0;q=+0;H=0;deg=2;ring=0|double|N;hyb=SP2;arom=0;q=+0;H=0;deg=2;ring=0|conj=1;ring=0]",
+      "bond_environment[C;hyb=SP;arom=0;q=+0;H=0;deg=2;ring=0|double|O;hyb=SP2;arom=0;q=+0;H=0;deg=1;ring=0|conj=1;ring=0]",
+      "bond_environment[C;hyb=SP;arom=0;q=+0;H=0;deg=2;ring=0|triple|N;hyb=SP;arom=0;q=+0;H=0;deg=1;ring=0|conj=1;ring=0]",
+      "bond_environment[Cl;hyb=SP3;arom=0;q=+0;H=0;deg=1;ring=0|single|S;hyb=SP3;arom=0;q=+0;H=0;deg=4;ring=0|conj=0;ring=0]",
+      "bond_environment[N;hyb=SP2;arom=0;q=+0;H=0;deg=2;ring=0|double|O;hyb=SP2;arom=0;q=+0;H=0;deg=1;ring=0|conj=1;ring=0]",
+      "bond_environment[N;hyb=SP2;arom=0;q=+0;H=0;deg=2;ring=0|single|O;hyb=SP2;arom=0;q=+0;H=0;deg=2;ring=0|conj=1;ring=0]",
+      "bond_environment[N;hyb=SP2;arom=0;q=+0;H=0;deg=2;ring=0|single|O;hyb=SP2;arom=0;q=+0;H=1;deg=1;ring=0|conj=1;ring=0]",
+      "bond_environment[N;hyb=SP2;arom=0;q=+0;H=0;deg=3;ring=1|single|O;hyb=SP3;arom=0;q=+0;H=0;deg=2;ring=0|conj=0;ring=0]",
+      "bond_environment[N;hyb=SP2;arom=0;q=+0;H=1;deg=2;ring=0|single|S;hyb=SP3;arom=0;q=+0;H=0;deg=4;ring=0|conj=0;ring=0]",
+      "bond_environment[N;hyb=SP2;arom=1;q=+0;H=0;deg=2;ring=1|aromatic|N;hyb=SP2;arom=1;q=+0;H=0;deg=3;ring=1|conj=1;ring=1]",
+      "bond_environment[N;hyb=SP2;arom=1;q=+0;H=0;deg=2;ring=1|aromatic|O;hyb=SP2;arom=1;q=+0;H=0;deg=2;ring=1|conj=1;ring=1]",
+      "estate_by_element[Br]",
+      "estate_by_element[C]",
+      "estate_by_element[O]",
+      "first_order_v1[acyclic_pi_delocalization]",
+      "first_order_v1[carbonyl_n_lone_pair_delocalization]",
+      "first_order_v1[forced_small_ring_strain]",
+      "first_order_v1[localized_bond_enthalpy]",
+      "first_order_v1[mixed_element_lone_pair_delocalization]",
+      "first_order_v1[mixed_n_lone_pair_delocalization]",
+      "fukui_homo_density[C;hyb=SP2;arom=0;q=+0]",
+      "fukui_homo_density[C;hyb=SP;arom=0;q=+0]",
+      "fukui_homo_density[N;hyb=SP2;arom=1;q=+0]",
+      "fukui_lumo_density[N;hyb=SP2;arom=1;q=+0]",
+      "gasteiger_bond_charge_difference",
+      "huckel_homo_energy_sum",
+      "huckel_min_frontier_gap",
+      "rdkit_bertz_ct",
+      "rdkit_chi2n",
+      "rdkit_kappa1",
+      "ring[size=3;arom_atoms=0;unsat_edges=0;elements=C,C,C]",
+      "ring[size=5;arom_atoms=0;unsat_edges=0;elements=C,C,C,C,O]",
+      "ring[size=5;arom_atoms=0;unsat_edges=0;elements=C,C,C,N,N]",
+      "ring[size=5;arom_atoms=5;unsat_edges=5;elements=C,C,N,N,N]",
+      "ring[size=6;arom_atoms=6;unsat_edges=6;elements=C,C,C,C,C,C]",
+      "ring[size=6;arom_atoms=6;unsat_edges=6;elements=C,C,C,C,C,O]",
+      "ring[size=7;arom_atoms=4;unsat_edges=2;elements=C,C,C,C,C,N,N]",
+      "ring_junction_fused_pairs",
+      "quantum_graph_charge_abs_difference_r1",
+      "quantum_graph_charge_abs_difference_r2",
+      "quantum_graph_charge_abs_difference_r4",
+      "quantum_graph_charge_donor_acceptor_abs_difference_r4",
+      "quantum_graph_charge_product_r1",
+      "quantum_graph_charge_product_r2",
+      "quantum_graph_charge_product_r3",
+      "quantum_graph_huckel_bond_order_abs_max",
+      "quantum_graph_huckel_bond_order_squared_sum",
+      "quantum_graph_huckel_occupied_energy_variance",
+      "quantum_graph_huckel_population_variance",
+      "quantum_graph_resonance_branch_center_count",
+      "quantum_graph_resonance_component_count",
+      "quantum_graph_resonance_path_count_length4"
+    ]
+  }
+}

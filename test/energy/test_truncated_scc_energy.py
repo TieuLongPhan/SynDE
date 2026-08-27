@@ -14,7 +14,6 @@ from synde.energy.truncated_scc_energy import (
 )
 from synde.graph import GraphBuilder
 
-
 PARAMETERS = """
 $Z= 1
  REPA= 2.000000

@@ -1,0 +1,68 @@
+{
+  "analysis": "synde-formula-relative-atom-count-baseline-v1",
+  "definition": "Ridge regression using elemental atom counts, total atom count, heavy-atom count, and formal charge after within-formula centering",
+  "feature_names": [
+    "count_B",
+    "count_Br",
+    "count_C",
+    "count_Cl",
+    "count_F",
+    "count_H",
+    "count_I",
+    "count_N",
+    "count_O",
+    "count_P",
+    "count_S",
+    "count_Si",
+    "total_atom_count",
+    "heavy_atom_count",
+    "formal_charge"
+  ],
+  "ridge_alpha": 1.0,
+  "mathematical_result": "Every feature is constant within a formula/formal-charge group; the centered design is exactly zero and ridge weights are zero.",
+  "fitted_weights": {
+    "count_B": 0.0,
+    "count_Br": 0.0,
+    "count_C": 0.0,
+    "count_Cl": 0.0,
+    "count_F": 0.0,
+    "count_H": 0.0,
+    "count_I": 0.0,
+    "count_N": 0.0,
+    "count_O": 0.0,
+    "count_P": 0.0,
+    "count_S": 0.0,
+    "count_Si": 0.0,
+    "total_atom_count": 0.0,
+    "heavy_atom_count": 0.0,
+    "formal_charge": 0.0
+  },
+  "training": {
+    "groups": 11993,
+    "molecules": 78513,
+    "maximum_absolute_centered_feature": 0.0,
+    "rankable_groups": 0
+  },
+  "external": {
+    "groups": 3005,
+    "molecules": 19940,
+    "maximum_absolute_centered_feature": 0.0,
+    "rankable_groups": 0,
+    "pearson": null,
+    "spearman": null,
+    "pearson_and_spearman_reason": "zero prediction variance in every group",
+    "tie_aware_pairwise_concordance": 0.5,
+    "expected_top1_accuracy_under_random_tie_break": 0.18788896812191322,
+    "group_size_counts": {
+      "3": 618,
+      "4": 424,
+      "5": 316,
+      "6": 194,
+      "7": 164,
+      "8": 140,
+      "9": 112,
+      "10": 1037
+    }
+  },
+  "interpretation": "Composition-only learning can model cross-formula energy scale but has no information for ranking constitutional isomers."
+}

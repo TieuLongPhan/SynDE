@@ -14,7 +14,7 @@ logger = setup_logging()
 @dataclass
 class ForceFieldConfig:
     """
-    Simple container for force-field related defaults.
+    Configure force-field minimization.
 
     :param default_method: Default force field method to use (e.g. "MMFF94" or "UFF").
     :param min_iter: Minimum iterations used when max_iter="auto".
@@ -34,38 +34,22 @@ class ForceFieldConfig:
 
 
 class ForceField:
-    """
-    Object-oriented interface to RDKit force-field utilities (MMFF / UFF).
-
-    The class wraps common operations:
-      - Minimization of all embedded conformers
-      - Compute energy of a specified conformer
-      - Extract lowest-energy conformer as a new molecule
-
-    Usage example
-    -------------
-    >>> ff = ForceField()
-    >>> mol = Chem.AddHs(Chem.MolFromSmiles("CCO"))
-    >>> AllChem.EmbedMolecule(mol)
-    >>> mol_min = ff.minimize(mol)  # returns minimized molecule
-    """
+    """Minimize and score RDKit conformers with MMFF or UFF."""
 
     def __init__(self, config: Optional[ForceFieldConfig] = None) -> None:
         """
-        Initialize the ForceField helper.
+        Create a force-field helper.
 
-        :param config: Optional ForceFieldConfig to override defaults.
+        :param config: Force-field settings, or ``None`` for defaults.
         """
         self._config = config or ForceFieldConfig()
 
-    # ---------- dunder helpers ----------
     def __repr__(self) -> str:
         return (
             f"<ForceField default_method={self.default_method!r}"
             + f" threads={self.num_threads}>"
         )
 
-    # ---------- convenience / introspection ----------
     @property
     def config(self) -> ForceFieldConfig:
         """Return the configuration dataclass used by this instance."""
@@ -83,7 +67,7 @@ class ForceField:
 
     @property
     def available_methods(self) -> List[str]:
-        """List of allowed / recognised force field method strings."""
+        """Return the supported force-field method names."""
         return list(self._config._available_methods)
 
     @classmethod
@@ -98,7 +82,6 @@ class ForceField:
             or "ForceField helper for RDKit minimization & energy calculation."
         )
 
-    # ---------- public API ----------
     def minimize(
         self,
         molecule: Chem.Mol,
@@ -118,7 +101,7 @@ class ForceField:
         :param return_energies: If True, return (molecule, energies_list).
         :param num_threads: Number of threads to pass to RDKit (overrides config).
         :param kwargs: Extra keyword args forwarded to RDKit optimizer (if supported).
-        :returns: Minimized molecule or (molecule, energies).
+        :return: Minimized molecule or (molecule, energies).
         :raises ValueError: if molecule has no conformers or an invalid force field
         is given.
         :raises RuntimeError: on RDKit initialization / execution errors.
@@ -176,8 +159,8 @@ class ForceField:
 
         # results is a list of (convergence_flag, energy) tuples
         energies = [float(r[1]) for r in results]
-        # The exact meaning of the convergence flag can depend on RDKit; we check if any
-        # conformer shows a non-terminal flag value and warn if all are non-converged.
+        # RDKit backends may use different convergence flag details. Warn when
+        # every conformer reports an unexpected value.
         converged_flags = [r[0] for r in results]
         if not any((f == 0 or f == 1) for f in converged_flags):  # conservative check
             logger.warning(
@@ -205,7 +188,7 @@ class ForceField:
         :param conformer_id: ID (index) of the conformer to evaluate.
         :param force_field_method: Force-field (MMFF94, MMFF94s, or UFF).
         If None uses instance default.
-        :returns: Energy (float) in the units RDKit reports (kcal / mol).
+        :return: Energy (float) in the units RDKit reports (kcal / mol).
         :raises ValueError: on invalid conformer id or unsupported force field.
         :raises RuntimeError: on RDKit initialization errors.
         """
@@ -249,11 +232,11 @@ class ForceField:
         self, molecule: Chem.Mol, force_field_method: Optional[str] = None
     ) -> Chem.Mol:
         """
-        Return a NEW RDKit molecule (copy) containing only the lowest-energy conformer.
+        Return a copy containing only the lowest-energy conformer.
 
         :param molecule: RDKit molecule with >= 1 conformers.
         :param force_field_method: Force-field used to score conformers.
-        :returns: New RDKit molecule with a single conformer (the lowest-energy one).
+        :return: New RDKit molecule with a single conformer (the lowest-energy one).
         :raises ValueError: if the molecule contains no conformers or
         no finite-energy conformer is found.
         """
@@ -283,14 +266,13 @@ class ForceField:
         new_mol.AddConformer(molecule.GetConformer(best_id), assignId=True)
         return new_mol
 
-    # ---------- internal helpers ----------
     def _get_max_iter_from_molecule_size(
         self, molecule: Chem.Mol, min_iter: int, max_iter: int, incr_iter: int
     ) -> int:
         """
         Compute a reasonable maximum iteration count based on number of atoms.
 
-        :returns: integer maximum iterations.
+        :return: Integer maximum iterations.
         """
         num_atoms = molecule.GetNumAtoms()
         return min(int(max_iter), int(min_iter + num_atoms * int(incr_iter)))

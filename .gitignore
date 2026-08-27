@@ -57,6 +57,7 @@ cover/
 
 # Django stuff:
 *.log
+*.synctex.gz
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
@@ -207,6 +208,22 @@ tempCodeRunnerFile.py
 # Ruff stuff:
 .ruff_cache/
 
+# Pinned upstream ORD checkout and generated molecular inventories
+data/ord-data/
+data/ord_raw.csv
+data/ord_raw.audit.json
+data/.ord_raw_work*.sqlite3*
+data/synde-ord-canonical-*/
+data/ord.csv
+data/ord.audit.json
+data/ord_formula_groups.csv
+data/ord_validation_candidates.csv
+# The canonical xTB database and CSV exports are tracked recovery artifacts.
+# Ignore only SQLite's transient sidecars.
+data/ord_xtb_results.sqlite3-journal
+data/ord_xtb_results.sqlite3-shm
+data/ord_xtb_results.sqlite3-wal
+
 # PyPI configuration file
 .pypirc
 
@@ -229,15 +246,11 @@ sprint/*.html
 /xtbrestart
 /xtbtopo.mol
 
-# Local ORD inputs are not redistributed; only hashes and derived records are tracked.
-/data/energy.py
-/data/ord_external.csv
-/data/ord_traindata.csv
-
-# LaTeX build intermediates (retain manuscript PDFs and generated source)
+# Generated build intermediates
 *.aux
 *.bbl
 *.bcf
+*-blx.bib
 *.blg
 *.fdb_latexmk
 *.fls
@@ -245,3 +258,9 @@ sprint/*.html
 *.out
 *.run.xml
 *-SAVE-ERROR
+
+# Global-comparator work files; reviewed reports and artifacts are tracked.
+/Experiment/results/global_comparators/training.joblib
+/Experiment/results/global_comparators/external.joblib
+/Experiment/results/global_comparators/chemprop/
+/Experiment/results/global_comparators/matplotlib/

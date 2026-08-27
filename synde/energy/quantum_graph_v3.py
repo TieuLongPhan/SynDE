@@ -61,9 +61,7 @@ class QuantumGraphV3Scorer:
         self.weights = dict(weights)
         self.base_scorer = FirstOrderTwoDEnergyScorer()
 
-    def features(
-        self, normalized: NormalizedMolecularGraph
-    ) -> dict[str, float]:
+    def features(self, normalized: NormalizedMolecularGraph) -> dict[str, float]:
         """Return the combined named v2 and fixed v3 graph coordinates."""
         base = self.base_scorer.score(normalized)
         features = extract_named_empirical_two_d_features(normalized, base)
@@ -114,9 +112,7 @@ class QuantumGraphV3Scorer:
             return []
         from .two_d_calibration import molecular_formula_charge_key
 
-        keys = {
-            molecular_formula_charge_key(candidate) for candidate in candidates
-        }
+        keys = {molecular_formula_charge_key(candidate) for candidate in candidates}
         if len(keys) != 1:
             raise ValueError(
                 "Quantum-graph v3 group scoring requires one "
@@ -134,8 +130,7 @@ class QuantumGraphV3Scorer:
         return cls(
             card=QuantumGraphV3ModelCard(**card_payload),
             weights={
-                str(name): float(value)
-                for name, value in payload["weights"].items()
+                str(name): float(value) for name, value in payload["weights"].items()
             },
         )
 
@@ -143,9 +138,7 @@ class QuantumGraphV3Scorer:
         from dataclasses import asdict
 
         card = asdict(self.card)
-        card["admitted_v3_families"] = list(
-            self.card.admitted_v3_families
-        )
+        card["admitted_v3_families"] = list(self.card.admitted_v3_families)
         return {"card": card, "weights": dict(self.weights)}
 
 

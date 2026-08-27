@@ -1,0 +1,472 @@
+{
+  "protocol": "synde-ord-postfit-diagnostics-v1",
+  "development_only": true,
+  "untouched_test_complete": false,
+  "result": "Experiment/results/calibration_results.json",
+  "result_sha256": "d6b9f85c0b4e809f88af65a293768686a3835008ad9a996f2b8f776de37a6569",
+  "model": "synde/models/synde_frozen_model.json",
+  "model_sha256": "78c17873cb895db6c2432387073bb2cbb510089aa861530a94189e6221df6eea",
+  "support": {
+    "available_features": 1803,
+    "selected_features": 633,
+    "seed_features": 86,
+    "retained_from_seed": 73,
+    "dropped_from_seed": 13,
+    "new_relative_to_seed": 560,
+    "family_counts": {
+      "atom_state": 37,
+      "bond_environment": 365,
+      "classical_graph_index": 2,
+      "electrotopological_state": 5,
+      "first_order_v1": 8,
+      "formal_charge_topology": 1,
+      "gasteiger_charge": 9,
+      "huckel_fukui": 19,
+      "named_chemical_graph_descriptor": 7,
+      "other_named_term": 1,
+      "ring_topology": 152,
+      "quantum_graph_charge_topology": 10,
+      "quantum_graph_cycle_ring_junction": 5,
+      "quantum_graph_graph_steric": 3,
+      "quantum_graph_huckel_density_spectral": 5,
+      "quantum_graph_resonance_topology": 4
+    },
+    "outer_frequency_counts": {
+      "1": 130,
+      "2": 73,
+      "3": 66,
+      "4": 86,
+      "5": 429
+    }
+  },
+  "largest_absolute_standardized_coefficients": [
+    {
+      "feature": "quantum_graph_charge_distance_decay_product",
+      "standardized_coefficient": 0.21943138758238062
+    },
+    {
+      "feature": "first_order_v1[localized_bond_enthalpy]",
+      "standardized_coefficient": 0.18479688968024102
+    },
+    {
+      "feature": "quantum_graph_charge_product_r2",
+      "standardized_coefficient": -0.15935917518921217
+    },
+    {
+      "feature": "first_order_v1[forced_small_ring_strain]",
+      "standardized_coefficient": 0.15542333359604707
+    },
+    {
+      "feature": "atom_state[C;hyb=SP;arom=0;q=+0;H=0;deg=2;ring=0]",
+      "standardized_coefficient": 0.14816971756074643
+    },
+    {
+      "feature": "quantum_graph_resonance_path_count_length4",
+      "standardized_coefficient": -0.11560163127387535
+    },
+    {
+      "feature": "quantum_graph_resonance_branch_center_count",
+      "standardized_coefficient": 0.09842311697432345
+    },
+    {
+      "feature": "ring_junction_bridged_pairs",
+      "standardized_coefficient": -0.08897234872442007
+    },
+    {
+      "feature": "atom_state[C;hyb=SP2;arom=1;q=+0;H=0;deg=3;ring=1]",
+      "standardized_coefficient": -0.08404905172616924
+    },
+    {
+      "feature": "atom_state[O;hyb=SP2;arom=0;q=+0;H=1;deg=1;ring=0]",
+      "standardized_coefficient": -0.08243020612931497
+    },
+    {
+      "feature": "rdkit_mol_logp",
+      "standardized_coefficient": 0.07382584981006785
+    },
+    {
+      "feature": "atom_state[N;hyb=SP2;arom=1;q=+0;H=0;deg=3;ring=1]",
+      "standardized_coefficient": -0.07194181376254447
+    },
+    {
+      "feature": "huckel_pi_systems",
+      "standardized_coefficient": 0.06937889415115356
+    },
+    {
+      "feature": "gasteiger_bond_charge_difference",
+      "standardized_coefficient": -0.06848012227830222
+    },
+    {
+      "feature": "atom_state[N;hyb=SP2;arom=1;q=+0;H=1;deg=2;ring=1]",
+      "standardized_coefficient": -0.06779427128027815
+    },
+    {
+      "feature": "bond_environment[N;hyb=SP2;arom=0;q=+0;H=0;deg=2;ring=0|double|N;hyb=SP;arom=0;q=+1;H=0;deg=2;ring=0|conj=1;ring=0]",
+      "standardized_coefficient": -0.06398149642423681
+    },
+    {
+      "feature": "atom_state[N;hyb=SP3;arom=0;q=+0;H=2;deg=1;ring=0]",
+      "standardized_coefficient": 0.06325460194280685
+    },
+    {
+      "feature": "cycle_rank",
+      "standardized_coefficient": -0.05956406311270817
+    },
+    {
+      "feature": "quantum_graph_cycle_cycle_rank",
+      "standardized_coefficient": -0.05956406311270817
+    },
+    {
+      "feature": "atom_state[C;hyb=SP2;arom=0;q=+0;H=1;deg=2;ring=0]",
+      "standardized_coefficient": 0.05834941405879288
+    },
+    {
+      "feature": "bond_environment[C;hyb=SP2;arom=0;q=+0;H=0;deg=3;ring=1|single|N;hyb=SP2;arom=0;q=+0;H=0;deg=3;ring=1|conj=1;ring=1]",
+      "standardized_coefficient": -0.056574877381503554
+    },
+    {
+      "feature": "quantum_graph_charge_product_r1",
+      "standardized_coefficient": 0.0551596822409052
+    },
+    {
+      "feature": "quantum_graph_steric_double_bond_substitution_product",
+      "standardized_coefficient": 0.05469755956512571
+    },
+    {
+      "feature": "bond_environment[N;hyb=SP2;arom=0;q=+1;H=0;deg=3;ring=0|double|O;hyb=SP2;arom=0;q=+0;H=0;deg=1;ring=0|conj=1;ring=0]",
+      "standardized_coefficient": 0.05465562570418957
+    },
+    {
+      "feature": "bond_environment[C;hyb=SP2;arom=0;q=+0;H=0;deg=3;ring=0|double|O;hyb=SP2;arom=0;q=+0;H=0;deg=1;ring=0|conj=1;ring=0]",
+      "standardized_coefficient": -0.05195033520985341
+    },
+    {
+      "feature": "bond_environment[C;hyb=SP;arom=0;q=+0;H=0;deg=2;ring=0|double|N;hyb=SP2;arom=0;q=+0;H=0;deg=2;ring=0|conj=1;ring=0]",
+      "standardized_coefficient": -0.051189455511673476
+    },
+    {
+      "feature": "opposite_charge_inverse_graph_distance",
+      "standardized_coefficient": 0.05059792781249653
+    },
+    {
+      "feature": "atom_state[N;hyb=SP3;arom=0;q=+0;H=1;deg=2;ring=1]",
+      "standardized_coefficient": 0.05054731038193523
+    },
+    {
+      "feature": "atom_state[C;hyb=SP2;arom=0;q=+0;H=2;deg=1;ring=0]",
+      "standardized_coefficient": 0.048782554618398685
+    },
+    {
+      "feature": "atom_state[N;hyb=SP2;arom=0;q=+0;H=1;deg=1;ring=0]",
+      "standardized_coefficient": 0.04874478755323163
+    }
+  ],
+  "fixed_prediction_within_group_permutation": {
+    "replicates": 100,
+    "scope": "labels permuted within formula groups against already selected outer predictions; selection pipeline not repeated",
+    "observed_pearson": 0.9340651864088432,
+    "observed_spearman": 0.8788648356562974,
+    "pearson_null_mean": 0.00020019131040297994,
+    "pearson_null_95_range": [
+      -0.007835161599364801,
+      0.008156972117043861
+    ],
+    "pearson_null_maximum": 0.01171548854433503,
+    "pearson_add_one_p": 0.009900990099009901,
+    "spearman_null_mean": -1.8884212038552014e-05,
+    "spearman_null_95_range": [
+      -0.0076553508125049834,
+      0.008325446337203174
+    ],
+    "spearman_null_maximum": 0.011698039585140393,
+    "spearman_add_one_p": 0.009900990099009901
+  },
+  "absolute_score_margin": {
+    "pairs": 267732,
+    "quintiles": [
+      {
+        "bin": 1,
+        "lower_inclusive": 3.6733099880725817e-06,
+        "upper_inclusive": 0.20852802067531312,
+        "pairs": 53547,
+        "mean_pairwise_correctness": 0.6951836704203783
+      },
+      {
+        "bin": 2,
+        "lower_inclusive": 0.20852802067531312,
+        "upper_inclusive": 0.5457342869679769,
+        "pairs": 53546,
+        "mean_pairwise_correctness": 0.9342808052889104
+      },
+      {
+        "bin": 3,
+        "lower_inclusive": 0.5457342869679769,
+        "upper_inclusive": 1.0074783410732084,
+        "pairs": 53546,
+        "mean_pairwise_correctness": 0.9926044895977291
+      },
+      {
+        "bin": 4,
+        "lower_inclusive": 1.0074783410732084,
+        "upper_inclusive": 1.7381949562411254,
+        "pairs": 53546,
+        "mean_pairwise_correctness": 0.9987674149329548
+      },
+      {
+        "bin": 5,
+        "lower_inclusive": 1.7381949562411254,
+        "upper_inclusive": 11.078878543497103,
+        "pairs": 53547,
+        "mean_pairwise_correctness": 0.999589145983902
+      }
+    ],
+    "interpretation": "Descriptive correctness versus absolute cross-fitted score difference; not a calibrated probability."
+  },
+  "worst_groups": {
+    "by_pearson": [
+      {
+        "key": "C22H16BrN|charge=0",
+        "size": 3,
+        "pearson": -0.9999986330961093,
+        "spearman": -1.0
+      },
+      {
+        "key": "C6H4S|charge=0",
+        "size": 3,
+        "pearson": -0.9997318610744491,
+        "spearman": -0.5
+      },
+      {
+        "key": "C14H20ClFO2Si|charge=0",
+        "size": 3,
+        "pearson": -0.9996903589532333,
+        "spearman": -1.0
+      },
+      {
+        "key": "C13H16BNO2|charge=0",
+        "size": 4,
+        "pearson": -0.9994052139208044,
+        "spearman": -1.0
+      },
+      {
+        "key": "C16H8ClF3N2O2S|charge=0",
+        "size": 3,
+        "pearson": -0.9992619912795583,
+        "spearman": -1.0
+      },
+      {
+        "key": "C21H24F2N2O4|charge=0",
+        "size": 3,
+        "pearson": -0.9988890564082897,
+        "spearman": -1.0
+      },
+      {
+        "key": "C13H18FN5O|charge=0",
+        "size": 3,
+        "pearson": -0.9985463618509439,
+        "spearman": -1.0
+      },
+      {
+        "key": "C6H13N3O4|charge=0",
+        "size": 3,
+        "pearson": -0.9975427766504618,
+        "spearman": -1.0
+      },
+      {
+        "key": "C9H10ClI|charge=0",
+        "size": 3,
+        "pearson": -0.9973137108156425,
+        "spearman": -1.0
+      },
+      {
+        "key": "C22H28NO3P|charge=0",
+        "size": 3,
+        "pearson": -0.9963309921477914,
+        "spearman": -1.0
+      },
+      {
+        "key": "C9H7BrClN3O3S2|charge=0",
+        "size": 3,
+        "pearson": -0.9939287070946976,
+        "spearman": -1.0
+      },
+      {
+        "key": "C19H30BNO2|charge=0",
+        "size": 4,
+        "pearson": -0.9939218237499603,
+        "spearman": -0.7999999999999999
+      },
+      {
+        "key": "C19H21ClN2O7S|charge=0",
+        "size": 3,
+        "pearson": -0.9934150923370069,
+        "spearman": -0.5
+      },
+      {
+        "key": "C9H6O6|charge=0",
+        "size": 3,
+        "pearson": -0.9931053478368981,
+        "spearman": -1.0
+      },
+      {
+        "key": "C13H10BrFS|charge=0",
+        "size": 3,
+        "pearson": -0.9928768972500621,
+        "spearman": -1.0
+      },
+      {
+        "key": "C21H15BrCl2O3|charge=0",
+        "size": 3,
+        "pearson": -0.9909502086072631,
+        "spearman": -1.0
+      },
+      {
+        "key": "C9H6BrF3|charge=0",
+        "size": 3,
+        "pearson": -0.9903596896115981,
+        "spearman": -1.0
+      },
+      {
+        "key": "C14H29N|charge=0",
+        "size": 3,
+        "pearson": -0.9889420717128834,
+        "spearman": -1.0
+      },
+      {
+        "key": "C20H11Cl2F3O2S|charge=0",
+        "size": 3,
+        "pearson": -0.9857502548304085,
+        "spearman": -1.0
+      },
+      {
+        "key": "C17H20BN3O2|charge=0",
+        "size": 3,
+        "pearson": -0.985637764426295,
+        "spearman": -0.5
+      }
+    ],
+    "by_spearman": [
+      {
+        "key": "C13H10BrFS|charge=0",
+        "size": 3,
+        "pearson": -0.9928768972500621,
+        "spearman": -1.0
+      },
+      {
+        "key": "C14H20ClFO2Si|charge=0",
+        "size": 3,
+        "pearson": -0.9996903589532333,
+        "spearman": -1.0
+      },
+      {
+        "key": "C19H21F2NS|charge=0",
+        "size": 3,
+        "pearson": -0.9653546912236118,
+        "spearman": -1.0
+      },
+      {
+        "key": "C21H15BrCl2O3|charge=0",
+        "size": 3,
+        "pearson": -0.9909502086072631,
+        "spearman": -1.0
+      },
+      {
+        "key": "C21H29IN2S|charge=0",
+        "size": 4,
+        "pearson": -0.8677256896040636,
+        "spearman": -1.0
+      },
+      {
+        "key": "C23H27BrO6|charge=0",
+        "size": 3,
+        "pearson": -0.9846010553162085,
+        "spearman": -1.0
+      },
+      {
+        "key": "C5H4Cl2OS|charge=0",
+        "size": 3,
+        "pearson": -0.9331735986595838,
+        "spearman": -1.0
+      },
+      {
+        "key": "C6H6BBrO2|charge=0",
+        "size": 3,
+        "pearson": -0.9648061532462502,
+        "spearman": -1.0
+      },
+      {
+        "key": "C13H15N3S2|charge=0",
+        "size": 3,
+        "pearson": -0.5928982403630453,
+        "spearman": -1.0
+      },
+      {
+        "key": "C14H8BrFO2|charge=0",
+        "size": 3,
+        "pearson": -0.8784826109990591,
+        "spearman": -1.0
+      },
+      {
+        "key": "C17H15ClFN5OS|charge=0",
+        "size": 3,
+        "pearson": -0.9814914449830326,
+        "spearman": -1.0
+      },
+      {
+        "key": "C22H16BrN|charge=0",
+        "size": 3,
+        "pearson": -0.9999986330961093,
+        "spearman": -1.0
+      },
+      {
+        "key": "C4H10OS2|charge=0",
+        "size": 3,
+        "pearson": -0.827032249067646,
+        "spearman": -1.0
+      },
+      {
+        "key": "C4H2ClFN2O|charge=0",
+        "size": 3,
+        "pearson": -0.9297983004348765,
+        "spearman": -1.0
+      },
+      {
+        "key": "C9H10ClI|charge=0",
+        "size": 3,
+        "pearson": -0.9973137108156425,
+        "spearman": -1.0
+      },
+      {
+        "key": "C13H11Cl2F3N4O2|charge=0",
+        "size": 3,
+        "pearson": -0.8873332550958221,
+        "spearman": -1.0
+      },
+      {
+        "key": "C14H29N|charge=0",
+        "size": 3,
+        "pearson": -0.9889420717128834,
+        "spearman": -1.0
+      },
+      {
+        "key": "C16H16BrF|charge=0",
+        "size": 3,
+        "pearson": -0.9244180976859144,
+        "spearman": -1.0
+      },
+      {
+        "key": "C18H18ClF3N6|charge=0",
+        "size": 3,
+        "pearson": -0.968173067107805,
+        "spearman": -1.0
+      },
+      {
+        "key": "C19H26ClN5O5|charge=0",
+        "size": 3,
+        "pearson": -0.6543800453312624,
+        "spearman": -1.0
+      }
+    ]
+  },
+  "interpretation": "All diagnostics are postfit development descriptions and did not alter the selected profile, support, or coefficients."
+}

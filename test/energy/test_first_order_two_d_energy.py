@@ -57,15 +57,11 @@ class TestFirstOrderTwoDEnergyScorer(unittest.TestCase):
         para = self.score("O=Cc1ccc(O)cc1")
 
         self.assertEqual(
-            ortho.descriptors["raw_topology_terms"][
-                "rigid_intramolecular_hbond"
-            ],
+            ortho.descriptors["raw_topology_terms"]["rigid_intramolecular_hbond"],
             -20.0,
         )
         self.assertEqual(
-            para.descriptors["raw_topology_terms"][
-                "rigid_intramolecular_hbond"
-            ],
+            para.descriptors["raw_topology_terms"]["rigid_intramolecular_hbond"],
             0.0,
         )
         self.assertNotIn("rigid_intramolecular_hbond", ortho.components)

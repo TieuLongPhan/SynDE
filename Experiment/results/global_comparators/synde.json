@@ -1,0 +1,789 @@
+{
+  "protocol": "synde-total-energy-amended-domain-external-validation-v2",
+  "program_sha256": "7349ab1296a617b212b3425f6d5f75b7302855089642e5c0c8355b7750843790",
+  "target": {
+    "quantity": "single-conformer gas-phase GFN2-xTB 6.7.1 optimized total energy",
+    "units": "eV",
+    "reference_protocol": "single retained RDKit ETKDGv3 conformer; MMFF/UFF preoptimization; gas-phase GFN2-xTB 6.7.1 --opt extreme --acc 0.01; neutral closed-shell; final optimized total energy converted from Hartree to eV",
+    "cross_formula_comparable_only_under_same_reference_protocol": true,
+    "not_experimental_energy_or_free_energy": true
+  },
+  "scientific_status": "formula- and connectivity-disjoint external validation; external labels were not used for fitting or selection",
+  "data": {
+    "training_cache": "/tmp/synde-amended/training.joblib",
+    "training_cache_sha256": "56590384265e1c0d392e7940a05b9e3d7dc1557cbdf1488b18e3dd23c68fb773",
+    "training_cache_summary": "Experiment/results/training_cache_record.json",
+    "training_cache_summary_sha256": "dcd1866a031a6622eea794e87ef9968218e282a7200370939293f39c877d9514",
+    "formula_relative_model": "synde/models/synde_frozen_model.json",
+    "formula_relative_model_sha256": "78c17873cb895db6c2432387073bb2cbb510089aa861530a94189e6221df6eea",
+    "external_cache": {
+      "protocol": "synde-total-energy-amended-domain-external-validation-v2-external-cache-reused",
+      "source": "data/ord_test_xtb.csv",
+      "source_sha256": "ea884767d11b4f3058e52f868c36a08122f61119af06cdb8013f90d7094deead",
+      "formula_disjoint": true,
+      "connectivity_disjoint": true,
+      "groups": 3005,
+      "molecules": 19940,
+      "cache": "/tmp/synde-amended/external.joblib",
+      "cache_sha256": "46b5f8dedbeff8be5db99d2eef8f56703dc3af19e0bb9a7514f7e77935eb19e2"
+    }
+  },
+  "software": {
+    "rdkit": "2025.09.6",
+    "numpy": "2.4.6"
+  },
+  "split": {
+    "training_groups": 11993,
+    "training_molecules": 78513,
+    "evaluation_groups": 3005,
+    "evaluation_molecules": 19940,
+    "excluded_unseen_element_groups": 0,
+    "excluded_unseen_element_molecules": 0,
+    "unseen_elements": [],
+    "trained_elements": [
+      "H",
+      "B",
+      "C",
+      "N",
+      "O",
+      "F",
+      "Si",
+      "P",
+      "S",
+      "Cl",
+      "Br",
+      "I"
+    ],
+    "formula_disjoint": true,
+    "connectivity_disjoint": true,
+    "maximum_molecules_per_formula": 10
+  },
+  "models": {
+    "mean_only": "training-target mean",
+    "composition_linear": [
+      "atom_count[H]",
+      "atom_count[B]",
+      "atom_count[C]",
+      "atom_count[N]",
+      "atom_count[O]",
+      "atom_count[F]",
+      "atom_count[Si]",
+      "atom_count[P]",
+      "atom_count[S]",
+      "atom_count[Cl]",
+      "atom_count[Br]",
+      "atom_count[I]"
+    ],
+    "composition_plus_size": [
+      "atom_count[H]",
+      "atom_count[B]",
+      "atom_count[C]",
+      "atom_count[N]",
+      "atom_count[O]",
+      "atom_count[F]",
+      "atom_count[Si]",
+      "atom_count[P]",
+      "atom_count[S]",
+      "atom_count[Cl]",
+      "atom_count[Br]",
+      "atom_count[I]",
+      "total_atoms",
+      "heavy_atoms",
+      "electron_count",
+      "total_atoms_squared",
+      "heavy_atoms_squared"
+    ],
+    "connectivity_without_composition": "fixed formula-centered SynDE score plus global intercept",
+    "composition_plus_synde_connectivity": "element-count fit to target minus fixed formula-centered SynDE connectivity score",
+    "direct_joint_ridge": {
+      "features": "element counts plus the selected SynDE feature support",
+      "alpha": 100.0
+    }
+  },
+  "cross_formula_metrics": {
+    "mean_only": {
+      "molecules": 19940,
+      "formula_groups": 3005,
+      "mae_eV": 391.9883158197031,
+      "mae_group_bootstrap_95ci_eV": [
+        382.2775914019692,
+        401.4002170893912
+      ],
+      "rmse_eV": 463.6425146148452,
+      "rmse_group_bootstrap_95ci_eV": [
+        453.89683789656755,
+        472.98445473037117
+      ],
+      "median_absolute_error_eV": 372.05894960525814,
+      "r2": -0.000880311546099799,
+      "pearson": null,
+      "spearman": null,
+      "mean_signed_error_eV": -13.750243165906705
+    },
+    "composition_linear": {
+      "molecules": 19940,
+      "formula_groups": 3005,
+      "mae_eV": 0.8361052758078392,
+      "mae_group_bootstrap_95ci_eV": [
+        0.8209380219195102,
+        0.8506662425512561
+      ],
+      "rmse_eV": 1.1020822368881995,
+      "rmse_group_bootstrap_95ci_eV": [
+        1.0816975623734937,
+        1.1217411314343542
+      ],
+      "median_absolute_error_eV": 0.654093768104758,
+      "r2": 0.9999943448562846,
+      "pearson": 0.9999971724753228,
+      "spearman": 0.9999954671400092,
+      "mean_signed_error_eV": -0.004622919421413927
+    },
+    "composition_plus_size": {
+      "molecules": 19940,
+      "formula_groups": 3005,
+      "mae_eV": 0.8356232791122493,
+      "mae_group_bootstrap_95ci_eV": [
+        0.8210371064365282,
+        0.8498562992429527
+      ],
+      "rmse_eV": 1.0995128224921638,
+      "rmse_group_bootstrap_95ci_eV": [
+        1.0802564994896071,
+        1.1187418774085471
+      ],
+      "median_absolute_error_eV": 0.6580046886504078,
+      "r2": 0.9999943711945539,
+      "pearson": 0.9999971856112579,
+      "spearman": 0.9999955018191895,
+      "mean_signed_error_eV": -0.0012241194394036925
+    },
+    "connectivity_without_composition": {
+      "molecules": 19940,
+      "formula_groups": 3005,
+      "mae_eV": 383.96130752488455,
+      "mae_group_bootstrap_95ci_eV": [
+        374.608992209589,
+        392.89808221604073
+      ],
+      "rmse_eV": 454.21622975084574,
+      "rmse_group_bootstrap_95ci_eV": [
+        444.6150122326407,
+        463.27321799190287
+      ],
+      "median_absolute_error_eV": 363.91793458802704,
+      "r2": 0.03940363869863328,
+      "pearson": 0.9541878865268566,
+      "spearman": 0.9551403802958724,
+      "mean_signed_error_eV": -13.479080722766055
+    },
+    "composition_plus_synde_connectivity": {
+      "molecules": 19940,
+      "formula_groups": 3005,
+      "mae_eV": 0.13873237421375506,
+      "mae_group_bootstrap_95ci_eV": [
+        0.13631915204908393,
+        0.1412020447984327
+      ],
+      "rmse_eV": 0.19828810178170164,
+      "rmse_group_bootstrap_95ci_eV": [
+        0.1900179808384642,
+        0.20824388195011093
+      ],
+      "median_absolute_error_eV": 0.10690111261294533,
+      "r2": 0.9999998169334692,
+      "pearson": 0.9999999085018713,
+      "spearman": 0.9999998208358548,
+      "mean_signed_error_eV": 0.003805604746730477
+    },
+    "direct_joint_ridge": {
+      "molecules": 19940,
+      "formula_groups": 3005,
+      "mae_eV": 2.6553006906908396,
+      "mae_group_bootstrap_95ci_eV": [
+        2.609476220744829,
+        2.701655351529193
+      ],
+      "rmse_eV": 3.6447989563582035,
+      "rmse_group_bootstrap_95ci_eV": [
+        3.5689050943418947,
+        3.722088269064941
+      ],
+      "median_absolute_error_eV": 1.9734458235925558,
+      "r2": 0.9999381467111003,
+      "pearson": 0.9999690761109699,
+      "spearman": 0.9999656810384457,
+      "mean_signed_error_eV": -0.021398799109074197
+    }
+  },
+  "ablations": {
+    "combined_without_first_order": {
+      "molecules": 19940,
+      "formula_groups": 3005,
+      "mae_eV": 0.24993437403162813,
+      "mae_group_bootstrap_95ci_eV": [
+        0.24565394135289814,
+        0.25441145805994225
+      ],
+      "rmse_eV": 0.33867496894458826,
+      "rmse_group_bootstrap_95ci_eV": [
+        0.33123320315182847,
+        0.3461692345510419
+      ],
+      "median_absolute_error_eV": 0.18928025067361887,
+      "r2": 0.9999994659500971,
+      "pearson": 0.9999997330066407,
+      "spearman": 0.9999995255845563,
+      "mean_signed_error_eV": 0.0035527910092270306
+    },
+    "combined_without_v2_named_graph": {
+      "molecules": 19940,
+      "formula_groups": 3005,
+      "mae_eV": 0.526946370321642,
+      "mae_group_bootstrap_95ci_eV": [
+        0.5182415173611497,
+        0.5358473831943109
+      ],
+      "rmse_eV": 0.6960152546557419,
+      "rmse_group_bootstrap_95ci_eV": [
+        0.683475825025541,
+        0.7083953612406719
+      ],
+      "median_absolute_error_eV": 0.4156494745792543,
+      "r2": 0.9999977444463714,
+      "pearson": 0.9999988722259684,
+      "spearman": 0.9999982764258181,
+      "mean_signed_error_eV": -0.0002776405915200061
+    },
+    "combined_without_v3_quantum_graph": {
+      "molecules": 19940,
+      "formula_groups": 3005,
+      "mae_eV": 0.38808268278291463,
+      "mae_group_bootstrap_95ci_eV": [
+        0.38131782956872357,
+        0.3948442755216079
+      ],
+      "rmse_eV": 0.5083678415449886,
+      "rmse_group_bootstrap_95ci_eV": [
+        0.49904855804647297,
+        0.5176703478777973
+      ],
+      "median_absolute_error_eV": 0.307615899907546,
+      "r2": 0.999998796705917,
+      "pearson": 0.9999993983751855,
+      "spearman": 0.9999989931928901,
+      "mean_signed_error_eV": -0.0002868603464987396
+    }
+  },
+  "new_model_same_formula_ranking": {
+    "groups": 3005,
+    "molecules": 19940,
+    "mean_pearson": 0.9417784110500872,
+    "mean_pearson_group_bootstrap_95ci": [
+      0.9343183043839901,
+      0.9486970602455137
+    ],
+    "mean_spearman": 0.8810148309815532,
+    "mean_spearman_group_bootstrap_95ci": [
+      0.8721388828863871,
+      0.8892663832285298
+    ],
+    "mean_pairwise_concordance": 0.909273169056863,
+    "mean_pairwise_concordance_group_bootstrap_95ci": [
+      0.9048640757467713,
+      0.9139386208171565
+    ],
+    "top1_accuracy": 0.789351081530782,
+    "top1_accuracy_group_bootstrap_95ci": [
+      0.7756988352745424,
+      0.8033361064891846
+    ]
+  },
+  "stratified_combined_metrics": {
+    "heavy_atom_quartile_boundaries": [
+      16.0,
+      21.0,
+      26.0
+    ],
+    "molecular_size": {
+      "q1_smallest": {
+        "molecules": 5280,
+        "formula_groups": 745,
+        "mae_eV": 0.12356475580735311,
+        "mae_group_bootstrap_95ci_eV": [
+          0.11890931404704116,
+          0.12806224599060587
+        ],
+        "rmse_eV": 0.18209760730491376,
+        "rmse_group_bootstrap_95ci_eV": [
+          0.16964380133937457,
+          0.1959811540746136
+        ],
+        "median_absolute_error_eV": 0.09328310988132671,
+        "r2": 0.9999992071592517,
+        "pearson": 0.9999996045241206,
+        "spearman": 0.9999986928622014,
+        "mean_signed_error_eV": 6.410324517325059e-05
+      },
+      "q2": {
+        "molecules": 5185,
+        "formula_groups": 776,
+        "mae_eV": 0.1320684089610031,
+        "mae_group_bootstrap_95ci_eV": [
+          0.1283184213198618,
+          0.1364101130673279
+        ],
+        "rmse_eV": 0.18803882690219403,
+        "rmse_group_bootstrap_95ci_eV": [
+          0.17569515550800102,
+          0.20115794376742005
+        ],
+        "median_absolute_error_eV": 0.10235914975919513,
+        "r2": 0.9999981701897183,
+        "pearson": 0.9999990879161509,
+        "spearman": 0.9999982033750393,
+        "mean_signed_error_eV": 0.01038338158396656
+      },
+      "q3": {
+        "molecules": 5229,
+        "formula_groups": 811,
+        "mae_eV": 0.14695489940187448,
+        "mae_group_bootstrap_95ci_eV": [
+          0.1426810005751916,
+          0.15133143465400575
+        ],
+        "rmse_eV": 0.20844412450008645,
+        "rmse_group_bootstrap_95ci_eV": [
+          0.1916680195144319,
+          0.23066509267943233
+        ],
+        "median_absolute_error_eV": 0.11516401562266765,
+        "r2": 0.999997867016567,
+        "pearson": 0.9999989336608192,
+        "spearman": 0.9999977135362257,
+        "mean_signed_error_eV": 0.002480855564347968
+      },
+      "q4_largest": {
+        "molecules": 4246,
+        "formula_groups": 673,
+        "mae_eV": 0.1556052194357628,
+        "mae_group_bootstrap_95ci_eV": [
+          0.15087942876423321,
+          0.1607683607439695
+        ],
+        "rmse_eV": 0.21615895692377707,
+        "rmse_group_bootstrap_95ci_eV": [
+          0.19997939991398644,
+          0.2390961642271943
+        ],
+        "median_absolute_error_eV": 0.12462459754146948,
+        "r2": 0.9999970605935866,
+        "pearson": 0.9999985310476117,
+        "spearman": 0.9999966115854301,
+        "mean_signed_error_eV": 0.0020572459388716008
+      }
+    },
+    "element_presence": {
+      "contains_B": {
+        "molecules": 257,
+        "formula_groups": 53,
+        "mae_eV": 0.1178852463246487,
+        "mae_group_bootstrap_95ci_eV": [
+          0.10454638267016722,
+          0.13290228539823207
+        ],
+        "rmse_eV": 0.15668357668247299,
+        "rmse_group_bootstrap_95ci_eV": [
+          0.13581446710803674,
+          0.18090784832172088
+        ],
+        "median_absolute_error_eV": 0.08811351317922345,
+        "r2": 0.9999998356474177,
+        "pearson": 0.9999999199622882,
+        "spearman": 0.9998791116188579,
+        "mean_signed_error_eV": 0.02167549042190318
+      },
+      "contains_C": {
+        "molecules": 19940,
+        "formula_groups": 3005,
+        "mae_eV": 0.13873237421375506,
+        "mae_group_bootstrap_95ci_eV": [
+          0.13635769686033425,
+          0.1414227039458887
+        ],
+        "rmse_eV": 0.19828810178170164,
+        "rmse_group_bootstrap_95ci_eV": [
+          0.19022620679422142,
+          0.207856272706001
+        ],
+        "median_absolute_error_eV": 0.10690111261294533,
+        "r2": 0.9999998169334692,
+        "pearson": 0.9999999085018713,
+        "spearman": 0.9999998208358548,
+        "mean_signed_error_eV": 0.003805604746730477
+      },
+      "contains_N": {
+        "molecules": 16582,
+        "formula_groups": 2473,
+        "mae_eV": 0.1408866080484271,
+        "mae_group_bootstrap_95ci_eV": [
+          0.13851644811707248,
+          0.14345828430278765
+        ],
+        "rmse_eV": 0.1997753853726483,
+        "rmse_group_bootstrap_95ci_eV": [
+          0.1910873530835074,
+          0.2116263556549585
+        ],
+        "median_absolute_error_eV": 0.1095107552700938,
+        "r2": 0.9999998079892903,
+        "pearson": 0.9999999040557659,
+        "spearman": 0.9999997799225809,
+        "mean_signed_error_eV": 0.004648998658761974
+      },
+      "contains_O": {
+        "molecules": 16785,
+        "formula_groups": 2496,
+        "mae_eV": 0.14120244546791716,
+        "mae_group_bootstrap_95ci_eV": [
+          0.13861573047120038,
+          0.14352570943085988
+        ],
+        "rmse_eV": 0.2010283371859941,
+        "rmse_group_bootstrap_95ci_eV": [
+          0.19184550027766326,
+          0.21035990747335828
+        ],
+        "median_absolute_error_eV": 0.10977927317026115,
+        "r2": 0.9999997964189095,
+        "pearson": 0.9999998982428776,
+        "spearman": 0.9999997858244216,
+        "mean_signed_error_eV": 0.0035290861620781698
+      },
+      "contains_F": {
+        "molecules": 5367,
+        "formula_groups": 904,
+        "mae_eV": 0.12822681509992295,
+        "mae_group_bootstrap_95ci_eV": [
+          0.12444620573255054,
+          0.1320027569053054
+        ],
+        "rmse_eV": 0.16913302725643817,
+        "rmse_group_bootstrap_95ci_eV": [
+          0.16257562669497816,
+          0.17599222660262093
+        ],
+        "median_absolute_error_eV": 0.10224144905214416,
+        "r2": 0.9999998553027349,
+        "pearson": 0.9999999289911241,
+        "spearman": 0.9999994819488077,
+        "mean_signed_error_eV": 0.022004783884163995
+      },
+      "contains_Si": {
+        "molecules": 376,
+        "formula_groups": 84,
+        "mae_eV": 0.13392352399436752,
+        "mae_group_bootstrap_95ci_eV": [
+          0.12022382344299923,
+          0.14973124662630513
+        ],
+        "rmse_eV": 0.195228950760583,
+        "rmse_group_bootstrap_95ci_eV": [
+          0.1674443133043492,
+          0.22681336724822038
+        ],
+        "median_absolute_error_eV": 0.09751973893423838,
+        "r2": 0.9999998071676988,
+        "pearson": 0.9999999038364236,
+        "spearman": 0.9999810373045883,
+        "mean_signed_error_eV": 0.003044536832291858
+      },
+      "contains_P": {
+        "molecules": 101,
+        "formula_groups": 25,
+        "mae_eV": 0.30764849734022265,
+        "mae_group_bootstrap_95ci_eV": [
+          0.23115385585339218,
+          0.396629735048919
+        ],
+        "rmse_eV": 0.4182102070564598,
+        "rmse_group_bootstrap_95ci_eV": [
+          0.28818082542077783,
+          0.5461851242246343
+        ],
+        "median_absolute_error_eV": 0.23099351465953077,
+        "r2": 0.9999985414072777,
+        "pearson": 0.9999993233762999,
+        "spearman": 0.9995340710541641,
+        "mean_signed_error_eV": 0.018169625627663635
+      },
+      "contains_S": {
+        "molecules": 5762,
+        "formula_groups": 926,
+        "mae_eV": 0.14229384429545913,
+        "mae_group_bootstrap_95ci_eV": [
+          0.1382102366514091,
+          0.14719161815113257
+        ],
+        "rmse_eV": 0.21009020253478364,
+        "rmse_group_bootstrap_95ci_eV": [
+          0.19178772888942391,
+          0.23401611464296063
+        ],
+        "median_absolute_error_eV": 0.10827962079179088,
+        "r2": 0.9999997965119847,
+        "pearson": 0.999999898315299,
+        "spearman": 0.9999995021277992,
+        "mean_signed_error_eV": 0.0014447348461594347
+      },
+      "contains_Cl": {
+        "molecules": 5219,
+        "formula_groups": 840,
+        "mae_eV": 0.13093286516903216,
+        "mae_group_bootstrap_95ci_eV": [
+          0.12701836415148635,
+          0.1352050531749095
+        ],
+        "rmse_eV": 0.17846371950126927,
+        "rmse_group_bootstrap_95ci_eV": [
+          0.16850388930301236,
+          0.18968694654132207
+        ],
+        "median_absolute_error_eV": 0.10310974586764132,
+        "r2": 0.9999998382420829,
+        "pearson": 0.9999999194876762,
+        "spearman": 0.9999995183282913,
+        "mean_signed_error_eV": 0.008100604543056202
+      },
+      "contains_Br": {
+        "molecules": 2335,
+        "formula_groups": 386,
+        "mae_eV": 0.12173321957721993,
+        "mae_group_bootstrap_95ci_eV": [
+          0.1155786707885122,
+          0.12922117008289746
+        ],
+        "rmse_eV": 0.18000540965412065,
+        "rmse_group_bootstrap_95ci_eV": [
+          0.15898045066414762,
+          0.20419617264649556
+        ],
+        "median_absolute_error_eV": 0.0918395136172876,
+        "r2": 0.9999998221976789,
+        "pearson": 0.9999999111960285,
+        "spearman": 0.9999984513323219,
+        "mean_signed_error_eV": 0.004647879755123791
+      },
+      "contains_I": {
+        "molecules": 451,
+        "formula_groups": 85,
+        "mae_eV": 0.11451094998964377,
+        "mae_group_bootstrap_95ci_eV": [
+          0.1028528983541071,
+          0.12980373951057336
+        ],
+        "rmse_eV": 0.16400846055503066,
+        "rmse_group_bootstrap_95ci_eV": [
+          0.1352051279401982,
+          0.20360694487373515
+        ],
+        "median_absolute_error_eV": 0.0921152762565498,
+        "r2": 0.9999997701965893,
+        "pearson": 0.9999998857871758,
+        "spearman": 0.999959578517748,
+        "mean_signed_error_eV": 0.010507646308752594
+      }
+    },
+    "formal_charge": {
+      "charge_0": {
+        "molecules": 19940,
+        "formula_groups": 3005,
+        "mae_eV": 0.13873237421375506,
+        "mae_group_bootstrap_95ci_eV": [
+          0.13635769686033425,
+          0.1414227039458887
+        ],
+        "rmse_eV": 0.19828810178170164,
+        "rmse_group_bootstrap_95ci_eV": [
+          0.19022620679422142,
+          0.207856272706001
+        ],
+        "median_absolute_error_eV": 0.10690111261294533,
+        "r2": 0.9999998169334692,
+        "pearson": 0.9999999085018713,
+        "spearman": 0.9999998208358548,
+        "mean_signed_error_eV": 0.003805604746730477
+      }
+    },
+    "applicability": {
+      "inside_training_q99": {
+        "molecules": 19753,
+        "formula_groups": 3004,
+        "mae_eV": 0.13723566632323053,
+        "mae_group_bootstrap_95ci_eV": [
+          0.13496856431756413,
+          0.13954458375643647
+        ],
+        "rmse_eV": 0.1938646235625605,
+        "rmse_group_bootstrap_95ci_eV": [
+          0.1860979440031997,
+          0.2031986998748513
+        ],
+        "median_absolute_error_eV": 0.10637209770675327,
+        "r2": 0.9999998249090302,
+        "pearson": 0.9999999124890202,
+        "spearman": 0.9999998248292457,
+        "mean_signed_error_eV": 0.003585422103088676
+      },
+      "outside_training_q99": {
+        "molecules": 187,
+        "formula_groups": 165,
+        "mae_eV": 0.2968311494091087,
+        "mae_group_bootstrap_95ci_eV": [
+          0.2414578152398097,
+          0.3558944101327835
+        ],
+        "rmse_eV": 0.47175637856881736,
+        "rmse_group_bootstrap_95ci_eV": [
+          0.3672936937500552,
+          0.5713707300789125
+        ],
+        "median_absolute_error_eV": 0.1892466509289079,
+        "r2": 0.9999989224410778,
+        "pearson": 0.9999994711761754,
+        "spearman": 0.9999889891690127,
+        "mean_signed_error_eV": 0.027063721109599443
+      }
+    }
+  },
+  "applicability": {
+    "training_feature_distance_q99": 3.3464460372924805,
+    "evaluation_molecules_outside_q99": 187,
+    "composition_ranges": {
+      "H": [
+        0,
+        56
+      ],
+      "B": [
+        0,
+        1
+      ],
+      "C": [
+        1,
+        30
+      ],
+      "N": [
+        0,
+        9
+      ],
+      "O": [
+        0,
+        11
+      ],
+      "F": [
+        0,
+        16
+      ],
+      "Si": [
+        0,
+        2
+      ],
+      "P": [
+        0,
+        2
+      ],
+      "S": [
+        0,
+        3
+      ],
+      "Cl": [
+        0,
+        5
+      ],
+      "Br": [
+        0,
+        3
+      ],
+      "I": [
+        0,
+        3
+      ]
+    }
+  },
+  "amended_connectivity_equation_validation": {
+    "result_path": "Experiment/results/cross_formula_energy.json",
+    "frozen_model_path": "synde/models/synde_frozen_model.json",
+    "frozen_model_sha256": "78c17873cb895db6c2432387073bb2cbb510089aa861530a94189e6221df6eea",
+    "external_performance": {
+      "groups": 3005,
+      "molecules": 19940,
+      "mean_pearson": 0.9417784110500872,
+      "mean_pearson_bootstrap_95ci": [
+        0.9343183043839901,
+        0.9486970602455137
+      ],
+      "mean_spearman": 0.8810148309815532,
+      "mean_spearman_bootstrap_95ci": [
+        0.8721388828863871,
+        0.8892663832285298
+      ],
+      "mean_pairwise_concordance": 0.909273169056863,
+      "mean_pairwise_concordance_bootstrap_95ci": [
+        0.9048640757467713,
+        0.9139386208171565
+      ],
+      "top1_accuracy": 0.789351081530782,
+      "top1_accuracy_bootstrap_95ci": [
+        0.7756988352745424,
+        0.8033361064891846
+      ]
+    },
+    "note": "Compatibility summary constructed solely from this one-shot amended external record. The superseded external-results record was retired without rescoring external labels."
+  },
+  "energy_model": {
+    "path": "synde/models/synde_energy_model.json",
+    "sha256": "f6ec3a5c5caeb5ebc70b49b46bb2130fd68b0c96ad2f5ec389b19fe3cdc4804b",
+    "card": {
+      "model_name": "synde-gfn2-total-energy-v2-amended-domain",
+      "schema_version": 2,
+      "target": "single-conformer gas-phase GFN2-xTB 6.7.1 optimized total energy",
+      "units": "eV",
+      "reference_protocol": "single retained RDKit ETKDGv3 conformer; MMFF/UFF preoptimization; gas-phase GFN2-xTB 6.7.1 --opt extreme --acc 0.01; neutral closed-shell; final optimized total energy converted from Hartree to eV",
+      "training_source": "data/ord_training_xtb.csv",
+      "training_source_sha256": "9a0b92350adeea7f159427396c4a5ad442e3475e0e1ef057718d67fe56598697",
+      "training_groups": 11993,
+      "training_molecules": 78513,
+      "evaluation_status": "formula- and connectivity-disjoint external validation; external labels were not used for fitting or selection",
+      "formula_disjoint_evaluation": true,
+      "connectivity_disjoint_evaluation": true,
+      "composition_model": "ordinary least squares over elemental atom counts",
+      "connectivity_model": "frozen 633-term SynDE equation fitted on formula-centered targets; composition baseline fitted to its raw total-energy residual",
+      "supported_elements": [
+        "H",
+        "B",
+        "C",
+        "N",
+        "O",
+        "F",
+        "Si",
+        "P",
+        "S",
+        "Cl",
+        "Br",
+        "I"
+      ],
+      "supported_formal_charges": [
+        0
+      ],
+      "uses_coordinates_at_inference": false,
+      "uses_conformers_at_inference": false,
+      "connectivity_equation_unchanged": true,
+      "connectivity_refit_on_amended_development_cohort": true,
+      "ordinary_explicit_hydrogen_policy": "normalize_to_implicit",
+      "isotope_policy": "exclude_nonzero_isotope_numbers"
+    },
+    "selected_connectivity_terms": 633,
+    "contribution_identity": "prediction = intercept + sum(atom-count terms) + sum(connectivity terms)"
+  },
+  "elapsed_seconds": 674.6911586999995
+}

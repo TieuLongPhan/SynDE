@@ -92,9 +92,7 @@ class XTBMinimize:
         self.gfn: Optional[int] = gfn if gfn is None else int(gfn)
         self.alpb: Optional[str] = alpb
 
-    # ---------------------------------------------------------------------
     # Compatibility helpers (names kept similar to older code)
-    # ---------------------------------------------------------------------
     @staticmethod
     def smiles_to_3D(smiles: str) -> Optional[Chem.Mol]:
         """
@@ -153,9 +151,7 @@ class XTBMinimize:
         logger.info(f"XYZ file '{filename}' has been generated and saved.")
         return filename
 
-    # ---------------------------------------------------------------------
     # Internal RDKit + xTB utilities
-    # ---------------------------------------------------------------------
     def _validate_smiles(self) -> Chem.Mol:
         """
         Parse and hydrogenate SMILES.
@@ -317,9 +313,7 @@ class XTBMinimize:
 
         return {"cmd": cmd, "env": env}
 
-    # ---------------------------------------------------------------------
     # Public per-molecule API
-    # ---------------------------------------------------------------------
     def optimize(
         self,
         save_dir: str = "./",
@@ -488,11 +482,10 @@ class XTBMinimize:
         level: str = "loose",
     ) -> float:
         """
-        Compatibility wrapper that executes the workflow and returns only energy.
+        Execute the legacy workflow and return only its energy.
 
-        This mirrors your original API:
-        - writes an optimized XYZ to ``save_dir`` unless ``clean_xyz=True``.
-        - removes *all* ``.xyz`` files (including optimized) if ``clean_xyz=True``.
+        The method writes an optimized XYZ file unless ``clean_xyz`` is true.
+        With cleanup enabled, it removes all XYZ files created by the run.
 
         :param save_dir: Directory to save the optimized file, defaults to "./".
         :type save_dir: str
@@ -517,9 +510,7 @@ class XTBMinimize:
             logger.error(f"An error occurred during fit(): {e}")
             return 0.0
 
-    # ---------------------------------------------------------------------
     # Batch (parallel) API
-    # ---------------------------------------------------------------------
     @classmethod
     def _worker(cls, s: str, save_dir: str, params: Dict[str, Any]) -> Dict[str, Any]:
         """

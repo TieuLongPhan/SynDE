@@ -25,7 +25,7 @@ class TestGeoOpt(unittest.TestCase):
             # best-effort cleanup
             pass
 
-    # ---------- basic utilities (always run) ----------
+    # Basic utilities
     def test_show_help_returns_str(self) -> None:
         txt = GeoOpt.show_help()
         self.assertIsInstance(txt, str)
@@ -44,7 +44,7 @@ class TestGeoOpt(unittest.TestCase):
         self.assertTrue(os.path.exists(fname), "XYZ file was not created")
         self.assertGreater(os.stat(fname).st_size, 0, "XYZ file is empty")
 
-    # ---------- optimization (runtime-skip if xtb missing) ----------
+    # Optimization (skipped when xTB is unavailable)
     def test_optimize_method(self) -> None:
         if not self.has_xtb:
             self.skipTest("Skipping xTB integration test (xtb not found on PATH)")
@@ -83,7 +83,7 @@ class TestGeoOpt(unittest.TestCase):
         self.assertIsInstance(energy, float)
         self.assertGreaterEqual(energy, -1e6)
 
-    # ---------- batch ----------
+    # Batch optimization
     def test_process_smiles_list_and_remove_dir(self) -> None:
         if not self.has_xtb:
             self.skipTest("Skipping xTB integration test (xtb not found on PATH)")
@@ -113,7 +113,7 @@ class TestGeoOpt(unittest.TestCase):
             os.path.exists(self.test_dir), "save_dir was not removed after batch run"
         )
 
-    # ---------- single-point (SP) ----------
+    # Single-point energy
     def test_single_point_from_mol(self) -> None:
         if not self.has_xtb:
             self.skipTest("Skipping xTB SP test (xtb not found on PATH)")

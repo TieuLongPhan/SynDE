@@ -1,0 +1,575 @@
+{
+  "protocol": "synde-global-local-external-comparators-v1",
+  "target": "single-conformer gas-phase GFN2-xTB 6.7.1 optimized total energy in eV",
+  "design": {
+    "one_prediction_for_global_and_local_evaluation": true,
+    "structural_fit": "formula-centered training target",
+    "global_calibration": "training-only elemental OLS on raw-energy residual",
+    "primary_global_endpoints": [
+      "mae_eV",
+      "rmse_eV"
+    ],
+    "correlations_reported_but_composition_dominated": true,
+    "formula_disjoint": true,
+    "connectivity_disjoint": true
+  },
+  "software": {
+    "python": "3.11.15",
+    "rdkit": "2025.09.6",
+    "numpy": "2.4.6",
+    "scikit_learn": "1.9.0",
+    "chemprop": "2.3.0",
+    "torch": "2.13.0"
+  },
+  "data": {
+    "training_cache": "/tmp/synde-amended/training.joblib",
+    "training_cache_sha256": "b476ad5a406d665e9ca085ad2f0f3f6dd9311700e7cce2e6f1d5ef4311f5ec30",
+    "external_cache": "/tmp/synde-amended/external.joblib",
+    "external_cache_sha256": "db5ab60d9f82148e27c61162f35e8710716bcc4683f4ee03f14be593bc3f8472",
+    "training_groups": 11993,
+    "training_molecules": 78513,
+    "evaluation_groups": 3005,
+    "evaluation_molecules": 19940,
+    "trained_elements": [
+      "H",
+      "B",
+      "C",
+      "N",
+      "O",
+      "F",
+      "Si",
+      "P",
+      "S",
+      "Cl",
+      "Br",
+      "I"
+    ]
+  },
+  "models": {
+    "ecfp4_ridge": {
+      "representation": {
+        "algorithm": "Morgan/ECFP",
+        "radius": 2,
+        "bits": 2048
+      },
+      "explicit_hydrogens": true,
+      "structural_target": "energy centered within formula/formal-charge group",
+      "ridge_alpha_grid": [
+        0.1,
+        1.0,
+        10.0,
+        100.0,
+        1000.0
+      ],
+      "training_only_selection": [
+        {
+          "alpha": 0.1,
+          "mean_rank_correlation": 0.704841680024104,
+          "mean_pearson": 0.7396120653952658,
+          "mean_spearman": 0.6700712946529421
+        },
+        {
+          "alpha": 1.0,
+          "mean_rank_correlation": 0.7048429680358481,
+          "mean_pearson": 0.7396126200375951,
+          "mean_spearman": 0.6700733160341013
+        },
+        {
+          "alpha": 10.0,
+          "mean_rank_correlation": 0.7048370627779714,
+          "mean_pearson": 0.7396180995499712,
+          "mean_spearman": 0.6700560260059716
+        },
+        {
+          "alpha": 100.0,
+          "mean_rank_correlation": 0.704984097425462,
+          "mean_pearson": 0.7396698016343536,
+          "mean_spearman": 0.6702983932165703
+        },
+        {
+          "alpha": 1000.0,
+          "mean_rank_correlation": 0.7050003867190856,
+          "mean_pearson": 0.7398057255956675,
+          "mean_spearman": 0.6701950478425037
+        }
+      ],
+      "selected_ridge_alpha": 1000.0,
+      "composition_calibration": {
+        "model": "ordinary least squares on elemental atom counts",
+        "features": [
+          "atom_count[H]",
+          "atom_count[B]",
+          "atom_count[C]",
+          "atom_count[N]",
+          "atom_count[O]",
+          "atom_count[F]",
+          "atom_count[Si]",
+          "atom_count[P]",
+          "atom_count[S]",
+          "atom_count[Cl]",
+          "atom_count[Br]",
+          "atom_count[I]"
+        ],
+        "intercept": 1.0586036388235698,
+        "weights": {
+          "H": -13.965421459686407,
+          "B": -36.328901279563134,
+          "C": -58.22707442802861,
+          "N": -79.60867713016152,
+          "O": -110.73014500213623,
+          "F": -128.9709087226971,
+          "Si": -47.21837188723483,
+          "P": -71.19847170056366,
+          "S": -88.32693122294361,
+          "Cl": -124.19917251271083,
+          "Br": -111.44741162988319,
+          "I": -104.05089035309594
+        },
+        "fit_target": "raw energy minus final structural-model score",
+        "training_only": true
+      },
+      "metrics": {
+        "global": {
+          "molecules": 19940,
+          "formula_groups": 3005,
+          "mae_eV": 0.3742663121257131,
+          "mae_group_bootstrap_95ci_eV": [
+            0.36844576389357103,
+            0.38045826227022533
+          ],
+          "rmse_eV": 0.5174222170531522,
+          "rmse_group_bootstrap_95ci_eV": [
+            0.506285510611861,
+            0.5297900294797394
+          ],
+          "median_absolute_error_eV": 0.28375437837121353,
+          "r2": 0.999998753461239,
+          "pearson": 0.9999993769112013,
+          "spearman": 0.9999989901679978,
+          "mean_signed_error_eV": 0.0034112234901652445
+        },
+        "local": {
+          "groups": 3005,
+          "molecules": 19940,
+          "mean_pearson": 0.7578851298821134,
+          "mean_pearson_group_bootstrap_95ci": [
+            0.7441356131798634,
+            0.7706212532451431
+          ],
+          "mean_spearman": 0.6864370730445469,
+          "mean_spearman_group_bootstrap_95ci": [
+            0.672513479900415,
+            0.6995321306385731
+          ],
+          "mean_pairwise_concordance": 0.7955148826030689,
+          "mean_pairwise_concordance_group_bootstrap_95ci": [
+            0.7890608707709373,
+            0.8018398898660962
+          ],
+          "top1_accuracy": 0.5617304492512479,
+          "top1_accuracy_group_bootstrap_95ci": [
+            0.5437603993344426,
+            0.5797004991680532
+          ]
+        }
+      },
+      "artifact": "/tmp/synde-amended/global_comparators/artifacts/fingerprints/ecfp4_ridge.joblib",
+      "artifact_sha256": "634cc39ac4ec229eed534396658ca3f5a89aa276cba672e6220e62b7c153343c",
+      "elapsed_seconds": 53.36497018416412
+    },
+    "rdk5_ridge": {
+      "representation": {
+        "algorithm": "RDKit topological path",
+        "maximum_path": 5,
+        "bits": 2048
+      },
+      "explicit_hydrogens": true,
+      "structural_target": "energy centered within formula/formal-charge group",
+      "ridge_alpha_grid": [
+        0.1,
+        1.0,
+        10.0,
+        100.0,
+        1000.0
+      ],
+      "training_only_selection": [
+        {
+          "alpha": 0.1,
+          "mean_rank_correlation": 0.7378876245821611,
+          "mean_pearson": 0.7740493792232869,
+          "mean_spearman": 0.7017258699410353
+        },
+        {
+          "alpha": 1.0,
+          "mean_rank_correlation": 0.7378882678945284,
+          "mean_pearson": 0.7740506117038835,
+          "mean_spearman": 0.7017259240851734
+        },
+        {
+          "alpha": 10.0,
+          "mean_rank_correlation": 0.7379390651979179,
+          "mean_pearson": 0.7740628865306896,
+          "mean_spearman": 0.7018152438651462
+        },
+        {
+          "alpha": 100.0,
+          "mean_rank_correlation": 0.7381334531187396,
+          "mean_pearson": 0.7741812841821438,
+          "mean_spearman": 0.7020856220553353
+        },
+        {
+          "alpha": 1000.0,
+          "mean_rank_correlation": 0.739193497447671,
+          "mean_pearson": 0.7750498695581703,
+          "mean_spearman": 0.7033371253371717
+        }
+      ],
+      "selected_ridge_alpha": 1000.0,
+      "composition_calibration": {
+        "model": "ordinary least squares on elemental atom counts",
+        "features": [
+          "atom_count[H]",
+          "atom_count[B]",
+          "atom_count[C]",
+          "atom_count[N]",
+          "atom_count[O]",
+          "atom_count[F]",
+          "atom_count[Si]",
+          "atom_count[P]",
+          "atom_count[S]",
+          "atom_count[Cl]",
+          "atom_count[Br]",
+          "atom_count[I]"
+        ],
+        "intercept": 0.8119203231044594,
+        "weights": {
+          "H": -13.936525715171284,
+          "B": -36.48120654357436,
+          "C": -58.23450752233453,
+          "N": -79.34941269423916,
+          "O": -110.63378572798507,
+          "F": -128.8812900288675,
+          "Si": -47.012057463351454,
+          "P": -71.3887442274232,
+          "S": -88.46784012433379,
+          "Cl": -124.02536251955347,
+          "Br": -111.30757281699923,
+          "I": -103.84174688553937
+        },
+        "fit_target": "raw energy minus final structural-model score",
+        "training_only": true
+      },
+      "metrics": {
+        "global": {
+          "molecules": 19940,
+          "formula_groups": 3005,
+          "mae_eV": 0.36177854946162036,
+          "mae_group_bootstrap_95ci_eV": [
+            0.3556800717659469,
+            0.36803126487965837
+          ],
+          "rmse_eV": 0.499108151419686,
+          "rmse_group_bootstrap_95ci_eV": [
+            0.48603134598433645,
+            0.5136566853807512
+          ],
+          "median_absolute_error_eV": 0.27552549451559116,
+          "r2": 0.9999988401416109,
+          "pearson": 0.9999994201886844,
+          "spearman": 0.9999990531916355,
+          "mean_signed_error_eV": 0.006289470779738208
+        },
+        "local": {
+          "groups": 3005,
+          "molecules": 19940,
+          "mean_pearson": 0.7882459430748536,
+          "mean_pearson_group_bootstrap_95ci": [
+            0.7751350638397998,
+            0.799930063073784
+          ],
+          "mean_spearman": 0.7096149537969709,
+          "mean_spearman_group_bootstrap_95ci": [
+            0.6956640188054872,
+            0.723258508937279
+          ],
+          "mean_pairwise_concordance": 0.8080280220796028,
+          "mean_pairwise_concordance_group_bootstrap_95ci": [
+            0.8018585294350686,
+            0.814035879354515
+          ],
+          "top1_accuracy": 0.58369384359401,
+          "top1_accuracy_group_bootstrap_95ci": [
+            0.5667221297836939,
+            0.6019966722129784
+          ]
+        }
+      },
+      "artifact": "/tmp/synde-amended/global_comparators/artifacts/fingerprints/rdk5_ridge.joblib",
+      "artifact_sha256": "70693a6cee445dacd6a7ebec6ff9a3eb8a5347db50ba82e8451212c7a28b3cfc",
+      "elapsed_seconds": 316.91314858803526
+    },
+    "maccs_ridge": {
+      "representation": {
+        "algorithm": "MACCS structural keys",
+        "bits": 167
+      },
+      "explicit_hydrogens": true,
+      "structural_target": "energy centered within formula/formal-charge group",
+      "ridge_alpha_grid": [
+        0.1,
+        1.0,
+        10.0,
+        100.0,
+        1000.0
+      ],
+      "training_only_selection": [
+        {
+          "alpha": 0.1,
+          "mean_rank_correlation": 0.7804592726088471,
+          "mean_pearson": 0.8158733656429041,
+          "mean_spearman": 0.7450451795747901
+        },
+        {
+          "alpha": 1.0,
+          "mean_rank_correlation": 0.7804720968285286,
+          "mean_pearson": 0.8158734821673734,
+          "mean_spearman": 0.7450707114896837
+        },
+        {
+          "alpha": 10.0,
+          "mean_rank_correlation": 0.7805010321958055,
+          "mean_pearson": 0.8158743785561376,
+          "mean_spearman": 0.7451276858354732
+        },
+        {
+          "alpha": 100.0,
+          "mean_rank_correlation": 0.7804450733359096,
+          "mean_pearson": 0.8158569476925026,
+          "mean_spearman": 0.7450331989793167
+        },
+        {
+          "alpha": 1000.0,
+          "mean_rank_correlation": 0.778821858739531,
+          "mean_pearson": 0.8143404848657618,
+          "mean_spearman": 0.7433032326133003
+        }
+      ],
+      "selected_ridge_alpha": 10.0,
+      "composition_calibration": {
+        "model": "ordinary least squares on elemental atom counts",
+        "features": [
+          "atom_count[H]",
+          "atom_count[B]",
+          "atom_count[C]",
+          "atom_count[N]",
+          "atom_count[O]",
+          "atom_count[F]",
+          "atom_count[Si]",
+          "atom_count[P]",
+          "atom_count[S]",
+          "atom_count[Cl]",
+          "atom_count[Br]",
+          "atom_count[I]"
+        ],
+        "intercept": 1.534207427473575,
+        "weights": {
+          "H": -13.95862960540268,
+          "B": -52.92042477980066,
+          "C": -58.20321895820342,
+          "N": -79.59818013353517,
+          "O": -110.64795657939715,
+          "F": -129.12478272844672,
+          "Si": -46.66092489004753,
+          "P": -69.00933777503181,
+          "S": -87.69149135710242,
+          "Cl": -124.18784719073852,
+          "Br": -111.89621838690769,
+          "I": -104.69253487560944
+        },
+        "fit_target": "raw energy minus final structural-model score",
+        "training_only": true
+      },
+      "metrics": {
+        "global": {
+          "molecules": 19940,
+          "formula_groups": 3005,
+          "mae_eV": 1.0559583105887007,
+          "mae_group_bootstrap_95ci_eV": [
+            1.0288698081394112,
+            1.0826972748752113
+          ],
+          "rmse_eV": 1.305309777882118,
+          "rmse_group_bootstrap_95ci_eV": [
+            1.2772537076777204,
+            1.3329453656458683
+          ],
+          "median_absolute_error_eV": 0.9072776109048846,
+          "r2": 0.9999920669018971,
+          "pearson": 0.999996034386093,
+          "spearman": 0.9999949744737981,
+          "mean_signed_error_eV": 0.012314709457426302
+        },
+        "local": {
+          "groups": 2959,
+          "molecules": 19733,
+          "mean_pearson": 0.8302510447039226,
+          "mean_pearson_group_bootstrap_95ci": [
+            0.8179706450052489,
+            0.8417905364492105
+          ],
+          "mean_spearman": 0.7507635492274521,
+          "mean_spearman_group_bootstrap_95ci": [
+            0.7378790383150589,
+            0.7637228358588125
+          ],
+          "mean_pairwise_concordance": 0.8249149755655331,
+          "mean_pairwise_concordance_group_bootstrap_95ci": [
+            0.8186512395596969,
+            0.8306407610357425
+          ],
+          "top1_accuracy": 0.6140588036498817,
+          "top1_accuracy_group_bootstrap_95ci": [
+            0.5961473470767151,
+            0.6312943562014194
+          ]
+        }
+      },
+      "artifact": "/tmp/synde-amended/global_comparators/artifacts/fingerprints/maccs_ridge.joblib",
+      "artifact_sha256": "83b0af43be3f52bdb85a278b60548c6e59e54378a4759f8aa8a20c6db2198ce6",
+      "elapsed_seconds": 70.53490539710037
+    },
+    "chemprop_dmpnn": {
+      "representation": {
+        "algorithm": "Chemprop directed-message-passing neural network",
+        "explicit_hydrogens": true,
+        "stereochemistry": "ignored to match constitutional graphs"
+      },
+      "structural_target": "energy centered within formula/formal-charge group",
+      "architecture": {
+        "ensemble_size": 5,
+        "hidden_dimension": 300,
+        "depth": 3,
+        "dropout": 0.0,
+        "epochs_maximum": 30,
+        "early_stopping_patience": 8,
+        "batch_size": 128,
+        "seed": 42,
+        "accelerator": "gpu",
+        "devices": "1"
+      },
+      "folds": [
+        {
+          "validation_fold": 1,
+          "checkpoint": "/tmp/synde-amended/global_comparators/artifacts/chemprop/fold_1/model/model_0/best.pt",
+          "checkpoint_sha256": "e11b8601448bd050d3120c483400556f7f8014495287a872de498688b8c34290",
+          "elapsed_seconds": 415.93148971395567
+        },
+        {
+          "validation_fold": 2,
+          "checkpoint": "/tmp/synde-amended/global_comparators/artifacts/chemprop/fold_2/model/model_0/best.pt",
+          "checkpoint_sha256": "50c599fec5cd5f7eaade13ee776dc9c081fe10b413415cb8f5c7083a8d95f4fb",
+          "elapsed_seconds": 417.12903684796765
+        },
+        {
+          "validation_fold": 3,
+          "checkpoint": "/tmp/synde-amended/global_comparators/artifacts/chemprop/fold_3/model/model_0/best.pt",
+          "checkpoint_sha256": "0e11aae144849f92c1c4f5c45ce9c0a734813bc3f1b00d8230c7c1d14ef59a44",
+          "elapsed_seconds": 415.46668216586113
+        },
+        {
+          "validation_fold": 4,
+          "checkpoint": "/tmp/synde-amended/global_comparators/artifacts/chemprop/fold_4/model/model_0/best.pt",
+          "checkpoint_sha256": "813fd8f58c0c56aed81294623ebb9c048acc1e2beeaf5cb8f6eecc3b7a85a7bf",
+          "elapsed_seconds": 414.9758094979916
+        },
+        {
+          "validation_fold": 5,
+          "checkpoint": "/tmp/synde-amended/global_comparators/artifacts/chemprop/fold_5/model/model_0/best.pt",
+          "checkpoint_sha256": "9915b2c05679e917f5338e15be5dd7f6c0922ba10984d42f4297ea48b6b6617e",
+          "elapsed_seconds": 417.4863704761956
+        }
+      ],
+      "composition_calibration": {
+        "model": "ordinary least squares on elemental atom counts",
+        "features": [
+          "atom_count[H]",
+          "atom_count[B]",
+          "atom_count[C]",
+          "atom_count[N]",
+          "atom_count[O]",
+          "atom_count[F]",
+          "atom_count[Si]",
+          "atom_count[P]",
+          "atom_count[S]",
+          "atom_count[Cl]",
+          "atom_count[Br]",
+          "atom_count[I]"
+        ],
+        "intercept": 1.9233772251106984,
+        "weights": {
+          "H": -13.976101902544656,
+          "B": -36.381139726205895,
+          "C": -58.24558901236033,
+          "N": -79.67977448512816,
+          "O": -110.68346951853731,
+          "F": -129.03492347429932,
+          "Si": -46.97320463663727,
+          "P": -71.36649039844221,
+          "S": -88.45809369172937,
+          "Cl": -124.2960976665187,
+          "Br": -111.6953210258832,
+          "I": -104.35686546459976
+        },
+        "fit_target": "raw energy minus final structural-model score",
+        "training_only": true
+      },
+      "metrics": {
+        "global": {
+          "molecules": 19940,
+          "formula_groups": 3005,
+          "mae_eV": 0.31082580573712726,
+          "mae_group_bootstrap_95ci_eV": [
+            0.30327664665717197,
+            0.3187424176919189
+          ],
+          "rmse_eV": 0.44015060794981803,
+          "rmse_group_bootstrap_95ci_eV": [
+            0.42434572096922907,
+            0.4567850859779054
+          ],
+          "median_absolute_error_eV": 0.23210729783966144,
+          "r2": 0.9999990979756643,
+          "pearson": 0.9999995490161738,
+          "spearman": 0.9999992995372268,
+          "mean_signed_error_eV": 0.002648876551346335
+        },
+        "local": {
+          "groups": 3005,
+          "molecules": 19940,
+          "mean_pearson": 0.922586123332252,
+          "mean_pearson_group_bootstrap_95ci": [
+            0.9145288509631964,
+            0.9305173757730985
+          ],
+          "mean_spearman": 0.8622509381910379,
+          "mean_spearman_group_bootstrap_95ci": [
+            0.853414446341235,
+            0.8708729444432439
+          ],
+          "mean_pairwise_concordance": 0.8960098248950162,
+          "mean_pairwise_concordance_group_bootstrap_95ci": [
+            0.8911551976863958,
+            0.9010447798642475
+          ],
+          "top1_accuracy": 0.7643926788685524,
+          "top1_accuracy_group_bootstrap_95ci": [
+            0.7490848585690516,
+            0.7790349417637271
+          ]
+        }
+      },
+      "calibration_artifact": "/tmp/synde-amended/global_comparators/artifacts/chemprop/composition_calibration.json",
+      "elapsed_seconds": 2082.0758004519157
+    }
+  }
+}

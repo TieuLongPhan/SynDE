@@ -1,0 +1,47 @@
+{
+  "protocol": "synde-target-generation-runtime-v1",
+  "fairness_scope": "Both methods use the same selected external molecules and cover SMILES input through final energy output; model fitting is excluded.",
+  "cohort": {
+    "groups": 34,
+    "molecules": 149,
+    "selection": "freshly recalculated successful external recovery subset with nonzero xTB elapsed times",
+    "subset_manifest": "Experiment/results/amended_xtb_recovery_audit.json"
+  },
+  "repeats": 3,
+  "hardware": {
+    "platform": "Linux-7.0.0-28-generic-x86_64-with-glibc2.39",
+    "cpu": "AMD Ryzen Threadripper 7970X (32 cores, 64 threads)",
+    "ram_gib": 125
+  },
+  "software": {
+    "python": "3.11.15",
+    "rdkit": "2025.09.6",
+    "numpy": "2.4.6",
+    "xtb": "6.7.1"
+  },
+  "xtb_gfn2_extreme": {
+    "distribution": "individual molecule elapsed times",
+    "molecules": 149,
+    "mean_seconds_per_molecule": 2.846360858722009,
+    "std_seconds_per_molecule_sample": 3.114691866651297,
+    "median_seconds_per_molecule": 1.9188016219995916,
+    "p95_seconds_per_molecule": 8.714467742061242,
+    "mean_milliseconds_per_molecule": 2846.3608587220087,
+    "std_milliseconds_per_molecule_sample": 3114.691866651297,
+    "mean_molecules_per_second_per_worker": 0.3513257979696191,
+    "scope": "SMILES embedding, GFN2-xTB extreme optimization, and energy extraction"
+  },
+  "synde": {
+    "distribution": "repeated warm selected-cohort SMILES parsing, graph featurization, and frozen connectivity scoring",
+    "observations": 3,
+    "molecules_per_observation": 149,
+    "mean_seconds": 2.277350013377145,
+    "std_seconds_sample": 0.023671690477823856,
+    "mean_milliseconds_per_molecule": 15.284228277698958,
+    "std_milliseconds_per_molecule_sample": 0.15887040589143517,
+    "mean_molecules_per_second": 65.42692125706395
+  },
+  "excluded_setup_seconds": {
+    "synde_model_load": 0.0013231090269982815
+  }
+}

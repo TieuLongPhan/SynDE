@@ -15,18 +15,17 @@ class SFEnergy:
         random_seed: int = 42,
     ) -> None:
         """
-        Initializes an instance of the SFEnergy class for processing chemical reactions
-        based on energy calculations to determine synthetic feasibility.
+        Configure reaction-energy scoring.
 
-        Parameters:
-        - energy_type (str): The type of energy calculation method ('XTB', 'GRAPH', or others).
-        Default 'XTB'.
-        - num_threads (int): Number of threads to use for parallel calculations.
-        Default 4.
-        - verbose (int): Verbosity level for logging output.
-        Default 0.
-        - random_seed (int): Seed for random number generation.
-        Default 42.
+        :param energy_type: Energy calculation method, such as ``XTB`` or
+            ``GRAPH``.
+        :type energy_type: str
+        :param num_threads: Number of parallel calculation threads.
+        :type num_threads: int
+        :param verbose: Logging verbosity.
+        :type verbose: int
+        :param random_seed: Random-number seed.
+        :type random_seed: int
         """
         self.energy_type = energy_type
         self.num_threads = num_threads
@@ -44,26 +43,24 @@ class SFEnergy:
         sort: bool = True,
     ) -> Tuple[List[str], List[float]]:
         """
-        Processes and sorts a list of reaction SMILES strings based on their calculated
-        energy values.
+        Score reactions and optionally sort them by ascending energy.
 
-        Parameters:
-        - reactions (List[str]): List of reaction SMILES strings.
-        - num_conformers (str): Strategy for determining the number of conformers.
-        Default 'auto'.
-        - embedding_method (str): Embedding method. Default 'ETKDGv3'.
-        - random_coords_threshold (int): Threshold for using random coordinates.
-        Default 100.
-        - force_field_method (str): Force field method used for energy calculations.
-        Default 'MMFF94'.
-        - max_iter (str): Maximum number of iterations during calculation.
-        Default 'auto'.
-        - sort (bool, optional): Whether to sort the results by energy in
-        ascending order. Default True.
-
-        Returns:
-        - Tuple[List[str], List[float]]: Sorted list of reaction SMILES and their
-        corresponding energy values.
+        :param reactions: Reaction SMILES strings.
+        :type reactions: List[str]
+        :param num_conformers: Conformer-count strategy.
+        :type num_conformers: str
+        :param embedding_method: RDKit embedding method.
+        :type embedding_method: str
+        :param random_coords_threshold: Atom-count threshold for random coordinates.
+        :type random_coords_threshold: int
+        :param force_field_method: Force-field energy method.
+        :type force_field_method: str
+        :param max_iter: Maximum-iteration strategy.
+        :type max_iter: str
+        :param sort: Whether to sort results by ascending energy.
+        :type sort: bool
+        :return: Reaction SMILES strings and corresponding energy values.
+        :rtype: Tuple[List[str], List[float]]
         """
         if self.energy_type == "XTB":
             logger.info("Minimize energy using xTB")
